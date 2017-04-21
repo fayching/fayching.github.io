@@ -114,7 +114,7 @@
 	$('.item').each(function (i,item) {
 		var t = (Math.random()*4).toFixed(2);
 		$(item).attr('style','-webkit-animation-delay:'+t+'s;animation-delay:'+t+'s');
-		$('.test').text($('.test').text()+ t);
+		$('.test').text($('.test').text()+ Math.random());
 	})
 	$('.item img').each(function (i,item) {
 		var t = (Math.random()*8).toFixed(2);
