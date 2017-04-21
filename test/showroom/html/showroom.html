@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -106,20 +106,18 @@
 	<div class="item"><img src="../style/img/p2.jpg"></div>
 	<div class="item"><img src="../style/img/p3.jpg"></div>
 	<div class="item"><img src="../style/img/p4.png"></div>
-	<p class="test">测试 </p>
 </div>
 
-<script src="http://lib.cdc.com/js/jquery/jquery-2.1.3.min.js"></script>
+<script src="../style/zepto.min.js"></script>
 <script type="text/javascript">
-
 	$('.item').each(function (i,item) {
 		var t = (Math.random()*4).toFixed(2);
-		$(item).attr('style','-webkit-animation-delay:'+t+'s;animation-delay:'+t+'s');
-		alert("test"+ (Math.random()*4).toFixed(2));
+		$(item).css({"-webkit-animation-delay":t+'s'})
+
 	})
-	$('.item img').each(function (i,item) {
+	$('.item img').each(function () {
 		var t = (Math.random()*8).toFixed(2);
-		$(item).attr('style','-webkit-animation-delay:'+t+'s;animation-delay:'+t+'s');
+		$(item).css({"-webkit-animation-delay":t+'s'})
 
 	})
 </script>
