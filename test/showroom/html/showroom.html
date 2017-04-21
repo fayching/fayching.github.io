@@ -111,7 +111,7 @@
 
 <script src="http://lib.cdc.com/js/jquery/jquery-2.1.3.min.js"></script>
 <script type="text/javascript">
-alert(Math.random());
+alert("test"+ (Math.random()*4).toFixed(2));
 	$('.item').each(function (i,item) {
 		var t = (Math.random()*4).toFixed(2);
 		$(item).attr('style','-webkit-animation-delay:'+t+'s;animation-delay:'+t+'s');
