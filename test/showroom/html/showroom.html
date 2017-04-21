@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<title>弹幕</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=yes" />
-	<link rel="stylesheet" href="../style/test.css"  />
+	<!-- <link rel="stylesheet" href="../style/test.css"  /> -->
 	<style>
 	.item{
 		width: 50px;
@@ -109,6 +109,7 @@
 </div>
 
 <script src="../style/zepto.min.js"></script>
+<script src="../style/stats.min.js"></script>
 <script type="text/javascript">
 	$('.item').each(function (i,item) {
 		var t = (Math.random()*4).toFixed(2);
@@ -120,6 +121,23 @@
 		$(item).css({"-webkit-animation-delay":t+'s'})
 
 	})
+	var stats = new Stats();
+	stats.showPanel( 0 ); // 0: fps, 1: ms, 2: mb, 3+: custom
+	document.body.appendChild( stats.dom );
+
+	function animate() {
+
+		stats.begin();
+
+		// monitored code goes here
+
+		stats.end();
+
+		requestAnimationFrame( animate );
+
+	}
+
+	requestAnimationFrame( animate );
 </script>
 </body>
 </html>
