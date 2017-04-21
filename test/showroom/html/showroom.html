@@ -115,7 +115,7 @@
 		$(item).css({"-webkit-animation-delay":t+'s'})
 
 	})
-	$('.item img').each(function () {
+	$('.item img').each(function (i,item) {
 		var t = (Math.random()*8).toFixed(2);
 		$(item).css({"-webkit-animation-delay":t+'s'})
 
