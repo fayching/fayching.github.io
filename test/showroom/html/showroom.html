@@ -112,7 +112,7 @@
 <script type="text/javascript">
 	$('.item').each(function (i,item) {
 		var t = (Math.random()*4).toFixed(2);
-		$('.item').eq(i).css({"-webkit-animation-delay":t+'s'})
+		$(item).attr('style','-webkit-animation-delay:'+t+'s;animation-delay:'+t+'s');
 
 	})
 	$('.item img').each(function (i,item) {
