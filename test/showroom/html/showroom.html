@@ -6,11 +6,14 @@
 	<meta charset="utf-8">
 	<title>弹幕</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=yes" />
-	<!-- <link rel="stylesheet" href="../style/test.css"  /> -->
+	<link rel="stylesheet" href="../style/test.css"  />
 	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
 	.item{
-		width: 50px;
-		height: 50px;
+
 		display: inline-block;
 		text-align: center;
 	  -webkit-animation-duration: 4s;
@@ -25,19 +28,19 @@
 	@-webkit-keyframes swing {
 	  20% {
 
-	    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+	    -webkit-transform: rotate3d(0, 0, 1, 10deg);
 	  }
 
 	  40% {
-	    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+	    -webkit-transform: rotate3d(0, 0, 1, -7deg);
 	  }
 
 	  60% {
-		-webkit-transform: rotate3d(0, 0, 1, 5deg);
+		-webkit-transform: rotate3d(0, 0, 1, 3deg);
 	  }
 
 	  80% {
-	    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+	    -webkit-transform: rotate3d(0, 0, 1, -7deg);
 	  }
 
 	  100% {
@@ -51,7 +54,7 @@
 	 	50% {
 		  	-webkit-transform: rotate3d(0, 1, 0, 0);
 		}
-	  	55% {
+	  	54% {
 	    	-webkit-transform: rotate3d(0, 1, 0, -180deg);
 	  }
 	  	100% {
@@ -61,66 +64,70 @@
 	.item img {
 	  -webkit-backface-visibility: visible;
 	  backface-visibility: visible;
-	  -webkit-animation-duration: 8s;
+	  -webkit-animation-duration: 10s;
 	 -webkit-animation-fill-mode: both;
 	 -webkit-animation-iteration-count: infinite;
 	 -webkit-animation-timing-function: steps(1);
 	  -webkit-animation-name: flip;
 	}
-
+	.item p{
+		width: 100%;
+		background-color: rgba(0,0,0,.6);
+		color: #fff;
+	}
 	</style>
 </head>
 <body>
 
 
 <div class="container">
-	<div class="item"><img src="../style/img/p1.jpg"></div>
-	<div class="item"><img src="../style/img/p2.jpg"></div>
-	<div class="item"><img src="../style/img/p3.jpg"></div>
-	<div class="item"><img src="../style/img/p4.png"></div>
-	<div class="item"><img src="../style/img/p1.jpg"></div>
-	<div class="item"><img src="../style/img/p2.jpg"></div>
-	<div class="item"><img src="../style/img/p3.jpg"></div>
-	<div class="item"><img src="../style/img/p4.png"></div>
-	<div class="item"><img src="../style/img/p1.jpg"></div>
-	<div class="item"><img src="../style/img/p2.jpg"></div>
-	<div class="item"><img src="../style/img/p3.jpg"></div>
-	<div class="item"><img src="../style/img/p4.png"></div>
-	<div class="item"><img src="../style/img/p1.jpg"></div>
-	<div class="item"><img src="../style/img/p2.jpg"></div>
-	<div class="item"><img src="../style/img/p3.jpg"></div>
-	<div class="item"><img src="../style/img/p4.png"></div>
-	<div class="item"><img src="../style/img/p1.jpg"></div>
-	<div class="item"><img src="../style/img/p2.jpg"></div>
-	<div class="item"><img src="../style/img/p3.jpg"></div>
-	<div class="item"><img src="../style/img/p4.png"></div>
-	<div class="item"><img src="../style/img/p1.jpg"></div>
-	<div class="item"><img src="../style/img/p2.jpg"></div>
-	<div class="item"><img src="../style/img/p3.jpg"></div>
-	<div class="item"><img src="../style/img/p4.png"></div>
-	<div class="item"><img src="../style/img/p1.jpg"></div>
-	<div class="item"><img src="../style/img/p2.jpg"></div>
-	<div class="item"><img src="../style/img/p3.jpg"></div>
-	<div class="item"><img src="../style/img/p4.png"></div>
-	<div class="item"><img src="../style/img/p1.jpg"></div>
-	<div class="item"><img src="../style/img/p2.jpg"></div>
-	<div class="item"><img src="../style/img/p3.jpg"></div>
-	<div class="item"><img src="../style/img/p4.png"></div>
+	<div class="item"><p>dfggggg</p><img src="../style/img/p1.jpg"></div>
+	<div class="item"><p>xxx</p><img src="../style/img/p2.jpg"></div>
+	<div class="item"><p>ttt</p><img src="../style/img/p3.jpg"></div>
+	<div class="item"><p>bbb</p><img src="../style/img/p4.png"></div>
+	<div class="item"><p>dfggggg</p><img src="../style/img/p1.jpg"></div>
+	<div class="item"><p>xxx</p><img src="../style/img/p2.jpg"></div>
+	<div class="item"><p>ttt</p><img src="../style/img/p3.jpg"></div>
+	<div class="item"><p>bbb</p><img src="../style/img/p4.png"></div>
+	<div class="item"><p>dfggggg</p><img src="../style/img/p1.jpg"></div>
+	<div class="item"><p>xxx</p><img src="../style/img/p2.jpg"></div>
+	<div class="item"><p>ttt</p><img src="../style/img/p3.jpg"></div>
+	<div class="item"><p>bbb</p><img src="../style/img/p4.png"></div>
+	<div class="item"><p>dfggggg</p><img src="../style/img/p1.jpg"></div>
+	<div class="item"><p>xxx</p><img src="../style/img/p2.jpg"></div>
+	<div class="item"><p>ttt</p><img src="../style/img/p3.jpg"></div>
+	<div class="item"><p>bbb</p><img src="../style/img/p4.png"></div>
+	<div class="item"><p>dfggggg</p><img src="../style/img/p1.jpg"></div>
+	<div class="item"><p>xxx</p><img src="../style/img/p2.jpg"></div>
+	<div class="item"><p>ttt</p><img src="../style/img/p3.jpg"></div>
+	<div class="item"><p>bbb</p><img src="../style/img/p4.png"></div>
+	<div class="item"><p>dfggggg</p><img src="../style/img/p1.jpg"></div>
+	<div class="item"><p>xxx</p><img src="../style/img/p2.jpg"></div>
+	<div class="item"><p>ttt</p><img src="../style/img/p3.jpg"></div>
+	<div class="item"><p>bbb</p><img src="../style/img/p4.png"></div>
+	<div class="item"><p>dfggggg</p><img src="../style/img/p1.jpg"></div>
+	<div class="item"><p>xxx</p><img src="../style/img/p2.jpg"></div>
+	<div class="item"><p>ttt</p><img src="../style/img/p3.jpg"></div>
+	<div class="item"><p>bbb</p><img src="../style/img/p4.png"></div>
+	<div class="item"><p>dfggggg</p><img src="../style/img/p1.jpg"></div>
+	<div class="item"><p>xxx</p><img src="../style/img/p2.jpg"></div>
+	<div class="item"><p>ttt</p><img src="../style/img/p3.jpg"></div>
+	<div class="item"><p>bbb</p><img src="../style/img/p4.png"></div>
+
 </div>
 
 <script src="../style/zepto.min.js"></script>
 <script src="../style/stats.min.js"></script>
+
 <script type="text/javascript">
 	$('.item').each(function (i,item) {
 		var t = (Math.random()*4).toFixed(2);
-		$(item).css({"-webkit-animation-delay":t+'s'})
+		var t2 = (Math.random()*8).toFixed(2);
+		var m = (Math.random()*20).toFixed(0);
+		$(item).find('img').css({"-webkit-animation-delay":t+'s'})
+		$(item).css({"-webkit-animation-delay":t+'s','margin':'0 -'+ m + 'px'})
 
-	})
-	$('.item img').each(function (i,item) {
-		var t = (Math.random()*8).toFixed(2);
-		$(item).css({"-webkit-animation-delay":t+'s'})
-
-	})
+	});
 	var stats = new Stats();
 	stats.showPanel( 0 ); // 0: fps, 1: ms, 2: mb, 3+: custom
 	document.body.appendChild( stats.dom );
@@ -138,6 +145,8 @@
 	}
 
 	requestAnimationFrame( animate );
+
+
 </script>
 </body>
 </html>

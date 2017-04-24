@@ -6,120 +6,70 @@
 	<meta charset="utf-8">
 	<title>弹幕</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=yes" />
-	<link rel="stylesheet" href="../style/test.css"  />
+
 	<style>
-	.item{
-		width: 50px;
-		height: 50px;
-		display: inline-block;
-		text-align: center;
-	  -webkit-animation-duration: 4s;
-	  -webkit-animation-fill-mode: both;
-	  -webkit-animation-iteration-count: infinite;
-	  -webkit-transform-origin: bottom center;
-	  -webkit-animation-name: swing;
-	}
-	.item img{
-		vertical-align: middle;
-	}
-	@-webkit-keyframes swing {
-	  20% {
 
-	    -webkit-transform: rotate3d(0, 0, 1, 15deg);
-	  }
-
-	  40% {
-	    -webkit-transform: rotate3d(0, 0, 1, -10deg);
-	  }
-
-	  60% {
-		-webkit-transform: rotate3d(0, 0, 1, 5deg);
-	  }
-
-	  80% {
-	    -webkit-transform: rotate3d(0, 0, 1, -10deg);
-	  }
-
-	  100% {
-	    -webkit-transform: rotate3d(0, 0, 1, 0);
-	  }
-	}
-	@-webkit-keyframes flip {
-		0% {
-		  	-webkit-transform: rotate3d(0, 1, 0, 0);
-		}
-	 	50% {
-		  	-webkit-transform: rotate3d(0, 1, 0, 0);
-		}
-	  	54% {
-	    	-webkit-transform: rotate3d(0, 1, 0, -180deg);
-	  }
-	  	100% {
-	    	-webkit-transform: rotate3d(0, 1, 0, -180deg);
-	  	}
-	}
-	.item img {
-	  -webkit-backface-visibility: visible;
-	  backface-visibility: visible;
-	  -webkit-animation-duration: 8s;
-	 -webkit-animation-fill-mode: both;
-	 -webkit-animation-iteration-count: infinite;
-	 -webkit-animation-timing-function: ease-in;
-	  -webkit-animation-name: flip;
-	}
 
 	</style>
 </head>
 <body>
 
 
-<div class="container">
-	<div class="item"><img src="../style/img/p1.jpg" class="flip"></div>
-	<div class="item"><img src="../style/img/p2.jpg"></div>
-	<div class="item"><img src="../style/img/p3.jpg"></div>
-	<div class="item"><img src="../style/img/p4.png"></div>
-	<div class="item"><img src="../style/img/p1.jpg"></div>
-	<div class="item"><img src="../style/img/p2.jpg"></div>
-	<div class="item"><img src="../style/img/p3.jpg"></div>
-	<div class="item"><img src="../style/img/p4.png"></div>
-	<div class="item"><img src="../style/img/p1.jpg"></div>
-	<div class="item"><img src="../style/img/p2.jpg"></div>
-	<div class="item"><img src="../style/img/p3.jpg"></div>
-	<div class="item"><img src="../style/img/p4.png"></div>
-	<div class="item"><img src="../style/img/p1.jpg"></div>
-	<div class="item"><img src="../style/img/p2.jpg"></div>
-	<div class="item"><img src="../style/img/p3.jpg"></div>
-	<div class="item"><img src="../style/img/p4.png"></div>
-	<div class="item"><img src="../style/img/p1.jpg"></div>
-	<div class="item"><img src="../style/img/p2.jpg"></div>
-	<div class="item"><img src="../style/img/p3.jpg"></div>
-	<div class="item"><img src="../style/img/p4.png"></div>
-	<div class="item"><img src="../style/img/p1.jpg"></div>
-	<div class="item"><img src="../style/img/p2.jpg"></div>
-	<div class="item"><img src="../style/img/p3.jpg"></div>
-	<div class="item"><img src="../style/img/p4.png"></div>
-	<div class="item"><img src="../style/img/p1.jpg"></div>
-	<div class="item"><img src="../style/img/p2.jpg"></div>
-	<div class="item"><img src="../style/img/p3.jpg"></div>
-	<div class="item"><img src="../style/img/p4.png"></div>
-	<div class="item"><img src="../style/img/p1.jpg"></div>
-	<div class="item"><img src="../style/img/p2.jpg"></div>
-	<div class="item"><img src="../style/img/p3.jpg"></div>
-	<div class="item"><img src="../style/img/p4.png"></div>
-</div>
+<canvas id="container">
+
+</canvas>
 
 <script src="http://lib.cdc.com/js/jquery/jquery-2.1.3.min.js"></script>
 <script type="text/javascript">
-	$('.item').each(function () {
-		var t = (Math.random()*4).toFixed(2);
-		$(this).css({"-webkit-animation-delay":t+'s'})
 
-	})
-	$('.item img').each(function () {
-		var t = (Math.random()*8).toFixed(2);
-		$(this).css({"-webkit-animation-delay":t+'s'})
 
-	})
+function loadImage(scrList, runImg) {
+    var obj = new Object(); //创建对象
+    for (var i = 0; i < scrList.length; i++) {
+        var img = obj[scrList[i].id] = new Image(); //创建图片对象
+        img.onload = function() {
+            runImg(); //图片加载完成并执行runImg
+        }
+        img.src = scrList[i].url; //对象的每个属性值赋给图片地址
+    }
+    return obj; //返回对象数据
+}
+var imgs;
+var context;
+var timer = null;
+
+function init() {
+    var canvas = document.getElementById("container");
+    canvas.width = 600;
+    canvas.height = 400;
+    document.body.appendChild(canvas);
+    context = canvas.getContext("2d");
+    var arr = [
+        {
+        id: "p1",
+        url: "../style/img/p1.jpg"},
+    {
+        id: "p2",
+        url: "../style/img/p2.jpg"},
+	{
+        id: "p3",
+        url: "../style/img/p3.jpg"},
+	{
+        id: "p4",
+        url: "../style/img/p4.png"}
+    ]
+
+    imgs = loadImage(arr, runImg);
+}
+
+function runImg() {
+    context.drawImage(imgs.p1, 0, 0);
+    context.drawImage(imgs.p2, 50, 0 );
+	context.drawImage(imgs.p3, 100, 0);
+    context.drawImage(imgs.p4, 150, 0);
+}
+init();
+
 </script>
 </body>
 </html>
