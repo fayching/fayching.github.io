@@ -5,22 +5,16 @@
 		<title>Video and Three.js</title>
 		<style>
 			body { margin: 0; }
-			canvas {
-			    width: 100%;
-			    height: 100%;
-			    position: fixed;
-			    left: 0;
-			    top: 0;
-			}
+			canvas { width: 100%; height: 100% }
 		</style>
-		<script src="javascripts/three/three.js"></script>
-		<script src="javascripts/three/Detector.js"></script>
-		<script src="javascripts/three/OrbitControls.js"></script>
-		<script src="javascripts/three/stats.min.js"></script>
+		<script src="js/three/three.js"></script>
+		<script src="js/three/Detector.js"></script>
+		<script src="js/three/OrbitControls.js"></script>
+		<script src="js/three/stats.min.js"></script>
 	</head>
 	<body>
 		<div id="mod_player" style="display:;">
-			<video id="vv" controls="controls" loop="loop" webkit-playsinline playsinline data-playing-loadingad="0" preload="none" src="images/beach.mp4" ></video>
+			<video id="vv" controls="controls" loop="loop" webkit-playsinline playsinline data-playing-loadingad="0" preload="none" src="/images/beach.mp4"></video>
 			<canvas width=640 height=256 id="thecanvas" style="border: 5px #666666 solid;display:none"></canvas>
 		</div>
 
@@ -99,39 +93,7 @@
 				renderer.shadowMapSoft = true;
 				document.body.appendChild( renderer.domElement );
 
-				//光源，方向光
-				var dirLight = new THREE.DirectionalLight( 0xffffff, 1 );
-				dirLight.position.set( 50, 400, 50 );
-				dirLight.castShadow = true;
-				dirLight.shadowCameraNear = 0.01;
-				dirLight.shadowCameraFar = 600;
-				dirLight.shadowCameraRight = 300;
-				dirLight.shadowCameraLeft = -300;
-				dirLight.shadowCameraTop	= 300;
-				dirLight.shadowCameraBottom = -300;
-				dirLight.shadowDarkness = 0.5;
-				//辅助线
-				//dirLight.shadowCameraVisible = true;
-				dirLight.shadowMapWidth = 1024;
-				dirLight.shadowMapHeight = 1024;
-				//dirLight.name = 'Dir. Light';
-				//scene.add( dirLight );
 
-				var ambient = new THREE.AmbientLight( 0xffffff );
-				scene.add( ambient );
-
-				var spotLight = new THREE.SpotLight( 0xffffff );
-				spotLight.position.set( 50, 400, 50 );
-				spotLight.castShadow = true;
-				spotLight.shadowCameraNear = 1;
-				spotLight.shadowCameraFar = 600;
-				spotLight.shadowDarkness = 0.5;
-				//辅助线
-				//spotLight.shadowCameraVisible = true;
-				spotLight.shadowMapWidth = 1024;
-				spotLight.shadowMapHeight = 1024;
-				spotLight.name = 'Spot Light';
-				scene.add( spotLight );
 
 				//圆形
 				// var geometry = new THREE.SphereBufferGeometry( 100, 64, 64 );
@@ -140,8 +102,7 @@
 				var geometry = new THREE.BoxGeometry( 300, 200, 200 );//new THREE.SphereGeometry(32, 100);
 
 				var gtexture = THREE.ImageUtils.loadTexture( 'images/texture.jpg' );
-				var texture = new THREE.Texture( canvas );
-				texture.needsUpdate = true;
+				// gtexture.needsUpdate = true;
 				//var texture = THREE.ImageUtils.loadTexture( 'images/crate.gif' );
 				var material = new THREE.MeshBasicMaterial( { map: gtexture } );
 
@@ -154,14 +115,14 @@
 
 
 				//地板
-				var groundGeometry = new THREE.BoxGeometry( 240, 160, 0 );//new THREE.PlaneGeometry(10, 10, 1, 1);
+				var groundGeometry = new THREE.BoxGeometry( 200, 100, 0 );//new THREE.PlaneGeometry(10, 10, 1, 1);
 				var texture = new THREE.Texture( canvas );
 				var material2 = new THREE.MeshBasicMaterial( { map: texture } );
 
 				var ground = new THREE.Mesh( groundGeometry, material2 );
 				ground.position.x = 0;
 				ground.position.y = 0;
-				ground.position.z = -99;
+				ground.position.z = 0;
 				texture.needsUpdate = true;
 				scene.add(ground);
 
