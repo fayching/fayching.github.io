@@ -1,6 +1,305 @@
-/**
- * @authors Javinzhong
- */
+// 检测是否支持 webgl
+var useWebgl;
+
+function webglAvailable() {
+    try {
+        var canvas = document.createElement('canvas');
+        return !!(window.WebGLRenderingContext && (
+            canvas.getContext('webgl') ||
+            canvas.getContext('experimental-webgl')));
+    } catch (e) {
+        return false;
+    }
+}
+if (webglAvailable()) {
+    // useWebgl = true;
+} else {
+    // useWebgl = false;
+}
+var useWebgl = true;
+
+var distanceX = 15, // 左右移动距离
+    distanceY = 8, // 上下移动距离
+    path = "images/clan/", // 图片路径
+    scenebg = path + "bg.jpg", // 场景背景
+    placeholderImg = path + "texture.jpg", // 占位图（可忽略，一般无须更改）
+    // 道具
+    Meshs = {
+        "haibao": [
+            [127, 281],
+            path + "haibao.png", {
+                x: -450,
+                y: 135,
+                z: 400
+            },
+        ],
+        "shafa": [
+            [317, 267],
+            path + "shafa.png", {
+                x: 378,
+                y: -258,
+                z: 400
+            }
+        ],
+        "clock": [
+            [102, 95],
+            path + "clock.png", {
+                x: -269,
+                y: 258,
+                z: 400
+            }
+        ],
+        "hehuanshu": [
+            [58, 78],
+            path + "hehuanshu.png", {
+                x: -450,
+                y: -20,
+                z: 390
+            }
+        ],
+        "zai": [
+            [56, 69],
+            path + "zai.png", {
+                x: 313,
+                y: 221,
+                z: 400
+            }
+        ],
+        "tususu": [
+            [49, 69],
+            path + "tususu.png", {
+                x: 320,
+                y: 142,
+                z: 400
+            }
+        ],
+        "yeyan": [
+            [51, 62],
+            path + "yeyan.png", {
+                x: 322,
+                y: 73,
+                z: 400
+            }
+        ],
+        "sujiuer": [
+            [34, 68],
+            path + "sujiuer.png", {
+                x: 320,
+                y: 2,
+                z: 400
+            }
+        ],
+        "xiaolu": [
+            [49, 66],
+            path + "xiaolu.png", {
+                x: 318,
+                y: -76,
+                z: 400
+            }
+        ],
+        "shudie": [
+            [130, 80],
+            path + "shudie.png", {
+                x: 495,
+                y: 280,
+                z: 400
+            }
+        ],
+        "game": [
+            [113, 46],
+            path + "game.png", {
+                x: 502,
+                y: 173,
+                z: 400
+            }
+        ],
+        "taideng": [
+            [56, 78],
+            path + "taideng.png", {
+                x: 18,
+                y: -8,
+                z: 400
+            }
+        ],
+        "computer": [
+            [88, 66],
+            path + "computer.png", {
+                x: -56,
+                y: -18,
+                z: 400
+            }
+        ],
+        "ytch": [
+            [64, 80],
+            path + "ytch.png", {
+                x: -150,
+                y: 30,
+                z: 400
+            }
+        ],
+        "qtds": [
+            [55, 56],
+            path + "qtds.png", {
+                x: -212,
+                y: 181,
+                z: 400
+            }
+        ],
+        "hulu": [
+            [38, 56],
+            path + "hulu.png", {
+                x: -326,
+                y: 182,
+                z: 400
+            }
+        ],
+        "huoying": [
+            [102, 37],
+            path + "huoying.png", {
+                x: -272,
+                y: 132,
+                z: 400
+            }
+        ],
+        "deng": [
+            [51, 78],
+            path + "deng.png", {
+                x: -320,
+                y: 63,
+                z: 400
+            }
+        ],
+        "baozou": [
+            [57, 60],
+            path + "baozou.png", {
+                x: -241,
+                y: -20,
+                z: 400
+            }
+        ],
+        "goudian": [
+            [107, 52],
+            path + "goudian.png", {
+                x: -53,
+                y: -136,
+                z: 400
+            }
+        ],
+        "dianshi": [
+            [216, 128],
+            path + "dianshi.png", {
+                x: 567,
+                y: -34,
+                z: 400
+            }
+        ],
+        "dengzi": [
+            [268, 300],
+            path + "dengzi.png", {
+                x: -508,
+                y: -252,
+                z: 400
+            }
+        ],
+    };
+    Mesh2={
+        "p1": [
+            [60, 60],
+            path + "p1.jpg", {
+                x: -178,
+                y: -200,
+                z: 400
+            }
+        ],
+        "p2": [
+            [60, 60],
+            path + "p2.jpg", {
+                x: -128,
+                y: -200,
+                z: 400
+            }
+        ],
+        "p3": [
+            [60, 60],
+            path + "p3.jpg", {
+                x: -58,
+                y: -200,
+                z: 400
+            }
+        ],
+        "p4": [
+            [60, 60],
+            path + "p4.jpg", {
+                x: 8,
+                y: -200,
+                z: 400
+            }
+        ],
+        "p5": [
+            [60, 60],
+            path + "p5.jpg", {
+                x: 60,
+                y: -200,
+                z: 400
+            }
+        ],
+        "p6": [
+            [60, 60],
+            path + "p6.jpg", {
+                x: 128,
+                y: -200,
+                z: 400
+            }
+        ],
+        "p7": [
+            [60, 60],
+            path + "p7.jpg", {
+                x: -168,
+                y: -200,
+                z: 384
+            }
+        ],
+        "p8": [
+            [60, 60],
+            path + "p8.jpg", {
+                x: -118,
+                y: -200,
+                z: 385
+            }
+        ],
+        "p9": [
+            [60, 60],
+            path + "p9.jpg", {
+                x: -48,
+                y: -200,
+                z: 384
+            }
+        ],
+        "p10": [
+            [60, 60],
+            path + "p10.jpg", {
+                x: 18,
+                y: -200,
+                z: 384
+            }
+        ],
+        "p11": [
+            [60, 60],
+            path + "p11.jpg", {
+                x: 68,
+                y: -200,
+                z: 384
+            }
+        ],
+        "p12": [
+            [60, 60],
+            path + "p12.jpg", {
+                x: 138,
+                y: -200,
+                z: 384
+            }
+        ],
+    }
 
 // 三要素：场景、相机、渲染器
 var scene, camera, renderer;
@@ -44,13 +343,13 @@ animate();
 
 // 初始化
 function init() {
-    var canvas2 = $("#thecanvas")[0];
-    var ctx = canvas2.getContext("2d");
-    initCanvas();
+    // var canvas2 = document.getElementById('thecanvas');
+    // var ctx = canvas2.getContext("2d");
+    // initCanvas();
 
     function initCanvas() {
 
-        var v = $("#vv")[0];
+        var v = document.getElementById("vv");
         v.load();
         v.muted = true;
         v.play();
@@ -92,6 +391,11 @@ function init() {
     // PerspectiveCamera 透视相机（视界大小，横纵比，视野开始，视野结束）
     camera = new THREE.PerspectiveCamera(80, clanW / clanH, 1, 1000);
 
+    /*** 陀螺仪 ***/
+    var Devices = new THREE.DeviceOrientationControls(camera); // 初始化陀螺仪
+    Devices.connect();                                         // 初始化绑定陀螺仪
+    Devices.update();
+
     controls = new THREE.TrackballControls(camera,chamber);
     controls.rotateSpeed = 1.0;
     controls.zoomSpeed = 1.2;
@@ -119,23 +423,23 @@ function init() {
     ];
 
     //地板
-    var groundGeometry = new THREE.BoxGeometry( 1200, 1020, 1 );//new THREE.PlaneGeometry(10, 10, 1, 1);
-    var texture = new THREE.Texture( canvas2 );
-    var material2 = new THREE.MeshBasicMaterial( { map: texture } );
-
-    var ground = new THREE.Mesh( groundGeometry, material2 );
-    ground.position.x = 0;
-    ground.position.y = 0;
-    ground.position.z = 1;
-    texture.needsUpdate = true;
-    scene.add(ground);
+    // var groundGeometry = new THREE.BoxGeometry( 1200, 1020, 1 );//new THREE.PlaneGeometry(10, 10, 1, 1);
+    // var texture = new THREE.Texture( canvas2 );
+    // var material2 = new THREE.MeshBasicMaterial( { map: texture } );
+    //
+    // var ground = new THREE.Mesh( groundGeometry, material2 );
+    // ground.position.x = 0;
+    // ground.position.y = 0;
+    // ground.position.z = 40;
+    // texture.needsUpdate = true;
+    // scene.add(ground);
 
     // 添加场景
     geometry = new THREE.BoxGeometry(1200, 1020, 1200, 10, 10, 10);
     material = new THREE.MeshFaceMaterial(materials);
     mesh = new THREE.Mesh(geometry, material);
     mesh.scale.x = -1;
-    // scene.add(mesh);
+    scene.add(mesh);
 
 
 
@@ -147,24 +451,24 @@ function init() {
         objects_array = [];
         var ratio = 1600 / 1200 * 3.51;
 
-        for (var k in Meshs) {
+        for (var k in Mesh2) {
             // 结构
-            geometry = new THREE.BoxGeometry(Meshs[k][0][0] / ratio, Meshs[k][0][1] / ratio, 0);
+            geometry = new THREE.BoxGeometry(Mesh2[k][0][0] / ratio, Mesh2[k][0][1] / ratio, 0);
             // 材质
             material = new THREE.MeshBasicMaterial({
-                map: loader.load(Meshs[k][1]),
+                map: loader.load(Mesh2[k][1]),
                 transparent: true,
                 opacity: 0,
             });
             material.map.minFilter = THREE.LinearFilter;
             // 坐标
-            position = Meshs[k][2];
+            position = Mesh2[k][2];
 
             sphere = new THREE.Mesh(geometry, material);
 
-            sphere.position.x = Meshs[k][2].x / ratio;
-            sphere.position.y = Meshs[k][2].y / ratio;
-            sphere.position.z = Meshs[k][2].z;
+            sphere.position.x = Mesh2[k][2].x / ratio;
+            sphere.position.y = Mesh2[k][2].y / ratio;
+            sphere.position.z = Mesh2[k][2].z;
             // sphere.position.copy(position);
 
             objects_array.push(sphere);
@@ -212,7 +516,6 @@ function init() {
         $('#chamber').on('touchmove', function(event) {
             onDocumentTouchMove(event);
         });
-        chamberend();
     };
 
 }
@@ -294,7 +597,7 @@ function onDocumentTouchMove(event) {
         event.preventDefault();
         lon = (onPointerDownPointerX - event.touches[0].pageX) * 0.1 + onPointerDownLon;
         lat = (event.touches[0].pageY - onPointerDownPointerY) * 0.1 + onPointerDownLat;
-        // limitPos();
+        limitPos();
     }
 }
 
