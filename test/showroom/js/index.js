@@ -392,15 +392,9 @@ function init() {
     camera = new THREE.PerspectiveCamera(80, clanW / clanH, 1, 1000);
 
 
-    function setOrientationControls(e) {
-           if(!e.alpha)return;
-           controls = new THREE.DeviceOrientationControls(camera, true);
-           controls.connect();
-           controls.update();
-
-           window.removeEventListener('deviceorientation', setOrientationControls, true);
-       }
-    window.addEventListener('deviceorientation', setOrientationControls, true);
+    var controls2 = new THREE.DeviceOrientationControls(camera, true);
+    controls2.connect();
+    controls2.update();
 
     controls = new THREE.TrackballControls(camera,chamber);
     controls.rotateSpeed = 1.0;
@@ -624,6 +618,7 @@ function update() {
     target.z = 500 * Math.sin(phi) * Math.sin(theta);
 
     controls.update();
+    controls2.update();
 
     // 视野中心
     camera.lookAt(target);
