@@ -339,7 +339,7 @@ setWH();
 init();
 animate();
 
-
+var controls2;
 
 // 初始化
 function init() {
@@ -392,7 +392,7 @@ function init() {
     camera = new THREE.PerspectiveCamera(80, clanW / clanH, 1, 1000);
 
 
-    var controls2 = new THREE.DeviceOrientationControls(camera, true);
+    controls2 = new THREE.DeviceOrientationControls(camera, true);
     controls2.connect();
     controls2.update();
 
