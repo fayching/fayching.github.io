@@ -396,14 +396,14 @@ function init() {
     controls2.connect();
     controls2.update();
 
-    controls = new THREE.TrackballControls(camera,chamber);
-    controls.rotateSpeed = 1.0;
-    controls.zoomSpeed = 1.2;
-    controls.panSpeed = 0.8;
-    controls.noZoom = false;
-    controls.noPan = false;
-    controls.staticMoving = true;
-    controls.dynamicDampingFactor = 0.3;
+    // controls = new THREE.TrackballControls(camera,chamber);
+    // controls.rotateSpeed = 1.0;
+    // controls.zoomSpeed = 1.2;
+    // controls.panSpeed = 0.8;
+    // controls.noZoom = false;
+    // controls.noPan = false;
+    // controls.staticMoving = true;
+    // controls.dynamicDampingFactor = 0.3;
 
     texture_placeholder = document.createElement('canvas');
     texture_placeholder.width = 50;
