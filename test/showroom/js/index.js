@@ -391,10 +391,16 @@ function init() {
     // PerspectiveCamera 透视相机（视界大小，横纵比，视野开始，视野结束）
     camera = new THREE.PerspectiveCamera(80, clanW / clanH, 1, 1000);
 
-    /*** 陀螺仪 ***/
-    var Devices = new THREE.DeviceOrientationControls(camera); // 初始化陀螺仪
-    Devices.connect();                                         // 初始化绑定陀螺仪
-    Devices.update();
+
+    function setOrientationControls(e) {
+           if(!e.alpha)return;
+           controls = new THREE.DeviceOrientationControls(camera, true);
+           controls.connect();
+           controls.update();
+
+           window.removeEventListener('deviceorientation', setOrientationControls, true);
+       }
+    window.addEventListener('deviceorientation', setOrientationControls, true);
 
     controls = new THREE.TrackballControls(camera,chamber);
     controls.rotateSpeed = 1.0;
