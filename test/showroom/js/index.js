@@ -617,7 +617,7 @@ function update() {
     target.y = 500 * Math.cos(phi);
     target.z = 500 * Math.sin(phi) * Math.sin(theta);
 
-    controls.update();
+    // controls.update();
     controls2.update();
 
     // 视野中心
