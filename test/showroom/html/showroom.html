@@ -82,7 +82,7 @@
 <body>
 
 
-<div class="container">
+<div class="container" style="display:none">
 	<div class="item"><p>dfggggg</p><img src="../style/img/p1.jpg"></div>
 	<div class="item"><p>xxx</p><img src="../style/img/p2.jpg"></div>
 	<div class="item"><p>ttt</p><img src="../style/img/p3.jpg"></div>
@@ -142,6 +142,9 @@
 		$(item).css({"-webkit-animation-delay":t+'s','margin':'0 -'+ m + 'px'})
 
 	});
+	setTimeout(function(){
+		$('.container').show();
+	},1000)
 	var stats = new Stats();
 	stats.showPanel( 0 ); // 0: fps, 1: ms, 2: mb, 3+: custom
 	document.body.appendChild( stats.dom );
