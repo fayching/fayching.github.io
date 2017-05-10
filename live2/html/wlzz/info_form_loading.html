@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>明日之子报名</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui" />
+<link rel="stylesheet" href="../../style/wlzz.css"  />
+<!-- 开发同学请使用下面这个css引入代码：
+<link rel="stylesheet" href="http://imgcache.gtimg.cn/tencentvideo_v1/vstyle/mobile/live/style/wlzz.css"  />
+-->
+</head>
+<body ontouchstart>
+
+	<section class="mod_form">
+		<form action="#">
+			<ul class="step mod_border_b">
+				<li>1. 基础信息</li>
+				<li class="current">2. 联系信息</li>
+				<li>3. 才艺介绍</li>
+			</ul>
+			<div class="mod_form_content">
+				<div class="mod_form_item mod_border_b mod_form_item_link">
+				   	<label for="#">个人标签</label>
+					<div class="mod_form_info">
+						<ul class="mod_label_list disabled">
+							<li>旅行</li>
+							<li>美食</li>
+							<li>旅行</li>
+						</ul>
+					</div>
+			   	</div>
+
+				<div class="mod_form_item mod_border_b">
+				  <label for="#">个人视频</label>
+				  	<div class="mod_form_info upload_container">
+						<div class="upload_box"><input type="file"></div>
+						<div class="upload_video"><div style="background-image:url(http://tacs_v1.oa.com/img.php?200x112)" class="upload_video_pic"></div></div>
+						<div class="upload_video"><div style="background-image:url(...)" class="upload_video_pic"></div></div>
+						<p>一段展示自己的视频，不超过100MB</p>
+ 				  	</div>
+
+			  	</div>
+				<div class="mod_form_item mod_border_b">
+				   	<label for="#">签约经纪公司</label>
+					<label class="mod_radio" for="male">
+                        <input type="radio" name="company" id="has">
+						有
+                    </label>
+					<label class="mod_radio" for="female">
+                        <input type="radio" name="company" id="not">
+						无
+                    </label>
+			   	</div>
+				<div class="mod_form_item mod_border_b">
+				   	<label for="#">经纪公司名称</label>
+				   	<input type="text" value="">
+			   	</div>
+		  	</div>
+			<div class="mod_btn_wrap"><button type="submit" class="mod_btn mod_btn_lg">完成</button></div>
+		</form>
+	</section>
+	<section class="mod_toast show">
+		<div class="mod_toast_content">
+			<i class="mod_loading"></i>
+			<h4>正在上传视频</h4>
+			<p>可能需要几分钟</p>
+		</div>
+	</section>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>超级直播认证</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui" />
+<link rel="stylesheet" href="../../style/certify.css"  />
+<!-- 开发同学请使用下面这个css引入代码：
+<link rel="stylesheet" href="http://imgcache.gtimg.cn/tencentvideo_v1/vstyle/mobile/live/style/certify.css"  />
+-->
+</head>
+<body ontouchstart>
+
+	<section class="mod_form">
+		<form action="#">
+			<div class="mod_form_content">
+				<div class="mod_form_item mod_border_b">
+				   	<label>性别</label>
+					<label class="mod_radio" for="male">
+                        <input type="radio" name="sex" id="male">
+						男
+                    </label>
+					<label class="mod_radio" for="female">
+                        <input type="radio" name="sex" id="female">
+						女
+                    </label>
+			   </div>
+			   <div class="mod_form_item mod_border_b">
+				   <label name="type">账号类型</label>
+				   <label class="mod_radio" for="personal">
+					   <input type="radio" name="type" id="personal">
+					   个人
+				   </label>
+				   <label class="mod_radio" for="group">
+					   <input type="radio" name="type" id="group">
+					   团体
+				   </label>
+			  	</div>
+			   	<div class="mod_form_item mod_form_item_link mod_border_b">
+				   	<label for="#">出生日期</label>
+				   	<input type="text" placeholder="请选择您的出生日期" readonly>
+					<input type="date" name="birthday" style="display:none">
+			  	</div>
+				<div class="mod_form_item mod_form_item_link mod_border_b">
+				   	<label for="#">地区</label>
+				   	<input type="text" placeholder="请选择您所在地区" readonly>
+			  	</div>
+				<div class="mod_form_item mod_border_b">
+				   	<label for="#">邮箱</label>
+				   	<input type="text" placeholder="请填写您的邮箱" >
+			  	</div>
+		  	</div>
+			<div class="mod_btn_wrap"><button type="submit" class="mod_btn mod_btn_lg" disabled>提交验证</button></div>
+		</form>
+	</section>
+
+</body>
+</html>

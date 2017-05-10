@@ -1,0 +1,15 @@
+{
+
+  "main": "config.json",
+  "author": "faycheng",
+  "homepage": "",
+  "license": "MIT",
+  "sass": true,
+  "path":"/tencentvideo/vstyle/mobile/live",
+  "imgpath":"/style/images",
+  "csspath":"/style",
+  "sasspath":"/style/scss",
+  "distpath":"/dist",
+  "imgdist":"/dist/images",
+  "cssdist":"/dist"
+}

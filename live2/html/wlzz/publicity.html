@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>明日之子就这样唱</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui" />
+<link rel="stylesheet" href="../../style/public.css"  />
+<!--  开发同学请使用下面这个css引入代码： -->
+<!-- <link rel="stylesheet" href="http://vm.gtimg.cn/tencentvideo/vstyle/mobile/live/style/public.css"  /> -->
+<!-- <link rel="stylesheet" href="http://10.123.9.9/tencentvideo/vstyle/mobile/live/style/public.css"  /> -->
+
+
+</head>
+<body ontouchstart>
+	
+	<div class="landscape">
+		<div class="icon_landscape"></div>
+		<div class="text">为了更好的体验，请使用竖屏浏览</div>
+	</div>
+	<!-- 加载页 -->
+	<div class="page_loading">
+		<div class="loading_content">
+			<i class="icon_loadinglogo"></i>
+			<div class="loading_txt">0%</div>
+		</div>
+	</div>
+
+	<!-- 视频播放页 -->
+	<div class="page_video none">
+		<!-- 音频 -->
+		<div class="music music_on none"><!-- 默认音乐播放，点击音乐暂停去除类名 music_on ，添加类名 music_off -->
+		    <i class="icon_music"></i>
+		</div>
+
+		<!-- 视频 -->
+		<div class="video">
+			<video id="video_bg" src="../../style/images/wlzz/public.mp4" poster="../../style/images/wlzz/video_poster.jpg" preload="preload" playsinline webkit-playsinline controls></video>
+		</div>
+
+		<!-- 播放确认按钮 -->
+		<div class="play_confirm_content ">
+			<div class="confirm_inner">
+				<span class="view_tip"></span>
+				<i class="icon_play"></i>
+			</div>
+		</div>
+
+		<!-- 悬浮下载条 -->
+		<div class="tool_bar none">
+			<a href="https://m.v.qq.com/qqliveboardcast/qqliveboardcast_download.html" class="tool_bar_link">
+				<i class="icon_barlogo"></i>
+				<span class="bar_txt">立即报名</span>
+			</a>
+		</div>
+
+		<!-- 视频结束文字 -->
+		<div class="finnal_content none">
+			<div class="finnal_inner">
+				<div class="finnal_logo">
+					<i class="logo_white"></i>
+					<i class="logo_orange"></i>
+				</div>
+				<div class="finnal_txt">
+					<div class="txt">
+						<p>2017腾讯视频联合全网超级资源</p>
+						<p>中国唯一全套偶像生态链制作团队</p>
+						<p>强强联手 叱咤发声！</p>
+					</div>
+					<div class="txt">
+						<p>一档互联网音乐偶像养成节目的开元之作</p>
+						<p>一场想象力爆发的大型真人游戏</p>
+						<p>一场男性荷尔蒙爆发的热血狂欢</p>
+					</div>
+					<div class="txt">
+						<p>年轻人 都应自选你的“未来”</p>
+						<p>盛世美颜、盛世魔音、盛世独秀</p>
+						<p>三大赛道 自选参赛模式 空前而出</p>
+					</div>
+					<div class="txt">
+						<p>人气投票，圈粉狂潮，建立只属于你的圈层</p>
+						<p>大咖星推，急速助力，直指最强偶像登顶</p>
+					</div>
+					<div class="txt">
+						<p>万千世界的你已是唯一</p>
+						<p>你，是这众圈层的无界大神</p>
+					</div>
+					<div class="txt_l">
+						<p>你，就是明日之子!</p>
+					</div>
+					<div class="btn_line">
+						<a href="#" class="btn_action" id="btn_again">好感动 再看一遍</a>
+						<a href="#" class="btn_action" id="btn_share">分享给好友</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 分享 -->
+		<div class="share none"></div>
+	</div>
+
+<script type="text/javascript" src="http://10.123.9.9/tencentvideo/vstyle/mobile/live/js/jquery.min.js"></script>
+<script type="text/javascript">
+	var initime = 0;
+	setInterval(function(){
+		if (initime == 101){
+			$(".page_loading").addClass("none");
+			$(".page_video").removeClass("none");
+			return false;
+		};
+		$(".loading_txt").text(initime++ +"%");
+	}, 20);
+
+	// 点击进入自动播放视频
+	$(".play_confirm_content").click(function(){
+		$(this).addClass("none");
+		$(".music").removeClass("none");
+		$(".tool_bar").removeClass("none");
+		$('#video_bg')[0].play();
+		var timer=setInterval(function(){
+			var curTime = $("#video_bg")[0].currentTime;
+			console.log(curTime);
+			if (curTime > 99){
+				$(".finnal_content").removeClass("none");
+				clearInterval(timer);
+			}
+		},100);
+	});
+
+	// 点击播放暂停音乐
+	$(".music").click(function(){
+		$(".music").toggleClass("music_off");
+		$('#video_bg')[0].muted = !$('#video_bg')[0].muted;
+	});
+
+	// 点击分享出分享遮罩
+	$("#btn_share").click(function(){
+		$(".share").removeClass("none");
+	});
+
+	// 点击分享遮罩关闭分享遮罩
+	$(".share").click(function(){
+		$(this).addClass("none");
+	});
+
+	// 再播一次
+	$("#btn_again").click(function(){
+		$(".finnal_content").addClass("none");
+		$(".music").removeClass("none");
+		$('#video_bg')[0].play();
+		var timer=setInterval(function(){
+			var curTime = $("#video_bg")[0].currentTime;
+			console.log(curTime);
+			if (curTime > 99){
+				$(".finnal_content").removeClass("none");
+				clearInterval(timer);
+			}
+		},100);
+		return false;
+	});
+
+	$("#video_bg")[0].addEventListener("ended", function () {
+		$(".music").addClass("none");
+	});
+
+</script>
+
+</body>
+</html>
