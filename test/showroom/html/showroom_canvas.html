@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta charset="utf-8">
+	<title>弹幕</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=yes" />
+
+	<style>
+
+
+	</style>
+</head>
+<body>
+
+
+<canvas id="container">
+
+</canvas>
+
+<script src="http://lib.cdc.com/js/jquery/jquery-2.1.3.min.js"></script>
+<script type="text/javascript">
+
+
+function loadImage(scrList, runImg) {
+    var obj = new Object(); //创建对象
+    for (var i = 0; i < scrList.length; i++) {
+        var img = obj[scrList[i].id] = new Image(); //创建图片对象
+        img.onload = function() {
+            runImg(); //图片加载完成并执行runImg
+        }
+        img.src = scrList[i].url; //对象的每个属性值赋给图片地址
+    }
+    return obj; //返回对象数据
+}
+var imgs;
+var context;
+var timer = null;
+
+function init() {
+    var canvas = document.getElementById("container");
+    canvas.width = 600;
+    canvas.height = 400;
+    document.body.appendChild(canvas);
+    context = canvas.getContext("2d");
+    var arr = [
+        {
+        id: "p1",
+        url: "../style/img/p1.jpg"},
+    {
+        id: "p2",
+        url: "../style/img/p2.jpg"},
+	{
+        id: "p3",
+        url: "../style/img/p3.jpg"},
+	{
+        id: "p4",
+        url: "../style/img/p4.png"}
+    ]
+
+    imgs = loadImage(arr, runImg);
+}
+
+function runImg() {
+    context.drawImage(imgs.p1, 0, 0);
+    context.drawImage(imgs.p2, 50, 0 );
+	context.drawImage(imgs.p3, 100, 0);
+    context.drawImage(imgs.p4, 150, 0);
+}
+init();
+
+</script>
+</body>
+</html>
