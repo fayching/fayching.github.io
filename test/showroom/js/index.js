@@ -508,14 +508,14 @@ function init() {
                 console.log(this.id);
             }
         }
-        var onPointerDownPointerX, onPointerDownPointerY;
-        // touch
-        $('#chamber').on('touchstart', function(event) {
-            onDocumentTouchStart(event);
-        });
-        $('#chamber').on('touchmove', function(event) {
-            onDocumentTouchMove(event);
-        });
+        // var onPointerDownPointerX, onPointerDownPointerY;
+        // // touch
+        // $('#chamber').on('touchstart', function(event) {
+        //     onDocumentTouchStart(event);
+        // });
+        // $('#chamber').on('touchmove', function(event) {
+        //     onDocumentTouchMove(event);
+        // });
     };
 
 }
