@@ -15,7 +15,7 @@
 	</head>
 	<body>
 		<div id="mod_player" style="display:;">
-			<video id="vv" controls="controls" loop="loop" webkit-playsinline playsinline data-playing-loadingad="0" preload="none" src="images/test.mp4"></video>
+			<video id="vv" controls="controls" loop="loop" webkit-playsinline playsinline data-playing-loadingad="0" preload="none" src="images/test.mp4" width="100"></video>
 			<canvas width=640 height=256 id="thecanvas" style="border: 5px #666666 solid;display:none"></canvas>
 		</div>
 
@@ -94,15 +94,32 @@ var controls,clock,texture,renderer,scene,camera;
 				renderer.shadowMapSoft = true;
 				document.body.appendChild( renderer.domElement );
 
-
+				function loadTexture(path, callback) {
+				    var texture = new THREE.Texture(texture_placeholder);
+				    var material = new THREE.MeshBasicMaterial({
+				        map: texture,
+				        overdraw: 0.5
+				    });
+				    material.map.minFilter = THREE.LinearFilter;
+				    var image = new Image();
+				    image.onload = function() {
+				        texture.image = this;
+				        texture.needsUpdate = true;
+				        if (callback) {
+				            callback()
+				        }
+				    };
+				    image.src = path;
+				    return material;
+				}
 
 				//圆形
 				// var geometry = new THREE.SphereBufferGeometry( 100, 64, 64 );
 
 				// 正方体
-				var geometry = new THREE.BoxGeometry( 300, 200, 200 );//new THREE.SphereGeometry(32, 100);
+				var geometry = new THREE.BoxGeometry( 600, 400, 200 );//new THREE.SphereGeometry(32, 100);
 
-				var gtexture = THREE.ImageUtils.loadTexture( 'images/texture.jpg' );
+				var gtexture = THREE.ImageUtils.loadTexture( 'images/clan/bg.jpg' );
 				// gtexture.needsUpdate = true;
 				//var texture = THREE.ImageUtils.loadTexture( 'images/crate.gif' );
 				var material = new THREE.MeshBasicMaterial( { map: gtexture } );
