@@ -18,8 +18,8 @@ if (webglAvailable()) {
 }
 var useWebgl = true;
 
-var distanceX = 15, // 左右移动距离
-    distanceY = 8, // 上下移动距离
+var distanceX = 50, // 左右移动距离
+    distanceY = 20, // 上下移动距离
     path = "images/clan/", // 图片路径
     scenebg = path + "bg.jpg", // 场景背景
     placeholderImg = path + "texture.jpg", // 占位图（可忽略，一般无须更改）
@@ -392,18 +392,18 @@ function init() {
     camera = new THREE.PerspectiveCamera(80, clanW / clanH, 1, 1000);
 
 
-    controls2 = new THREE.DeviceOrientationControls(camera, true);
-    controls2.connect();
-    controls2.update();
+    // controls2 = new THREE.DeviceOrientationControls(camera, true);
+    // controls2.connect();
+    // controls2.update();
 
-    // controls = new THREE.TrackballControls(camera,chamber);
-    // controls.rotateSpeed = 1.0;
-    // controls.zoomSpeed = 1.2;
-    // controls.panSpeed = 0.8;
-    // controls.noZoom = false;
-    // controls.noPan = false;
-    // controls.staticMoving = true;
-    // controls.dynamicDampingFactor = 0.3;
+    controls = new THREE.TrackballControls(camera,chamber);
+    controls.rotateSpeed = 1.0;
+    controls.zoomSpeed = 1.2;
+    controls.panSpeed = 0.8;
+    controls.noZoom = false;
+    controls.noPan = false;
+    controls.staticMoving = true;
+    controls.dynamicDampingFactor = 0.3;
 
     texture_placeholder = document.createElement('canvas');
     texture_placeholder.width = 50;
@@ -494,10 +494,8 @@ function init() {
     chamber.appendChild(renderer.domElement);
 
     window.addEventListener('resize', onWindowResize, false);
+    window.addEventListener('deviceorientation', setDeviceOrientationControls, true);
 
-    THREE.DefaultLoadingManager.onProgress = function(item, loaded, total) {
-
-    };
     THREE.DefaultLoadingManager.onLoad = function() {
         // 道具
         for (var k in objects) {
@@ -606,7 +604,12 @@ function animate() {
     requestAnimationFrame(animate);
     update();
 }
-
+function setDeviceOrientationControls(e) {
+  controls = new THREE.DeviceOrientationControls(camera, true);
+  controls.connect();
+  controls.update();
+  window.removeEventListener('deviceorientation', setDeviceOrientationControls, true);
+}
 function update() {
     // 场景旋转
     lat = Math.max(-85, Math.min(85, lat));
@@ -617,8 +620,8 @@ function update() {
     target.y = 500 * Math.cos(phi);
     target.z = 500 * Math.sin(phi) * Math.sin(theta);
 
-    // controls.update();
-    controls2.update();
+    controls.update();
+    // controls2.update();
 
     // 视野中心
     camera.lookAt(target);

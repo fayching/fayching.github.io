@@ -11,10 +11,11 @@
 		<script src="js/three/Detector.js"></script>
 		<script src="js/three/OrbitControls.js"></script>
 		<script src="js/three/stats.min.js"></script>
+		<script src="js/DeviceOrientationControls.js"></script>
 	</head>
 	<body>
 		<div id="mod_player" style="display:;">
-			<video id="vv" controls="controls" loop="loop" webkit-playsinline playsinline data-playing-loadingad="0" preload="none" src="images/beach.mp4"></video>
+			<video id="vv" controls="controls" loop="loop" webkit-playsinline playsinline data-playing-loadingad="0" preload="none" src="images/test.mp4" width="100"></video>
 			<canvas width=640 height=256 id="thecanvas" style="border: 5px #666666 solid;display:none"></canvas>
 		</div>
 
@@ -62,7 +63,7 @@
 				});
 
 			}
-
+var controls,clock,texture,renderer,scene,camera;
 
 			function initThreejs(){
 
@@ -76,15 +77,15 @@
 				*/
 
 				//创建场景
-				var scene = new THREE.Scene();
+				scene = new THREE.Scene();
 
 				//创建摄像机
-				var camera = new THREE.PerspectiveCamera( 80, window.innerWidth / window.innerHeight, 1, 1000 );
+				camera = new THREE.PerspectiveCamera( 80, window.innerWidth / window.innerHeight, 1, 1000 );
 				camera.position.y = 300;
 				camera.position.z = 300;
 
 				//创建dom元素
-				var renderer = new THREE.WebGLRenderer();
+				renderer = new THREE.WebGLRenderer();
 				renderer.setSize( window.innerWidth, window.innerHeight );
 				renderer.setClearColor(0xffffff);
 
@@ -93,15 +94,32 @@
 				renderer.shadowMapSoft = true;
 				document.body.appendChild( renderer.domElement );
 
-
+				function loadTexture(path, callback) {
+				    var texture = new THREE.Texture(texture_placeholder);
+				    var material = new THREE.MeshBasicMaterial({
+				        map: texture,
+				        overdraw: 0.5
+				    });
+				    material.map.minFilter = THREE.LinearFilter;
+				    var image = new Image();
+				    image.onload = function() {
+				        texture.image = this;
+				        texture.needsUpdate = true;
+				        if (callback) {
+				            callback()
+				        }
+				    };
+				    image.src = path;
+				    return material;
+				}
 
 				//圆形
 				// var geometry = new THREE.SphereBufferGeometry( 100, 64, 64 );
 
 				// 正方体
-				var geometry = new THREE.BoxGeometry( 300, 200, 200 );//new THREE.SphereGeometry(32, 100);
+				var geometry = new THREE.BoxGeometry( 600, 400, 200 );//new THREE.SphereGeometry(32, 100);
 
-				var gtexture = THREE.ImageUtils.loadTexture( 'images/texture.jpg' );
+				var gtexture = THREE.ImageUtils.loadTexture( 'images/clan/bg.jpg' );
 				// gtexture.needsUpdate = true;
 				//var texture = THREE.ImageUtils.loadTexture( 'images/crate.gif' );
 				var material = new THREE.MeshBasicMaterial( { map: gtexture } );
@@ -115,8 +133,8 @@
 
 
 				//地板
-				var groundGeometry = new THREE.BoxGeometry( 200, 100, 0 );//new THREE.PlaneGeometry(10, 10, 1, 1);
-				var texture = new THREE.Texture( canvas );
+				var groundGeometry = new THREE.BoxGeometry( 300, 160, 0 );//new THREE.PlaneGeometry(10, 10, 1, 1);
+				texture = new THREE.Texture( canvas );
 				var material2 = new THREE.MeshBasicMaterial( { map: texture } );
 
 				var ground = new THREE.Mesh( groundGeometry, material2 );
@@ -127,36 +145,40 @@
 				scene.add(ground);
 
 
-				//帧率统计
-				var stats = new Stats();
-				stats.domElement.style.position = 'absolute';
-				stats.domElement.style.bottom = '0px';
-				stats.domElement.style.zIndex = 10;
-				document.body.appendChild( stats.domElement );
 
 				//鼠标控制
-				var controls = new THREE.OrbitControls(camera, renderer.domElement);
+				controls = new THREE.OrbitControls(camera, renderer.domElement);
 				controls.target = new THREE.Vector3(0, 0, 0);
-				var clock = new THREE.Clock();
+				clock = new THREE.Clock();
 
-				//循环
-				function render() {
-					//cube.rotation.x += 0.01;
-					// cube.rotation.y += 0.01;
-					controls.update(clock.getDelta());
-					stats.update();
-					texture.needsUpdate = true;
+				window.addEventListener('deviceorientation', setDeviceOrientationControls, true);
 
-					//var timer = Date.now() * 0.000025;
-					//spotLight.position.x = Math.sin(timer * 5) * 100;
-					//spotLight.position.z = Math.cos(timer * 5) * 100;
 
-					requestAnimationFrame( render );
-					renderer.render( scene, camera );
-				}
-				render();
 			}
 
+			function setDeviceOrientationControls(e) {
+				controls = new THREE.DeviceOrientationControls(camera, true);
+				controls.connect();
+				controls.update();
+				window.removeEventListener('deviceorientation', setDeviceOrientationControls, true);
+			}
+			//循环
+			function render() {
+				//cube.rotation.x += 0.01;
+				// cube.rotation.y += 0.01;
+
+				// controls2.update();
+				controls.update(clock.getDelta());
+				texture.needsUpdate = true;
+
+				//var timer = Date.now() * 0.000025;
+				//spotLight.position.x = Math.sin(timer * 5) * 100;
+				//spotLight.position.z = Math.cos(timer * 5) * 100;
+
+				requestAnimationFrame( render );
+				renderer.render( scene, camera );
+			}
+			render();
 		</script>
 	</body>
 </html>
