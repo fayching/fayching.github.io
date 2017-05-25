@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +18,7 @@ html, body, #CanvasBody {width: 100%;height: 100%;overflow: hidden;}
 <div id="CanvasBody">
 	<input id="onDevice" type="button" value="开启陀螺仪">
 </div>
-<video id="vv" controls="controls" loop="loop" webkit-playsinline playsinline data-playing-loadingad="0" preload="none" src="images/beach.mp4" width="100" ></video>
+<video id="vv" controls="controls" loop="loop" webkit-playsinline playsinline data-playing-loadingad="0" preload="none" src="images/test.mp4" style="visibility:hidden"></video>
 <canvas width=640 height=256 id="thecanvas" style="border: 5px #666666 solid;display:none"></canvas>
 <script src="https://cdn.bootcss.com/three.js/r76/three.min.js"></script>
 <script src="https://cdn.bootcss.com/stats.js/r16/Stats.min.js"></script>
@@ -89,8 +90,9 @@ THREE.DeviceOrientationControls=function(object){var scope=this;this.object=obje
     }
     // 初始化照相机
     function initCamera() {
-        Camera = new THREE.PerspectiveCamera(80, clanW / clanH, 1, 1000);
-        Camera.position.set(0, 0, -10);
+        Camera = new THREE.PerspectiveCamera(80, clanW / clanH, 1, 3000);
+        Camera.position.set(0, 0, 1);
+
     }
     // 初始化渲染器
     function initRenderer() {
@@ -193,8 +195,8 @@ THREE.DeviceOrientationControls=function(object){var scope=this;this.object=obje
 
     ];
 	texture_placeholder = document.createElement('canvas');
-    texture_placeholder.width = 50;
-    texture_placeholder.height = 50;
+    texture_placeholder.width = 500;
+    texture_placeholder.height = 500;
 
     var context = texture_placeholder.getContext('2d');
     context.fillStyle = 'rgb( 200, 200, 200 )';
@@ -314,7 +316,7 @@ THREE.DeviceOrientationControls=function(object){var scope=this;this.object=obje
                 // transparent: true,
                 opacity: 1,
             });
-            // material.map.minFilter = THREE.LinearFilter;
+            material.map.minFilter = THREE.LinearFilter;
             // 坐标
             var position = Mesh2[k][2];
 
@@ -343,14 +345,15 @@ THREE.DeviceOrientationControls=function(object){var scope=this;this.object=obje
 		})();
 		(function () {
 				//视频
-				var groundGeometry = new THREE.BoxGeometry( 100, 64, 1 );//new THREE.PlaneGeometry(10, 10, 1, 1);
+				var groundGeometry = new THREE.BoxGeometry( 100, 54, 1 );//new THREE.PlaneGeometry(10, 10, 1, 1);
 				var texture2 = new THREE.Texture( canvas );
-				var material2 = new THREE.MeshBasicMaterial( { map: texture2,transparent: true } );
+				var material2 = new THREE.MeshBasicMaterial( { map: texture2 } );
 
 				var ground = new THREE.Mesh( groundGeometry, material2 );
 				ground.position.x = 0;
-				ground.position.y = 30;
+				ground.position.y = 0;
 				ground.position.z = 100;
+				texture2.needsUpdate = true;
 				Scene.add(ground);
     })();
 })(document.getElementById("CanvasBody"), window);
