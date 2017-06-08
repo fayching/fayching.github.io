@@ -81,59 +81,26 @@
 </head>
 <body>
 
+<div id="container" class="container" style="display: none"></div>
 
-<div class="container" style="display:none">
-	<div class="item"><p>dfggggg</p><img src="../style/img/p1.jpg"></div>
-	<div class="item"><p>xxx</p><img src="../style/img/p2.jpg"></div>
-	<div class="item"><p>ttt</p><img src="../style/img/p3.jpg"></div>
-	<div class="item"><p>bbb</p><img src="../style/img/p4.jpg"></div>
-	<div class="item"><p>dfggggg</p><img src="../style/img/p5.jpg"></div>
-	<div class="item"><p>xxx</p><img src="../style/img/p6.jpg"></div>
-	<div class="item"><p>ttt</p><img src="../style/img/p7.jpg"></div>
-	<div class="item"><p>bbb</p><img src="../style/img/p8.jpg"></div>
-	<div class="item"><p>dfggggg</p><img src="../style/img/p9.jpg"></div>
-	<div class="item"><p>xxx</p><img src="../style/img/p10.jpg"></div>
-	<div class="item"><p>ttt</p><img src="../style/img/p11.jpg"></div>
-	<div class="item"><p>bbb</p><img src="../style/img/p12.jpg"></div>
-	<div class="item"><p>dfggggg</p><img src="../style/img/p13.jpg"></div>
-	<div class="item"><p>xxx</p><img src="../style/img/p14.jpg"></div>
-	<div class="item"><p>ttt</p><img src="../style/img/p15.jpg"></div>
-	<div class="item"><p>bbb</p><img src="../style/img/p16.jpg"></div>
-	<div class="item"><p>dfggggg</p><img src="../style/img/p7.jpg"></div>
-	<div class="item"><p>xxx</p><img src="../style/img/p18.jpg"></div>
-	<div class="item"><p>ttt</p><img src="../style/img/p19.jpg"></div>
-	<div class="item"><p>bbb</p><img src="../style/img/p20.jpg"></div>
-	<div class="item"><p>dfggggg</p><img src="../style/img/p21.jpg"></div>
-	<div class="item"><p>xxx</p><img src="../style/img/p22.jpg"></div>
-	<div class="item"><p>ttt</p><img src="../style/img/p23.jpg"></div>
-	<div class="item"><p>bbb</p><img src="../style/img/p24.jpg"></div>
-	<div class="item"><p>dfggggg</p><img src="../style/img/p25.jpg"></div>
-	<div class="item"><p>xxx</p><img src="../style/img/p26.jpg"></div>
-	<div class="item"><p>ttt</p><img src="../style/img/p27.jpg"></div>
-	<div class="item"><p>bbb</p><img src="../style/img/p28.jpg"></div>
-	<div class="item"><p>dfggggg</p><img src="../style/img/p29.jpg"></div>
-	<div class="item"><p>xxx</p><img src="../style/img/p30.jpg"></div>
-	<div class="item"><p>ttt</p><img src="../style/img/p31.jpg"></div>
-	<div class="item"><p>bbb</p><img src="../style/img/p32.jpg"></div>
-	<div class="item"><p>ttt</p><img src="../style/img/p33.jpg"></div>
-	<div class="item"><p>bbb</p><img src="../style/img/p34.jpg"></div>
-	<div class="item"><p>dfgg</p><img src="../style/img/p35.jpg"></div>
-	<div class="item"><p>xxx</p><img src="../style/img/p36.jpg"></div>
-	<div class="item"><p>ttt</p><img src="../style/img/p37.jpg"></div>
-	<div class="item"><p>bbb</p><img src="../style/img/p38.jpg"></div>
-	<div class="item"><p>dfggggg</p><img src="../style/img/p39.jpg"></div>
-	<div class="item"><p>xxx</p><img src="../style/img/p40.jpg"></div>
-	<div class="item"><p>ttt</p><img src="../style/img/p41.jpg"></div>
-	<div class="item"><p>bbb</p><img src="../style/img/p42.jpg"></div>
-	<div class="item"><p>ttt</p><img src="../style/img/p43.jpg"></div>
-	<div class="item"><p>bbb</p><img src="../style/img/p44.jpg"></div>
-
-</div>
 
 <script src="../style/zepto.min.js"></script>
 <script src="../style/stats.min.js"></script>
 
 <script type="text/javascript">
+
+var path = "../style/img/";
+var list = ["bbb","dfggggg","fff","edww","fdhnf","sartgr","werts","sv","bbdthb","srge","dtjyt","htr","dhfg","dstyhh","fghytr","dfewe","dfghre","dhbdt","dfggggg","awrf","edwghmytw","hertw","sdfshtf","cfnth",
+"hlyikty","wrw","srge","ertw","djy","werq","wgt5juk","gykmty","srtwe","werfaew","fff","edww","fdhnf","sartgr","werts","sv","bbdthb","srge","dtjyt","htr","dhfg","dstyhh","fghytr","dfewe","dfghre","dhbdt","dfggggg","awrf","edwghmytw","hertw","sdfshtf","cfnth",
+"hlyikty","wrw","srge","ertw","djy","werq","wgt5juk","gykmty","srtwe","werfaew"];
+for (var i = 0; i < list.length; i++) {
+	var j = i;
+	if(i>=43){
+		var j= i-43;
+	}
+
+	$('<div class="item"><p>'+list[i]+'</p><img src="../style/img/p'+j+'.jpg"></div>').appendTo(".container");
+}
 	$('.item').each(function (i,item) {
 		var t = (Math.random()*4).toFixed(2);
 		var t2 = (Math.random()*8).toFixed(2);
