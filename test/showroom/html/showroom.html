@@ -6,13 +6,19 @@
 	<meta charset="utf-8">
 	<title>showroom动效</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=yes" />
-	<link rel="stylesheet" href="../style/test.css"  />
 	<style>
 	*{
 		margin: 0;
 		padding: 0;
 	}
 	.item{
+		display: inline-block;
+		position: absolute;
+		-webkit-transform: translate3d(0,0,0);
+		-webkit-transition: -webkit-transform 1s ease;
+
+	}
+	.item_inner{
 		width: 60px;
 		height: 60px;
 		display: inline-block;
@@ -88,30 +94,111 @@
 <script src="../style/stats.min.js"></script>
 
 <script type="text/javascript">
-
+var winW = document.documentElement.clientWidth;
 var path = "../style/img/";
-var list = ["bbb","dfggggg","fff","edww","fdhnf","sartgr","werts","sv","bbdthb","srge","dtjyt","htr","dhfg","dstyhh","fghytr","dfewe","dfghre","dhbdt","dfggggg","awrf","edwghmytw","hertw","sdfshtf","cfnth",
-"hlyikty","wrw","srge","ertw","djy","werq","wgt5juk","gykmty","srtwe","werfaew","fff","edww","fdhnf","sartgr","werts","sv","bbdthb","srge","dtjyt","htr","dhfg","dstyhh","fghytr","dfewe","dfghre","dhbdt","dfggggg","awrf","edwghmytw","hertw","sdfshtf","cfnth",
-"hlyikty","wrw","srge","ertw","djy","werq","wgt5juk","gykmty","srtwe","werfaew"];
-for (var i = 0; i < list.length; i++) {
+var fans = {
+	"list": [
+		{ "name":"John" , w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"Anna" ,w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"Peter" ,w: 50 , h: 50, x: 0, y: 0  },
+		{ "name":"fff" , w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"dfggggg" ,w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"saa" ,w: 50 , h: 50, x: 0, y: 0  },
+		{ "name":"csfv" , w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"savsa" ,w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"wefe" ,w: 50 , h: 50, x: 0, y: 0  },
+		{ "name":"xzvasr" , w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"xcvsfsfas" ,w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"sef" ,w: 50 , h: 50, x: 0, y: 0  },
+		{ "name":"sd" , w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"aaaddddfdddd" ,w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"wafew" ,w: 50 , h: 50, x: 0, y: 0  },
+		{ "name":"sdvdfef" , w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"wewrwr" ,w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"fvdsfesfsef" ,w: 50 , h: 50, x: 0, y: 0  },
+		{ "name":"sefefe" , w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"dvd" ,w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"ewfdfe" ,w: 50 , h: 50, x: 0, y: 0  },
+		{ "name":"wafawe" , w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"qwee" ,w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"we" ,w: 50 , h: 50, x: 0, y: 0  },
+		{ "name":"qwe2" , w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"sfewfqwf" ,w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"wqfqfwefwegws" ,w: 50 , h: 50, x: 0, y: 0  },
+		{ "name":"John" , w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"Anna" ,w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"Peter" ,w: 50 , h: 50, x: 0, y: 0  },
+		{ "name":"fff" , w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"dfggggg" ,w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"saa" ,w: 50 , h: 50, x: 0, y: 0  },
+		{ "name":"csfv" , w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"savsa" ,w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"wefe" ,w: 50 , h: 50, x: 0, y: 0  },
+		{ "name":"xzvasr" , w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"xcvsfsfas" ,w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"sef" ,w: 50 , h: 50, x: 0, y: 0  },
+		{ "name":"sd" , w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"aaaddddfdddd" ,w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"wafew" ,w: 50 , h: 50, x: 0, y: 0  },
+		{ "name":"sdvdfef" , w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"wewrwr" ,w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"fvdsfesfsef" ,w: 50 , h: 50, x: 0, y: 0  },
+		{ "name":"sefefe" , w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"dvd" ,w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"ewfdfe" ,w: 50 , h: 50, x: 0, y: 0  },
+		{ "name":"wafawe" , w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"qwee" ,w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"we" ,w: 50 , h: 50, x: 0, y: 0  },
+		{ "name":"qwe2" , w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"sfewfqwf" ,w: 50 , h: 50, x: 0, y: 0 },
+		{ "name":"wqfqfwefwegws" ,w: 50 , h: 50, x: 0, y: 0  }
+
+
+	]
+}
+// var list = ["bbb","dfggggg","fff","edww","fdhnf","sartgr","werts","sv","bbdthb","srge","dtjyt","htr","dhfg","dstyhh","fghytr","dfewe","dfghre","dhbdt","dfggggg","awrf","edwghmytw","hertw","sdfshtf","cfnth",
+// "hlyikty","wrw","srge","ertw","djy","werq","wgt5juk","gykmty","srtwe","werfaew","fff","edww","fdhnf","sartgr","werts","sv","bbdthb","srge","dtjyt","htr","dhfg","dstyhh","fghytr","dfewe","dfghre","dhbdt","dfggggg","awrf","edwghmytw","hertw","sdfshtf","cfnth",
+// "hlyikty","wrw","srge","ertw","djy","werq","wgt5juk","gykmty","srtwe","werfaew"];
+var col = winW/50;//一行放10张
+var length = fans.list.length;
+for (var i = 1; i < length; i++) {
 	var j = i;
-	if(i>=43){
+	if(i>43){
 		var j= i-43;
 	}
-
-	$('<div class="item"><p>'+list[i]+'</p><img src="../style/img/p'+j+'.jpg"></div>').appendTo(".container");
+	fans.list[i].x = Math.floor(i%col)*50;
+	fans.list[i].y = Math.floor(i/col)*50;
+	var name = fans.list[i].name;
+	$('<div class="item"><div class="item_inner"><p>'+name+'</p><img src="../style/img/p'+j+'.jpg"></div></div>').appendTo(".container");
 }
 	$('.item').each(function (i,item) {
 		var t = (Math.random()*4).toFixed(2);
 		var t2 = (Math.random()*8).toFixed(2);
 		var m = (Math.random()*20).toFixed(0);
+		 $(item).css("-webkit-transform","translate3d("+fans.list[i].x+"px,"+fans.list[i].y+"px,0)");
 		$(item).find('img').css({"-webkit-animation-delay":t+'s'})
-		$(item).css({"-webkit-animation-delay":t+'s','margin':'0 -'+ m + 'px'})
+		$(item).find('.item_inner').css({"-webkit-animation-delay":t+'s','margin':'0 -'+ m + 'px'})
 
 	});
 	setTimeout(function(){
 		$('.container').show();
 	},1000)
+
+	function move(){
+		var a = Math.floor(Math.random()*length);
+		var b = Math.floor(Math.random()*length);
+		console.log(a,b)
+		$('.item').eq(a).css("-webkit-transform","translate3d("+fans.list[b].x+"px,"+fans.list[b].y+"px,0)");
+		
+		$('.item').eq(b).css("-webkit-transform","translate3d("+fans.list[a].x+"px,"+fans.list[a].y+"px,0)");
+		var _x = fans.list[a].x;
+		var _y = fans.list[a].y;
+		fans.list[a].x = fans.list[b].x;
+		fans.list[a].y = fans.list[b].y;
+		fans.list[b].x = _x;
+		fans.list[b].y = _y;
+	}
+	setInterval(move,2000);
 	var stats = new Stats();
 	stats.showPanel( 0 ); // 0: fps, 1: ms, 2: mb, 3+: custom
 	document.body.appendChild( stats.dom );
