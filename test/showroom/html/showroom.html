@@ -6,16 +6,21 @@
 	<meta charset="utf-8">
 	<title>showroom动效</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=yes" />
-	<link rel="stylesheet" href="../style/test.css"  />
+	<!-- <link rel="stylesheet" href="../style/test.css"  /> -->
 	<style>
 	*{
 		margin: 0;
 		padding: 0;
 	}
 	.item{
+		position: absolute;
 		width: 60px;
 		height: 60px;
-		display: inline-block;
+	    transform: translate3d(0,0,0);
+	}
+	.item_inner{
+		width: 60px;
+		height: 60px;
 		text-align: center;
 	  -webkit-animation-duration: 4s;
 	  -webkit-animation-fill-mode: both;
@@ -23,7 +28,7 @@
 	  -webkit-transform-origin: bottom center;
 	  -webkit-animation-name: swing;
 	}
-	.item img{
+	.item_inner img{
 		vertical-align: middle;
 	}
 	@-webkit-keyframes swing {
@@ -88,7 +93,7 @@
 <script src="../style/stats.min.js"></script>
 
 <script type="text/javascript">
-
+var winW = document.documentElement.clientWidth;
 var path = "../style/img/";
 var list = ["bbb","dfggggg","fff","edww","fdhnf","sartgr","werts","sv","bbdthb","srge","dtjyt","htr","dhfg","dstyhh","fghytr","dfewe","dfghre","dhbdt","dfggggg","awrf","edwghmytw","hertw","sdfshtf","cfnth",
 "hlyikty","wrw","srge","ertw","djy","werq","wgt5juk","gykmty","srtwe","werfaew","fff","edww","fdhnf","sartgr","werts","sv","bbdthb","srge","dtjyt","htr","dhfg","dstyhh","fghytr","dfewe","dfghre","dhbdt","dfggggg","awrf","edwghmytw","hertw","sdfshtf","cfnth",
@@ -99,19 +104,23 @@ for (var i = 0; i < list.length; i++) {
 		var j= i-43;
 	}
 
-	$('<div class="item"><p>'+list[i]+'</p><img src="../style/img/p'+j+'.jpg"></div>').appendTo(".container");
+	$('<div class="item"><div class="item_inner"><p>'+list[i]+'</p><img src="../style/img/p'+j+'.jpg"></div></div>').appendTo(".container");
 }
 	$('.item').each(function (i,item) {
+		var col = Math.floor(winW/60); //列数
+
+		$(item).css({"-webkit-transform":"translate3d(" + Math.floor(i/col)*50+"px,"+Math.floor(i%col)*50+"px,0)"})
 		var t = (Math.random()*4).toFixed(2);
 		var t2 = (Math.random()*8).toFixed(2);
 		var m = (Math.random()*20).toFixed(0);
 		$(item).find('img').css({"-webkit-animation-delay":t+'s'})
-		$(item).css({"-webkit-animation-delay":t+'s','margin':'0 -'+ m + 'px'})
+		$(item).find('.item_inner').css({"-webkit-animation-delay":t+'s','margin':'0 -'+ m + 'px'})
 
 	});
 	setTimeout(function(){
 		$('.container').show();
 	},1000)
+	
 	var stats = new Stats();
 	stats.showPanel( 0 ); // 0: fps, 1: ms, 2: mb, 3+: custom
 	document.body.appendChild( stats.dom );
