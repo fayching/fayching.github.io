@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +9,11 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=yes" />
 	<link rel="stylesheet" href="../style/css/showroom.css"  />
 	<style>
+	html,body{
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
 	.page_bg{
 		position: fixed;
 		width: 100%;
@@ -23,11 +29,73 @@
 </head>
 <body>
 <div class="page_bg"></div>
-<div class="fan_list rank_top10"></div>
+<div class="fan_list rank_top10">
+    <div class="item" style="transform: translate3d(125px, 0px, 0px);">
+        <div class="item_inner" style="animation-delay: 4.27s;">
+            <p class="rank1">
+                <span class="num">1</span>John</p>
+            <img src="../style/img/temp/p1.png" class="img" style="animation-delay: 3.21s;"></div>
+    </div>
+    <div class="item" style="transform: translate3d(100px, 0px, 0px);">
+        <div class="item_inner" style="animation-delay: 7.82s;">
+            <p class="rank2">
+                <span class="num">2</span>Anna</p>
+            <img src="../style/img/temp/p2.png" class="img" style="animation-delay: 2.55s;"></div>
+    </div>
+    <div class="item" style="transform: translate3d(150px, 0px, 0px);">
+        <div class="item_inner" style="animation-delay: 6.5s;">
+            <p class="rank3">
+                <span class="num">3</span>Peter</p>
+            <img src="../style/img/temp/p3.png" class="img" data-pin-nopin="true" style="animation-delay: 1.69s;"></div>
+    </div>
+    <div class="item item_me" style="transform: translate3d(75px, 0px, 0px);">
+        <div class="item_inner" style="animation-delay: 5.5s;">
+            <p>
+                <span class="num">4</span>fff</p>
+            <img src="../style/img/temp/p4.png" class="img" data-pin-nopin="true" style="animation-delay: 1.89s;"></div>
+    </div>
+    <div class="item" style="transform: translate3d(175px, 0px, 0px);">
+        <div class="item_inner" style="animation-delay: 3.47s;">
+            <p>
+                <span class="num">5</span>dfggggg</p>
+            <img src="../style/img/temp/p5.png" class="img" data-pin-nopin="true" style="animation-delay: 0.01s;"></div>
+    </div>
+    <div class="item" style="transform: translate3d(50px, 0px, 0px);">
+        <div class="item_inner" style="animation-delay: 0.14s;">
+            <p>
+                <span class="num">6</span>saa</p>
+            <img src="../style/img/temp/p6.png" class="img" data-pin-nopin="true" style="animation-delay: 1.54s;"></div>
+    </div>
+    <div class="item" style="transform: translate3d(200px, 0px, 0px);">
+        <div class="item_inner" style="animation-delay: 4.12s;">
+            <p>
+                <span class="num">7</span>csfv</p>
+            <img src="../style/img/temp/p7.png" class="img" data-pin-nopin="true" style="animation-delay: 0.69s;"></div>
+    </div>
+    <div class="item" style="transform: translate3d(25px, 0px, 0px);">
+        <div class="item_inner" style="animation-delay: 0.62s;">
+            <p>
+                <span class="num">8</span>savsa</p>
+            <img src="../style/img/temp/p8.png" class="img" data-pin-nopin="true" style="animation-delay: 0.41s;"></div>
+    </div>
+    <div class="item" style="transform: translate3d(225px, 0px, 0px);">
+        <div class="item_inner" style="animation-delay: 6.53s;">
+            <p>
+                <span class="num">9</span>wefe</p>
+            <img src="../style/img/temp/p9.png" class="img" data-pin-nopin="true" style="animation-delay: 1.87s;"></div>
+    </div>
+    <div class="item" style="transform: translate3d(0px, 0px, 0px);">
+        <div class="item_inner" style="animation-delay: 2.88s;">
+            <p>
+                <span class="num">10</span>xzvasr</p>
+            <img src="../style/img/temp/p0.png" class="img" data-pin-nopin="true" style="animation-delay: 0.77s;"></div>
+    </div>
+</div>
 <div id="container" class="container fan_list" style="display: none"></div>
 
 
 <script src="../js/zepto.min.js"></script>
+<script src="../js/stats.min.js"></script>
 
 <script type="text/javascript">
 var winW = document.documentElement.clientWidth;
@@ -115,36 +183,17 @@ var fans = {
 	]
 }
 
-var col;
+var col = (winW-180)/25;
 var length = fans.list.length;
-for (var i = 0; i < length; i++) {
+for (var i = 1; i < length; i++) {
 
-	var j = i+1;
-	if(i<=9){
-		col=10;
-	}else{
-		col = Math.floor((winW-180)/25);
-		j = i-9;
-	}
-	var sign = 2*(j%2-0.5); //正负
-	var dis = Math.ceil(((j-1)%col)/2); //离中点的距离
-	fans.list[i].x = Math.floor(col/2+sign*dis)*25;
-	fans.list[i].y = Math.floor((j-1)/col)*35;
+	fans.list[i].x = Math.floor(i%col)*25;
+	fans.list[i].y = Math.floor(i/col)*35;
 	var name = fans.list[i].name;
-	if(i==0){
-		$('<div class="item"><div class="item_inner"><p class="rank1"><span class="num">'+j+'</span>'+name+'</p><img src="'+ path + fans.list[i].path +'" class="img"></div></div>').appendTo(".rank_top10");
-	}
-	else if(i==1){
-		$('<div class="item"><div class="item_inner"><p class="rank2"><span class="num">'+j+'</span>'+name+'</p><img src="'+ path + fans.list[i].path +'" class="img"></div></div>').appendTo(".rank_top10");
-	}
-	else if(i==2){
-		$('<div class="item"><div class="item_inner"><p class="rank3"><span class="num">'+j+'</span>'+name+'</p><img src="'+ path + fans.list[i].path +'" class="img"></div></div>').appendTo(".rank_top10");
-	}
-	else if(i<=9){
-		$('<div class="item"><div class="item_inner"><p><span class="num">'+j+'</span>'+name+'</p><img src="'+ path + fans.list[i].path +'" class="img"></div></div>').appendTo(".rank_top10");
-	}
-	else{
-		$('<div class="item"><div class="item_inner"><p>'+j+name+'</p><img src="'+ path + fans.list[i].path +'" class="img"></div></div>').appendTo(".container");
+	if(i<=10){
+		// $('<div class="item"><div class="item_inner"><p>'+name+'</p><img src="'+ path + fans.list[i].path +'" class="img"></div></div>').appendTo(".rank_top10");
+	}else{
+		$('<div class="item"><div class="item_inner"><p>'+name+'</p><img src="'+ path + fans.list[i].path +'" class="img"></div></div>').appendTo(".container");
 	}
 
 }
@@ -179,7 +228,23 @@ for (var i = 0; i < length; i++) {
 		fans.list[b].y = _y;
 	}
 	// setInterval(move,5000);
+	var stats = new Stats();
+	stats.showPanel( 0 ); // 0: fps, 1: ms, 2: mb, 3+: custom
+	document.body.appendChild( stats.dom );
 
+	function animate() {
+
+		stats.begin();
+
+		// monitored code goes here
+
+		stats.end();
+
+		requestAnimationFrame( animate );
+
+	}
+
+	requestAnimationFrame( animate );
 
 
 </script>

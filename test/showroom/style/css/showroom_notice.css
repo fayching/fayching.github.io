@@ -1,0 +1,382 @@
+@charset "UTF-8";
+/*===========================================
+		项目: 腾讯视频
+		作者: jacobgong
+		日期: 2017-03-23
+		作用: 全站样式reset
+===========================================*/
+html {
+  color: #fff;
+  background: none;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font: 14px/1.5 PingFangSC-Regular,"Helvetica Neue",tahoma,arial,sans-serif;
+  font-weight: 300;
+}
+
+article, aside, blockquote, body, button, code, dd, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, input, legend, li, menu, nav, ol, p, pre, section, td, textarea, th, ul {
+  margin: 0;
+  padding: 0;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure, footer, header, optgroup, menu, nav, section {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  font-size: 100%;
+}
+
+a {
+  text-decoration: none;
+  background: 0 0;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:active {
+  outline: 0;
+}
+
+li {
+  list-style: none;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+hr {
+  height: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+optgroup {
+  font-weight: 700;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+em, i {
+  font-style: normal;
+}
+
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+button, input, optgroup, option, select, textarea {
+  font: inherit;
+  outline: 0;
+  border: 0;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+button, input[type=button], input[type=reset], input[type=submit] {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  background: 0 0;
+}
+
+input[type=search], input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: block;
+}
+
+.none {
+  display: none;
+}
+
+.svg_icon {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  pointer-events: none;
+}
+
+.svg_icon path,
+.svg_icon use {
+  fill: currentColor;
+}
+
+.svg_sprite {
+  display: none;
+}
+
+/*===========================================
+		项目: 腾讯直播
+		作者: faycheng
+		日期: 2016-12-30
+		作用: 弹窗
+===========================================*/
+.mod_popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.75);
+  display: none;
+  color: #fff;
+}
+
+.mod_popup.show {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.mod_popup_header {
+  margin-bottom: 10px;
+  position: relative;
+  margin-top: 20px;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+}
+.mod_popup_header h4 {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.mod_popup_icon_close {
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin: 0 auto;
+  position: absolute;
+  color: #fff;
+  top: 0;
+  right: 20px;
+}
+
+.mod_popup_body {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+body {
+  background: #040d1f;
+}
+
+.popup_notice {
+  background: transparent;
+}
+
+.iphone_bg {
+  width: 100%;
+  height: 100%;
+  background: url(../img/effect/iphone.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.section_user {
+  width: 60px;
+  height: 90px;
+  position: absolute;
+  top: 70px;
+}
+.section_user .avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 30px;
+  border: 2px rgba(245, 28, 53, 0.8) solid;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  z-index: 1;
+}
+.section_user .c1 {
+  width: 110px;
+  height: 110px;
+  position: absolute;
+  left: -25px;
+  top: -25px;
+  background-color: rgba(245, 28, 53, 0.2);
+  border-radius: 55px;
+}
+.section_user .c2 {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  left: -15px;
+  top: -15px;
+  background-color: rgba(245, 28, 53, 0.3);
+  border-radius: 45px;
+}
+.section_user .c3 {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  background-color: rgba(245, 28, 53, 0.5);
+  border-radius: 35px;
+}
+.section_user .name {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 16px;
+  color: #fff;
+  background: #f51c35;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 14px;
+  padding: 0 16px;
+  margin-top: 60px;
+  transform: translate(-50%, 0);
+  margin-left: 30px;
+}
+
+.section_banner {
+  position: absolute;
+  top: 158px;
+}
+.section_banner .banner {
+  width: 389px;
+  height: 77px;
+  background: url(../img/effect/banner.png);
+  background-size: 389px auto;
+  text-align: center;
+  text-shadow: 1px 1.732px 4px #d90012;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+}
+.section_banner .balloon_list {
+  position: absolute;
+  width: 90px;
+  height: 112px;
+  bottom: 76px;
+  left: 24px;
+}
+.section_banner .balloon_list2 {
+  transform: scaleX(-1);
+  left: inherit;
+  right: 24px;
+}
+.section_banner .balloon1 {
+  width: 50px;
+  height: 83px;
+  background: url(../img/effect/balloon1.png);
+  background-size: 50px 83px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.section_banner .balloon2 {
+  width: 43px;
+  height: 107px;
+  background: url(../img/effect/balloon2.png);
+  background-size: 43px 107px;
+  position: absolute;
+  bottom: 0;
+  left: 6px;
+}
+.section_banner .balloon3 {
+  width: 39px;
+  height: 67px;
+  background: url(../img/effect/balloon3.png);
+  background-size: 39px 67px;
+  position: absolute;
+  bottom: 0;
+  left: 27px;
+}
+.section_banner .balloon4 {
+  width: 34px;
+  height: 89px;
+  background: url(../img/effect/balloon4.png);
+  background-size: 34px 89px;
+  position: absolute;
+  bottom: 0;
+  left: 47px;
+}
+.section_banner .num {
+  font-size: 26px;
+}
+
+.section_text {
+  width: 264px;
+  height: 74px;
+  background: url(../img/effect/text.png);
+  background-size: 264px 74px;
+  position: absolute;
+  top: 215px;
+}
+
+.section_btn {
+  font-size: 15px;
+  color: #fff;
+  background: #ff7000;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  padding: 0 45px;
+  position: absolute;
+  top: 295px;
+}
+
+/*# sourceMappingURL=showroom_notice.css.map */
