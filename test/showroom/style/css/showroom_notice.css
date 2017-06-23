@@ -289,6 +289,15 @@ body {
   transform: translate(-50%, 0);
   margin-left: 30px;
 }
+.section_user .c1 {
+  -webkit-animation: zoom 2s 0.3s infinite linear;
+}
+.section_user .c2 {
+  -webkit-animation: zoom 2s 0.2s infinite linear;
+}
+.section_user .c3 {
+  -webkit-animation: zoom 2s 0.1s infinite linear;
+}
 
 .section_banner {
   position: absolute;
@@ -326,6 +335,7 @@ body {
   left: 0;
   bottom: 0;
   z-index: 1;
+  -webkit-animation: balloon1 6s ease-in-out infinite;
 }
 .section_banner .balloon2 {
   width: 43px;
@@ -335,6 +345,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 6px;
+  -webkit-animation: balloon2 6s ease-in-out infinite;
 }
 .section_banner .balloon3 {
   width: 39px;
@@ -344,6 +355,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 27px;
+  -webkit-animation: balloon3 6s ease-in-out infinite;
 }
 .section_banner .balloon4 {
   width: 34px;
@@ -353,6 +365,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 47px;
+  -webkit-animation: balloon4 6s ease-in-out infinite;
 }
 .section_banner .num {
   font-size: 26px;
@@ -377,6 +390,81 @@ body {
   padding: 0 45px;
   position: absolute;
   top: 295px;
+}
+.section_btn:active {
+  opacity: .7;
+}
+
+.animated {
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+
+.section_banner {
+  animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+  }
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  40%,80% {
+    -webkit-transform: translate3d(0, -3px, 0);
+  }
+  60%,100% {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes zoom {
+  0% {
+    -webkit-transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+    opacity: 0.2;
+  }
+}
+@-webkit-keyframes balloon1 {
+  0%, 100% {
+    -webkit-transform: translateY(0) rotate(-6deg);
+  }
+  50% {
+    -webkit-transform: translateY(-2px) rotate(8deg);
+  }
+}
+@-webkit-keyframes balloon2 {
+  0%, 100% {
+    -webkit-transform: translateY(0) rotate(6eg);
+  }
+  50% {
+    -webkit-transform: translateY(-3px) rotate(-8deg);
+  }
+}
+@-webkit-keyframes balloon3 {
+  0%, 100% {
+    -webkit-transform: translate(0, -1px) rotate(6eg);
+  }
+  50% {
+    -webkit-transform: translate(-2px, 3px) rotate(-8deg);
+  }
+}
+@-webkit-keyframes balloon4 {
+  0%, 100% {
+    -webkit-transform: translate(1px, -1px) rotate(-8eg);
+  }
+  50% {
+    -webkit-transform: translate(-1px, 2px) rotate(10deg);
+  }
 }
 
 /*# sourceMappingURL=showroom_notice.css.map */

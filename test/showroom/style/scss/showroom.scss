@@ -147,9 +147,15 @@ body{
 		    bottom: -4px;
 		}
 	}
-	.show_pop{
+	.show_tips{
 		z-index: 1;
-		.pop_tips,.pop_comment{
+		.pop_tips{
+			opacity: 1;
+		}
+	}
+	.show_comment{
+		z-index: 1;
+		.pop_comment{
 			opacity: 1;
 		}
 	}

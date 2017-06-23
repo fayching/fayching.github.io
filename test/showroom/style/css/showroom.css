@@ -295,10 +295,16 @@ body {
   left: 50%;
   bottom: -4px;
 }
-.fan_list .show_pop {
+.fan_list .show_tips {
   z-index: 1;
 }
-.fan_list .show_pop .pop_tips, .fan_list .show_pop .pop_comment {
+.fan_list .show_tips .pop_tips {
+  opacity: 1;
+}
+.fan_list .show_comment {
+  z-index: 1;
+}
+.fan_list .show_comment .pop_comment {
   opacity: 1;
 }
 .fan_list .pop_comment {
