@@ -1,0 +1,106 @@
+@charset "UTF-8";
+html{color:#fff;background:0 0;-webkit-text-size-adjust:100%;text-size-adjust:100%;-webkit-tap-highlight-color:transparent;-webkit-user-select:none}
+body{font:14px/1.5 PingFangSC-Regular,"Helvetica Neue",tahoma,arial,sans-serif;font-weight:300}
+article,aside,blockquote,body,button,code,dd,div,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}
+*,:after,:before{box-sizing:border-box;-webkit-box-sizing:border-box}
+article,aside,details,figcaption,figure,footer,header,menu,nav,optgroup,section{display:block}
+audio,canvas,video{display:inline-block}
+h1,h2,h3,h4,h5,h6{font-weight:300;font-size:100%}
+a{text-decoration:none;background:0 0;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}
+a:active{outline:0}
+li{list-style:none}
+b,strong{font-weight:700}
+fieldset,img{border:0}
+svg:not(:root){overflow:hidden}
+hr{height:0}
+pre{overflow:auto}
+legend{border:0;padding:0}
+optgroup{font-weight:700}
+table{border-collapse:collapse;border-spacing:0}
+em,i{font-style:normal}
+ins{text-decoration:none}
+del{text-decoration:line-through}
+button,input,optgroup,option,select,textarea{font:inherit;outline:0;border:0;-webkit-box-sizing:content-box;box-sizing:content-box}
+button,input[type=button],input[type=reset],input[type=submit]{-webkit-tap-highlight-color:transparent;-webkit-appearance:none;appearance:none;background:0 0}
+input[type=search],input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;appearance:none}
+input:focus,select:focus,textarea:focus{outline:0;-webkit-tap-highlight-color:transparent}
+img{display:block}
+.none{display:none}
+.svg_icon{display:inline-block;width:100%;height:100%;vertical-align:top;pointer-events:none}
+.svg_icon path,.svg_icon use{fill:currentColor}
+.svg_sprite{display:none}
+body,html{width:100%;height:100%}
+.svg_icon{display:inline-block;width:100%;height:100%;vertical-align:top;pointer-events:none}
+.svg_icon path,.svg_icon use{fill:currentColor}
+.txp_svg_sprite{display:none}
+.mod_wardrobe_clothing{position:fixed;width:100%;height:100%;left:0;top:0;background:rgba(0,0,0,.9)}
+.mod_wardrobe_clothing .wardrobe_clothing{position:relative;width:100%;height:100%;display:-webkit-flex;display:flex;flex-direction:column;-webkit-flex-direction:column;justify-content:center;-webkit-justify-content:center}
+.mod_wardrobe_clothing .wardrobe_clothing_inner{position:relative;z-index:1;width:100%;height:100%;padding-left:290px}
+.mod_wardrobe_clothing .wardrobe_area{position:absolute;z-index:2;left:65px;top:80px;width:170px;height:178px}
+.mod_wardrobe_clothing .wardrobe_stage{margin-bottom:2px}
+.mod_wardrobe_clothing .wardrobe_stage .stage_pic{width:152px;height:152px;position:relative;top:10px;left:8px;z-index:1}
+.mod_wardrobe_clothing .wardrobe_stage .stage_pic .pic{display:block;width:100%;height:100%}
+.mod_wardrobe_clothing .wardrobe_stage .stage_bg{width:170px;height:26px;background:url(/tencentvideo/vstyle/showroom/style/img/dress/bg_stage.png) no-repeat;background-size:100%}
+.mod_wardrobe_clothing .wardrobe_tit{font-size:15px;line-height:22px;color:#fff;text-align:center}
+.mod_wardrobe_clothing .wardrobe_txt{font-size:12px;line-height:20px;color:#979797;text-align:center;margin-bottom:4px}
+.mod_wardrobe_clothing .wardrobe_btn{text-align:center}
+.mod_wardrobe_clothing .btn_use{display:inline-block;width:82px;text-align:center;font-size:13px;line-height:30px;border-radius:30px;color:#fff;background:#ff7000}
+.mod_wardrobe_clothing .btn_use.using{background:#a3a3a3}
+.mod_wardrobe_clothing .btn_use:active:not(.using){opacity:.7}
+.mod_wardrobe_clothing .clothing_area{padding-top:89px}
+.mod_wardrobe_clothing .clothing_hd{font-size:12px;line-height:18px;color:#fff;padding-bottom:2px;border-bottom:1px solid rgba(255,255,255,.1)}
+.mod_wardrobe_clothing .clothing_bd{overflow:auto;-webkit-overflow-scrolling:touch}
+.mod_wardrobe_clothing .clothing_list{padding:20px 0 32px;white-space:nowrap;font-size:0}
+.mod_wardrobe_clothing .clothing_list .item{position:relative;display:inline-block;width:56px;height:64px;margin-right:10px;text-align:center}
+.mod_wardrobe_clothing .clothing_list .item .pic{display:inline-block;width:48px;height:48px;margin-top:8px}
+.mod_wardrobe_clothing .clothing_list .item .icon_mark{position:absolute;top:-13px;left:0;right:0;width:100%;height:7px;text-align:center}
+.mod_wardrobe_clothing .clothing_list .item .icon_mark img{display:block;width:21px;height:7px;margin:0 auto}
+.mod_wardrobe_clothing .clothing_list .item.selected,.mod_wardrobe_clothing .clothing_list .item:active{background:rgba(255,255,255,.2);border-radius:10px}
+.mod_wardrobe_clothing .clothing_list .item.current:after{content:'';display:block;position:absolute;width:20px;height:20px;right:0;bottom:0;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoBAMAAAB+0KVeAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAwUExURQAAAP9vAP9vAP9vAP9wAP9wAP9tAP9vAP9vAP9wAP///v+8h//Usv+AHf+cT//q2KraNbgAAAAJdFJOUwDpkvqvaBg307Ko/rgAAAEHSURBVCjPbZO/DgFBEMaXcLUQEh1RKemuU9JRiY6HUOg1So4wEfcAG6J2b+ARvAKFWiEx+/d2z3zFXO6Xb25nZucYU5r3K53lmLkKmiBVnjqsBVrdlI7AqmpYHhw1NBy4cKtYATz1JGz7cCNYETIaIpxlYe0/W+YHYRZGU79IU2rOez+JUGILDyYfDHs2cdmRXzDu/B4TfpedrjC+HsZ4Fo8Dq+PX+dc1wpqFAl4fjhEiAeGprNqIENMhllZjxHRxkLIaIx4kSxJWa8SSVPFotUYsXrUZc26N2KYeyJNbIw5Ejy5OjTg6M+T3zRkyeR30xZFXTC4DvTbkgtGrSC4tvd7kj5D9ZX7MCXjHgLucFgAAAABJRU5ErkJggg==) no-repeat;background-size:20px 20px}
+.mod_wardrobe_clothing .btn_close{position:absolute;z-index:2;top:20px;right:15px;color:#fff;width:30px;height:30px}
+.mod_wardrobe_clothing .btn_close .icon_pk_close{display:block;width:15px;height:15px;margin:0 auto;position:relative;top:7px}
+.mod_wardrobe_clothing .btn_rule{position:absolute;z-index:2;top:23px;left:15px;color:#fff;font-size:12px;line-height:20px}
+.mod_wardrobe_clothing .btn_rule .icon_pk_question{display:inline-block;vertical-align:top;width:12px;height:12px;position:relative;top:4px;margin-right:5px}
+.mod_wardrobe_clothing .dress_tit{position:absolute;z-index:2;top:20px;left:50%;width:160px;margin-left:-80px;text-align:center}
+.mod_wardrobe_clothing .dress_tit .tit{font-size:15px;line-height:25px;color:#fff}
+.mod_wardrobe_clothing .dress_tit .txt{font-size:12px;line-height:21px;color:#979797}
+.clothing_list .mask{position:absolute;left:4px;width:48px;height:48px;top:8px;-webkit-mask-size:cover;background:rgba(255,255,255,.6)}
+.stage_light{position:absolute;left:0;bottom:0;width:170px}
+.stage_light .light{width:115px;height:235px;background-image:url(/tencentvideo/vstyle/showroom/style/img/sprite/dress.png);-moz-background-size:247px auto;-o-background-size:247px auto;-webkit-background-size:247px auto;background-size:247px auto;background-position:0 0;position:absolute;-webkit-transform-origin:bottom;opacity:0}
+.stage_light .light1{left:-40px;bottom:12px;-webkit-animation:stage_light1 1.2s alternate infinite}
+.stage_light .light2{left:-10px;bottom:10px;-webkit-animation:stage_light2 1.2s alternate infinite}
+.stage_light .light3{left:14px;bottom:20px;-webkit-animation:stage_light3 1.2s alternate infinite}
+.stage_light .light4{right:14px;bottom:20px;-webkit-animation:stage_light4 1.2s alternate infinite}
+.stage_light .light5{right:-10px;bottom:10px;-webkit-animation:stage_light5 1.2s alternate infinite}
+.stage_light .light6{right:-40px;bottom:12px;-webkit-animation:stage_light6 1.2s alternate infinite}
+.light_spot1{width:247px;height:244px;background-image:url(/tencentvideo/vstyle/showroom/style/img/sprite/dress.png);-moz-background-size:247px auto;-o-background-size:247px auto;-webkit-background-size:247px auto;background-size:247px auto;background-position:0 -240px;position:absolute;bottom:0;left:-47px;opacity:0;-webkit-animation:light_spot 2s infinite}
+.light_spot2{width:247px;height:244px;background-image:url(/tencentvideo/vstyle/showroom/style/img/sprite/dress.png);-moz-background-size:247px auto;-o-background-size:247px auto;-webkit-background-size:247px auto;background-size:247px auto;background-position:0 -489px;position:absolute;bottom:0;left:-47px;opacity:0;-webkit-animation:light_spot 2s 1s infinite}
+@keyframes light_spot{
+0%{opacity:0}
+100%{opacity:1}
+}
+@keyframes stage_light1{
+0%{-webkit-transform:rotate(-40deg);opacity:.2}
+100%{-webkit-transform:rotate(40deg);opacity:1}
+}
+@keyframes stage_light2{
+0%{-webkit-transform:rotate(50deg);opacity:1}
+100%{-webkit-transform:rotate(-50deg);opacity:.5}
+}
+@keyframes stage_light3{
+0%{-webkit-transform:rotate(10deg);opacity:1}
+100%{-webkit-transform:rotate(-10deg);opacity:1}
+}
+@keyframes stage_light4{
+0%{-webkit-transform:rotate(-10deg);opacity:1}
+100%{-webkit-transform:rotate(10deg);opacity:1}
+}
+@keyframes stage_light5{
+0%{-webkit-transform:rotate(-50deg);opacity:1}
+100%{-webkit-transform:rotate(50deg);opacity:.5}
+}
+@keyframes stage_light6{
+0%{-webkit-transform:rotate(40deg);opacity:.2}
+100%{-webkit-transform:rotate(-40deg);opacity:1}
+}
+#faycheng{content:"20170705155027"}
