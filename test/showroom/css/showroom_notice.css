@@ -40,12 +40,12 @@ img{display:block}
 body{background:#040d1f}
 .popup_notice{background:0 0}
 .iphone_bg{width:100%;height:100%;background:url(/tencentvideo/vstyle/showroom/style/img/effect/iphone.png);background-size:100% auto;background-repeat:no-repeat;position:absolute;left:0;top:0;-webkit-animation:zoomIn;-webkit-animation-duration:.1s;-webkit-animation-delay:1s;z-index:2}
-.section_user{width:60px;height:90px;position:absolute;top:82px;left:50%;transform:translate(-50%,0);z-index:1;-webkit-animation-name:fadeIn;-webkit-animation-duration:.1s;-webkit-animation-delay:.4s}
-.section_user .avatar{width:60px;height:60px;border-radius:30px;border:2px rgba(245,28,53,.8) solid;position:absolute;left:0;top:0;z-index:1;transform:translate(-50%,0);left:50%}
+.section_user{width:60px;height:90px;position:absolute;top:82px;left:50%;-webkit-transform:translate(-50%,0);z-index:1;-webkit-animation-name:fadeIn;-webkit-animation-duration:.1s;-webkit-animation-delay:.4s}
+.section_user .avatar{width:60px;height:60px;border-radius:30px;border:2px rgba(245,28,53,.8) solid;position:absolute;left:0;top:0;z-index:1;-webkit-transform:translate(-50%,0);left:50%}
 .section_user .c1{width:110px;height:110px;position:absolute;left:-25px;top:-25px;background-color:rgba(245,28,53,.2);border-radius:55px}
 .section_user .c2{width:90px;height:90px;position:absolute;left:-15px;top:-15px;background-color:rgba(245,28,53,.3);border-radius:45px}
 .section_user .c3{width:70px;height:70px;position:absolute;left:-5px;top:-5px;background-color:rgba(245,28,53,.5);border-radius:35px}
-.section_user .name{display:inline-block;white-space:nowrap;font-size:16px;color:#fff;background:#f51c35;background:-webkit-linear-gradient(45deg,#f51c35,#fa5f37);box-shadow:1.5px 2.598px 6px #fa5f37;height:28px;line-height:28px;border-radius:14px;padding:0 16px;margin-top:74px;transform:translate(-50%,0);margin-left:30px}
+.section_user .name{display:inline-block;white-space:nowrap;font-size:16px;color:#fff;background:#f51c35;background:-webkit-linear-gradient(45deg,#f51c35,#fa5f37);box-shadow:1.5px 2.598px 6px #fa5f37;height:28px;line-height:28px;border-radius:14px;padding:0 16px;margin-top:74px;-webkit-transform:translate(-50%,0);margin-left:30px}
 .section_user .c1{-webkit-animation:zoom 2s .3s infinite linear}
 .section_user .c2{-webkit-animation:zoom 2s .2s infinite linear}
 .section_user .c3{-webkit-animation:zoom 2s .1s infinite linear}
@@ -72,10 +72,10 @@ body{background:#040d1f}
 .section_user .meteor4{left:-30px;top:-50px;-webkit-animation-delay:.3s}
 .section_user .meteor5{left:30px;top:-50px;-webkit-animation-delay:.1s}
 .section_user .meteor6{left:50px;top:-20px;-webkit-animation-delay:.8s}
-.section_banner{position:absolute;top:180px;left:50%;transform:translate(-50%,0)}
-.section_banner .banner{width:389px;height:77px;background-image:url(/tencentvideo/vstyle/showroom/style/img/effect/banner3.png);background-size:389px auto;text-align:center;text-shadow:1px 1.732px 4px #d90012;font-size:16px;line-height:32px;font-weight:500;position:relative;z-index:1}
+.section_banner{position:absolute;top:175px;left:50%;-webkit-transform:translate(-50%,0)}
+.section_banner .banner{width:389px;height:77px;background-image:url(/tencentvideo/vstyle/showroom/style/img/effect/banner3.png);background-size:389px auto;text-align:center;text-shadow:1px 1.732px 4px #d90012;font-size:16px;line-height:28px;font-weight:500;position:relative;z-index:1;padding-top:6px}
 .section_banner .balloon_list{position:absolute;width:90px;height:112px;bottom:68px;left:24px}
-.section_banner .balloon_list2{transform:scaleX(-1);left:inherit;right:24px}
+.section_banner .balloon_list2{-webkit-transform:scaleX(-1);left:inherit;right:24px}
 .section_banner .balloon1{width:50px;height:83px;background:url(/tencentvideo/vstyle/showroom/style/img/effect/balloon1.png);background-size:50px 83px;position:absolute;left:0;bottom:0;z-index:1;-webkit-animation:balloon1 4s ease-in-out infinite;-webkit-transform-origin:center bottom}
 .section_banner .balloon2{width:43px;height:107px;background:url(/tencentvideo/vstyle/showroom/style/img/effect/balloon2.png);background-size:43px 107px;position:absolute;bottom:0;left:6px;-webkit-animation:balloon2 4s ease-in-out infinite;-webkit-transform-origin:center bottom}
 .section_banner .balloon3{width:39px;height:67px;background:url(/tencentvideo/vstyle/showroom/style/img/effect/balloon3.png);background-size:39px 67px;position:absolute;bottom:0;left:27px;-webkit-animation:balloon3 4s ease-in-out infinite;-webkit-transform-origin:center bottom}
@@ -84,9 +84,9 @@ body{background:#040d1f}
 .section_banner .spotlight_list{width:480px;height:300px;position:absolute;top:-222px;overflow:hidden;left:50%;margin-left:-240px}
 .section_banner .light1,.section_banner .light2{-webkit-animation:light1 3s 1s ease-in-out alternate infinite;width:177px;height:308px;background:url(/tencentvideo/vstyle/showroom/style/img/effect/light1.png);background-size:177px 308px;bottom:-30px;left:0;position:absolute;-webkit-transform-origin:bottom;opacity:0}
 .section_banner .light2{-webkit-animation:light2 2s 1s ease-in-out alternate infinite;left:auto;right:0}
-.section_banner .light3,.section_banner .light4{-webkit-animation:light1 3s 3s ease-in-out alternate infinite;width:103px;height:220px;background:url(/tencentvideo/vstyle/showroom/style/img/effect/light2.png);background-size:103px 220px;bottom:-30px;left:0;position:absolute;transform-origin:bottom;opacity:0}
+.section_banner .light3,.section_banner .light4{-webkit-animation:light1 3s 3s ease-in-out alternate infinite;width:103px;height:220px;background:url(/tencentvideo/vstyle/showroom/style/img/effect/light2.png);background-size:103px 220px;bottom:-30px;left:0;position:absolute;-webkit-transform-origin:bottom;opacity:0}
 .section_banner .light4{-webkit-animation:light2 2s 3s ease-in-out alternate infinite;left:auto;right:0}
-.page_notice1 .section_banner .banner{background-image:url(/tencentvideo/vstyle/showroom/style/img/effect/banner1.png);width:428px;height:87px;background-size:428px 87px;text-shadow:.5px .866px 4px #ff4e00;padding-top:8px}
+.page_notice1 .section_banner .banner{background-image:url(/tencentvideo/vstyle/showroom/style/img/effect/banner1.png);width:428px;height:87px;background-size:428px 87px;text-shadow:.5px .866px 4px #ff4e00;padding-top:11px}
 .page_notice1 .section_user .name{background:#ffa200}
 .page_notice2 .section_user .name{background:#ffa200}
 .page_notice1 .section_user .avatar{border:4px solid rgba(255,162,0,.8)}
@@ -101,14 +101,14 @@ body{background:#040d1f}
 .page_notice2 .section_user .cross4{display:none}
 .page_notice2 .section_user .dot{background-color:#ff4800}
 .page_notice1 .section_banner .balloon_list,.page_notice2 .section_banner .balloon_list{bottom:85px}
-.page_notice2 .section_banner .banner{background-image:url(/tencentvideo/vstyle/showroom/style/img/effect/banner2.png);width:472px;height:94px;background-size:472px 94px;text-shadow:1.5px 2.598px 6px #ff4e00;padding-top:8px}
+.page_notice2 .section_banner .banner{background-image:url(/tencentvideo/vstyle/showroom/style/img/effect/banner2.png);width:472px;height:94px;background-size:472px 94px;text-shadow:1.5px 2.598px 6px #ff4e00;padding-top:11px}
 .page_notice3 .section_user{top:70px}
 .page_notice3 .section_user .name{margin-top:58px}
 .page_notice3 .section_banner{top:150px}
 .page_notice3 .section_banner .banner{width:389px;height:77px;background-image:url(/tencentvideo/vstyle/showroom/style/img/effect/banner3.png);background-size:389px auto;text-shadow:1px 1.732px 4px #d90012}
 .section_text{width:264px;height:74px;background:url(/tencentvideo/vstyle/showroom/style/img/effect/text.png);background-size:264px 74px;position:absolute;top:208px;left:50%;margin-left:-132px;z-index:1;-webkit-animation-name:fadeIn;-webkit-animation-duration:.1s;-webkit-animation-delay:.4s}
 .animated{-webkit-animation-fill-mode:both}
-.section_btn{font-size:15px;color:#fff;background:#ff7000;background:-webkit-linear-gradient(left,#fb7121,#fc9126);height:40px;line-height:40px;border-radius:20px;padding:0 45px;position:absolute;bottom:45px;transform:translate(-50%,0);left:50%;z-index:3;-webkit-animation-name:fadeIn;-webkit-animation-duration:.1s;-webkit-animation-delay:1.5s}
+.section_btn{font-size:15px;color:#fff;background:#ff7000;background:-webkit-linear-gradient(left,#fb7121,#fc9126);height:40px;line-height:40px;border-radius:20px;padding:0 45px;position:absolute;bottom:45px;-webkit-transform:translate(-50%,0);left:50%;z-index:3;-webkit-animation-name:fadeIn;-webkit-animation-duration:.1s;-webkit-animation-delay:1.5s}
 .section_btn:active{background:#fc9126}
 .section_banner_inner{animation-name:fadeInUp;animation-duration:2s;animation-delay:0}
 .section_firework{position:absolute;width:100%;left:0;top:185px;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-animation-name:fadeIn;-webkit-animation-duration:.1s;-webkit-animation-delay:.2s;z-index:1}
@@ -188,4 +188,4 @@ to{opacity:1}
 .section_banner{top:156px}
 .section_btn{bottom:25px}
 }
-#faycheng{content:"20170705155027"}
+#faycheng{content:"20170706191946"}
