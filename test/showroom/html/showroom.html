@@ -21,12 +21,13 @@
 	</style>
 
 </head>
-<body>
+<body ontouchstart>
 <div class="page_bg"></div>
 <div class="fan_list rank_top10"></div>
 <div id="container" class="container fan_list" style="display: none"></div>
 
 
+<script src="../js/stats.min.js"></script>
 <script src="../js/zepto.min.js"></script>
 
 <script type="text/javascript">
@@ -34,6 +35,231 @@ var winW = document.documentElement.clientWidth;
 var path = "../style/img/temp/";
 var fans = {
 	"list": [
+		{ "name":"John" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Anna" , "path" : "p2.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Peter" , "path" : "p3.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"fff" , "path" : "p4.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"dfggggg" , "path" : "p5.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"saa" , "path" : "p6.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"csfv" , "path" : "p7.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"savsa" , "path" : "p8.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"wefe" , "path" : "p9.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"xzvasr" , "path" : "p0.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"John" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Anna" , "path" : "p2.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Peter" , "path" : "p3.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"fff" , "path" : "p4.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"dfggggg" , "path" : "p5.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"saa" , "path" : "p6.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"csfv" , "path" : "p7.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"savsa" , "path" : "p8.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"wefe" , "path" : "p9.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"xzvasr" , "path" : "p0.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"xcvsfsfas" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"John" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Anna" , "path" : "p2.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Peter" , "path" : "p3.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"fff" , "path" : "p4.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"dfggggg" , "path" : "p5.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"saa" , "path" : "p6.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"csfv" , "path" : "p7.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"savsa" , "path" : "p8.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"wefe" , "path" : "p9.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"xzvasr" , "path" : "p0.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"xcvsfsfas" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"John" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Anna" , "path" : "p2.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Peter" , "path" : "p3.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"fff" , "path" : "p4.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"dfggggg" , "path" : "p5.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"saa" , "path" : "p6.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"csfv" , "path" : "p7.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"savsa" , "path" : "p8.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"wefe" , "path" : "p9.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"xzvasr" , "path" : "p0.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"xcvsfsfas" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"John" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Anna" , "path" : "p2.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Peter" , "path" : "p3.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"fff" , "path" : "p4.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"dfggggg" , "path" : "p5.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"saa" , "path" : "p6.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"csfv" , "path" : "p7.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"savsa" , "path" : "p8.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"wefe" , "path" : "p9.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"xzvasr" , "path" : "p0.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"xcvsfsfas" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"John" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Anna" , "path" : "p2.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Peter" , "path" : "p3.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"fff" , "path" : "p4.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"dfggggg" , "path" : "p5.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"saa" , "path" : "p6.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"csfv" , "path" : "p7.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"savsa" , "path" : "p8.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"wefe" , "path" : "p9.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"xzvasr" , "path" : "p0.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"xcvsfsfas" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"John" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Anna" , "path" : "p2.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Peter" , "path" : "p3.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"fff" , "path" : "p4.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"dfggggg" , "path" : "p5.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"saa" , "path" : "p6.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"csfv" , "path" : "p7.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"savsa" , "path" : "p8.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"wefe" , "path" : "p9.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"xzvasr" , "path" : "p0.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"John" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Anna" , "path" : "p2.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Peter" , "path" : "p3.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"fff" , "path" : "p4.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"dfggggg" , "path" : "p5.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"saa" , "path" : "p6.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"csfv" , "path" : "p7.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"savsa" , "path" : "p8.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"wefe" , "path" : "p9.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"xzvasr" , "path" : "p0.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"John" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Anna" , "path" : "p2.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Peter" , "path" : "p3.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"fff" , "path" : "p4.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"dfggggg" , "path" : "p5.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"saa" , "path" : "p6.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"csfv" , "path" : "p7.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"savsa" , "path" : "p8.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"wefe" , "path" : "p9.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"xzvasr" , "path" : "p0.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"xcvsfsfas" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"John" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Anna" , "path" : "p2.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Peter" , "path" : "p3.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"fff" , "path" : "p4.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"dfggggg" , "path" : "p5.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"saa" , "path" : "p6.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"csfv" , "path" : "p7.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"savsa" , "path" : "p8.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"wefe" , "path" : "p9.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"xzvasr" , "path" : "p0.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"xcvsfsfas" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"John" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Anna" , "path" : "p2.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Peter" , "path" : "p3.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"fff" , "path" : "p4.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"dfggggg" , "path" : "p5.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"saa" , "path" : "p6.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"csfv" , "path" : "p7.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"savsa" , "path" : "p8.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"wefe" , "path" : "p9.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"xzvasr" , "path" : "p0.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"xcvsfsfas" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"John" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Anna" , "path" : "p2.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Peter" , "path" : "p3.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"fff" , "path" : "p4.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"dfggggg" , "path" : "p5.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"saa" , "path" : "p6.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"csfv" , "path" : "p7.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"savsa" , "path" : "p8.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"wefe" , "path" : "p9.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"xzvasr" , "path" : "p0.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"xcvsfsfas" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"John" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Anna" , "path" : "p2.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Peter" , "path" : "p3.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"fff" , "path" : "p4.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"dfggggg" , "path" : "p5.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"saa" , "path" : "p6.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"csfv" , "path" : "p7.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"savsa" , "path" : "p8.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"wefe" , "path" : "p9.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"xzvasr" , "path" : "p0.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"xcvsfsfas" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"John" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Anna" , "path" : "p2.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Peter" , "path" : "p3.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"fff" , "path" : "p4.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"dfggggg" , "path" : "p5.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"saa" , "path" : "p6.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"csfv" , "path" : "p7.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"savsa" , "path" : "p8.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"wefe" , "path" : "p9.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"xzvasr" , "path" : "p0.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"John" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Anna" , "path" : "p2.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Peter" , "path" : "p3.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"fff" , "path" : "p4.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"dfggggg" , "path" : "p5.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"saa" , "path" : "p6.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"csfv" , "path" : "p7.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"savsa" , "path" : "p8.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"wefe" , "path" : "p9.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"xzvasr" , "path" : "p0.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"John" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Anna" , "path" : "p2.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Peter" , "path" : "p3.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"fff" , "path" : "p4.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"dfggggg" , "path" : "p5.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"saa" , "path" : "p6.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"csfv" , "path" : "p7.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"savsa" , "path" : "p8.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"wefe" , "path" : "p9.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"xzvasr" , "path" : "p0.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"xcvsfsfas" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"John" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Anna" , "path" : "p2.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Peter" , "path" : "p3.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"fff" , "path" : "p4.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"dfggggg" , "path" : "p5.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"saa" , "path" : "p6.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"csfv" , "path" : "p7.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"savsa" , "path" : "p8.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"wefe" , "path" : "p9.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"xzvasr" , "path" : "p0.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"xcvsfsfas" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"John" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Anna" , "path" : "p2.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Peter" , "path" : "p3.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"fff" , "path" : "p4.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"dfggggg" , "path" : "p5.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"saa" , "path" : "p6.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"csfv" , "path" : "p7.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"savsa" , "path" : "p8.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"wefe" , "path" : "p9.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"xzvasr" , "path" : "p0.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"xcvsfsfas" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"John" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Anna" , "path" : "p2.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Peter" , "path" : "p3.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"fff" , "path" : "p4.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"dfggggg" , "path" : "p5.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"saa" , "path" : "p6.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"csfv" , "path" : "p7.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"savsa" , "path" : "p8.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"wefe" , "path" : "p9.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"xzvasr" , "path" : "p0.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"xcvsfsfas" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"John" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Anna" , "path" : "p2.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Peter" , "path" : "p3.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"fff" , "path" : "p4.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"dfggggg" , "path" : "p5.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"saa" , "path" : "p6.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"csfv" , "path" : "p7.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"savsa" , "path" : "p8.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"wefe" , "path" : "p9.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"xzvasr" , "path" : "p0.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"xcvsfsfas" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"John" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Anna" , "path" : "p2.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"Peter" , "path" : "p3.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"fff" , "path" : "p4.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"dfggggg" , "path" : "p5.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"saa" , "path" : "p6.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"csfv" , "path" : "p7.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"savsa" , "path" : "p8.png", w: 48 , h: 48, x: 0, y: 0 },
+		{ "name":"wefe" , "path" : "p9.png", w: 48 , h: 48, x: 0, y: 0  },
+		{ "name":"xzvasr" , "path" : "p0.png", w: 48 , h: 48, x: 0, y: 0 },
 		{ "name":"John" , "path" : "p1.png", w: 48 , h: 48, x: 0, y: 0 },
 		{ "name":"Anna" , "path" : "p2.png", w: 48 , h: 48, x: 0, y: 0 },
 		{ "name":"Peter" , "path" : "p3.png", w: 48 , h: 48, x: 0, y: 0  },
@@ -154,7 +380,7 @@ for (var i = 0; i < length; i++) {
 		// var m = (Math.random()*10).toFixed(0);
 		var j = i;
 		if(i>=10){j = i-10}
-		$(item).css("-webkit-transform","translate3d("+fans.list[j].x+"px,"+fans.list[j].y+"px,0)");
+		$(item).css("-webkit-transform","translate("+fans.list[j].x+"px,"+fans.list[j].y+"px)");
 		$(item).find('.img').css({"-webkit-animation-delay":t+'s'})
 		$(item).find('.item_inner').css({"-webkit-animation-delay":t2+'s'})
 
@@ -168,9 +394,9 @@ for (var i = 0; i < length; i++) {
 		var a = Math.floor(Math.random()*length);
 		var b = Math.floor(Math.random()*length);
 
-		$('.item').eq(a).css("-webkit-transform","translate3d("+fans.list[b].x+"px,"+fans.list[b].y+"px,0)");
+		$('.item').eq(a).css("-webkit-transform","translate("+fans.list[b].x+"px,"+fans.list[b].y+"px)");
 
-		$('.item').eq(b).css("-webkit-transform","translate3d("+fans.list[a].x+"px,"+fans.list[a].y+"px,0)");
+		$('.item').eq(b).css("-webkit-transform","translate("+fans.list[a].x+"px,"+fans.list[a].y+"px)");
 		var _x = fans.list[a].x;
 		var _y = fans.list[a].y;
 		fans.list[a].x = fans.list[b].x;
@@ -178,9 +404,25 @@ for (var i = 0; i < length; i++) {
 		fans.list[b].x = _x;
 		fans.list[b].y = _y;
 	}
-	// setInterval(move,5000);
+	// setInterval(move,50);
 
+	var stats = new Stats();
+	stats.showPanel( 0 ); // 0: fps, 1: ms, 2: mb, 3+: custom
+	document.body.appendChild( stats.dom );
 
+	function animate() {
+
+		stats.begin();
+
+		// monitored code goes here
+
+		stats.end();
+
+		requestAnimationFrame( animate );
+
+	}
+
+	requestAnimationFrame( animate );
 
 </script>
 </body>
