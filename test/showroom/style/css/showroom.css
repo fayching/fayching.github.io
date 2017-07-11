@@ -196,7 +196,6 @@ img {
 }
 .container {
   margin: 0 90px;
-  transform: translateZ(0);
 }
 
 .rank_top10 {
@@ -218,7 +217,7 @@ img {
   height: 52px;
   display: block;
   text-align: center;
-  -webkit-animation-duration: 4s;
+  -webkit-animation-duration: 5s;
   -webkit-animation-fill-mode: both;
   -webkit-animation-iteration-count: infinite;
   -webkit-transform-origin: bottom center;
@@ -239,7 +238,7 @@ img {
   height: 40px;
   display: block;
   margin: auto;
-  margin-top: -5px;
+  margin-top: -10px;
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
   -webkit-animation-duration: 10s;
@@ -265,28 +264,32 @@ img {
 .fan_list .item p {
   display: inline-block;
   width: auto;
-  max-width: 80px;
+  max-width: 160px;
   overflow: hidden;
   text-overflow: ellipsis;
-  height: 12px;
-  line-height: 12px;
+  height: 24px;
+  line-height: 24px;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
-  font-size: 8px;
-  border-radius: 6px;
-  padding: 0 4px;
+  font-size: 16px;
+  border-radius: 12px;
+  padding: 0 8px;
   white-space: nowrap;
   position: relative;
   z-index: 1;
+  -webkit-transform: scale(0.5);
+  -webkit-transform-origin: top center;
 }
 .fan_list .item p .num {
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 5px;
-  margin: 1px;
-  margin-left: -3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  margin: 2px;
+  margin-left: -6px;
   background-color: rgba(161, 161, 161, 0.75);
+  line-height: 20px;
+  text-align: center;
 }
 .fan_list .item p.rank1 {
   background-color: rgba(228, 102, 97, 0.75);
