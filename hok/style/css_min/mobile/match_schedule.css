@@ -51,7 +51,7 @@
 .high_point .video_list_wrap{width:100%;margin-bottom:20px;overflow:auto;-webkit-overflow-scrolling:touch}
 .high_point .video_list_wrap::-webkit-scrollbar{height:0}
 .high_point .video_list{font-size:0;width:100%;white-space:nowrap}
-.high_point .video_list li{display:inline-block;background-color:#f4f7fa;border-radius:4px;width:153px;height:60px;font-size:12px;padding:15px 10px;margin-right:10px;white-space:normal;position:relative}
+.high_point .video_list li{display:inline-block;background-color:#f4f7fa;border-radius:4px;width:153px;font-size:12px;padding:15px 10px;margin-right:10px;line-height:18px;height:66px;max-height:66px;white-space:normal;position:relative}
 .high_point .video_list li div{display:-webkit-box;overflow:hidden;text-overflow:ellipsis;-webkit-box-orient:vertical;-webkit-line-clamp:2}
 .high_point .video_list li:active{background-color:#e0e5ea}
 .high_point .video_list li .tag{display:block;background:#fc7101;border-radius:3px;font-size:11px;color:#fff;padding:0 5px;height:15px;line-height:15px;position:absolute;left:0;top:0}
@@ -73,4 +73,4 @@
 .team_list li .logo img{display:block;width:50px;height:50px;border-radius:25px;margin:2px}
 .team_list li.current,.team_list li:active{color:#fc7101}
 .team_list li.current .logo,.team_list li:active .logo{border-color:#fc7101}
-#faycheng{content:"20170803144638"}
+#faycheng{content:"20170807170512"}
