@@ -579,15 +579,15 @@ img {
   background-color: #f4f7fa;
   border-radius: 4px;
   width: 153px;
-  font-size: 12px;
+  font-size: 0;
   padding: 15px 10px;
   margin-right: 10px;
-  height: 66px;
   white-space: normal;
   position: relative;
-  overflow: hidden;
+  vertical-align: top;
 }
 .high_point .video_list li div {
+    font-size: 12px;
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
