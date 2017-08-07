@@ -77,8 +77,8 @@ img{display:inline-block}
 .high_point .video_list_wrap{width:100%;margin-bottom:20px;overflow:auto;-webkit-overflow-scrolling:touch}
 .high_point .video_list_wrap::-webkit-scrollbar{height:0}
 .high_point .video_list{font-size:0;width:100%;white-space:nowrap}
-.high_point .video_list li{display:inline-block;background-color:#f4f7fa;border-radius:4px;width:153px;font-size:12px;padding:15px 10px;margin-right:10px;line-height:18px;height:66px;max-height:66px;white-space:normal;position:relative}
-.high_point .video_list li div{display:-webkit-box;overflow:hidden;text-overflow:ellipsis;-webkit-box-orient:vertical;-webkit-line-clamp:2}
+.high_point .video_list li{display:inline-block;background-color:#f4f7fa;border-radius:4px;width:153px;font-size:12px;padding:15px 10px;margin-right:10px;height:66px;white-space:normal;position:relative}
+.high_point .video_list li div{display:-webkit-box;overflow:hidden;text-overflow:ellipsis;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-height:18px;height:36px;max-height:36px}
 .high_point .video_list li:active{background-color:#e0e5ea}
 .high_point .video_list li .tag{display:block;background:#fc7101;border-radius:3px;font-size:11px;color:#fff;padding:0 5px;height:15px;line-height:15px;position:absolute;left:0;top:0}
 .fixed_link .map_link{position:fixed;bottom:83px;right:8px;width:53px;height:53px;background-image:url(/tencentvideo/vstyle/hok/style/img/sprite/match_schedule.png);-moz-background-size:200px auto;-o-background-size:200px auto;-webkit-background-size:200px auto;background-size:200px auto;background-position:0 -183px;color:#fff;text-align:center;line-height:53px;z-index:99;font-size:13px}
@@ -189,4 +189,4 @@ img{display:block}
 .rank_tab li.current{color:#fc7101}
 .rank_tab li.current:after{content:'';display:block;position:absolute;bottom:-7px;left:50%;margin-left:-19px;width:38px;height:7px;background-image:url(/tencentvideo/vstyle/hok/style/img/sprite/match_index.png);-moz-background-size:53px auto;-o-background-size:53px auto;-webkit-background-size:53px auto;background-size:53px auto;background-position:0 -392px}
 .rank_tab li:active{color:#fc7101}
-#faycheng{content:"20170807170512"}
+#faycheng{content:"20170807171338"}

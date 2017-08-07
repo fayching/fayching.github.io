@@ -582,9 +582,7 @@ img {
   font-size: 12px;
   padding: 15px 10px;
   margin-right: 10px;
-  line-height: 18px;
   height: 66px;
-  max-height: 66px;
   white-space: normal;
   position: relative;
 }
@@ -594,6 +592,9 @@ img {
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  line-height: 18px;
+  height: 36px;
+  max-height: 36px;
 }
 .high_point .video_list li:active {
   background-color: #e0e5ea;
