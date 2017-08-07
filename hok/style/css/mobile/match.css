@@ -585,6 +585,7 @@ img {
   height: 66px;
   white-space: normal;
   position: relative;
+  overflow: hidden;
 }
 .high_point .video_list li div {
   display: -webkit-box;
