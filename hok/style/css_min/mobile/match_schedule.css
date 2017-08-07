@@ -1,0 +1,76 @@
+@charset "UTF-8";
+.mod_toast{position:fixed;width:100%;height:100%;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;flex-direction:column;top:0;left:0;display:none;z-index:100}
+.mod_toast_content{padding:15px;color:#fff;background-color:rgba(0,0,0,.9);margin:auto;text-align:center;border-radius:4px;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;flex-direction:column;max-width:75%}
+.mod_toast.show{display:-webkit-box;display:-webkit-flex;display:flex}
+.mod_toast i{margin-bottom:10px}
+.mod_toast h4{font-size:13px}
+.mod_toast p{font-size:13px}
+.btn_normal{width:80px;height:30px;line-height:30px;border-radius:15px;text-align:center;display:block;font-size:13px}
+.btn_normal:active{opacity:.5}
+.btn_normal .icon_clock{display:inline-block;position:relative;width:11px;height:12px;background-image:url(/tencentvideo/vstyle/hok/style/img/sprite/match_schedule.png);-moz-background-size:200px auto;-o-background-size:200px auto;-webkit-background-size:200px auto;background-size:200px auto;background-position:0 -107px;margin-right:5px;top:1px}
+.btn_normal .icon_live{display:inline-block;position:relative;width:10px;height:8px;background-image:url(/tencentvideo/vstyle/hok/style/img/sprite/match_schedule.png);-moz-background-size:200px auto;-o-background-size:200px auto;-webkit-background-size:200px auto;background-size:200px auto;background-position:0 -170px;margin-right:3px;top:-1px}
+.btn_normal .icon_done{display:inline-block;position:relative;width:11px;height:8px;background-image:url(/tencentvideo/vstyle/hok/style/img/sprite/match_schedule.png);-moz-background-size:200px auto;-o-background-size:200px auto;-webkit-background-size:200px auto;background-size:200px auto;background-position:0 -141px;margin-right:3px;top:-1px}
+.icon_arrow{display:inline-block;position:relative;width:12px;height:14px;background-image:url(/tencentvideo/vstyle/hok/style/img/sprite/match_schedule.png);-moz-background-size:200px auto;-o-background-size:200px auto;-webkit-background-size:200px auto;background-size:200px auto;background-position:0 -88px;top:2px;margin-right:2px}
+.btn_subscribe{background:#f4f7fa;margin-bottom:15px}
+.btn_subscribe:active{opacity:1;background-color:#e0e5ea}
+.btn_live{background:#fc7101;color:#fff}
+.btn_review{background:#a3a3a3;color:#fff}
+.btn_all{background:#fc7101;color:#fff}
+.btn_done{background:#5ea6f0;color:#fff}
+.btn_done:active{opacity:1}
+.mod_step{width:100%;height:50px;position:fixed;z-index:99;top:0;left:0;background:url(/tencentvideo/vstyle/hok/style/img/match/bg_header.png);background-size:cover}
+.mod_step .step_list{display:-webkit-box;-webkit-box-pack:center;-webkit-box-align:center;display:-webkit-flex;-webkit-align-items:center;-webkit-justify-content:center;text-align:center}
+.mod_step .step_list li{-webkit-box-flex:1;-webkit-flex:1;line-height:50px;font-size:13px;position:relative}
+.mod_step .step_list li a{color:#fff}
+.mod_step .step_list li:after{content:'';display:block;position:absolute;width:12px;height:30px;background-image:url(/tencentvideo/vstyle/hok/style/img/sprite/match_schedule.png);-moz-background-size:200px auto;-o-background-size:200px auto;-webkit-background-size:200px auto;background-size:200px auto;background-position:0 -29px;right:-4px;top:50%;margin-top:-15px}
+.mod_step .step_list li.current a{color:#fc7101}
+.mod_step .step_list li.current:before{content:'';display:block;position:absolute;width:14px;height:7px;background-image:url(/tencentvideo/vstyle/hok/style/img/sprite/match_schedule.png);-moz-background-size:200px auto;-o-background-size:200px auto;-webkit-background-size:200px auto;background-size:200px auto;background-position:0 0;bottom:7px;left:50%;margin-left:-7px}
+.mod_step .step_list li:active a{color:#fc7101}
+.mod_step .step_list li:last-child:after{content:none}
+.mod_step+.match_list{margin-top:65px}
+.match_list{background:#fff;position:relative;margin:15px 12px}
+.match_list h3{font-weight:700;text-align:center;height:21px;line-height:21px;overflow:hidden;margin-bottom:-1px;position:relative;z-index:1;background:#fff}
+.match_list h3 .title{display:inline-block;padding:0 8px;position:relative}
+.match_list h3 .title:before{content:'';display:block;position:absolute;width:200px;height:7px;background-image:url(/tencentvideo/vstyle/hok/style/img/sprite/match_schedule.png);-moz-background-size:200px auto;-o-background-size:200px auto;-webkit-background-size:200px auto;background-size:200px auto;background-position:0 -64px;left:0;transform:translate(-100%,0);top:7px}
+.match_list h3 .title:after{content:'';display:block;position:absolute;width:200px;height:7px;background-image:url(/tencentvideo/vstyle/hok/style/img/sprite/match_schedule.png);-moz-background-size:200px auto;-o-background-size:200px auto;-webkit-background-size:200px auto;background-size:200px auto;background-position:0 -76px;right:0;top:7px;transform:translate(100%,0)}
+.match_list .icon_gold{display:inline-block;position:relative;width:16px;height:11px;background-image:url(/tencentvideo/vstyle/hok/style/img/sprite/match_schedule.png);-moz-background-size:200px auto;-o-background-size:200px auto;-webkit-background-size:200px auto;background-size:200px auto;background-position:0 -154px;top:1px;margin-right:2px}
+.match_list .icon_hot{width:24px;height:12px;font-size:9px;line-height:12px;background:#fd4242;border-radius:2px;display:inline-block;position:relative;top:-2px;color:#fff;text-align:center;margin-right:2px}
+.match_list .time{color:#666;margin-top:8px;margin-bottom:15px;font-size:12px}
+.match_list .name{font-size:16px;margin-bottom:4px}
+.match_list .match_item{display:-webkit-box;-webkit-box-pack:center;-webkit-box-align:center;-webkit-box-orient:vertical;display:-webkit-flex;-webkit-align-items:center;-webkit-justify-content:center;-webkit-flex-direction:column;text-align:center;border-top:1px solid #eaeaea}
+.match_list .match_sides{display:-webkit-box;-webkit-box-pack:center;-webkit-box-align:center;-webkit-box-orient:horizontal;display:-webkit-flex;-webkit-align-items:center;-webkit-justify-content:center;-webkit-flex-direction:row;text-align:center;margin-bottom:15px}
+.match_list .match_sides .one_side{margin:0 18px;width:80px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.match_list .match_sides .logo{border:1px solid #999;width:42px;height:42px;border-radius:21px;margin:0 auto 8px;position:relative}
+.match_list .match_sides .logo:before{content:'';display:block;width:36px;height:36px;border-radius:18px;background:url(/tencentvideo/vstyle/hok/style/img/match/avatar_default.png);background-size:cover;position:absolute;left:2px;top:2px}
+.match_list .match_sides .logo img{display:block;width:36px;height:36px;border-radius:18px;margin:2px;position:relative;z-index:1}
+.match_list .match_sides .score{font-size:19px;margin-bottom:8px}
+.high_point{margin-right:-12px}
+.high_point h4{margin-bottom:10px;position:relative}
+.high_point h4 .more{position:absolute;right:12px;top:0;color:#979797;padding-right:11px}
+.high_point h4 .more:after{content:'';display:block;position:absolute;width:7px;height:12px;background-image:url(/tencentvideo/vstyle/hok/style/img/sprite/match_schedule.png);-moz-background-size:200px auto;-o-background-size:200px auto;-webkit-background-size:200px auto;background-size:200px auto;background-position:0 -12px;right:0;top:4px}
+.high_point .video_list_wrap{width:100%;margin-bottom:20px;overflow:auto;-webkit-overflow-scrolling:touch}
+.high_point .video_list_wrap::-webkit-scrollbar{height:0}
+.high_point .video_list{font-size:0;width:100%;white-space:nowrap}
+.high_point .video_list li{display:inline-block;background-color:#f4f7fa;border-radius:4px;width:153px;height:60px;font-size:12px;padding:15px 10px;margin-right:10px;white-space:normal;position:relative}
+.high_point .video_list li div{display:-webkit-box;overflow:hidden;text-overflow:ellipsis;-webkit-box-orient:vertical;-webkit-line-clamp:2}
+.high_point .video_list li:active{background-color:#e0e5ea}
+.high_point .video_list li .tag{display:block;background:#fc7101;border-radius:3px;font-size:11px;color:#fff;padding:0 5px;height:15px;line-height:15px;position:absolute;left:0;top:0}
+.fixed_link .map_link{position:fixed;bottom:83px;right:8px;width:53px;height:53px;background-image:url(/tencentvideo/vstyle/hok/style/img/sprite/match_schedule.png);-moz-background-size:200px auto;-o-background-size:200px auto;-webkit-background-size:200px auto;background-size:200px auto;background-position:0 -183px;color:#fff;text-align:center;line-height:53px;z-index:99;font-size:13px}
+.fixed_link .team_link{position:fixed;bottom:20px;right:8px;width:53px;height:53px;background-image:url(/tencentvideo/vstyle/hok/style/img/sprite/match_schedule.png);-moz-background-size:200px auto;-o-background-size:200px auto;-webkit-background-size:200px auto;background-size:200px auto;background-position:0 -259px;color:#fff;text-align:center;line-height:53px;z-index:99}
+.fixed_link .team_current{position:absolute;top:0;left:0}
+.fixed_link .team_current .logo{width:53px;height:53px;border-radius:27px}
+.fixed_link .team_current:after{content:'';display:block;position:absolute;width:13px;height:13px;background-image:url(/tencentvideo/vstyle/hok/style/img/sprite/match_schedule.png);-moz-background-size:200px auto;-o-background-size:200px auto;-webkit-background-size:200px auto;background-size:200px auto;background-position:0 -241px;right:2px;top:2px;z-index:1}
+.fixed_link .map_link:active:after,.fixed_link .team_link:active:after{content:'';display:block;position:absolute;left:0;top:0;width:100%;height:100%;border-radius:50%;background-color:rgba(0,0,0,.4)}
+.mod_popup{position:fixed;top:0;left:0;width:100%;height:100%;z-index:100;-webkit-box-orient:horizontal;-webkit-box-pack:center;-webkit-box-align:end;-webkit-align-items:flex-end;-webkit-justify-content:center;background:rgba(0,0,0,.2);display:none}
+.mod_popup.show{display:-webkit-box;display:-webkit-flex}
+.mod_popup_content{width:100%;background:#fff;height:464px;overflow:auto;-webkit-overflow-scrolling:touch}
+.mod_popup_content header{height:42px;line-height:42px;color:#666;text-align:center;margin-bottom:12px;position:relative}
+.mod_popup_content header .icon_close{display:block;position:absolute;width:12px;height:12px;background-image:url(/tencentvideo/vstyle/hok/style/img/sprite/match_schedule.png);-moz-background-size:200px auto;-o-background-size:200px auto;-webkit-background-size:200px auto;background-size:200px auto;background-position:0 -124px;right:12px;top:14px}
+.mod_popup_content header .icon_close:after{content:"";position:absolute;top:-9px;bottom:-9px;left:-9px;right:-9px}
+.team_list{margin:0 25px}
+.team_list li{width:33.33%;float:left;text-align:center;margin-bottom:26px}
+.team_list li .logo{border:1px solid #999;width:56px;height:56px;border-radius:27px;margin:0 auto 6px}
+.team_list li .logo img{display:block;width:50px;height:50px;border-radius:25px;margin:2px}
+.team_list li.current,.team_list li:active{color:#fc7101}
+.team_list li.current .logo,.team_list li:active .logo{border-color:#fc7101}
+#faycheng{content:"20170803144638"}

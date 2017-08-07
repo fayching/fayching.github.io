@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>王者荣耀·妲己</title>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui" />
+<link rel="stylesheet" href="../style/css/mobile/hok_h5.css">
+
+</head>
+<body>
+<!-- 正式内容 开始 -->
+<div class="hero_wrap">
+	<!-- 英雄页顶部固定信息 -->
+	<div class="hero_fixed_bar "> <!-- 英雄浮层滚动，顶部固定条加 fixed_border ，此类名控制有无底部边框 -->
+		<div class="bar_info">
+			<span class="avatar"><img src="http://tacs_v1.oa.com/img.php?72x72"></span>
+			<span class="name">妲己</span>
+			<span class="desc">法师/先手</span>
+			<i class="mark_free"></i>
+			<i class="mark_new"></i>
+		</div>
+		<div class="btn_toggle fold"><span class="bnt_txt">切换英雄</span><i class="arrow_down"></i><i class="arrow_up"></i></div><!-- 点击切换英雄展开时去掉类名 fold -->
+		<div class="filter_fixed none"><!-- 当页面上滑到视频模块后去掉类名 none -->
+			<span class="filter_item">最热</span>
+			<span class="filter_item">进阶</span>
+			<span class="filter_item">反杀</span>
+		</div>
+	</div>
+	<div class="wrap_containner">
+		<!-- 当前英雄信息 -->
+		<div class="hero_info">
+			<div class="hero_skin_containner">
+				<div class="hero_skin_content">
+					<div class="hero_skin_img">
+						<img src="http://puui.qpic.cn/media_img/0/15714151497007560/0">
+					</div>
+					<div class="hero_skin_img">
+						<img src="http://puui.qpic.cn/media_img/0/15714151497007560/0">
+					</div>
+					<div class="hero_skin_img">
+						<img src="http://puui.qpic.cn/media_img/0/15714151497007560/0">
+					</div>
+				</div>
+			</div>
+			<div class="hero_skin_list">
+				<div class="skin_label">皮肤</div>
+				<div class="skin_list">
+					<span class="skin_item current">
+						<img class="skin_img" src="http://tacs_v1.oa.com/img.php?86x86">
+					</span>
+					<span class="skin_item">
+						<img class="skin_img" src="http://tacs_v1.oa.com/img.php?86x86">
+					</span>
+					<span class="skin_item">
+						<img class="skin_img" src="http://tacs_v1.oa.com/img.php?86x86">
+					</span>
+					<span class="skin_item">
+						<img class="skin_img" src="http://tacs_v1.oa.com/img.php?86x86">
+					</span>
+					<span class="skin_item">
+						<img class="skin_img" src="http://tacs_v1.oa.com/img.php?86x86">
+					</span>
+					<span class="skin_item">
+						<img class="skin_img" src="http://tacs_v1.oa.com/img.php?86x86">
+					</span>
+					<span class="skin_item">
+						<img class="skin_img" src="http://tacs_v1.oa.com/img.php?86x86">
+					</span>
+					<span class="skin_item">
+						<img class="skin_img" src="http://tacs_v1.oa.com/img.php?86x86">
+					</span>
+					<span class="skin_item">
+						<img class="skin_img" src="http://tacs_v1.oa.com/img.php?86x86">
+					</span>
+					<span class="skin_item">
+						<img class="skin_img" src="http://tacs_v1.oa.com/img.php?86x86">
+					</span><span class="skin_item">
+						<img class="skin_img" src="http://tacs_v1.oa.com/img.php?86x86">
+					</span>
+					<span class="skin_item">
+						<img class="skin_img" src="http://tacs_v1.oa.com/img.php?86x86">
+					</span>
+				</div>
+			</div>
+			<div class="hero_data_info">
+				<div class="data_circle" id="circle1"><!-- 此id仅用于演示 -->
+					<svg class="svg_circle svg_circle_1" viewBox="0 0 16 16">
+						<circle class="circle_1" r="7" cy="8" cx="8"></circle>
+						<circle class="circle_2" r="7" cy="8" cx="8" stroke-dashoffset="26.4px"></circle>
+					</svg>
+					<span class="circle_num"><em class="num">4</em></span>
+					<div class="desc">攻击</div>
+				</div>
+				<div class="data_circle">
+					<svg class="svg_circle svg_circle_2" viewBox="0 0 16 16">
+						<circle class="circle_1" r="7" cy="8" cx="8"></circle>
+						<circle class="circle_2" r="7" cy="8" cx="8" stroke-dashoffset="4.4px"></circle>
+					</svg>
+					<span class="circle_num"><em class="num">9</em></span>
+					<div class="desc">技能</div>
+				</div>
+				<div class="data_circle">
+					<svg class="svg_circle svg_circle_3" viewBox="0 0 16 16">
+						<circle class="circle_1" r="7" cy="8" cx="8"></circle>
+						<circle class="circle_2" r="7" cy="8" cx="8" stroke-dashoffset="39.6px"></circle>
+					</svg>
+					<span class="circle_num"><em class="num">1</em></span>
+					<div class="desc">生存</div>
+				</div>
+				<div class="data_circle">
+					<svg class="svg_circle svg_circle_4" viewBox="0 0 16 16">
+						<circle class="circle_1" r="7" cy="8" cx="8"></circle>
+						<circle class="circle_2" r="7" cy="8" cx="8" stroke-dashoffset="26.4px"></circle>
+					</svg>
+					<span class="circle_num"><em class="num">4</em></span>
+					<div class="desc">难度</div>
+				</div>
+			</div>
+		</div>
+		<!-- 筛选 -->
+		<div class="mod_filter_box">
+			<div class="mod_filter">
+				<span class="label">新热：</span>
+				<div class="filter_list">
+					<a class="filter_item current" href="javascript:;">最新</a>
+					<a class="filter_item" href="javascript:;">最热</a>
+				</div>
+			</div>
+			<div class="mod_filter">
+				<span class="label">等级：</span>
+				<div class="filter_list">
+					<a class="filter_item current" href="javascript:;">全部</a>
+					<a class="filter_item" href="javascript:;">新手</a>
+					<a class="filter_item" href="javascript:;">进阶</a>
+					<a class="filter_item" href="javascript:;">高端</a>
+				</div>
+			</div>
+			<div class="mod_filter">
+				<span class="label">看点：</span>
+				<div class="filter_list">
+					<a class="filter_item current" href="javascript:;">全部</a>
+					<a class="filter_item" href="javascript:;">三/四/五杀</a>
+					<a class="filter_item" href="javascript:;">反杀</a>
+					<a class="filter_item" href="javascript:;">翻盘</a>
+				</div>
+			</div>
+			<div class="mod_filter">
+				<span class="label">解说：</span>
+				<div class="filter_list">
+					<a class="filter_item current" href="javascript:;">全部</a>
+					<a class="filter_item" href="javascript:;">嗨式</a>
+					<a class="filter_item" href="javascript:;">九日</a>
+					<a class="filter_item" href="javascript:;">张大仙</a>
+					<a class="filter_item" href="javascript:;">嗨式</a>
+					<a class="filter_item" href="javascript:;">九日</a>
+					<a class="filter_item" href="javascript:;">张大仙</a>
+				</div>
+			</div>
+		</div>
+		<!-- 视频 -->
+		<div class="video_wrap">
+			<div class="mod_figure_list">
+				<div class="figure_item">
+					<div class="figure_inner">
+						<div class="figure">
+							<img class="figure_img" src="http://tacs_v1.oa.com/img.php?372x210">
+							<div class="figure_caption">
+								<span class="figure_info">25:56</span>
+							</div>
+						</div>
+						<strong class="figure_title">蜜糖解说：极限翻盘，高渐离大招超强绝处逢生超强绝处逢生</strong>
+						<div class="figure_desc">1天前</div>
+					</div>
+				</div>
+				<div class="figure_item">
+					<div class="figure_inner">
+						<div class="figure">
+							<img class="figure_img" src="http://tacs_v1.oa.com/img.php?372x210">
+							<div class="figure_caption">
+								<span class="figure_info">25:56</span>
+							</div>
+						</div>
+						<strong class="figure_title">《王者荣耀》这很soloEP12 暴走超强绝处逢生超强绝处逢生</strong>
+						<div class="figure_desc">1天前</div>
+					</div>
+				</div>
+				<div class="figure_item">
+					<div class="figure_inner">
+						<div class="figure">
+							<img class="figure_img" src="http://tacs_v1.oa.com/img.php?372x210">
+							<div class="figure_caption">
+								<span class="figure_info">25:56</span>
+							</div>
+						</div>
+						<strong class="figure_title">蜜糖解说：极限翻盘，高渐离大招超强绝处逢生超强绝处逢生</strong>
+						<div class="figure_desc">1天前</div>
+					</div>
+				</div>
+				<div class="figure_item">
+					<div class="figure_inner">
+						<div class="figure">
+							<img class="figure_img" src="http://tacs_v1.oa.com/img.php?372x210">
+							<div class="figure_caption">
+								<span class="figure_info">25:56</span>
+							</div>
+						</div>
+						<strong class="figure_title">蜜糖解说：极限翻盘，高渐离大招超强绝处逢生超强绝处逢生</strong>
+						<div class="figure_desc">1天前</div>
+					</div>
+				</div>
+				<div class="figure_item">
+					<div class="figure_inner">
+						<div class="figure">
+							<img class="figure_img" src="http://tacs_v1.oa.com/img.php?372x210">
+							<div class="figure_caption">
+								<span class="figure_info">25:56</span>
+							</div>
+						</div>
+						<strong class="figure_title">蜜糖解说：极限翻盘，高渐离大招超强绝处逢生超强绝处逢生</strong>
+						<div class="figure_desc">1天前</div>
+					</div>
+				</div>
+				<div class="figure_item">
+					<div class="figure_inner">
+						<div class="figure">
+							<img class="figure_img" src="http://tacs_v1.oa.com/img.php?372x210">
+							<div class="figure_caption">
+								<span class="figure_info">25:56</span>
+							</div>
+						</div>
+						<strong class="figure_title">蜜糖解说：极限翻盘，高渐离大招超强绝处逢生超强绝处逢生</strong>
+						<div class="figure_desc">1天前</div>
+					</div>
+				</div>
+				<div class="figure_item">
+					<div class="figure_inner">
+						<div class="figure">
+							<img class="figure_img" src="http://tacs_v1.oa.com/img.php?372x210">
+							<div class="figure_caption">
+								<span class="figure_info">25:56</span>
+							</div>
+						</div>
+						<strong class="figure_title">蜜糖解说：极限翻盘，高渐离大招超强绝处逢生超强绝处逢生</strong>
+						<div class="figure_desc">1天前</div>
+					</div>
+				</div>
+				<div class="figure_item">
+					<div class="figure_inner">
+						<div class="figure">
+							<img class="figure_img" src="http://tacs_v1.oa.com/img.php?372x210">
+							<div class="figure_caption">
+								<span class="figure_info">25:56</span>
+							</div>
+						</div>
+						<strong class="figure_title">蜜糖解说：极限翻盘，高渐离大招超强绝处逢生超强绝处逢生</strong>
+						<div class="figure_desc">1天前</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 空 -->
+		<div class="mod_empty">
+			<div class="empty_inner">
+				<i class="icon_empty"></i>
+				<p class="title">很抱歉，没有找到任何相关内容</p>
+				<p class="desc">建议您减少一些筛选条件试试</p>
+			</div>
+		</div>
+
+		<!-- loading效果全屏展示时添加类名 mod_loading_wrap -->
+		<div class="mod_loading">
+			<div class="loading_content">
+				<i class="icon_loading"></i>
+			</div>
+		</div>
+	</div>
+
+	<div class="hero_containner none">
+		<div class="mod_filter_fixed fold"><!-- 收起时添加类名fold --><!-- 当页面滑动或者筛选展开时，添加类名fixed_border -->
+			<div class="mod_filter mod_filter_top"><!-- 顶部一直固定的筛选项加类名mod_filter_top -->
+				<div class="filter_list">
+					<a class="filter_item current" href="javascript:;">全部</a>
+					<a class="filter_item" href="javascript:;">新手</a>
+					<a class="filter_item" href="javascript:;">坦克</a>
+					<a class="filter_item" href="javascript:;">战士</a>
+					<a class="filter_item" href="javascript:;">刺客</a>
+					<a class="filter_item" href="javascript:;">法师</a>
+					<a class="filter_item" href="javascript:;">新手</a>
+					<a class="filter_item" href="javascript:;">突进</a>
+					<a class="filter_item" href="javascript:;">肉盾</a>
+				</div>
+				<div class="btn_toggle fold"><i class="arrow_down"></i><i class="arrow_up"></i></div><!-- 当横滑到最后是，获取 btn_toggle:before ，设置样式为display:none,否则为display:block -->
+			</div>
+			<div class="mod_filter">
+				<span class="label">位置：</span>
+				<div class="filter_list">
+					<a class="filter_item current" href="javascript:;">全部</a>
+					<a class="filter_item" href="javascript:;">上单</a>
+					<a class="filter_item" href="javascript:;">中单</a>
+					<a class="filter_item" href="javascript:;">辅助</a>
+					<a class="filter_item" href="javascript:;">打野</a>
+					<a class="filter_item" href="javascript:;">ADC</a>
+				</div>
+			</div>
+			<div class="mod_filter">
+				<span class="label">类型：</span>
+				<div class="filter_list">
+					<a class="filter_item current" href="javascript:;">全部</a>
+					<a class="filter_item" href="javascript:;">近战</a>
+					<a class="filter_item" href="javascript:;">远程</a>
+					<a class="filter_item" href="javascript:;">魔法</a>
+					<a class="filter_item" href="javascript:;">物理</a>
+				</div>
+			</div>
+			<div class="mod_filter">
+				<span class="label">特长：</span>
+				<div class="filter_list">
+					<a class="filter_item current" href="javascript:;">全部</a>
+					<a class="filter_item" href="javascript:;">消耗</a>
+					<a class="filter_item" href="javascript:;">突进</a>
+					<a class="filter_item" href="javascript:;">团控</a>
+					<a class="filter_item" href="javascript:;">先手</a>
+					<a class="filter_item" href="javascript:;">吸引</a>
+					<a class="filter_item" href="javascript:;">突进</a>
+					<a class="filter_item" href="javascript:;">团控</a>
+					<a class="filter_item" href="javascript:;">先手</a>
+					<a class="filter_item" href="javascript:;">吸引</a>
+				</div>
+			</div>
+		</div>
+		<div class="mod_hero_list">
+			<div class="hero_item">
+				<span class="hero_avatar">
+					<img class="avatar_img" src="http://tacs_v1.oa.com/img.php?112x112">
+					<i class="mark_free"></i>
+				</span>
+				<span class="hero_name">诸葛亮诸葛亮诸葛亮</span>
+			</div>
+			<div class="hero_item">
+				<span class="hero_avatar">
+					<img class="avatar_img" src="http://tacs_v1.oa.com/img.php?112x112">
+					<i class="mark_new"></i>
+				</span>
+				<span class="hero_name">干将莫邪</span>
+			</div>
+			<div class="hero_item">
+				<span class="hero_avatar">
+					<img class="avatar_img" src="http://tacs_v1.oa.com/img.php?112x112">
+				</span>
+				<span class="hero_name">诸葛亮诸葛亮诸葛亮</span>
+			</div>
+			<div class="hero_item">
+				<span class="hero_avatar">
+					<img class="avatar_img" src="http://tacs_v1.oa.com/img.php?112x112">
+				</span>
+				<span class="hero_name">马可波罗</span>
+			</div>
+			<div class="hero_item">
+				<span class="hero_avatar">
+					<img class="avatar_img" src="http://tacs_v1.oa.com/img.php?112x112">
+				</span>
+				<span class="hero_name">妲己</span>
+			</div>
+			<div class="hero_item">
+				<span class="hero_avatar">
+					<img class="avatar_img" src="http://tacs_v1.oa.com/img.php?112x112">
+				</span>
+				<span class="hero_name">诸葛亮</span>
+			</div>
+			<div class="hero_item">
+				<span class="hero_avatar">
+					<img class="avatar_img" src="http://tacs_v1.oa.com/img.php?112x112">
+				</span>
+				<span class="hero_name">诸葛亮</span>
+			</div>
+			<div class="hero_item">
+				<span class="hero_avatar">
+					<img class="avatar_img" src="http://tacs_v1.oa.com/img.php?112x112">
+				</span>
+				<span class="hero_name">诸葛亮</span>
+			</div>
+			<div class="hero_item">
+				<span class="hero_avatar">
+					<img class="avatar_img" src="http://tacs_v1.oa.com/img.php?112x112">
+				</span>
+				<span class="hero_name">诸葛亮</span>
+			</div>
+			<div class="hero_item">
+				<span class="hero_avatar">
+					<img class="avatar_img" src="http://tacs_v1.oa.com/img.php?112x112">
+				</span>
+				<span class="hero_name">诸葛亮</span>
+			</div>
+			<div class="hero_item">
+				<span class="hero_avatar">
+					<img class="avatar_img" src="http://tacs_v1.oa.com/img.php?112x112">
+				</span>
+				<span class="hero_name">诸葛亮</span>
+			</div>
+			<div class="hero_item">
+				<span class="hero_avatar">
+					<img class="avatar_img" src="http://tacs_v1.oa.com/img.php?112x112">
+				</span>
+				<span class="hero_name">诸葛亮</span>
+			</div>
+			<div class="hero_item">
+				<span class="hero_avatar">
+					<img class="avatar_img" src="http://tacs_v1.oa.com/img.php?112x112">
+				</span>
+				<span class="hero_name">诸葛亮</span>
+			</div>
+			<div class="hero_item">
+				<span class="hero_avatar">
+					<img class="avatar_img" src="http://tacs_v1.oa.com/img.php?112x112">
+				</span>
+				<span class="hero_name">诸葛亮</span>
+			</div>
+			<div class="hero_item">
+				<span class="hero_avatar">
+					<img class="avatar_img" src="http://tacs_v1.oa.com/img.php?112x112">
+				</span>
+				<span class="hero_name">诸葛亮</span>
+			</div>
+			<div class="hero_item">
+				<span class="hero_avatar">
+					<img class="avatar_img" src="http://tacs_v1.oa.com/img.php?112x112">
+				</span>
+				<span class="hero_name">诸葛亮</span>
+			</div>
+			<div class="hero_item">
+				<span class="hero_avatar">
+					<img class="avatar_img" src="http://tacs_v1.oa.com/img.php?112x112">
+				</span>
+				<span class="hero_name">诸葛亮</span>
+			</div>
+			<div class="hero_item">
+				<span class="hero_avatar">
+					<img class="avatar_img" src="http://tacs_v1.oa.com/img.php?112x112">
+				</span>
+				<span class="hero_name">诸葛亮</span>
+			</div>
+			<div class="hero_item">
+				<span class="hero_avatar">
+					<img class="avatar_img" src="http://tacs_v1.oa.com/img.php?112x112">
+				</span>
+				<span class="hero_name">诸葛亮</span>
+			</div>
+			<div class="hero_item">
+				<span class="hero_avatar">
+					<img class="avatar_img" src="http://tacs_v1.oa.com/img.php?112x112">
+				</span>
+				<span class="hero_name">诸葛亮</span>
+			</div>
+			<div class="hero_item">
+				<span class="hero_avatar">
+					<img class="avatar_img" src="http://tacs_v1.oa.com/img.php?112x112">
+				</span>
+				<span class="hero_name">诸葛亮</span>
+			</div>
+			<div class="hero_item">
+				<span class="hero_avatar">
+					<img class="avatar_img" src="http://tacs_v1.oa.com/img.php?112x112">
+				</span>
+				<span class="hero_name">诸葛亮</span>
+			</div>
+			<div class="hero_item">
+				<span class="hero_avatar">
+					<img class="avatar_img" src="http://tacs_v1.oa.com/img.php?112x112">
+				</span>
+				<span class="hero_name">诸葛亮</span>
+			</div>
+			<div class="hero_item">
+				<span class="hero_avatar">
+					<img class="avatar_img" src="http://tacs_v1.oa.com/img.php?112x112">
+				</span>
+				<span class="hero_name">诸葛亮</span>
+			</div>
+			<div class="hero_item">
+				<span class="hero_avatar">
+					<img class="avatar_img" src="http://tacs_v1.oa.com/img.php?112x112">
+				</span>
+				<span class="hero_name">诸葛亮</span>
+			</div>
+			<div class="hero_item">
+				<span class="hero_avatar">
+					<img class="avatar_img" src="http://tacs_v1.oa.com/img.php?112x112">
+				</span>
+				<span class="hero_name">诸葛亮</span>
+			</div>
+			<div class="hero_item">
+				<span class="hero_avatar">
+					<img class="avatar_img" src="http://tacs_v1.oa.com/img.php?112x112">
+				</span>
+				<span class="hero_name">诸葛亮</span>
+			</div>
+			<div class="hero_item">
+				<span class="hero_avatar">
+					<img class="avatar_img" src="http://tacs_v1.oa.com/img.php?112x112">
+				</span>
+				<span class="hero_name">诸葛亮</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 正式内容 结束 -->
+<script type="text/javascript" src="../js/zepto.js"></script>
+<script language="javascript">
+	// 根据比列填满
+	var val = parseInt( $("#circle1 .circle_num .num").text() );
+	console.log(val);
+
+	var $circle = $('#circle1 .circle_2');
+	if( isNaN(val) ){
+		val = 10;
+	}else{
+		var r = $circle.attr('r');
+		var c = Math.PI * (r * 2);
+
+		console.log('val', val );
+		console.log(c);
+
+		if( val < 0){
+			val = 0;
+		}
+		if( val > 10){
+			val = 10;
+		}
+
+		console.log('val-', val);
+
+		var pct = ((10 - val)/10)*c;
+		console.log('pct', pct);
+
+		$circle.css({
+			'stroke-dashoffset' : pct
+		})
+	}
+
+	$(".hero_fixed_bar .btn_toggle").click(function(){
+		$(this).toggleClass("fold");
+		$(".wrap_containner").toggleClass("none");
+		$(".hero_containner").toggleClass("none");
+	});
+
+
+	$(".mod_filter .btn_toggle").click(function(){
+		$(this).toggleClass("fold");
+		$(".mod_filter_fixed").toggleClass("fold");
+		$(".hero_containner").css({"paddingTop":"171px"});
+	});
+
+
+	$(".filter_fixed").click(function(){
+		$(".mod_filter_box").addClass("mod_filter_fixed");
+	});
+
+	//广告
+	function TouchScroll(slideWrap,slide,slideNav,slideDot,activeClass) {
+		var _x;
+		var _y;
+		var _css_left = 0;
+		var leftWidth = 0;
+		var self = this;
+		var imgCurNum = 0;
+		var imgMaxNum = 0;
+		var imgMaxNum = $(slideWrap + " "+ slide).length-1;
+		var isRealDrag = false;
+		var $scrollUl = $(slideWrap);
+		var $scrollLi = $(slideWrap + " "+ slide);
+		var $modNav = $(slideNav +" "+slideDot);
+		var scrollWidth = 0;
+
+
+		$(window).bind("resize",function() {
+			switchFullscreen()
+			switchOrientation();
+			resetScroll(0);
+		});
+
+		function resetScroll(speed) {
+			if(speed == 0){
+				imgCurNum = 0;
+				leftWidth = 0;
+			}
+
+			speed = speed.toString();
+			$scrollUl.css("-webkit-transition", "-webkit-transform " + speed + "ms");
+			$scrollUl.css("transition", "-webkit-transform " + speed + "ms");
+			leftWidth =  ($scrollLi.width() + parseInt($scrollLi.css('margin-right'))) * imgCurNum;
+			$scrollUl.css("-webkit-transform", "translate3d(-" + leftWidth + "px , 0 ,0)");
+
+
+			$scrollLi.eq(imgCurNum).addClass(activeClass).siblings().removeClass(activeClass);
+			$modNav.eq(imgCurNum).addClass(activeClass).siblings().removeClass(activeClass);
+		}
+
+		this.onTouchStart = function() {
+			var touch = event.targetTouches[0];
+			_x = touch.pageX;
+			_y = touch.pageY;
+			isRealDrag = false;
+			$scrollUl.css("-webkit-transition", "-webkit-transform 0ms");
+			$scrollUl.css("transition", "-webkit-transform 0ms");
+			$(this).bind("touchmove", self.onTouchMove);
+			$(this).bind("touchend", self.onTouchEnd);
+		}
+
+		this.onTouchEnd = function() {
+			$(this).unbind("touchmove", self.onTouchMove);
+			$(this).unbind("touchend", self.onTouchEnd);
+			if (Math.abs(_css_left) > 50) {
+				if (_css_left > 0) {
+					if (imgCurNum > 0) {
+						imgCurNum--;
+					}
+				} else if (_css_left < 0) {
+					console.log('cur',imgCurNum)
+					console.log('max',imgMaxNum)
+					if (imgCurNum < imgMaxNum) {
+						imgCurNum++;
+					}
+				}
+			}
+			resetScroll(400);
+			_css_left = 0;
+		}
+
+		this.onTouchMove = function() {
+			var touch = event.targetTouches[0];
+			if (!isRealDrag) {
+				var offsetLeft = Math.abs(touch.pageX - _x);
+				if (offsetLeft < Math.abs(touch.pageY - _y)) {
+					return;
+				}
+			}
+			isRealDrag = true;
+			event.preventDefault();
+			var leftTmp = ( $scrollLi.width() + parseInt($scrollLi.css('margin-right'))) * imgCurNum / 50;
+			console.log(leftTmp);
+			_css_left = touch.pageX - _x;
+			//console.log(_css_left,leftTmp)
+			cur_x =  _css_left - leftTmp - leftWidth;
+			$scrollUl.css("-webkit-transform", "translate3d(" + cur_x + "px" + " , 0 ,0)");
+		}
+		$(slideWrap).bind("touchstart", this.onTouchStart);
+	}
+
+	TouchScroll('.hero_skin_containner','.hero_skin_img','.skin_list','.skin_item','current');
+
+</script>
+</body>
+
+</html>
