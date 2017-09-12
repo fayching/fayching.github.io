@@ -32,7 +32,7 @@
 	</section>
 	<section class="mod_row">
 		<div class="progress">
-			<span class="progress_bar" style="width: 56%">12.2亿	<i class="icon_heart show">+1</i></span>
+			<span class="progress_bar" style="width: 56%">12.2亿	<i class="icon_heart">+1</i></span>
 
 		</div>
 		<div class="timeline">
@@ -221,6 +221,9 @@
 	<script src="../js/zepto.js"></script>
 	<script src='http://vm.gtimg.cn/tencentvideo/txp/js/txplayer.js'></script>
 	<script>
+	setTimeout(function(){
+		$('.icon_heart').addClass('show')
+	},2000)
 	var player = new Txplayer({
 	  containerId: 'player1',
 	  vid: 'r0018hmh1pa',
