@@ -809,14 +809,14 @@ body {
   background-position: 0 -18px;
   font-size: 9px;
   color: #ffcbcb;
-  opacity: 1;
+  opacity: 0;
 }
-/*
-.icon_heart.show {
 
+.icon_heart.show {
+    opacity: 1;
     animation: showUp 2s;
     -webkit-animation: showUp 2s;
-}*/
+}
 
 .progress_bar .icon_heart {
   position: absolute;
