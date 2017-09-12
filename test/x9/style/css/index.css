@@ -813,9 +813,9 @@ body {
 }
 
 .icon_heart.show {
-    opacity: 1;
-    -webkit-animation: showUp 2s both;
-    animation: showUp 2s both;
+
+    animation: showUp 2s;
+    -webkit-animation: showUp 2s;
 }
 
 .progress_bar .icon_heart {
