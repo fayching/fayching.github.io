@@ -771,7 +771,7 @@ body {
 
 @-webkit-keyframes showUp {
   0% {
-    -webkit-transform: translate3d(0, 10px, 0) scale3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 10px, 0) scale3d(.3, .3, .3);
     opacity: 0;
   }
   30% {
@@ -783,20 +783,7 @@ body {
     opacity: 0;
   }
 }
-@keyframes showUp {
-  0% {
-    transform: translate3d(0, 10px, 0) scale3d(0, 0, 0);
-    opacity: 0;
-  }
-  30% {
-    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
-    opacity: 1;
-  }
-  100% {
-    transform: translate3d(0, -100px, 0);
-    opacity: 0;
-  }
-}
+
 .icon_heart {
   display: block;
   width: 19px;
@@ -813,8 +800,6 @@ body {
 }
 
 .icon_heart.show {
-    opacity: 1;
-    animation: showUp 2s;
     -webkit-animation: showUp 2s;
 }
 
