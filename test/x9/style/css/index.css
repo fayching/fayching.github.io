@@ -769,7 +769,7 @@ body {
   margin-right: 4px;
 }
 
-@-webkit-keyframes show {
+@-webkit-keyframes showUp {
   0% {
     -webkit-transform: translate3d(0, 10px, 0) scale3d(0, 0, 0);
     opacity: 0;
@@ -783,7 +783,7 @@ body {
     opacity: 0;
   }
 }
-@keyframes show {
+@keyframes showUp {
   0% {
     transform: translate3d(0, 10px, 0) scale3d(0, 0, 0);
     opacity: 0;
@@ -813,8 +813,8 @@ body {
 }
 
 .icon_heart.show {
-  -webkit-animation: show 2s both;
-  animation: show 2s both;
+  -webkit-animation: showUp 2s both;
+  animation: showUp 2s both;
 }
 
 .progress_bar .icon_heart {
