@@ -1,0 +1,57 @@
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;-webkit-tap-highlight-color:transparent;-webkit-user-select:none}
+article,aside,blockquote,body,button,code,dd,div,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}
+*{box-sizing:border-box}
+body{font-family:"Helvetica Neue",Helvetica,STHeiTi,sans-serif;line-height:1.5;font-size:13px;color:#000;font-weight:400}
+body,html{min-height:100%}
+h1,h2,h3,h4,h5,h6{font-weight:400;font-size:100%}
+a{text-decoration:none;background:0 0;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}
+a:active{outline:0}
+li{list-style:none}
+b,strong{font-weight:700}
+fieldset,img{border:0}
+svg:not(:root){overflow:hidden}
+hr{height:0}
+pre{overflow:auto}
+legend{border:0;padding:0}
+optgroup{font-weight:700}
+table{border-collapse:collapse;border-spacing:0}
+em,i{font-style:normal}
+ins{text-decoration:none}
+del{text-decoration:line-through}
+button,input,optgroup,option,select,textarea{font:inherit;outline:0;border:0;box-sizing:content-box;-webkit-box-sizing:content-box}
+button,input[type=button],input[type=reset],input[type=submit]{-webkit-tap-highlight-color:transparent;-webkit-appearance:none;appearance:none;background:0 0}
+input[type=search],input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;appearance:none}
+input:focus,select:focus,textarea:focus{outline:0;-webkit-tap-highlight-color:transparent}
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#666}
+img{display:inline-block}
+.none{display:none!important}
+.svg_icon{display:inline-block;width:100%;height:100%;vertical-align:top;pointer-events:none}
+.svg_icon path,.svg_icon use{fill:currentColor}
+body,html{height:100%;overflow:hidden;background:#fff}
+.none{display:none}
+.wrap{position:relative;z-index:2;display:-webkit-box;-webkit-box-orient:vertical;height:100%;padding-bottom:0}
+.main{position:relative;-webkit-box-flex:1}
+.slider{position:absolute;top:0;right:0;bottom:0;left:0}
+.slider .slider_list{height:100%;white-space:nowrap;font-size:0}
+.slider .slider_item{display:inline-block;position:relative;width:100%;height:100%}
+.slider .slider_item .img{position:absolute;left:50%;bottom:0;width:67.73%;background:#fff;border-radius:5px;-webkit-transform:translateX(-50%) translatez(0) scale(.77);transform:translateX(-50%) translatez(0) scale(.77);-webkit-transition:-webkit-transform .4s;transition:transform .4s;box-shadow:0 5px 20px rgba(0,0,0,.2)}
+.slider .slider_item .img img{width:100%;height:100%;opacity:.2;-webkit-transition:opacity .4s;transition:opacity .4s}
+.slider .slider_item.current{opacity:1;-webkit-transform:translateX(0);transform:translateX(0)}
+.slider .slider_item.current .img{-webkit-transform:translateX(-50%) translatez(0) scale(1);transform:translateX(-50%) translatez(0) scale(1)}
+.slider .slider_item.current .img img{opacity:1}
+.slider .fake_first{-webkit-transform:translateX(27%);transform:translateX(27%)}
+.slider .fake_last{-webkit-transform:translateX(-27%);transform:translateX(-27%)}
+.slider_nav{margin:23px 0 22px 0;font-size:0;text-align:center}
+.slider_nav .nav_item{display:inline-block;vertical-align:top;width:10px;height:2px;margin:0 3px;border-radius:1px;background:#fff;opacity:.23;-webkit-transition:opacity .6s;transition:opacity .6s}
+.slider_nav .nav_item.current{opacity:1}
+.btn_download{position:relative;display:block;width:67.73%;height:44px;margin:0 auto 30px;text-align:center;font-size:15px;line-height:44px;letter-spacing:2px;font-weight:700;background:#fff;border-radius:22px;-webkit-transition:color .4s;transition:color .4s}
+@media (max-height:550px){
+.btn_download,.slider .img{width:62%}
+.btn_download{height:36px;line-height:36px;margin-bottom:15px}
+.slider_nav{margin:12px 0}
+}
+.btn_download:active{opacity:.9}
+.btn_progress{font-size:0}
+.btn_progress span.text{position:absolute;left:0;top:0;font-size:15px;width:100%;height:44px;line-height:42px;z-index:1}
+.btn_progress span.bar{position:absolute;left:0;top:0;height:100%;border-radius:22px 0 0 22px}
+#faycheng{content:"20171108102057"}

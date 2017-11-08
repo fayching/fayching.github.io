@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>福利</title>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui" />
+<link rel="stylesheet" href="../../style/css/fan/fan.css">
+
+</head>
+<body ontouchstart>
+
+		<section class="mod_panel">
+			<h3 class="mod_panel_title">特权福利</h3>
+			<div class="mod_list_row_scroll">
+				<ul class="mod_list_row list_welfare">
+
+					<li>
+						<img src="../../style/img/fan/lv_s.png" width="56">
+						<h4>兑换特权</h4>
+						<p>专属真爱粉</p>
+					</li>
+					<li>
+						<img src="../../style/img/fan/vb_s.png" width="56">
+						<h4>加成特权</h4>
+						<p>V币奖励加成</p>
+					</li>
+					<li>
+						<img src="../../style/img/fan/welfare_fan.png" width="56">
+						<h4>团长特权</h4>
+						<p>申请粉丝团长</p>
+					</li>
+					<li>
+						<img src="../../style/img/fan/welfare_fan.png" width="56">
+						<h4>团长特权</h4>
+						<p>申请粉丝团长</p>
+					</li>
+
+				</ul>
+			</div>
+		</section>
+		<section class="mod_panel">
+			<h3 class="mod_panel_title">礼包福利</h3>
+			<h4 class="mod_panel_subtitle">鹿晗签名壁纸</h4>
+			<div class="mod_list_row_scroll">
+				<ul class="mod_list_row list_welfare_img">
+					<li>
+						<img src="http://tacs_v1.oa.com/img.php?216x305" width="108">
+					</li>
+					<li>
+						<img src="http://tacs_v1.oa.com/img.php?216x305" width="108">
+					</li>
+					<li>
+						<img src="http://tacs_v1.oa.com/img.php?216x305" width="108">
+					</li>
+					<li>
+						<img src="http://tacs_v1.oa.com/img.php?216x305" width="108">
+					</li>
+				</ul>
+			</div>
+			<h4 class="mod_panel_subtitle">鹿晗专属语音</h4>
+			<div class="mod_voice">
+				<div class="avatar"><img src="http://tacs_v1.oa.com/img.php?80x80" width="40" ></div>
+				<div class="bar_voice"><i class="icon_voice"></i><span class="duration">12”</span></div>
+				<button class="mod_btn mod_btn_outline">下载</button>
+			</div>
+			<h4 class="mod_panel_subtitle">鹿晗专属视频</h4>
+			<div class="mod_player" id="mod_player">
+				<img src="http://i.gtimg.cn/qqlive/images/20151229/poster.jpg" alt="" />
+			</div>
+
+		</section>
+
+	<script src="../../js/zepto.js"></script>
+	<script src='http://vm.gtimg.cn/tencentvideo/txp/js/txplayer.js'></script>
+	<script>
+	var player = new Txplayer({
+	  containerId: 'mod_player',
+	  vid: 'r0018hmh1pa',
+	  width: '100%',
+	  height: (screen.availWidth-24)/16*9
+	});
+	</script>
+</body>
+
+</html>
