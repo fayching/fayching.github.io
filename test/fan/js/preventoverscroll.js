@@ -16,7 +16,7 @@ var doc            = document,
 		list           : [],
 		cClass         : 'prevent_over_scroll_container',
 		styleId        : 'prevent_over_scroll_style',
-		styleStr       : '{overflow-y: scroll; -webkit-overflow-scrolling: touch;}'
+		styleStr       : '{overflow: scroll; -webkit-overflow-scrolling: touch;}'
 	};
 
 function PreventOverScroll(options) {
