@@ -1159,7 +1159,7 @@ img {
   height: 224px;
 }
 .mod_popup_badge .mod_info img {
-  -webkit-transform: scale3d(2, 2, 1);
+  -webkit-transform: scale(2, 2);
   -webkit-transform-origin: top center;
 }
 .mod_popup_badge .mod_info .star_item {
