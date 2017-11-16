@@ -12,9 +12,9 @@
 	<section class="mod_popup mod_popup_badge mod_popup_badge_share show">
 		<div class="mod_popup_content">
 
-			<div class="mod_info">
+			<div class="mod_info" >
 				<div class="badge_wrap">
-					<div class="badge"><img src="https://puui.qpic.cn/vupload/0/doki_badge_ABC_4.png/0"></div>
+					<div class="badge"><img src="../../style/img/fan/5.png" class="placeholder"> <img src="https://puui.qpic.cn/vupload/0/doki_badge_ABC_1.png/0" class="badge_img" style="display:none" ></div>
 				</div>
 
 				<div class="star_list">
@@ -44,14 +44,11 @@
 	</section>
 	<script type="text/javascript" src="../../js/zepto.js"></script>
 	<script language="javascript">
-	// $('.mod_popup_badge').addClass('animated1');
-	//
-	// setTimeout(function () {
-	// 	$('.mod_popup_badge').addClass('animated2');
-	// },2500)
-	// setTimeout(function () {
-	// 	$('.mod_popup_badge').addClass('animated3');
-	// },3000)
+
+	$('.badge_img')[0].onload = function() {
+		$('.placeholder').hide();
+		$('.badge_img').show();
+	};
 	</script>
 </body>
 

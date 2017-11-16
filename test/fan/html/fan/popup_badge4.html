@@ -27,7 +27,7 @@
 			<div class="mod_info mod_info_next">
 				<p class="update_text">恭喜你，徽章升级啦！</p>
 				<div class="badge_wrap">
-					<div class="badge"><img src="../../style/img/fan/5.png" class="placeholder"> <img src="https://puui.qpic.cn/vupload/0/doki_badge_ABC_1.png/0" class="badge_img" style="display:none" ></div>
+					<div class="badge"><img src="../../style/img/fan/3.png" id="badge"></div>
 				</div>
 
 				<div class="star_list">
@@ -84,23 +84,15 @@
 	</section>
 	<script type="text/javascript" src="../../js/zepto.js"></script>
 	<script language="javascript">
-		$('.badge_img')[0].onload = function() {
-			$('.placeholder').hide();
-			$('.badge_img').show();
-		};
-		setTimeout(function () {
-			$('.mod_popup_badge').addClass('animated1');
-		},500);
 
+		$('.mod_popup_badge').addClass('animated1');
 
 		setTimeout(function () {
 			$('.mod_popup_badge').addClass('animated2');
 		},2500)
 		setTimeout(function () {
 			$('.mod_popup_badge').addClass('animated3');
-		},3500)
-
-
+		},3000)
 	</script>
 </body>
 
