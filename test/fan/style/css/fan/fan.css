@@ -836,7 +836,7 @@ img {
   }
   to {
     opacity: 1;
-    -webkit-transform: scale3d(1, 1, 1);
+    -webkit-transform: scale(1, 1);
   }
 }
 @-webkit-keyframes slideInUp {
@@ -888,7 +888,7 @@ img {
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 170px, 0) scale3d(1, 1, 1);
+    -webkit-transform: translate3d(0, 170px, 0) scale(1, 1, 1);
   }
 }
 .mod_popup {
@@ -1158,7 +1158,10 @@ img {
   width: 300px;
   height: 224px;
 }
-.mod_popup_badge .mod_info img {
+.mod_popup_badge .mod_info .badge {
+  width: 150px;
+  height: 112px;
+  margin: auto;
   -webkit-transform: scale(2, 2);
   -webkit-transform-origin: top center;
 }
@@ -1208,11 +1211,11 @@ img {
 .mod_popup_badge.animated1 .mod_info_next {
   opacity: 0;
   display: block;
-  -webkit-animation: bounceIn 1s .8s ease-in forwards;
+  -webkit-animation: bounceIn 1s .8s forwards;
 }
 
-.mod_popup_badge.animated2 .mod_info_next img {
-  -webkit-transform: scale3d(1, 1, 1);
+.mod_popup_badge.animated2 .mod_info_next .badge {
+  -webkit-transform: scale(1, 1);
   -webkit-transition: all .5s;
 }
 .mod_popup_badge.animated2 .mod_info_next .badge_wrap {
@@ -1264,7 +1267,7 @@ img {
   opacity: 1;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 360px) {
   .mod_popup_content {
     margin-top: -100px;
   }
@@ -1633,7 +1636,7 @@ img {
   margin-bottom: 5px;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 360px) {
   .fans_rank {
     margin: 0 0 30px;
   }
@@ -1779,7 +1782,7 @@ img {
 }
 
 .checkin_gift_list {
-  margin: 23px 4px 6px 12px;
+  margin: 0 4px 6px 12px;
   font-size: 0;
 }
 .checkin_gift_list li {
@@ -1984,6 +1987,7 @@ img {
   text-align: center;
   color: #666;
   font-size: 13px;
+  margin-bottom: 23px;
 }
 .checkin_tips em {
   font-size: 18px;
