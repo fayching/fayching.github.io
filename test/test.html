@@ -18,7 +18,7 @@ figure .image-wrap {
 }
 figure .image-wrap .oldImage {
     width: 100%;
-    -webkit-filter: blur(10px);
+    -webkit-filter: blur(5px);
     transition: all 0.5s
 }
 </style>
@@ -51,8 +51,9 @@ figure .image-wrap .oldImage {
 	newImage.src = src;
 	newImage.style.cssText = 'position: absolute;left:0;top:0;width:100%;z-index:-1';
 	newImage.onload = function () {
-		imageParentDom.appendChild(newImage);
+
 		setTimeout(() => {
+			imageParentDom.appendChild(newImage);
 		    imageParentDom.removeChild(image);
 		},500)
 	}
