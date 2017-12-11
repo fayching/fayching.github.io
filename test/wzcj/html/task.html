@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>王者出击</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover" />
+<link rel="stylesheet" href="../style/css/wzcj.css"  />
+
+</head>
+<body ontouchstart >
+	<div class="container">
+		<!-- <div style="background-image:url(../style/img/bg.jpg);position:fixed; width:100%;height:100%;background-size:cover"></div> -->
+		<div class="mask"></div>
+		<header class="head">
+			<div class="avatar">
+				<img src="http://tacs_v1.oa.com/img.php?60x60" class="avatar2">
+			</div>
+			<!-- <div class="avatar_tips"></div> -->
+			<div class="title_task">为<span class="name">迪力热巴</span>做任务，积晶片抽大奖</div>
+			<div class="link_assets"></div>
+			<div class="link_rule"></div>
+			<i class="icon_close"></i>
+		</header>
+		<section class="wrap_task">
+			<div class="task_row">
+				<div class="task_box">
+					<ul class="task_list">
+						<li>
+							<div class="task task1"></div>
+							<div class="content">看王者影片5分钟获10能量</div>
+							<div class="action">
+								<div class="crystal_detail"><div class="icon_crystal_wrap"><i class="icon_crystal"></i></div><i class="icon_add"></i><span class="num">10</span></div>
+								<div class="tips">（点击领取）</div>
+							</div>
+						</li>
+						<li>
+							<div class="task task2"></div>
+							<div class="content">看王者影片5分钟获10能量</div>
+							<div class="action">
+								<button class="btn btn_link">前往</button>
+							</div>
+						</li>
+						<li>
+							<div class="task task3"></div>
+							<div class="content">看王者影片5分钟获10能量</div>
+							<div class="action">
+								<i class="icon_done"></i>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="gift">
+					<div class="crystal_num">
+						<div><span>已有晶片</span><span class="num">30</span></div>
+						<div><span>抽奖次数</span><span class="num">3</span></div>
+					</div>
+					<div class="crystal">
+						<div class="crystal_img crystal_stat3"></div>
+					</div>
+					<button class="btn btn_lottery btn_disabled">去抽奖</button>
+					<p class="lottery_tips">新增1次能量值=1次抽奖机会</p>
+					<div class="link_assets"></div>
+					<div class="link_rule"></div>
+
+				</div>
+			</div>
+
+		</section>
+</div>
+	<script src="../js/zepto.js"></script>
+
+	<script>
+	var disX = $('.crystal').offset().left - $('.icon_crystal').offset().left + 110 ;
+	var disY = $('.crystal').offset().top - $('.icon_crystal').offset().top  ;
+	setTimeout(function () {
+
+		$('.icon_crystal_wrap').css({ '-webkit-transform': 'translateX('+disX+'px)'}).addClass('animated');
+		$('.icon_crystal').css({ '-webkit-transform': 'translateY('+disY+'px)'})
+	},1000);
+	setTimeout(function () {
+		$('.icon_crystal_wrap').hide();
+	},1500);
+	</script>
+</body>
+</html>

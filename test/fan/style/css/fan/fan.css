@@ -982,7 +982,7 @@ img {
 
 .mod_popup_content_scroll {
   width: 100%;
-  height: auto;
+  height: 420px;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }

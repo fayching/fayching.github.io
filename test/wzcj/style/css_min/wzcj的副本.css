@@ -1,0 +1,342 @@
+@charset "UTF-8";
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;background-color:#fff}
+article,aside,blockquote,body,button,code,dd,div,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}
+*{box-sizing:border-box}
+body{font-family:"Helvetica Neue",Helvetica,STHeiTi,sans-serif;line-height:1.5;font-size:13px;color:#fff;font-weight:400;background:#131317}
+h1,h2,h3,h4,h5,h6{font-weight:400;font-size:100%}
+a{text-decoration:none;background:0 0;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}
+a:active{outline:0}
+li{list-style:none}
+b,strong{font-weight:700}
+fieldset,img{border:0}
+svg:not(:root){overflow:hidden}
+hr{height:0}
+pre{overflow:auto}
+legend{border:0;padding:0}
+optgroup{font-weight:700}
+table{border-collapse:collapse;border-spacing:0}
+em,i{font-style:normal}
+ins{text-decoration:none}
+del{text-decoration:line-through}
+button,input,optgroup,option,select,textarea{font:inherit;outline:0;border:0;box-sizing:content-box;-webkit-box-sizing:content-box}
+button,input[type=button],input[type=reset],input[type=submit],select{-webkit-tap-highlight-color:transparent;-webkit-appearance:none;appearance:none;background:0 0}
+input[type=search],input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;appearance:none}
+input:focus,select:focus,textarea:focus{outline:0;-webkit-tap-highlight-color:transparent}
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#666}
+img{display:inline-block}
+.none{display:none!important}
+a,em{color:#f7d371}
+@media screen and (max-width:319px){
+html{font-size:85.33333px}
+}
+@media screen and (min-width:320px) and (max-width:359px){
+html{font-size:85.33333px}
+}
+@media screen and (min-width:360px) and (max-width:374px){
+html{font-size:96px}
+}
+@media screen and (min-width:375px) and (max-width:383px){
+html{font-size:100px}
+}
+@media screen and (min-width:384px) and (max-width:399px){
+html{font-size:102.4px}
+}
+@media screen and (min-width:400px) and (max-width:411px){
+html{font-size:106.66667px}
+}
+@media screen and (min-width:412px) and (max-width:413px){
+html{font-size:109.86667px}
+}
+@media screen and (min-width:414px){
+html{font-size:110.4px}
+}
+.mod_dialog{position:fixed;top:0;left:0;width:100%;height:100%;z-index:100;-webkit-box-align:center;-webkit-align-items:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;flex-direction:column;background:rgba(0,0,0,.6);display:none;color:#000}
+.mod_dialog.show{display:-webkit-box;display:-webkit-flex;display:flex}
+.mod_dialog_content{border-radius:5px;width:290px;background-clip:padding-box;pointer-events:auto;background-color:#fff;position:relative}
+.mod_dialog_body{margin:25px 18px;font-size:16px;line-height:27px;text-align:center}
+.mod_dialog_body h3{font-size:17px;margin-bottom:10px}
+.mod_dialog_body .mod_dialog_text{font-size:13px;text-align:justify}
+.mod_dialog_foot{border-bottom-left-radius:5px;border-bottom-right-radius:5px;display:-webkit-box;display:-webkit-flex;display:flex;width:100%;-webkit-box-align:center;-webkit-align-items:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;height:50px;line-height:50px;position:relative;font-size:16px}
+.mod_dialog_foot button{text-align:center;width:100%;background:0 0;display:block;margin:0;position:relative}
+.mod_dialog_foot:before{border-top:1px solid #f3f3f3;content:'';display:block;width:100%;position:absolute;left:0;top:0;-webkit-transform-origin:left top;transform-origin:left top}
+.mod_dialog_foot button:after{border-right:1px solid #f3f3f3;content:'';display:block;bottom:0;position:absolute;right:0;top:0;-webkit-transform-origin:right top;transform-origin:right top}
+.mod_dialog_foot button:active{opacity:.6}
+.mod_dialog_foot button:first-child{border-bottom-left-radius:5px}
+.mod_dialog_foot button:last-child{border-right:0;border-bottom-right-radius:5px}
+.mod_dialog_foot button:last-child:after{content:none}
+@media screen and (-webkit-min-device-pixel-ratio:2){
+.mod_dialog_foot:before{-webkit-transform:scaleY(.5);transform:scaleY(.5)}
+.mod_dialog_foot button:after{-webkit-transform:scaleX(.5);transform:scaleX(.5)}
+}
+@media screen and (-webkit-min-device-pixel-ratio:3){
+.mod_dialog_foot:before{-webkit-transform:scaleY(.3333);transform:scaleY(.3333)}
+.mod_dialog_foot button:after{-webkit-transform:scaleX(.3333);transform:scaleX(.3333)}
+}
+html{background:0 0!important}
+body{background:0 0;color:#fff}
+body,html{width:100%;height:100%}
+a{color:#fdb71d}
+.mask{background:rgba(0,0,0,.8);width:100%;height:100%;position:fixed;left:0;top:0;z-index:0}
+.container{width:100%;height:100%;position:relative;overflow:auto;-webkit-overflow-scrolling:touch}
+.container .head{background:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/bg_title.png);background-size:auto 52px;position:fixed;left:0;top:0;width:100%;height:52px;z-index:99;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center;padding-left:20px}
+.container .head .avatar{display:inline-block;margin:0 12px 0 0;font-size:0;position:relative}
+.container .head .avatar img{width:30px;height:30px;border:2px #fff solid;border-radius:16px}
+.container .head .avatar1{position:relative;z-index:1}
+.container .head .avatar2{margin-left:-8px}
+.container .head .icon_vip{position:absolute;right:-17px;top:17px;z-index:3}
+.container .head .title{font-size:19px;font-weight:500;display:block}
+.container .head .link_assets{position:absolute;right:142px;top:18px}
+.container .head .link_assets:active{opacity:.7}
+.container .head .link_rule{position:absolute;right:75px;top:18px}
+.container .head .link_rule:active{opacity:.7}
+.container .head .name{position:relative;top:-2px;display:inline-block;font-size:19px;line-height:24px;vertical-align:top;margin:0 4px;font-weight:700;color:rgba(231,183,78,.9);text-shadow:1px 0 0 #975500,-1px 0 0 #975500,0 1px 0 #975500,0 -1px 0 #975500}
+.link_assets{width:47px;height:14px;background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/sprite/common.png);-moz-background-size:204px auto;-o-background-size:204px auto;-webkit-background-size:204px auto;background-size:204px auto;background-position:0 -298px}
+.link_rule{width:48px;height:14px;background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/sprite/common.png);-moz-background-size:204px auto;-o-background-size:204px auto;-webkit-background-size:204px auto;background-size:204px auto;background-position:0 -317px;position:relative}
+.link_rule:after{content:'';background-color:#01010a;box-shadow:1px 0 0 0 rgba(0,84,255,.24);position:absolute;width:1px;height:14px;position:absolute;right:-12px;top:0;pointer-events:none}
+.icon_close{width:19px;height:21px;background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/sprite/common.png);-moz-background-size:204px auto;-o-background-size:204px auto;-webkit-background-size:204px auto;background-size:204px auto;background-position:0 -255px;position:absolute;right:16px;top:14px}
+.icon_close:after{content:'';display:block;position:absolute;left:-7px;top:-7px;right:-7px;bottom:-7px}
+.wrap{margin:0;width:100%;height:100%;z-index:98;padding-top:52px;position:absolute;top:0;left:0;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-orient:vertical;-webkit-flex-direction:column;flex-direction:column;-webkit-box-align:center;-webkit-align-items:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center}
+.wrap h3{font-size:19px;margin-bottom:16px}
+.num{font-size:30px;font-weight:700;color:rgba(231,183,78,.9);text-shadow:1px 0 0 #975500,-1px 0 0 #975500,0 1px 0 #975500,0 -1px 0 #975500;line-height:1}
+.box{border:1px solid #00354e;border-radius:6px;background-color:rgba(16,16,35,.7)}
+.btn{width:122px;height:40px;background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/sprite/common.png);-moz-background-size:204px auto;-o-background-size:204px auto;-webkit-background-size:204px auto;background-size:204px auto;background-position:0 -91px;font-size:15px;font-weight:700;text-shadow:0 3px 2px rgba(255,175,0,.52);white-space:nowrap;text-align:center;line-height:40px;color:#fff}
+.btn:active{opacity:.7}
+.btn_disabled{background-position:0 -136px;color:#6f6f6f;text-shadow:0 0 1px rgba(255,255,255,.8)}
+.btn_disabled:active{opacity:1}
+.btn_link{width:59px;height:24px;background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/sprite/common.png);-moz-background-size:204px auto;-o-background-size:204px auto;-webkit-background-size:204px auto;background-size:204px auto;background-position:0 -181px;line-height:24px;font-size:13px}
+.rank_num{display:block;width:60px;height:45px;background-size:47px 45px;background-repeat:no-repeat;margin:0 6px;background-position:center}
+.rank_num1{background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/rank1.png)}
+.rank_num2{background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/rank2.png)}
+.rank_num3{background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/rank3.png)}
+.rank_num4{background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/rank4.png)}
+.dialog_rule{background:0 0}
+.dialog_rule .mod_dialog_content{background-color:rgba(0,1,12,.902)}
+.dialog_rule .mod_dialog_body{height:225px;overflow:auto;color:#fffefe}
+.dialog_rule .icon_dialog_close{display:block;position:absolute;top:10px;right:10px;width:12px;height:12px;background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/sprite/common.png);-moz-background-size:204px auto;-o-background-size:204px auto;-webkit-background-size:204px auto;background-size:204px auto;background-position:0 -281px}
+.dialog_rule .icon_dialog_close:active{opacity:.7}
+.dialog_rule .icon_dialog_close:after{content:'';display:block;position:absolute;left:-7px;top:-7px;right:-7px;bottom:-7px}
+@media (orientation:portrait){
+body{background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/bg_portrait.jpg);background-size:100% auto}
+.mask{display:none}
+.container .head{background:0 0;position:static;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;padding-left:0}
+.container .head .avatar_tips,.container .head .icon_close,.container .head .link_assets,.container .head .link_rule{display:none}
+.wrap{padding-top:0;height:auto;position:static}
+}
+.wrap_task{position:absolute;top:52px;left:0;z-index:10;width:100%;overflow:hidden;text-align:center;min-height:288px}
+.title_task{display:block;font-size:0;margin-top:3px;position:relative}
+.title_task:before{content:'';display:inline-block;width:171px;height:22px;background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/sprite/task.png);-moz-background-size:240px auto;-o-background-size:240px auto;-webkit-background-size:240px auto;background-size:240px auto;background-position:0 -637px}
+.title_task:after{content:'';display:inline-block;width:85px;height:22px;background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/sprite/task.png);-moz-background-size:240px auto;-o-background-size:240px auto;-webkit-background-size:240px auto;background-size:240px auto;background-position:0 -691px}
+.crystal_num{border:1px solid #010109;border-right:0;border-radius:6px 0 0 6px;background-image:-webkit-linear-gradient(90deg,rgba(11,11,25,.6) 0,rgba(24,24,62,.6) 50%,rgba(7,7,17,.6) 100%);box-shadow:inset 0 0 3px rgba(19,102,255,.14);position:absolute;top:-10px;right:0;text-align:left;font-size:11px;line-height:20px;padding:6px 10px}
+.crystal_num .num{font-size:15px;line-height:21px;margin-left:3px;display:inline-block;vertical-align:top}
+.crystal_detail{margin-top:-4px;padding-left:20px}
+.crystal_detail .num{display:inline-block;vertical-align:top}
+.icon_add{display:inline-block;vertical-align:top;width:9px;height:9px;background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/sprite/task.png);-moz-background-size:240px auto;-o-background-size:240px auto;-webkit-background-size:240px auto;background-size:240px auto;background-position:0 -75px;margin:14px 7px 0}
+.icon_crystal_wrap{position:absolute;top:0;left:0}
+.icon_crystal_wrap.animated{-webkit-transition:-webkit-transform .5s linear}
+.icon_crystal_wrap.animated .icon_crystal{-webkit-transition:-webkit-transform .5s cubic-bezier(0,.98,.42,1.95)}
+.icon_crystal{display:inline-block;width:24px;height:23px;background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/sprite/task.png);-moz-background-size:240px auto;-o-background-size:240px auto;-webkit-background-size:240px auto;background-size:240px auto;background-position:0 -89px}
+.icon_done{width:30px;height:23px;background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/sprite/task.png);-moz-background-size:240px auto;-o-background-size:240px auto;-webkit-background-size:240px auto;background-size:240px auto;background-position:0 -117px;display:block}
+.task_box{border:1px solid #006392;border-radius:6px;background-color:rgba(16,16,35,.8);background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/task_box.png);background-size:352px auto;width:352px;height:236px;margin-left:30px;margin-top:32px;position:relative;z-index:1}
+.task_box .vip_tips{color:#4a404f;position:absolute;top:-24px}
+.task_list li{height:77px;margin:0 32px;color:rgba(255,255,255,.2);position:relative}
+.task_list li .content{position:absolute;top:45px}
+.task_list li .action{position:absolute;top:30px;right:0;font-size:0}
+.task_list li .action .tips{font-size:11px;text-align:center}
+.task_list li .task{width:81px;height:15px;background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/sprite/task.png);-moz-background-size:240px auto;-o-background-size:240px auto;-webkit-background-size:240px auto;background-size:240px auto;position:absolute;top:22px}
+.task_list li .task1{background-position:0 -577px}
+.task_list li .task2{background-position:0 -597px}
+.task_list li .task3{background-position:0 -617px}
+.gift{position:absolute;right:0;top:27px;width:100%;padding-left:382px;text-align:center;background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/smoke.png);background-size:450px auto;background-position:right center;background-repeat:no-repeat}
+.gift .lottery_tips{color:#4a404f;margin-top:4px}
+.gift .link_assets,.gift .link_rule{display:none}
+.crystal .crystal_img{position:absolute;top:-72px;left:0;width:240px;height:320px}
+.crystal .crystal_img.crystal_stat1{width:240px;height:320px;background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/sprite/task.png);-moz-background-size:240px auto;-o-background-size:240px auto;-webkit-background-size:240px auto;background-size:240px auto;background-position:0 -180px}
+.crystal .crystal_img.crystal_stat2{width:240px;height:320px;background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/sprite/crystal_stat2.png);-moz-background-size:240px auto;-o-background-size:240px auto;-webkit-background-size:240px auto;background-size:240px auto;background-position:0 0;-webkit-animation:crystal_stat2_active 1.5s steps(1) infinite}
+.crystal .crystal_img.crystal_stat3{width:240px;height:320px;background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/sprite/crystal_stat3.png);-moz-background-size:240px auto;-o-background-size:240px auto;-webkit-background-size:240px auto;background-size:240px auto;background-position:0 0;-webkit-animation:crystal_stat3_active 1.5s steps(1) infinite}
+.crystal .crystal_img.crystal_stat4{width:240px;height:320px;background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/sprite/crystal_stat4.png);-moz-background-size:240px auto;-o-background-size:240px auto;-webkit-background-size:240px auto;background-size:240px auto;background-position:0 0;-webkit-animation:crystal_stat4_active 1.5s steps(1) infinite}
+@-webkit-keyframes crystal_stat2_active{
+0%,100%{background-position:0 0}
+50%{background-position:0 -325px}
+}
+@-webkit-keyframes crystal_stat3_active{
+0%,100%{background-position:0 0}
+50%{background-position:0 -325px}
+}
+@-webkit-keyframes crystal_stat4_active{
+0%,100%{background-position:0 0}
+50%{background-position:0 -325px}
+}
+@-webkit-keyframes fadeIn{
+0%{opacity:0}
+100%{opacity:1}
+}
+.crystal{position:relative;pointer-events:none;width:240px;height:188px;display:block;margin:auto;opacity:0;-webkit-animation:fadeIn 1s forwards}
+.rank_tab{width:528px;overflow:hidden;margin:auto;margin-top:30px}
+.rank_tab_nav{width:362px;margin:auto;background-image:-webkit-linear-gradient(90deg,rgba(24,24,62,.46) 0,rgba(11,11,25,.46) 100%);box-shadow:0 -2px 1px 0 rgba(11,12,26,.98),inset 0 -1px 1px 0 rgba(110,67,255,.24);height:40px;border-radius:20px;overflow:hidden;font-size:0}
+.rank_tab_nav li{display:inline-block;width:92px;height:30px;margin:5px 33px 5px 5px}
+.rank_tab_nav li:last-child{margin-right:5px}
+.rank_tab_nav li.current{width:92px;height:30px;background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/sprite/task.png);-moz-background-size:240px auto;-o-background-size:240px auto;-webkit-background-size:240px auto;background-size:240px auto;background-position:0 -145px}
+.rank_tab_nav li span{display:block;margin:6px auto;width:64px;height:19px;background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/sprite/task.png);-moz-background-size:240px auto;-o-background-size:240px auto;-webkit-background-size:240px auto;background-size:240px auto;opacity:.3}
+.rank_tab_nav .rank1 span{background-position:0 -505px}
+.rank_tab_nav .rank2 span{background-position:0 -529px}
+.rank_tab_nav .rank3 span{background-position:0 -553px}
+.rank_tab_nav li.current span{opacity:1}
+.rank_tab_content{display:none}
+.rank_tab_content.current{display:block}
+.rank_tab_content .rank_num_normal{background:0 0;font-size:55px;color:#535b66;text-shadow:1px 0 0 #7e8690,-1px 0 0 #7e8690,0 1px 0 #7e8690,0 -1px 0 #7e8690,0 0 10px #141418;line-height:1;width:60px;text-align:center}
+.rank_tab_content .member_item .avatar{width:72px;height:70px;background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/sprite/task.png);-moz-background-size:240px auto;-o-background-size:240px auto;-webkit-background-size:240px auto;background-size:240px auto;background-position:0 0;position:relative;margin-bottom:12px}
+.rank_tab_content .member_item .avatar img{width:50px;height:50px;border-radius:25px;position:absolute;top:6px;left:13px}
+.rank_tab_content .member_item .avatar .name{font-size:12px;background-image:-webkit-linear-gradient(120deg,#ff9600 0,#ffb52e 52%,#ffd35c 100%);position:absolute;border:1px #8d3c00 solid;display:inline-block;color:#824900;height:16px;line-height:16px;padding:0 3px;right:3px;bottom:7px;transform:skewX(-10deg)}
+.rank_team_list{width:100%;overflow:hidden;height:632px}
+.rank_team_list .team_item{height:158px;padding:28px 0;border-bottom:1px rgba(255,255,255,.1) solid;display:-webkit-box;display:-webkit-flex;display:flex}
+.rank_team_list .value{color:rgba(255,255,255,.2);text-align:center}
+.rank_team_list .member_item,.rank_team_list .team_info{font-size:12px;width:100%;-webkit-box-flex:1;-webkit-flex:1;flex:1;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-orient:vertical;-webkit-flex-direction:column;flex-direction:column;-webkit-box-align:center;-webkit-align-items:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center}
+.rank_team_list .team_info .team_name{display:block;margin:auto;margin-bottom:12px;width:60px;height:28px}
+.rank_member_list{width:100%;padding-top:20px}
+.rank_member_list .member_item{width:100%;overflow:hidden;height:102px;border-bottom:1px rgba(255,255,255,.1) solid;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-orient:horizontal;-webkit-box-align:center;-webkit-align-items:center;align-items:center;color:rgba(255,255,255,.5);padding:0 45px 0 35px;text-align:left}
+.rank_member_list .member_item .rank_num{margin-right:45px}
+.rank_member_list .member_item .avatar{margin-right:52px}
+.rank_member_list .member_item .team_name{font-size:13px;width:90px}
+.rank_member_list .member_item .detail .tag{color:#a8721d;text-shadow:1px 0 0 #491e09,-1px 0 0 #491e09,0 1px 0 #491e09,0 -1px 0 #491e09}
+.rank_member_list .member_item .detail .tag1{color:#ffbe2f;text-shadow:1px 0 0 #975500,-1px 0 0 #975500,0 1px 0 #975500,0 -1px 0 #975500}
+.rank_member_list .member_item .detail .tag2{color:#ff5918;text-shadow:1px 0 0 #45170f,-1px 0 0 #45170f,0 1px 0 #45170f,0 -1px 0 #45170f}
+.rank_member_list .member_item .detail .tag3{color:#a489aa;text-shadow:1px 0 0 #942495,-1px 0 0 #942495,0 1px 0 #942495,0 -1px 0 #942495}
+.rank_member_list .member_item .detail .tag4{color:#75afaa;text-shadow:1px 0 0 #202b30,-1px 0 0 #202b30,0 1px 0 #202b30,0 -1px 0 #202b30}
+@media (max-width:666px) and (orientation:landscape){
+.gift{padding-left:336px}
+.task_box{margin-left:15px;width:332px}
+.container .head .link_rule{right:60px}
+.container .head .link_assets{right:117px}
+}
+@media (orientation:portrait){
+.icon_crystal_wrap.animated .icon_crystal{-webkit-transition:-webkit-transform .5s linear}
+.gift{position:relative;top:0;margin:16px auto;padding:0}
+.gift .link_assets,.gift .link_rule{display:inline-block;margin:9px 9px 0}
+.gift .lottery_tips{color:#989898}
+.crystal_num{border-right:1px solid #010109;border-radius:6px;top:4px}
+.title_task:before{width:14px;height:22px;background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/sprite/task.png);-moz-background-size:240px auto;-o-background-size:240px auto;-webkit-background-size:240px auto;background-size:240px auto;background-position:0 -664px}
+.task_box{background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/box.png);width:320px;margin:0 auto;margin-bottom:50px}
+.task_box .vip_tips{color:#989898;top:244px;width:100%;text-align:center}
+.wrap_task{padding-top:0;height:auto;position:static}
+.rank_tab{background-color:rgba(1,0,8,.4);padding-top:45px;width:100%}
+.rank_tab_nav{width:306px}
+.rank_tab_nav li{margin-right:5px}
+.rank_tab_content{width:100%;overflow:auto;min-height:632px}
+.rank_member_list,.rank_team_list{width:528px}
+}
+@media (max-width:360px) and (orientation:portrait){
+.task_box{width:290px}
+.task_list li{margin:0 15px}
+}
+.title_select{display:block;font-size:0;width:364px;height:22px;background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/sprite/select.png);-moz-background-size:364px auto;-o-background-size:364px auto;-webkit-background-size:364px auto;background-size:364px auto;background-position:0 -21px;position:relative}
+.select_team_list{margin-bottom:20px;margin-top:12px;display:inline-block;font-size:0}
+.select_team_list .team_item{display:inline-block;vertical-align:top;margin-right:15px;border:1px solid #00354e;border-radius:6px;background-color:rgba(16,16,35,.702);width:140px;height:228px;box-shadow:inset 0 0 2px #1393ff,0 0 10px rgba(0,108,255,.15)}
+.select_team_list .team_item.selected{border-color:#ff1800;box-shadow:inset 0 0 2px #ff5a00,0 0 10px rgba(255,0,0,.15)}
+.select_team_list .team_item:last-child{margin-right:0}
+.select_team_list .team_info{margin-bottom:7px;margin-top:-14px;white-space:nowrap;text-align:center}
+.select_team_list .team_name{display:inline-block;width:60px;height:28px}
+.select_team_list .rank_num{display:inline-block;vertical-align:top;width:27px;height:26px;background-size:27px auto}
+.member_list{margin-left:10px;text-align:left}
+.member_list .member_item{width:60px;display:inline-block;vertical-align:top;font-size:0}
+.member_list .member_item .avatar{position:relative;width:40px;height:40px;margin:auto;margin-bottom:3px}
+.member_list .member_item .avatar img{display:block;width:40px;height:40px;border-radius:20px;border:1px #fff solid}
+.member_list .member_item .name{text-align:center;font-size:11px;font-weight:700;margin-bottom:10px;white-space:nowrap}
+.member_list .member_item.selected .avatar img{border:1px #ff1800 solid}
+.member_list .member_item.selected .avatar:before{content:'';display:block;position:absolute;left:1px;top:1px;background-color:rgba(1,0,7,.8);width:38px;height:38px;z-index:1;border-radius:19px}
+.member_list .member_item.selected .avatar:after{content:'';display:block;position:absolute;left:9px;top:12px;width:21px;height:16px;background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/sprite/select.png);-moz-background-size:364px auto;-o-background-size:364px auto;-webkit-background-size:364px auto;background-size:364px auto;background-position:0 0;z-index:2}
+.btn_task{display:block}
+@media (max-width:666px) and (orientation:landscape){
+.select_team_list{margin-bottom:10px}
+.select_team_list .team_item{margin-right:5px;width:128px;height:196px}
+.select_team_list .team_info{margin-bottom:4px}
+.member_list{margin-left:4px}
+.member_list .member_item .avatar{margin-bottom:0}
+.member_list .member_item .name{margin-bottom:0}
+}
+@media (min-width:720px) and (orientation:landscape){
+.select_team_list{margin-bottom:28px}
+.select_team_list .team_item{margin-right:15px;width:160px}
+.member_list{margin-left:10px}
+.member_list .member_item{width:70px}
+}
+@media (orientation:portrait){
+.title_select{width:276px;height:19px;background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/sprite/select.png);-moz-background-size:364px auto;-o-background-size:364px auto;-webkit-background-size:364px auto;background-size:364px auto;background-position:0 -48px}
+.select_team_list{margin-bottom:8px}
+.select_team_list .team_item{display:block;width:100%;height:102px;margin-bottom:16px;margin-right:0}
+.select_team_list .member_list{margin:0 12px}
+.select_team_list .team_info{margin-top:5px;margin-bottom:6px;text-align:left;margin-left:9px}
+.select_team_list .rank_num{width:21px;height:20px;background-size:21px auto;margin-top:1px}
+.select_team_list .team_name{width:45px;height:21px}
+.btn_task{margin-bottom:24px}
+}
+@media (max-width:360px) and (orientation:portrait){
+.select_team_list .member_list{margin:0 10px}
+.select_team_list .member_list .member_item{width:54px}
+}
+@media (min-width:376px) and (orientation:portrait){
+.select_team_list{margin-top:24px}
+.member_list{margin:0 12px}
+}
+.lottery_box{border:1px solid #006392;border-radius:6px;background-color:rgba(16,16,35,.8);background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/box.png);background-size:352px auto;width:115px;height:92px;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-orient:vertical;-webkit-flex-direction:column;flex-direction:column;-webkit-box-align:center;-webkit-align-items:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center}
+.lottery_list{width:476px;height:288px;position:relative}
+.lottery_list .lottery_item{width:25%;height:33.33%;padding:2px;display:block;position:absolute;left:0;top:0}
+.lottery_list .lottery_item.active .lottery_box{border-color:#ff9c00;background:-webkit-linear-gradient(90deg,rgba(255,198,73,.2) 66%,rgba(234,167,37,.2) 83%,rgba(213,135,0,.2) 99%)}
+.lottery_list .lottery_item .lottery_box{width:100%;height:100%}
+.lottery_list .lottery_item2{left:25%}
+.lottery_list .lottery_item3{left:50%}
+.lottery_list .lottery_item4{left:75%}
+.lottery_list .lottery_item5{top:33.33%;left:75%}
+.lottery_list .lottery_item6{top:66.66%;left:75%}
+.lottery_list .lottery_item7{top:66.66%;left:50%}
+.lottery_list .lottery_item8{top:66.66%;left:25%}
+.lottery_list .lottery_item9{top:66.66%}
+.lottery_list .lottery_item10{top:33.33%}
+.lottery_list .lottery_action_inner{width:100%;height:100%;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-orient:vertical;-webkit-flex-direction:column;flex-direction:column;-webkit-box-align:center;-webkit-align-items:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center}
+.lottery_list .lottery_action{width:50%;height:33.33%;position:absolute;left:25%;top:33.33%;margin:0}
+.lottery_list .lottery_action .tips{font-size:13px;margin-bottom:6px;text-align:center}
+.lottery_list .lottery_action .num_tips{display:none}
+.wrap_receive{background:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/lottery_shine.png);background-size:100% auto;background-repeat:no-repeat;z-index:100}
+.wrap_receive .lottery_box{margin-bottom:30px}
+.form_item{width:250px;display:-webkit-box;display:-webkit-flex;display:flex;margin-bottom:10px}
+.form_item .form_select{-webkit-box-flex:1;-webkit-flex:1;flex:1;position:relative}
+.form_item .form_select select{border:1px solid #006392;border-radius:6px;background-color:rgba(16,16,35,.8);width:100%;height:40px;line-height:40px;color:rgba(255,255,255,.1);padding-left:16px;box-sizing:border-box}
+.form_item .form_select select.active{color:#fff}
+.form_item .form_select:after{content:'';display:block;position:absolute;right:15px;top:17px;width:11px;height:7px;background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/sprite/common.png);-moz-background-size:204px auto;-o-background-size:204px auto;-webkit-background-size:204px auto;background-size:204px auto;background-position:0 0}
+.form_item .btn_search{border:1px solid #006392;border-radius:6px;background-color:rgba(16,16,35,.8);width:75px;text-align:center;margin-left:10px;height:40px;line-height:40px;color:#fff}
+.btn_submit{display:block;margin:20px auto}
+.btn_group{margin-right:-30px}
+.btn_group .btn{margin-right:30px}
+.popup_receive{position:fixed;top:0;left:0;width:100%;height:100%;z-index:100;-webkit-box-align:center;-webkit-align-items:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;flex-direction:column;background:rgba(0,0,0,.6);display:none;color:#fff}
+.popup_receive.show{display:-webkit-box;display:-webkit-flex;display:flex}
+.popup_receive_container{border-style:solid;border-width:2px;border-color:#010109;background-image:-webkit-linear-gradient(90deg,#101023 0,#18183e 50%,#14142f 100%);width:90%;height:320px;position:relative}
+.popup_receive_container .head{position:relative;padding:0;width:auto;height:58px;line-height:58px;text-align:left;border-bottom:1px solid #212a68;margin:0 20px;font-size:19px;z-index:101}
+.popup_receive_container .head .icon_close{display:block;right:0}
+.popup_receive_container .wrap_receive{width:112%;margin-left:-6%;position:absolute;padding-top:84px;background-size:134% auto;background-position:center;padding-bottom:30px}
+@media (max-width:666px) and (orientation:landscape){
+.lottery_list{height:252px}
+}
+@media (min-width:720px) and (orientation:landscape){
+.lottery_list{width:576px;height:312px}
+}
+@media (orientation:portrait){
+.container_lottery .head{display:none}
+.container_lottery .wrap{height:100%}
+.lottery_list{width:100%;height:100%}
+.lottery_list .lottery_item{width:33.33%;height:25%}
+.lottery_list .lottery_item .lottery_box{width:100%;height:100%}
+.lottery_list .lottery_item2{left:33.33%}
+.lottery_list .lottery_item3{left:66.66%}
+.lottery_list .lottery_item4{left:66.66%;top:25%}
+.lottery_list .lottery_item5{left:66.66%;top:50%}
+.lottery_list .lottery_item6{top:75%;left:66.66%}
+.lottery_list .lottery_item7{top:75%;left:33.33%}
+.lottery_list .lottery_item8{top:75%;left:0}
+.lottery_list .lottery_item9{top:50%}
+.lottery_list .lottery_item10{top:25%}
+.lottery_list .lottery_action{width:33.33%;height:50%;left:33.33%;top:25%}
+.lottery_list .lottery_action .tips{width:116px}
+.lottery_list .lottery_action .btn_num_tips{display:none}
+.lottery_list .lottery_action .num_tips{display:block;color:rgba(255,255,255,.3)}
+.btn_lottery_begin{width:102px;height:40px;background-image:url(/tencentvideo/vstyle/mobile/topic/wzcj/style/img/sprite/common.png);-moz-background-size:204px auto;-o-background-size:204px auto;-webkit-background-size:204px auto;background-size:204px auto;background-position:0 -210px}
+}
+#faycheng{content:"20171211143353"}
