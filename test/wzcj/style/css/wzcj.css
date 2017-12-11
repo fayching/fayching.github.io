@@ -359,7 +359,11 @@ a {
   -webkit-overflow-scrolling: touch;
   padding: 0 !important;
 }
-
+@-webkit-keyframes accelerateAnim {
+   0%, 100% {
+     -webkit-transform: scale3d(1, 1, 1);
+   }
+ }
 .container .head {
   background: url(../../style/img/bg_title.png);
   background-size: auto 52px;
@@ -376,6 +380,7 @@ a {
   -webkit-align-items: center;
   align-items: center;
   padding-left: 20px;
+  -webkit-animation: accelerateAnim .1s both;
 }
 .container .head .avatar {
   display: inline-block;
