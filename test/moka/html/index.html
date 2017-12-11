@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>腾讯视频用户送会员</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui" />
+<link rel="stylesheet" href="../style/css/index.css"  />
+
+</head>
+<body ontouchstart>
+	<section class="mod_popup show popup_guide">
+		<h1 class="title content show">看看M君如何撩视频妹...</h1>
+		<div class="dialog1 content"><p>我刚剪了个《那年花开》的魔性短视频刷爆票圈了呢</p></div>
+		<div class="dialog2 content"><p>嫉妒使我变丑<i class="emoji_smile"></i>剪视频什么的根本学不来</p></div>
+		<div class="dialog3 content"><p>我用MOKA魔咔剪的啊，都是分分钟的事情</p></div>
+		<button class="mod_btn content">立即下载魔咔视频</button>
+	</section>
+	<script type="text/javascript" src="../../js/zepto.js"></script>
+	<script>
+		var count = 0;
+		$('.content').eq(0).addClass('show');
+		setTimeout(function () {
+			$('.content').eq(1).addClass('show');
+			count++;
+		},1000);
+
+		$('body').click(function(){
+			if(count<5){
+				$('.content').eq(count+1).addClass('show');
+				count++;
+			}
+
+		})
+	</script>
+</body>
+</html>
