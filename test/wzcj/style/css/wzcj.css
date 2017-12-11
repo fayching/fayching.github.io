@@ -658,8 +658,8 @@ a {
   }
 
   .container .head {
-    background: 0 0;
-    position: static;
+    /*background: 0 0;*/
+    /*position: static;*/
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     justify-content: center;
