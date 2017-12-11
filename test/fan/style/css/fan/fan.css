@@ -905,24 +905,24 @@ img {
   }
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 170px, 0) scale3d(0.3, 0.3, 0.3);
+    -webkit-transform: translate(0, 170px) scale(0.3);
   }
   20% {
-    -webkit-transform: translate3d(0, 170px, 0) scale3d(1.1, 1.1, 1.1);
+    -webkit-transform: translate(0, 170px) scale(1.1);
   }
   40% {
-    -webkit-transform: translate3d(0, 170px, 0) scale3d(0.9, 0.9, 0.9);
+    -webkit-transform: translate(0, 170px) scale(0.9, 0.9);
   }
   60% {
     opacity: 1;
-    -webkit-transform: translate3d(0, 170px, 0) scale3d(1.03, 1.03, 1.03);
+    -webkit-transform: translate(0, 170px) scale(1.03, 1.03);
   }
   80% {
-    -webkit-transform: translate3d(0, 170px, 0) scale3d(0.97, 0.97, 0.97);
+    -webkit-transform: translate(0, 170px) scale(0.97, 0.97);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 170px, 0) scale(1, 1, 1);
+    -webkit-transform: translate(0, 170px) scale(1, 1, 1);
   }
 }
 .mod_popup {
@@ -1195,12 +1195,12 @@ img {
 .mod_popup_checkin_date .mod_popup_content,
 .mod_popup_task .mod_popup_content {
   -webkit-transform: translate3d(0, 100%, 0);
-  -webkit-animation: slideInUp .6s .2s ease-out forwards;
+  -webkit-animation: slideInUp .3s .2s ease-out forwards;
 }
 .mod_popup_checkin_date .mod_popup_content.slideOutDown,
 .mod_popup_task .mod_popup_content.slideOutDown {
   -webkit-transform: translate3d(0, 0, 0);
-  -webkit-animation: slideOutDown .6s .2s ease-out forwards;
+  -webkit-animation: slideOutDown .3s .2s ease-out forwards;
 }
 
 .mod_popup_hack.show {
@@ -1212,7 +1212,7 @@ img {
   position: absolute;
   bottom: 0;
   opacity: 0;
-  -webkit-animation: popFadeIn .6s .2s ease-out forwards;
+  -webkit-animation: popFadeIn .3s .2s ease-out forwards;
 }
 .mod_popup_hack .mod_popup_content.slideOutDown {
   display: none;
@@ -1693,6 +1693,8 @@ img {
   width: 56px;
   height: 56px;
   border-radius: 28px;
+  background-size: cover;
+  background-position: center;
 }
 
 .panel_welfare .title {
@@ -2194,6 +2196,12 @@ img {
 .mod_info_s .badge img {
   width: 75px;
   height: 56px;
+}
+
+.badge_img {
+  width: 100%;
+  -webkit-filter: blur(5px);
+  transition: all 0.5s;
 }
 
 /*===========================================
