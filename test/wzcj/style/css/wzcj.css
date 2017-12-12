@@ -364,7 +364,7 @@ a {
      -webkit-transform: scale3d(1, 1, 1);
    }
  }
-.container .head {
+.head {
   background: url(../../style/img/bg_title.png);
   background-size: auto 52px;
   position: fixed;
