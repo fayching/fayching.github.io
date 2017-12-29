@@ -13,9 +13,6 @@
 
 </head>
 <body ontouchstart>
-	<div id="wrapper" class="wrapper">
-
-		<div id="scroller" class="scroller">
 			<section class="mod_slider swiper-container">
 				<div class="mod_slider_content swiper-wrapper">
 					<div class="download_banner swiper-slide">
@@ -142,9 +139,7 @@
 				<button class="btn_normal">走你</button>
 			</section>
 
-		</div>
 
-	</div>
 	<section class="mod_dialog notice_dialog">
 		<div class="mod_dialog_content">
 			<div class="mod_dialog_body">
@@ -155,7 +150,7 @@
 			</div>
 		</div>
 	</section>
-	<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../js/zepto.js"></script>
 	<script type="text/javascript" src="../js/swiper.min.js"></script>
 	<script type="text/javascript" src="../js/alloy_touch.js"></script>
 	<script type="text/javascript" src="../js/transform.js"></script>
@@ -167,7 +162,6 @@
 		autoplay : 3000,
 		loop : true,
 		onSlideChangeEnd: function(swiper){
-			console.log(swiper.activeIndex)
 			if(swiper.activeIndex==2){
 				$('.emoji_gesture_right').addClass('animated');
 			}else{
@@ -186,41 +180,43 @@
 	<script>
 	var width =  document.body.clientWidth,
 	height =  document.body.clientHeight;
-	var scroller = $('#scroller')[0],
-	floatTips = $('.float_tips')[0];
+	var floatTips = $('.float_tips')[0];
+	var isTouchStart = false;
 
-	$('.bg').css('width',$('#scroller').height()+'px');
+	$('.bg').css('width',height+'px');
 	// $('.bg').css('background-position',-$('#scroller').height()+'px 0');
 	var bg = $('.bg')[0];
-	Transform(scroller,true);
 	Transform(floatTips);
 	Transform(bg);
 
-var alloyTouch = new AlloyTouch({
-    touch: "#wrapper",
-    vertical: true,
-    target: scroller,
-    property: "translateY",
-    maxSpeed: 2,
-    outFactor: 0.1,
-    min: -$('#scroller').height() + height,
-    max: 0,
-    // lockDirection: false,
-    touchStart: function () {
-        // reastMin();
-    },
-    change: function (v) {
-		var _v = v;
+	$('body').on('touchstart', function (e) {
+        if($(window).scrollTop()>= 0){
+            isTouchStart = true;
+        }
+    });
+	$('body').on('touchmove',function (e) {
 
-		console.log(v)
-		bg.translateX = v;
-		bg.translateY = v*0.4;
-		floatTips.translateY = v*0.4;
-    }
-})
-document.addEventListener("touchmove", function (e) {
-   e.preventDefault();
-}, false);
+		if ( isTouchStart ){
+			var v = -$(window).scrollTop();
+			bg.translateX = v;
+			bg.translateY = v*0.4;
+			floatTips.translateY = v*0.4;
+
+        }
+
+	});
+	$('body').on('touchend',function (e) {
+		isTouchStart = false;
+
+	});
+	$(window).scroll(function() {
+		if($(window).scrollTop()>= 0){
+			var v = -$(window).scrollTop();
+			bg.translateX = v;
+			bg.translateY = v*0.4;
+			floatTips.translateY = v*0.4;
+		}
+	});
 
 	</script>
 

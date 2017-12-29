@@ -61,12 +61,23 @@ html{font-size:110.4px}
 .mod_popup{position:fixed;top:0;left:0;width:100%;height:100%;z-index:100;-webkit-box-align:center;-webkit-align-items:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;flex-direction:column;background:rgba(0,0,0,.6);display:none}
 .mod_popup.show{display:-webkit-box;display:-webkit-flex;display:flex}
 .mod_popup_content{width:100%}
-@keyframes fadeIn{
+@-webkit-keyframes fadeIn{
 from{opacity:0}
 to{opacity:1}
 }
+@-webkit-keyframes gelatine{
+from,to{-webkit-transform:scale(1,1);transform:scale(1,1)}
+25%{-webkit-transform:scale(.9,1.1);transform:scale(.9,1.1)}
+50%{-webkit-transform:scale(1.1,.9);transform:scale(1.1,.9)}
+75%{-webkit-transform:scale(.95,1.05);transform:scale(.95,1.05)}
+from,to{-webkit-transform:scale(1,1);transform:scale(1,1)}
+25%{-webkit-transform:scale(.9,1.1);transform:scale(.9,1.1)}
+50%{-webkit-transform:scale(1.1,.9);transform:scale(1.1,.9)}
+75%{-webkit-transform:scale(.95,1.05);transform:scale(.95,1.05)}
+}
 .popup_guide .title{width:166px;height:17px;background-image:url(/tencentvideo/vstyle/mobile/topic/moka/style/img/sprite/moka.png);-moz-background-size:399px auto;-o-background-size:399px auto;-webkit-background-size:399px auto;background-size:399px auto;background-position:0 -298px;position:absolute;top:25px;left:50%;margin-left:-83px}
-.popup_guide .mod_btn{background-color:#f9285e;font-size:16px;height:40px;line-height:40px;width:auto;padding:0 24px;margin-top:30px}
+.popup_guide .mod_btn{background-color:#f9285e;font-size:16px;height:40px;line-height:40px;width:auto;padding:0 24px;margin-top:30px;overflow:inherit}
+.popup_guide .mod_btn.show{-webkit-transition-timing-function:cubic-bezier(.6,4,.3,.8);-webkit-animation:gelatine .5s .5s;opacity:1}
 .popup_guide .dialog1{width:383.5px;height:85.5px;background-image:url(/tencentvideo/vstyle/mobile/topic/moka/style/img/sprite/moka.png);-moz-background-size:399px auto;-o-background-size:399px auto;-webkit-background-size:399px auto;background-size:399px auto;background-position:0 0;position:relative;margin-left:-148px;margin-top:20px}
 .popup_guide .dialog1 p{width:256px;font-size:15px;line-height:18px;color:#fff;position:absolute;right:14px;bottom:11px}
 .popup_guide .dialog2{width:397px;height:93.5px;background-image:url(/tencentvideo/vstyle/mobile/topic/moka/style/img/sprite/moka.png);-moz-background-size:399px auto;-o-background-size:399px auto;-webkit-background-size:399px auto;background-size:399px auto;background-position:0 -90.5px;position:relative;margin-top:-35px;margin-left:148px}
@@ -76,4 +87,4 @@ to{opacity:1}
 .popup_guide .dialog3 p{width:290px;font-size:15px;line-height:18px;color:#fff;position:absolute;right:14px;bottom:13px}
 .content{opacity:0;font-size:0}
 .content.show{animation:fadeIn .5s forwards}
-#faycheng{content:"20171211181339"}
+#faycheng{content:"20171229180534"}

@@ -12,20 +12,20 @@
 
 
 </head>
-<body ontouchstart>
+<body class="pc">
 	<div id="wrapper" class="wrapper">
-
+		<div class="bg"></div>
 		<div id="scroller" class="scroller">
 			<section class="mod_slider swiper-container">
 				<div class="mod_slider_content swiper-wrapper">
 					<div class="download_banner swiper-slide">
-						<i class="icon_app"></i>
-						<div class="text"><h4>MOKA魔咔</h4><p>下我呀下到我就让你...嘿嘿嘿</p></div>
+						<img src="http://tacs_v1.oa.com/img.php?80x80" width="40"  class="logo">
+						<div class="text"><h4>MOKA魔咔</h4><p>脑洞大开的视频剪辑社区</p></div>
 						<button class="btn_normal btn_download">下载</button>
 					</div>
 					<div class="download_banner swiper-slide">
-						<i class="icon_app"></i>
-						<div class="text"><h4>MOKA魔咔</h4><p>超多魔性脑洞视频等你来搞</p></div>
+						<img src="http://tacs_v1.oa.com/img.php?80x80" width="40" class="avatar">
+						<div class="text"><h4>寂寞奥大叔</h4><p>完美躲开所有不好笑的梗</p></div>
 						<button class="btn_normal"><i class="emoji_gesture_right"></i></button>
 					</div>
 				</div>
@@ -58,7 +58,7 @@
 						<div class="avatar"><img src="http://tacs_v1.oa.com/img.php?80x80" width="40"></div>
 						<div class="text">
 							<div class="name"><em>KongZ </em> 出品</div>
-							<div>TA在 Moka魔咔 剪出花了都</div>
+							<div>在 Moka魔咔 邀你一起开脑洞</div>
 						</div>
 						<button class="btn_normal">看看TA</button>
 					</div>
@@ -68,7 +68,7 @@
 
 
 			<section class="main_container">
-				<div class="bg"></div>
+
 				<div class="float_tips">
 					<div class="title">更多有意思的视频</div>
 					<div class="emoji_list"></div>
@@ -87,7 +87,7 @@
 							<div class="cover_img">
 								<img src="http://tacs_v1.oa.com/img.php?344x196" >
 								<i class="num">24.7万播放</i>
-
+								<i class="tag">热门</i>
 							</div>
 							<h4 class="title">看刘涛这教科书般的倒立我是真的服了</h4>
 						</li>
@@ -95,6 +95,7 @@
 							<div class="cover_img">
 								<img src="http://tacs_v1.oa.com/img.php?344x196" >
 								<i class="num">24.7万播放</i>
+								<i class="tag">热门</i>
 							</div>
 							<h4 class="title">看刘涛这教科书般的倒立我是真的服了</h4>
 						</li>
@@ -102,6 +103,7 @@
 							<div class="cover_img">
 								<img src="http://tacs_v1.oa.com/img.php?344x196" >
 								<i class="num">24.7万播放</i>
+								<i class="tag">热门</i>
 							</div>
 							<h4 class="title">看刘涛这教科书般的倒立我是真的服了</h4>
 						</li>
@@ -109,6 +111,7 @@
 							<div class="cover_img">
 								<img src="http://tacs_v1.oa.com/img.php?344x196" >
 								<i class="num">24.7万播放</i>
+								<i class="tag">热门</i>
 							</div>
 							<h4 class="title">看刘涛这教科书般的倒立我是真的服了</h4>
 						</li>
@@ -116,6 +119,7 @@
 							<div class="cover_img">
 								<img src="http://tacs_v1.oa.com/img.php?344x196" >
 								<i class="num">24.7万播放</i>
+								<i class="tag">热门</i>
 							</div>
 							<h4 class="title">看刘涛这教科书般的倒立我是真的服了</h4>
 						</li>
@@ -123,6 +127,7 @@
 							<div class="cover_img">
 								<img src="http://tacs_v1.oa.com/img.php?344x196" >
 								<i class="num">24.7万播放</i>
+								<i class="tag">热门</i>
 							</div>
 							<h4 class="title">看刘涛这教科书般的倒立我是真的服了</h4>
 						</li>
@@ -130,6 +135,7 @@
 							<div class="cover_img">
 								<img src="http://tacs_v1.oa.com/img.php?344x196" >
 								<i class="num">24.7万播放</i>
+								<i class="tag">热门</i>
 							</div>
 							<h4 class="title">看刘涛这教科书般的倒立我是真的服了</h4>
 						</li>
@@ -145,16 +151,6 @@
 		</div>
 
 	</div>
-	<section class="mod_dialog notice_dialog">
-		<div class="mod_dialog_content">
-			<div class="mod_dialog_body">
-				<h4>安卓版本正在火速开发中，敬请期待！</h4>
-			</div>
-			<div class="mod_dialog_foot">
-				<button type="button">确认</button>
-			</div>
-		</div>
-	</section>
 	<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="../js/swiper.min.js"></script>
 	<script type="text/javascript" src="../js/alloy_touch.js"></script>
@@ -162,7 +158,7 @@
 	<script src='http://vm.gtimg.cn/tencentvideo/txp/js/txplayer.js'></script>
 	<script>
 
-    var swiper = new Swiper('.swiper-container', {
+	var swiper = new Swiper('.swiper-container', {
 		pagination: '.swiper-pagination',
 		autoplay : 3000,
 		loop : true,
@@ -170,8 +166,6 @@
 			console.log(swiper.activeIndex)
 			if(swiper.activeIndex==2){
 				$('.emoji_gesture_right').addClass('animated');
-			}else{
-				$('.emoji_gesture_right').removeClass('animated');
 			}
 	   }
     });
@@ -183,46 +177,7 @@
 	});
 
 	</script>
-	<script>
-	var width =  document.body.clientWidth,
-	height =  document.body.clientHeight;
-	var scroller = $('#scroller')[0],
-	floatTips = $('.float_tips')[0];
 
-	$('.bg').css('width',$('#scroller').height()+'px');
-	// $('.bg').css('background-position',-$('#scroller').height()+'px 0');
-	var bg = $('.bg')[0];
-	Transform(scroller,true);
-	Transform(floatTips);
-	Transform(bg);
-
-var alloyTouch = new AlloyTouch({
-    touch: "#wrapper",
-    vertical: true,
-    target: scroller,
-    property: "translateY",
-    maxSpeed: 2,
-    outFactor: 0.1,
-    min: -$('#scroller').height() + height,
-    max: 0,
-    // lockDirection: false,
-    touchStart: function () {
-        // reastMin();
-    },
-    change: function (v) {
-		var _v = v;
-
-		console.log(v)
-		bg.translateX = v;
-		bg.translateY = v*0.4;
-		floatTips.translateY = v*0.4;
-    }
-})
-document.addEventListener("touchmove", function (e) {
-   e.preventDefault();
-}, false);
-
-	</script>
 
 </body>
 </html>
