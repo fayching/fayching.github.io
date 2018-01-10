@@ -9,18 +9,33 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover" />
 <link rel="stylesheet" href="../style/css/share.css"  />
 <!-- <link rel="stylesheet" href="http://www.swiper.com.cn/dist/css/swiper.min.css"  /> -->
-
+<style>
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > div {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+</style>
 
 </head>
 <body ontouchstart>
-			<section class="mod_slider swiper-container">
-				<div class="mod_slider_content swiper-wrapper">
-					<div class="download_banner swiper-slide">
+			<section class="mod_slider swipe"  id="mySwipe">
+				<div class="mod_slider_content swipe-wrap">
+					<div class="download_banner">
 						<i class="icon_app"></i>
 						<div class="text"><h4>MOKA魔咔</h4><p>下我呀下到我就让你...嘿嘿嘿</p></div>
 						<button class="btn_normal btn_download">下载</button>
 					</div>
-					<div class="download_banner swiper-slide">
+					<div class="download_banner ">
 						<i class="icon_app"></i>
 						<div class="text"><h4>MOKA魔咔</h4><p>超多魔性脑洞视频等你来搞</p></div>
 						<button class="btn_normal"><i class="emoji_gesture_right"></i></button>
@@ -151,25 +166,36 @@
 		</div>
 	</section>
 	<script type="text/javascript" src="../js/zepto.js"></script>
-	<script type="text/javascript" src="../js/swiper-3.4.2.min.js"></script>
+	<script type="text/javascript" src="http://lyfeyaj.github.io/swipe/swipe.js"></script>
 	<script type="text/javascript" src="../js/alloy_touch.js"></script>
 	<script type="text/javascript" src="../js/transform.js"></script>
 	<script src='http://vm.gtimg.cn/tencentvideo/txp/js/txplayer.js'></script>
 	<script>
-
-    var swiper = new Swiper('.swiper-container', {
-		pagination: '.swiper-pagination',
-		autoplay : 3000,
-		speed: 600,
-		loop : true,
-		onSlideChangeEnd: function(swiper){
-			if(swiper.activeIndex==2){
-				$('.emoji_gesture_right').addClass('animated');
-			}else{
-				$('.emoji_gesture_right').removeClass('animated');
-			}
-	   }
-    });
+	var element = document.getElementById('mySwipe');
+	var mySwipe = new Swipe(element, {
+	  startSlide: 0,
+	  auto: 3000,
+	  draggable: false,
+	  autoRestart: false,
+	  continuous: true,
+	  disableScroll: true,
+	  stopPropagation: true,
+	  callback: function(index, element) {},
+	  transitionEnd: function(index, element) {}
+	});
+    // var swiper = new Swiper('.swiper-container', {
+	// 	pagination: '.swiper-pagination',
+	// 	autoplay : 3000,
+	// 	speed: 300,
+	// 	loop : true,
+	// 	onSlideChangeEnd: function(swiper){
+	// 		if(swiper.activeIndex==2){
+	// 			$('.emoji_gesture_right').addClass('animated');
+	// 		}else{
+	// 			$('.emoji_gesture_right').removeClass('animated');
+	// 		}
+	//    }
+    // });
 	var player = new Txplayer({
 	  containerId: 'player1',
 	  vid: 'w0543yhvooz',
