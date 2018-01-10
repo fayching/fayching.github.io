@@ -56,7 +56,7 @@ from,to{transform:translate3d(0,0,0)}
 html{height:100%}
 body{background:#f9285e;color:#000;font-size:13px;width:100%;position:relative}
 em{color:#f9285e}
-.bg{position:absolute;left:0;top:0;width:100%;height:100%;background:url(/tencentvideo/vstyle/mobile/topic/moka/style/img/share/bg.png);background-size:auto 505px;background-position:0 0;background-repeat:repeat-x}
+.bg{position:absolute;left:0;top:-556px;width:100%;height:100%;background:url(/tencentvideo/vstyle/mobile/topic/moka/style/img/share/bg.png);background-size:auto 556px;background-position:0 0;background-repeat:repeat}
 .wrapper{position:absolute;width:100%;z-index:1;top:0;bottom:0;left:0;overflow:hidden}
 .scroller{position:absolute;width:100%;z-index:1;-webkit-tap-highlight-color:transparent;will-change:transform;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;-webkit-text-size-adjust:none;text-size-adjust:none;-webkit-perspective:1000;-webkit-backface-visibility:hidden;backface-visibility:hidden}
 .mod_slider{margin:0 auto;position:relative;overflow:hidden;list-style:none;padding:0;z-index:1}
@@ -103,11 +103,12 @@ em{color:#f9285e}
 .main_container .cover_list li:active{opacity:.7}
 .main_container .cover_list .title{line-height:18px;height:36px;margin:10px 4px 10px 10px;display:-webkit-box;overflow:hidden;white-space:normal;text-overflow:ellipsis;-webkit-box-orient:vertical;-webkit-line-clamp:2;word-wrap:break-all;word-break:normal;box-sizing:content-box}
 .main_container .cover_img{width:100%;position:relative;padding-top:56.25%}
-.main_container .cover_img:after{content:'';position:absolute;left:0;top:0;width:100%;height:100%;background-image:-webkit-linear-gradient(90deg,rgba(0,0,0,.4) 0,transparent 40%,transparent 40%)}
+.main_container .cover_img:before{content:'';position:absolute;left:0;top:0;width:100%;height:100%;background-image:-webkit-linear-gradient(90deg,rgba(0,0,0,.4) 0,transparent 40%,transparent 40%);z-index:1}
+.main_container .cover_img:after{content:'';position:absolute;left:50%;top:50%;width:43.5px;height:47px;background-image:url(/tencentvideo/vstyle/mobile/topic/moka/style/img/sprite/share.png);-moz-background-size:44px auto;-o-background-size:44px auto;-webkit-background-size:44px auto;background-size:44px auto;background-position:0 -335px;-webkit-transform:translate3d(-50%,-50%,0) scale(.5);z-index:2}
 .main_container .cover_img img{position:absolute;top:0;left:0;width:100%;height:100%}
 .main_container .cover_img .num{color:#fff;font-size:11px;position:absolute;right:4px;bottom:3px;z-index:1}
 .main_container .cover_img .tag{color:#fff;font-size:11px;height:16px;line-height:16px;width:27px;text-align:center;background:#f9285e;border-left:3px #f3e706 solid;position:absolute;left:4px;top:4px;font-weight:700;box-sizing:content-box}
-.main_container:after{content:'';display:block;position:absolute;bottom:31px;left:50%;margin-left:-22px;width:44px;height:44px;background-image:url(/tencentvideo/vstyle/mobile/topic/moka/style/img/sprite/share.png);-moz-background-size:44px auto;-o-background-size:44px auto;-webkit-background-size:44px auto;background-size:44px auto;background-position:0 -213px;z-index:-1}
+.main_container:after{content:'';display:block;position:absolute;bottom:31px;left:50%;margin-left:-22px;width:44px;height:44px;background-image:url(/tencentvideo/vstyle/mobile/topic/moka/style/img/sprite/share.png);-moz-background-size:44px auto;-o-background-size:44px auto;-webkit-background-size:44px auto;background-size:44px auto;background-position:0 -213px;z-index:0}
 .mod_slogan{position:relative;height:150px;background:#fff;text-align:center;font-size:14px;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-orient:vertical;-webkit-flex-direction:column;flex-direction:column}
 .mod_slogan .logo,.mod_slogan .text{margin-bottom:14px}
 .emoji_gesture_right{display:inline-block;width:18px;height:12px;background-image:url(/tencentvideo/vstyle/mobile/topic/moka/style/img/sprite/share.png);-moz-background-size:44px auto;-o-background-size:44px auto;-webkit-background-size:44px auto;background-size:44px auto;background-position:0 0}
@@ -115,7 +116,7 @@ em{color:#f9285e}
 .emoji_list{display:block;width:44px;height:191px;background-image:url(/tencentvideo/vstyle/mobile/topic/moka/style/img/sprite/share.png);-moz-background-size:44px auto;-o-background-size:44px auto;-webkit-background-size:44px auto;background-size:44px auto;background-position:0 -17px;margin:auto}
 .icon_arrow{display:inline-block;width:5px;height:9px;background-image:url(/tencentvideo/vstyle/mobile/topic/moka/style/img/sprite/share.png);-moz-background-size:44px auto;-o-background-size:44px auto;-webkit-background-size:44px auto;background-size:44px auto;background-position:0 -321px;margin-left:4px}
 .icon_add{display:inline-block;width:9px;height:9px;background-image:url(/tencentvideo/vstyle/mobile/topic/moka/style/img/sprite/share.png);-moz-background-size:44px auto;-o-background-size:44px auto;-webkit-background-size:44px auto;background-size:44px auto;background-position:0 -262px;margin-right:4px}
-.pc{background:#fff}
-.pc .scroller,.pc .wrapper{position:relative;width:800px;margin:auto}
+html{background:#fff}
+.pc{position:relative;width:800px;margin:auto}
 .pc .bg{position:absolute;background-size:100% auto}
-#faycheng{content:"20171229180535"}
+#faycheng{content:"20180110103739"}

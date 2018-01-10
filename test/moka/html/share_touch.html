@@ -6,7 +6,7 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover" />
 <link rel="stylesheet" href="../style/css/share.css"  />
 <!-- <link rel="stylesheet" href="http://www.swiper.com.cn/dist/css/swiper.min.css"  /> -->
 
@@ -199,7 +199,7 @@
 		if ( isTouchStart ){
 			var v = -$(window).scrollTop();
 			bg.translateX = v;
-			bg.translateY = v*0.4;
+			bg.translateY = -v;
 			floatTips.translateY = v*0.4;
 
         }
@@ -213,7 +213,7 @@
 		if($(window).scrollTop()>= 0){
 			var v = -$(window).scrollTop();
 			bg.translateX = v;
-			bg.translateY = v*0.4;
+			bg.translateY = -v;
 			floatTips.translateY = v*0.4;
 		}
 	});
