@@ -2,45 +2,33 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8" />
-<title>腾讯视频用户送会员</title>
+<title>moka测试</title>
 <meta name="format-detection" content="telephone=no">
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover" />
 <link rel="stylesheet" href="../style/css/share.css"  />
-<link rel="stylesheet" href="http://flexslider.woothemes.com/css/flexslider.css"  />
-
-<!-- <link rel="stylesheet" href="http://www.swiper.com.cn/dist/css/swiper.min.css"  /> -->
-<style>
-.flexslider{
-	border-radius: 0;
-}
-.flex-direction-nav{
-	display: none;
-}
-</style>
 
 </head>
 <body ontouchstart>
-			<section class="mod_slider swiper-container flexslider">
-				<ul class="mod_slider_content swiper-wrapper slides" >
+			<section class="mod_slider flexslider">
+				<ul class="mod_slider_content slides">
 					<li>
-						<div class="download_banner swiper-slide">
+						<div class="download_banner">
 							<i class="icon_app"></i>
 							<div class="text"><h4>MOKA魔咔</h4><p>下我呀下到我就让你...嘿嘿嘿</p></div>
 							<button class="btn_normal btn_download">下载</button>
 						</div>
 					</li>
 					<li>
-					<div class="download_banner swiper-slide">
-						<i class="icon_app"></i>
-						<div class="text"><h4>MOKA魔咔</h4><p>超多魔性脑洞视频等你来搞</p></div>
-						<button class="btn_normal"><i class="emoji_gesture_right"></i></button>
-					</div>
+						<div class="download_banner">
+							<i class="icon_app"></i>
+							<div class="text"><h4>MOKA魔咔</h4><p>超多魔性脑洞视频等你来搞</p></div>
+							<button class="btn_normal"><i class="emoji_gesture_right"></i></button>
+						</div>
 					</li>
 				</ul>
-				<div class="mod_slider_trigger swiper-pagination">
-				</div>
+
 			</section>
 			<section class="main_player">
 
@@ -164,35 +152,33 @@
 		</div>
 	</section>
 	<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
-	<script type="text/javascript" src="http://flexslider.woothemes.com/js/jquery.flexslider.js"></script>
-	<script type="text/javascript" src="../js/alloy_touch.js"></script>
+	<script type="text/javascript" src="../js/jquery.flexslider.js"></script>
 	<script type="text/javascript" src="../js/transform.js"></script>
 	<script src='http://vm.gtimg.cn/tencentvideo/txp/js/txplayer.js'></script>
 	<script>
-	$(window).load(function() {
-	  $('.flexslider').flexslider({
-	    animation: "slide"
-	  });
+	$('.flexslider').flexslider({
+		animation: "slide",
+		controlNav: true,
+		directionNav: false,
+		slideshowSpeed: 3000,
+		pauseOnHover: true,
+		before: function (slide) {
+			slide.pause();
+            slide.play();
+			$('.emoji_gesture_right').removeClass('animated');
+		},
+		end: function () {
+			$('.emoji_gesture_right').addClass('animated');
+		}
 	});
-    // var swiper = new Swiper('.swiper-container', {
-	// 	pagination: '.swiper-pagination',
-	// 	autoplay : 3000,
-	// 	speed: 600,
-	// 	loop : true,
-	// 	onSlideChangeEnd: function(swiper){
-	// 		if(swiper.activeIndex==2){
-	// 			$('.emoji_gesture_right').addClass('animated');
-	// 		}else{
-	// 			$('.emoji_gesture_right').removeClass('animated');
-	// 		}
-	//    }
-    // });
-	// var player = new Txplayer({
-	//   containerId: 'player1',
-	//   vid: 'w0543yhvooz',
-	//   width: '100%',
-	//   height: (screen.availWidth-0)/16*9
-	// });
+
+
+	var player = new Txplayer({
+	  containerId: 'player1',
+	  vid: 'w0543yhvooz',
+	  width: '100%',
+	  height: (screen.availWidth-0)/16*9
+	});
 
 	</script>
 	<script>

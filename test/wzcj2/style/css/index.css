@@ -1686,10 +1686,9 @@ a, em {
     padding: 0 16px;
   }
   .mod_head .user_account {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0;
-    flex: 0;
-    width: 18px;
+        -webkit-box-flex: inherit;
+        -webkit-flex: inherit;
+        flex: inherit;
   }
   .mod_head .user_account .name {
     display: none;
