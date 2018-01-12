@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>krpano / HTML5 Video WebGL Test</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="shortcut icon" href="//v.qq.com/favicon.ico" />
+    <style>
+        body { font-family:Arial; font-size:10pt;
+            background: transparent;
+         }
+        h2 { margin-bottom:4pt; padding-bottom:0pt; }
+        ul { margin-top:0pt; margin-bottom:4pt; padding-left:20pt; }
+        ul li { padding:1pt 0; }
+    </style>
+</head>
+<body>
+
+<h2 id="h2">load</h2>
+
+<div>
+<!-- <video id="video" src="abc.mp4" autoplay loop webkit-playsinline crossorigin="anonymous" style="position: fixed;z-index: 3;left: -1000px;top:0;"></video> -->
+  <video id="video" autoplay webkit-playsinline playsinline style="position: fixed;z-index: 3;left: -1400px;top:0; width: 100px;height:100px;">
+    <source type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+  </video>
+  
+  <canvas id="canvas" width="375" height="667" style="position:fixed;z-index:2;left:0px;top: 0px;pointer-events: none; border: 1px solid red;"></canvas>
+  <div>
+      <pre id="log" style="position:absolute;left:510px;top:0;width:400px;height:375px;margin:0;border:1px solid #CCCCCC;overflow:hidden;">Log:</pre>
+  </div>
+  <div id='openUrl' style="display: block;position: fixed;top: 300px;color: black;font-size: 20px;background-color:thistle;width: 130px;text-align: center;border-radius: 50px ;z-index: 100">点击跳转</div>
+</div>
+
+<script src="http://vm.gtimg.cn/tencentvideo_v1/script/film/weixin/v3/lib/load-debugger.js"></script>
+
+<script src="test_video.js"> </script>
+
+</body>
+</html>
