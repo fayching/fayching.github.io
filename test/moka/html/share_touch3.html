@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8" />
-<title>moka测试2</title>
+<title>moka测试3</title>
 <meta name="format-detection" content="telephone=no">
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -212,15 +212,15 @@ body, html{
 	Transform(floatTips);
 	Transform(bg);
 
-	$('body').on('touchstart', function (e) {
-        if($(window).scrollTop()>= 0){
+	$('.container').on('touchstart', function (e) {
+        if($('.container').scrollTop()>= 0){
             isTouchStart = true;
         }
     });
-	$('body').on('touchmove',function (e) {
+	$('.container').on('touchmove',function (e) {
 
 		if ( isTouchStart ){
-			var v = -$(window).scrollTop();
+			var v = -$('.container').scrollTop();
 			bg.translateX = v;
 			bg.translateY = -v;
 			floatTips.translateY = v*0.4;
@@ -228,13 +228,13 @@ body, html{
         }
 
 	});
-	$('body').on('touchend',function (e) {
+	$('.container').on('touchend',function (e) {
 		isTouchStart = false;
 
 	});
-	$(window).scroll(function() {
-		if($(window).scrollTop()>= 0){
-			var v = -$(window).scrollTop();
+	$('.container').scroll(function() {
+		if($('.container').scrollTop()>= 0){
+			var v = -$('.container').scrollTop();
 			bg.translateX = v;
 			bg.translateY = -v;
 			floatTips.translateY = v*0.4;
