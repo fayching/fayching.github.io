@@ -175,13 +175,17 @@ body, html{
 	<script type="text/javascript" src="../js/transform.js"></script>
 	<script src='http://vm.gtimg.cn/tencentvideo/txp/js/txplayer.js'></script>
 	<script>
-	$('.flexslider').flexslider({
+	var slider = $('.flexslider').flexslider({
 		animation: "slide",
 		controlNav: true,
+		slideshow: true,
+		animationLoop: true,
+		pauseOnAction: false,
+		mousewheel: false,
 		directionNav: false,
 		slideshowSpeed: 3000,
-		pauseOnHover: true,
 		before: function (slide) {
+			console.log(1)
 			slide.pause();
             slide.play();
 			$('.emoji_gesture_right').removeClass('animated');
@@ -206,7 +210,7 @@ body, html{
 	var floatTips = $('.float_tips')[0];
 	var isTouchStart = false;
 
-	$('.bg').css('width',height+'px');
+	$('.bg').css('width','1374px');
 	// $('.bg').css('background-position',-$('#scroller').height()+'px 0');
 	var bg = $('.bg')[0];
 	Transform(floatTips);
