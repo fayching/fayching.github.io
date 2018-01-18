@@ -1,0 +1,4 @@
+.txp_overlay_play .txp_btn_play_lg{width:100px;height:64px;background:rgba(0,0,0,.8);border-radius:4px}
+.txp_overlay_play .txp_btn_play_lg .txp_icon_play{top:1px;width:54px;height:54px}
+.txp_overlay_loading .txp_icon_loading{width:100px;height:64px;margin-bottom:0;background:rgba(0,0,0,.8) url(/tencentvideo/txp/style/img/loading_black.gif) center center no-repeat;background-size:30px 30px;border-radius:4px;-webkit-animation:none;animation:none}
+#faycheng{content:"20180111183234"}
