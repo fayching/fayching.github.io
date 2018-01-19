@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>签到日历页</title>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui" />
+<link rel="stylesheet" href="../../style/css/fan/fan.css">
+
+</head>
+<body ontouchstart>
+	<section class="mod_toast show">
+		<div class="mod_toast_content">
+			<p>上传失败请重试</p>
+		</div>
+	</section>
+	<section class="mod_popup mod_popup_checkin_date show">
+		<div class="mod_popup_content">
+			<header class="checkin_head">
+				<i class="icon_gift_fan_value_lg"></i>
+				<i class="icon_close"></i>
+				<div class="checkin_tips">
+					<h3 class="title">签到成功</h3>
+					<p>获得 <em>3 </em>点粉丝值！</p>
+				</div>
+			</header>
+			<div class="checkin_gift_list_scroll">
+				<ul class="checkin_gift_list">
+					<li class="done">
+						<div class="inner">
+							<div class="stat">第1天</div>
+							<div class="icon_gift"></div>
+							<div class="gift_value">粉丝值 +2</div>
+						</div>
+					</li>
+					<li class="current">
+						<div class="inner">
+							<div class="stat">2 day</div>
+							<div class="icon_gift"></div>
+							<div class="gift_value">粉丝值 +2</div>
+						</div>
+					</li>
+					<li>
+						<div class="inner">
+							<div class="stat">3 day</div>
+							<div class="icon_gift"></div>
+							<div class="gift_value">粉丝值 +3</div>
+						</div>
+					</li>
+					<li>
+						<div class="inner">
+							<div class="stat">4 day</div>
+							<div class="icon_gift"></div>
+							<div class="gift_value">粉丝值 +3</div>
+						</div>
+					</li>
+					<li>
+						<div class="inner">
+							<div class="stat">5 day</div>
+							<div class="icon_gift"></div>
+							<div class="gift_value">粉丝值 +4</div>
+						</div>
+					</li>
+					<li>
+						<div class="inner">
+							<div class="stat">6 day</div>
+							<div class="icon_gift"></div>
+							<div class="gift_value">粉丝值 +5</div>
+						</div>
+					</li>
+					<li>
+						<div class="inner">
+							<div class="stat">7 day</div>
+							<div class="icon_gift_lg"></div>
+							<div class="gift_value">大礼物</div>
+						</div>
+					</li>
+					<li>
+						<div class="inner">
+							<div class="stat">8 day</div>
+							<div class="icon_gift"></div>
+							<div class="gift_value">粉丝值 +5</div>
+						</div>
+					</li>
+					<li>
+						<div class="inner">
+							<div class="stat">9 day</div>
+							<div class="icon_gift"></div>
+							<div class="gift_value">粉丝值 +6</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	<section>
+
+<!-- 正式内容 结束 -->
+<script type="text/javascript" src="../../js/zepto.js"></script>
+<script language="javascript">
+
+$('.checkin_gift_list_scroll').height(document.documentElement.clientHeight-200-113 + 'px');
+</script>
+</body>
+
+</html>

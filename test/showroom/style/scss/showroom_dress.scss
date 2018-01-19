@@ -1,0 +1,253 @@
+@charset "utf-8";
+
+@import "reset";
+@import  "fn_common";
+
+html,
+body{
+	width: 100%;
+	height: 100%;
+}
+.svg_icon{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+	pointer-events: none;
+}
+.svg_icon path,
+.svg_icon use{
+	fill: currentColor;
+}
+.txp_svg_sprite{
+	display: none;
+}
+/****/
+
+.mod_wardrobe_clothing{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0,.75);
+	.wardrobe_clothing{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		display: -webkit-flex;
+	    display: flex;
+
+	    flex-direction: column;
+	    -webkit-flex-direction: column;
+
+	    justify-content: center;
+    	-webkit-justify-content: center;
+
+	}
+	.wardrobe_clothing_inner{
+		position: relative;
+		z-index: 1;
+		// left: 290px;
+		padding-left: 290px;
+	}
+	.wardrobe_area{
+		position: absolute;
+		z-index: 2;
+		// left: -220px;
+		left: 65px;
+		top: 50px;
+		width: 170px;
+		height: 178px;
+	}
+	.wardrobe_stage{
+		margin-bottom: 2px;
+		.stage_pic{
+			width: 152px;
+			height: 152px;
+			position: relative;
+			top: 10px;
+			left: 8px;
+			.pic{
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.stage_light{
+
+		}
+		.stage_bg{
+			width: 170px;
+			height: 26px;
+			background: url(../img/dress/bg_stage.png) no-repeat;
+			background-size: 100%;
+		}
+	}
+	.wardrobe_tit{
+		font-size: 15px;
+		line-height: 22px;
+		color: #fff;
+		text-align: center;
+	}
+	.wardrobe_txt{
+		font-size: 12px;
+		line-height: 20px;
+		color: #979797;
+		text-align: center;
+		margin-bottom: 4px;
+	}
+	.wardrobe_btn{
+		text-align: center;
+	}
+	.btn_use{
+		display: inline-block;
+		padding: 0 15px;
+		font-size: 13px;
+		line-height: 30px;
+		border-radius: 30px;
+		color: #fff;
+		background: #ff7000;
+		&.using{
+			background: #a3a3a3;
+		}
+	}
+	.clothing_area{
+		// position: relative;
+		// left: 290px;
+		padding-top: 60px;
+	}
+	.clothing_hd{
+		font-size: 12px;
+		line-height: 18px;
+		color: #fff;
+		padding-bottom: 2px;
+		border-bottom: 1px solid rgba(255,255,255,.1);
+	}
+	.clothing_bd{
+		overflow: auto;
+    	-webkit-overflow-scrolling: touch;
+	}
+	.clothing_list{
+		padding: 25px 0 40px;
+		white-space: nowrap;
+    	font-size: 0;
+		.item{
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			width: 48px;
+			height: 48px;
+			margin-right: 20px;
+			.pic{
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+			}
+			.icon_select{
+				display: none;
+				position: absolute;
+				right: -10px;
+				bottom: -10px;
+				width: 20px;
+				height: 20px;
+				border-radius: 20px;
+				background: #ff7000;
+				&:before,
+				&:after{
+					position: absolute;
+					content: ' ';
+					width: 1px;
+					font-size: 0;
+					background: #fff;
+				}
+				&:before{
+				    top: 8px;
+				    left: 6px;
+				    height: 6px;
+				    -webkit-transform: rotate(-45deg);
+				    transform: rotate(-45deg);
+				}
+				&:after{
+					top: 4px;
+				    left: 12px;
+				    height: 10px;
+				    -webkit-transform: rotate(45deg);
+				    transform: rotate(45deg);
+				}
+			}
+			.icon_mark{
+				position: absolute;
+				top: -13px;
+				left: 0;
+				right: 0;
+				width: 100%;
+				height: 7px;
+				text-align: center;
+				img{
+					display: block;
+					width: 21px;
+					height: 7px;
+					margin: 0 auto;
+				}
+			}
+		}
+		.selected .icon_select{
+			display: block;
+		}
+	}
+	.btn_close{
+		position: absolute;
+		z-index: 2;
+		top: 15px;
+		right: 15px;
+		color: #fff;
+		width: 30px;
+		height: 30px;
+		.icon_pk_close{
+			display: block;
+			width: 15px;
+			height: 15px;
+			margin: 0 auto;
+			position: relative;
+			top: 7px;
+		}
+	}
+	.btn_rule{
+		position: absolute;
+		z-index: 2;
+		top: 15px;
+		left: 15px;
+		color: #fff;
+		font-size: 12px;
+		line-height: 20px;
+		.icon_pk_question{
+			display: inline-block;
+			vertical-align: top;
+			width: 12px;
+			height: 12px;
+			position: relative;
+			top: 4px;
+			margin-right: 5px;
+		}
+	}
+	.dress_tit{
+		position: absolute;
+		z-index: 2;
+		top: 5px;
+		left: 50%;
+		width: 160px;
+		margin-left: -80px;
+		text-align: center;
+		.tit{
+			font-size: 15px;
+			line-height: 25px;
+			color: #fff;
+		}
+		.txt{
+			font-size: 12px;
+			line-height: 21px;
+			color: #979797;
+		}
+	}
+}

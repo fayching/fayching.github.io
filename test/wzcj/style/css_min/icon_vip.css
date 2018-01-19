@@ -1,0 +1,21 @@
+.icon_vip{position:relative;display:inline-block;width:18px;height:18px;background:url(/tencentvideo/vstyle/mobile/v3/style/img/common/sprite_icon_vip_lv.svg) 0 0 no-repeat;-webkit-background-size:240px auto;background-size:240px auto;vertical-align:-3px}
+.icon_vip_l{width:33px;background-position:-22px 0}
+.icon_vipyear{width:41px;background-position:-60px 0}
+.icon_vip_num{position:absolute;top:7px;left:8px;width:10px;height:10px;background:url(/tencentvideo/vstyle/mobile/v3/style/img/common/sprite_icon_vip_lv.svg) 0 -46px no-repeat;-webkit-background-size:240px auto;background-size:240px auto}
+.icon_vip_l .icon_vip_num,.icon_vipyear .icon_vip_num{background-position:0 -66px;width:5px;height:6px;top:8px;left:24px}
+.icon_vip_lv2 .icon_vip_num{background-position:-10px -46px}
+.icon_vip_lv3 .icon_vip_num{background-position:-20px -46px}
+.icon_vip_lv4 .icon_vip_num{background-position:-30px -46px}
+.icon_vip_lv5 .icon_vip_num{background-position:-40px -46px}
+.icon_vip_lv6 .icon_vip_num{background-position:-50px -46px}
+.icon_vip_lv7 .icon_vip_num{background-position:-60px -46px}
+.icon_vip_l .icon_vip_num,.icon_vipyear .icon_vip_num{background-position-y:-66px}
+.icon_vip_lv7{background-position:-105px 0}
+.icon_vip_grey.icon_vip_lv7{background-position:-105px -22px}
+.icon_vip_l.icon_vip_lv7{background-position:-130px 0}
+.icon_vipyear.icon_vip_lv7,.icon_vipyear.icon_vipyear_lv7{background-position:-170px 0}
+.icon_vipyear.icon_vip_grey.icon_vip_lv7{background-position:-170px -22px}
+.icon_vip_l.icon_vip_lv7{background-position:-130px 0}
+.icon_vip_grey.icon_vip_l.icon_vip_lv7{background-position:-130px -22px}
+.icon_vip_l.icon_vip_lv7 .icon_vip_num,.icon_vipyear.icon_vip_lv7 .icon_vip_num,.icon_vipyear_lv7 .icon_vip_num{background:0 0}
+#faycheng{content:"20171211143353"}

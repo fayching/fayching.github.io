@@ -1,0 +1,1632 @@
+@charset "UTF-8";
+/*===========================================
+		项目: 腾讯视频
+		作者: v_rqhe
+		日期: 2017-05-03
+		作用: 个人中心
+===========================================*/
+/* 清零样式样式 */
+/*===========================================
+		项目: 腾讯视频
+		作者: blankyu
+		日期: 2013-01-29
+		作用: 全站样式reset
+===========================================*/
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+html {
+  color: #fefefe;
+  background-color: #141414;
+  /*-webkit-text-size-adjust: 100%;*/
+  /*-ms-text-size-adjust: 100%;*/
+  _text-overflow: ellipsis;
+  /*text-rendering: optimizelegibility;*/
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+/*去掉点击元素产生背景或边框*/
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+/*article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+audio, canvas, video {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+*/
+/* 要注意表单元素并不继承父级 font 的问题 */
+body, button, input, select, textarea {
+  font: 12px/1.5 PingFangSC-Regular, Tahoma,Microsoft Yahei, sans-serif;
+  _font-size: 62.5%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1em;
+  /*font-family: helvetica neue, hiragino sans gb, microsoft yahei, sans-serif;*/
+}
+
+/* 默认不显示下划线，保持页面简洁 */
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #bbb;
+}
+
+/* ie10 会在链接active时添加一个灰色背景色 */
+a:visited,
+a[tabindex='-1']:focus,
+a:active {
+  outline: 0 none;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  a:active {
+    background-color: transparent;
+  }
+}
+a:hover {
+  color: #ff5945;
+  outline: 0 none;
+}
+
+/* 特殊标签的样式重定义 */
+small, cite, code, em, th, i, b {
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* 表单控件样式一致 */
+input, select, textarea, button {
+  font-size: 1em;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  outline: 0 none;
+}
+
+/* 设置鼠标指针为手形 */
+button, input[type=button], input[type=submit] {
+  cursor: pointer;
+}
+
+/* firefox 奇葩的按钮高度bug */
+button::-moz-focus-inner, button::-moz-focus-outer,
+input::-moz-focus-inner, input::-moz-focus-outer {
+  border: 0 none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 取消在 chrome 中搜索框的特殊样式 */
+input[type=search] {
+  -webkit-appearance: textfield;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+/* 移除 ie 输入框上的删除按钮 */
+input::-ms-clear {
+  display: none;
+}
+
+/* 设置文本区只可以垂直拉伸 */
+textarea {
+  resize: vertical;
+  overflow-y: auto;
+}
+
+/* 去掉各 Table  cell 的边距并让其边重合 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* IE bug fixed: th 不继承 text-align*/
+th {
+  text-align: inherit;
+}
+
+/* 去除默认边框 */
+fieldset, img, iframe {
+  border: 0 none;
+}
+
+/* 使图片在不同 ie 版本中的表现一致性 */
+img {
+  display: inline-block;
+  vertical-align: bottom;
+  -ms-interpolation-mode: bicubic;
+}
+
+img::shadow div {
+  border: none !important;
+}
+
+/*img /deep/ div{
+	border: none !important;
+}
+*/
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe {
+  display: block;
+}
+
+/* 去掉列表前的标识, li 会继承，大部分网站通常用列表来很多内容，所以应该当去 */
+ul, ol {
+  list-style: none;
+}
+
+li {
+  vertical-align: top;
+}
+
+q:before, q:after {
+  content: '';
+}
+
+/* 清理浮动 */
+.cf:before, .cf:after {
+  content: '';
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+/*  侧栏滚动条区域 */
+::-webkit-scrollbar {
+  width: 7px;
+  background: none;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-corner {
+  display: none;
+}
+
+::-webkit-scrollbar-track-piece {
+  background: none;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-resizer {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #42424a;
+  border-radius: 4px;
+}
+
+.none {
+  display: none !important;
+}
+
+.mod_top_back {
+  width: 60px;
+  height: 28px;
+  padding: 16px 20px;
+}
+.mod_top_back .btn_mod_back {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 28px;
+  text-indent: 21px;
+  color: #999;
+  background: #3b3b45;
+  -webkit-clip-path: polygon(0px 14px, 8px 0px, 60px 0px, 60px 28px, 8px 28px, 0px 14px);
+  clip-path: polygon(0px 14px, 8px 0px, 60px 0px, 60px 28px, 8px 28px, 0px 14px);
+}
+.mod_top_back .btn_mod_back:hover {
+  color: #999;
+  background: #44444f;
+}
+
+/*===========================================
+		项目: 腾讯视频
+		作者: v_rqhe
+		日期: 2016-09-02
+		作用: 个人中心公用样式
+===========================================*/
+/*字体色*/
+.hl {
+  color: #ff7000;
+}
+
+/*链接色*/
+a {
+  color: #202020;
+}
+a:hover {
+  color: #FF6428;
+}
+
+/*字大小*/
+/*一行*/
+/*两行*/
+/*头像*/
+/**/
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  color: inherit;
+}
+
+.icon_sm {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+
+.icon_lg {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+}
+
+.icon_xl {
+  display: inline-block;
+  width: 72px;
+  height: 72px;
+}
+
+.icon_xs {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+}
+
+.icon_l,
+.icon_xxl,
+.icon_xxxl {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  color: inherit;
+}
+
+.icon_xxl {
+  width: 90px;
+  height: 90px;
+}
+
+.icon_xxxl {
+  width: 160px;
+  height: 160px;
+}
+
+.icon_mark {
+  display: inline-block;
+  width: 23px;
+  height: 14px;
+}
+
+.svg_icon path,
+.svg_icon use {
+  fill: currentColor;
+}
+
+/* 正文内容容器 */
+.mod_row_loading .mod_bd {
+  min-height: 200px;
+}
+.mod_row_loading .mod_hd .title_desc {
+  visibility: hidden;
+}
+
+/****/
+.mod_main {
+  width: 100%;
+  height: 100%;
+}
+
+.mod_row_box {
+  margin-bottom: 20px;
+}
+
+/*记录为空*/
+.mod_row_empty {
+  padding-top: 250px;
+  height: 550px;
+  text-align: center;
+}
+
+.mod_row_empty .icon_xxxl {
+  display: inline-block;
+  color: #CCC;
+}
+
+.mod_row_empty .empty_title {
+  margin: 20px 0 5px;
+  color: #999;
+  font-size: 22px;
+}
+
+.mod_row_empty .empty_desc {
+  font-size: 18px;
+  color: #AAA;
+}
+
+.mod_row_empty .empty_title a,
+.mod_row_empty .empty_desc a {
+  color: #ff7000;
+}
+
+/*分页*/
+.mod_pages {
+  margin: 40px auto;
+  text-align: center;
+  font-size: 0;
+}
+
+.mod_pages a {
+  display: inline-block;
+  min-width: 10px;
+  height: 30px;
+  margin: 0 5px;
+  padding: 0 10px;
+  line-height: 30px;
+  border: 1px solid #D8D8D8;
+  text-align: center;
+  border-radius: 2px;
+  font-size: 14px;
+  color: #5A5A5A;
+  *vertical-align: top;
+}
+
+.mod_pages a:hover {
+  border-color: #ff7000;
+  color: #ff7000;
+}
+
+.mod_pages .current,
+.mod_pages .current:hover {
+  background-color: #ff7000;
+  border-color: #ff7000;
+  color: #fff;
+}
+
+.mod_pages .page_prev {
+  margin-right: 15px;
+}
+
+.mod_pages .page_next {
+  margin-left: 15px;
+}
+
+.mod_pages .disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.mod_pages .page_ellipsis:hover,
+.mod_pages .disabled:hover {
+  cursor: default;
+  color: #5A5A5A;
+  border: 1px solid #D8D8D8;
+}
+
+.mod_ad {
+  width: 100%;
+}
+.mod_ad img {
+  width: 100%;
+}
+
+.btn_normal {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  border-radius: 21px;
+  background: #FF6428;
+  background: -webkit-linear-gradient(left, #ff7000 0%, #ff4e00 100%);
+  background: linear-gradient(to right, #ff7000 0%, #ff4e00 100%);
+}
+.btn_normal:hover {
+  color: #fff;
+  background: #ff7000;
+}
+
+.btn_normal_line {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  color: #ff7000;
+  text-align: center;
+  border: 1px solid #ff7000;
+  border-radius: 21px;
+}
+.btn_normal_line:hover {
+  color: #FF6428;
+  border-color: #FF6428;
+}
+
+.btn_disable,
+.btn_disable {
+  background: #ccc !important;
+  box-shadow: none;
+  cursor: default;
+}
+
+/*广告模块*/
+/*===========================================
+		项目: 腾讯视频
+		作者: v_rqhe
+		日期: 2017-06-28
+		作用: 成长体系web 广告模块
+===========================================*/
+.mod_ad {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.mod_ad .ad_wrap {
+  width: 100%;
+  height: 181px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.mod_ad .ad_list {
+  position: relative;
+  height: 100%;
+  width: 100000px;
+}
+
+.mod_ad .ad_item {
+  font-size: 0;
+  float: left;
+  width: 1024px;
+}
+
+.mod_ad .ad_item img {
+  display: block;
+  width: 100%;
+}
+
+.mod_ad .ad_nav {
+  position: absolute;
+  bottom: 6px;
+  z-index: 5;
+  width: 100%;
+  text-align: center;
+  font-size: 0;
+}
+
+.mod_ad .ad_nav .dot {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0px 4px;
+  width: 6px;
+  height: 6px;
+  cursor: pointer;
+  background-color: #99a5b1;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 3px;
+}
+
+.mod_ad .ad_nav .active {
+  background: #FF6428;
+  background: -webkit-linear-gradient(left, #ff7000 0%, #ff4e00 100%);
+  background: linear-gradient(to right, #ff7000 0%, #ff4e00 100%);
+}
+
+.mod_ad .btn_next,
+.mod_ad .btn_prev {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 42px;
+  z-index: 2;
+  height: 100%;
+  opacity: 0.5;
+}
+
+.mod_ad .btn_prev {
+  left: 0;
+}
+
+.mod_ad .btn_next {
+  right: 0;
+}
+
+.mod_ad .icon_btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 26px;
+  margin-left: -7px;
+  margin-top: -13px;
+  color: #fff;
+}
+
+.mod_ad .btn_next:active,
+.mod_ad .btn_prev:active {
+  opacity: 1;
+}
+
+.mod_ad .btn_next:active .icon_btn,
+.mod_ad .btn_prev:active .icon_btn {
+  color: #202020;
+}
+
+/*V币商城模块*/
+/*===========================================
+		项目: 腾讯视频
+		作者: v_rqhe
+		日期: 2016-09-02
+		作用: V 币商城
+===========================================*/
+.mod_card_wrap {
+  position: relative;
+}
+
+/*主要内容部分切换导航*/
+.mod_nav_related {
+  position: relative;
+  margin: 0 20px;
+}
+.mod_nav_related .icon {
+  display: inline-block;
+  vertical-align: top;
+}
+.mod_nav_related .icon_lottery {
+  position: absolute;
+  top: 9px;
+  left: -40px;
+  width: 38px;
+  height: 39px;
+  background: url(img/vcoin_store/icon_lottery.png) center center no-repeat;
+  background-size: cover;
+}
+.mod_nav_related .related_list {
+  display: inline-block;
+  vertical-align: top;
+}
+.mod_nav_related .related_list .item {
+  float: left;
+  height: 44px;
+  margin-bottom: -1px;
+}
+.mod_nav_related .related_list .item .link {
+  position: relative;
+  display: block;
+  padding: 0 2px;
+  margin-right: 24px;
+  font-size: 20px;
+  line-height: 44px;
+  text-align: center;
+  color: #ececec;
+}
+.mod_nav_related .related_list .item .link:hover {
+  color: #ff7000;
+}
+.mod_nav_related .related_list .item.current .link {
+  color: #ff7000;
+}
+.mod_nav_related .related_list .item.current .link:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -8px;
+  width: 16px;
+  height: 2px;
+  background: #ff7000;
+}
+.mod_nav_related .link_lottery {
+  display: inline-block;
+  position: relative;
+  height: 46px;
+  line-height: 46px;
+  font-size: 20px;
+  margin: 0px 40px 0;
+  color: #ececec;
+}
+.mod_nav_related .link_lottery .lottery_tip {
+  position: absolute;
+  left: 100%;
+  top: -5px;
+  cursor: default;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 22px;
+  color: #fff;
+  padding: 0 8px;
+  border-radius: 11px;
+  background: #ef4125;
+  white-space: nowrap;
+}
+.mod_nav_related .link_lottery .lottery_tip .tip_arrow {
+  position: absolute;
+  bottom: 0;
+  left: -4px;
+  display: inline-block;
+  width: 13px;
+  height: 11px;
+  background: url(img/vcoin_store/tip_arrow.png) center center no-repeat;
+  background-size: cover;
+}
+.mod_nav_related .link_lottery:hover {
+  color: #ff7000;
+}
+.mod_nav_related .link_lottery.current {
+  color: #ff7000;
+}
+.mod_nav_related .link_lottery.current:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -8px;
+  width: 16px;
+  height: 2px;
+  background: #ff7000;
+}
+.mod_nav_related .mycard_link {
+  position: absolute;
+  right: 0;
+  bottom: 12px;
+  font-size: 14px;
+  color: #888;
+}
+.mod_nav_related .mycard_link:hover {
+  color: #ff7000;
+}
+.mod_nav_related .mycard_link.current {
+  color: #ff7000;
+}
+
+.mod_tip {
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  font-size: 14px;
+  background: #fdfdfd;
+}
+.mod_tip a {
+  color: #FF6428;
+}
+.mod_tip .icon_right_sm {
+  position: relative;
+  top: 11px;
+}
+
+.mod_card_list {
+  font-size: 0;
+  margin: 0 14px;
+}
+.mod_card_list .icon {
+  display: inline-block;
+  vertical-align: top;
+}
+.mod_card_list .icon_markvip {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 71px;
+  height: 71px;
+  background: url(img/vcoin_store/icon_markvip.png) center center no-repeat;
+  background-size: cover;
+}
+.mod_card_list .icon_new {
+  margin: 2px 0px 0px 4px;
+  width: 34px;
+  height: 16px;
+  background: url(img/vcoin_store/icon_new.png) center center no-repeat;
+  background-size: cover;
+}
+.mod_card_list .icon_timelimit {
+  position: relative;
+  margin: 3px 0px 0px 5px;
+}
+.mod_card_list .icon_rob {
+  position: relative;
+  margin: 3px 0px 0px 5px;
+}
+.mod_card_list .card_item {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 189px;
+  margin: 5px;
+}
+.mod_card_list .card_item .card_info {
+  display: block;
+}
+.mod_card_list .card_item .card_img {
+  height: 126px;
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  display: box;
+  box-orient: horizontal;
+  box-pack: center;
+  box-align: center;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: #222;
+}
+.mod_card_list .card_item .card_img img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+}
+.mod_card_list .card_item .card_img .limit_desc {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  color: #fff;
+  font-size: 11px;
+  background: rgba(239, 65, 37, 0.86);
+}
+.mod_card_list .card_item .card_img .limit_desc .limit_txt {
+  display: inline-block;
+  font-size: 14px;
+  margin-right: 5px;
+}
+.mod_card_list .card_item .card_img .limit_desc .limit_txt_right {
+  float: right;
+  margin-right: 6px;
+}
+.mod_card_list .card_item .card_tit {
+  display: inline-block;
+  max-width: 100%;
+  font-size: 16px;
+  line-height: 21px;
+  color: #fefefe;
+  font-weight: normal;
+  font-family: PingFangSC-Medium;
+  margin: 10px 0px 4px 0px;
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-wrap: break-all;
+  word-break: normal;
+}
+.mod_card_list .card_item .card_desc {
+  font-size: 14px;
+  color: #ff7000;
+}
+.mod_card_list .card_item .card_desc .original_price {
+  color: #555;
+  margin-left: 10px;
+  text-decoration: line-through;
+}
+.mod_card_list .card_item:active .card_tit {
+  color: #fff;
+}
+
+.mod_card_list .icon_exchanged {
+  position: absolute;
+  top: 64px;
+  right: 10px;
+  z-index: 2;
+  width: 66px;
+  height: 66px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(img/vcoin_store/icon_exchanged.png);
+}
+
+.mod_card_list .icon_exchangeover {
+  position: absolute;
+  top: 64px;
+  right: 10px;
+  z-index: 2;
+  width: 66px;
+  height: 66px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(img/vcoin_store/icon_exchangeover.png);
+}
+
+.coupon_list .icon_timelimit {
+  margin: -1px 0px 0px -2px;
+}
+.coupon_list .icon_rob {
+  margin: -1px 0px 0px -2px;
+}
+.coupon_list .icon_markvip {
+  width: 36px;
+  height: 36px;
+  background-image: url(img/vcoin_store/icon_markvip_s.png);
+}
+.coupon_list .card_item .card_img {
+  display: block;
+  width: 132px;
+  height: auto;
+  background: none;
+}
+.coupon_list .card_item .card_img .limit_desc {
+  position: relative;
+  background: none;
+  height: auto;
+  color: #ff7000;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 12px 0px -14px 0px;
+}
+.coupon_list .icon_exchanged,
+.coupon_list .icon_exchangeover {
+  top: 36px;
+  right: -25px;
+}
+
+.mycard_list {
+  font-size: 0;
+}
+.mycard_list .card_item {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  height: 104px;
+  font-size: 0;
+}
+.mycard_list .card_item .vertical_line {
+  display: inline-block;
+  width: 1px;
+  height: 104px;
+  vertical-align: middle;
+}
+.mycard_list .card_item .card_img {
+  display: inline-block;
+  width: 132px;
+  height: 64px;
+  vertical-align: middle;
+}
+.mycard_list .card_item .card_info {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 13px;
+  max-width: 48%;
+}
+.mycard_list .card_item .card_info .card_tit {
+  position: relative;
+  display: inline-block;
+  max-width: 107%;
+  padding-right: 25px;
+  font-size: 16px;
+  color: #eee;
+  font-weight: normal;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.mycard_list .card_item .card_info .card_tit .num {
+  position: absolute;
+  right: 0px;
+  top: 4px;
+  font-size: 14px;
+  color: #888;
+}
+.mycard_list .card_item .card_info .card_desc {
+  font-size: 14px;
+  color: #888;
+  line-height: 18px;
+  margin-top: 3px;
+}
+.mycard_list .card_item .card_info .limit_txt {
+  color: #ff7000;
+}
+.mycard_list .card_item .tip {
+  position: absolute;
+  right: 94px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #666;
+}
+.mycard_list .card_item .tip .icon_right_sm {
+  position: relative;
+  vertical-align: top;
+  top: 5px;
+  margin-left: 1px;
+}
+.mycard_list .card_item .tip:hover {
+  color: #ff7000;
+}
+
+.mycard_list .tip .arrow_right {
+  margin-left: 4px;
+  border-color: #d8d8d8;
+}
+
+.card_item_done .card_img,
+.card_item_done .card_tit,
+.card_item_done .card_desc {
+  opacity: 0.5;
+}
+
+.mod_empty {
+  width: 100%;
+  height: 380px;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  display: box;
+  box-orient: horizontal;
+  box-pack: center;
+  box-align: center;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.empty_inner {
+  text-align: center;
+}
+
+.mycard_empty {
+  color: #656565;
+}
+
+.mod_empty_title {
+  font-size: 18px;
+  color: #888;
+  margin: 10px 0px 3px 0px;
+}
+
+.mod_empty_desc {
+  font-size: 14px;
+  color: #666;
+}
+
+/*抽奖模块*/
+/*===========================================
+		项目: 腾讯视频
+		作者: v_rqhe
+		日期: 2017-05-02
+		作用: 抽奖模块
+===========================================*/
+/* 抽奖 模块开始 */
+.mod_lottery {
+  position: relative;
+  height: 500px;
+}
+
+.mod_lottery .mod_lottery_box {
+  position: absolute;
+  top: 90px;
+  right: 220px;
+  width: 347px;
+  height: 347px;
+  padding: 19px;
+  border-radius: 12px;
+  background: url(img/mod_lottery/lottery_bg.gif) center center no-repeat;
+  background-size: cover;
+}
+
+.mod_lottery .lottery_list {
+  position: relative;
+  width: 347px;
+  height: 347px;
+  background: #ffd7a2;
+  border-radius: 13px;
+}
+
+.mod_lottery .lottery_item {
+  position: absolute;
+  display: block;
+  width: 105px;
+  height: 105px;
+  text-align: center;
+  border-radius: 8px;
+  background: url(img/mod_lottery/lottery_item.png) center center no-repeat;
+  background-size: cover;
+}
+
+.mod_lottery #item_01 {
+  top: 8px;
+  left: 8px;
+}
+
+.mod_lottery #item_02 {
+  top: 8px;
+  left: 121px;
+}
+
+.mod_lottery #item_03 {
+  top: 8px;
+  left: 234px;
+}
+
+.mod_lottery #item_04 {
+  top: 121px;
+  left: 234px;
+}
+
+.mod_lottery #item_05 {
+  top: 234px;
+  left: 234px;
+}
+
+.mod_lottery #item_06 {
+  top: 234px;
+  left: 121px;
+}
+
+.mod_lottery #item_07 {
+  top: 234px;
+  left: 8px;
+}
+
+.mod_lottery #item_08 {
+  top: 121px;
+  left: 8px;
+}
+
+.mod_lottery .lottery_button {
+  top: 121px;
+  left: 121px;
+}
+
+.mod_lottery .lottery_item.active {
+  background-image: url(img/mod_lottery/lottery_item_active.png);
+  box-shadow: 0px 0px 5px rgba(255, 247, 150, 0.4);
+}
+
+.mod_lottery .lottery_img {
+  width: 100%;
+  border-radius: 14px;
+}
+
+.mod_lottery .lottery_button {
+  background: none;
+}
+
+.mod_lottery .btn_lottery {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  box-shadow: 0px 2px 4px rgba(255, 129, 6, 0.5);
+  background: url(img/mod_lottery/btn_lottery.png) center center no-repeat;
+  background-size: cover;
+}
+
+.mod_lottery .btn_lottery_free {
+  box-shadow: 0px 2px 4px rgba(45, 195, 21, 0.5);
+  background-image: url(img/mod_lottery/btn_lottery_free.png);
+}
+
+.mod_lottery_rule {
+  position: absolute;
+  top: 50%;
+  margin-top: -67px;
+  padding: 0 50px;
+  max-width: 50%;
+}
+
+.mod_lottery_rule .rule_tit {
+  font-size: 18px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.mod_lottery_rule .rule_list {
+  font-size: 16px;
+  line-height: 31px;
+  color: #bbb;
+  list-style-type: disc;
+  margin-left: 17px;
+  text-indent: -5px;
+}
+
+/*弹窗模块*/
+/*===========================================
+		项目: 腾讯视频
+		作者: v_rqhe
+		日期: 2017-05-02
+		作用: 抽奖模块
+===========================================*/
+/*===========================================
+		项目: 腾讯视频
+		作者: v_rqhe
+		日期: 2017-05-02
+		作用: 抽奖模块
+===========================================*/
+.mask_layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 999;
+}
+
+.scroll_wrap {
+  position: relative;
+  zoom: 1;
+  scrollbar-base-color: #eee;
+  /*滚动条的基本颜色*/
+  scrollbar-face-color: #ccc;
+  /*立体滚动条的颜色*/
+  scrollbar-arrow-color: #ccc;
+  /*三角箭头的颜色*/
+  scrollbar-3dlight-color: #ccc;
+  /*立体滚动条亮边的颜色*/
+  scrollbar-highlight-color: #ccc;
+  /*滚动条空白部分的颜色*/
+  scrollbar-shadow-color: #ccc;
+  /*立体滚动条阴影的颜色*/
+  scrollbar-darkshadow-color: #ccc;
+  /*立体滚动条强阴影的颜色*/
+  scrollbar-track-color: #eee;
+  /*立体滚动条背景颜色*/
+}
+
+.scroll_wrap::-webkit-scrollbar {
+  width: 4px;
+  background: #eee;
+  width: 0px;
+  background: transparent;
+}
+
+.scroll_wrap::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+
+.scroll_wrap::-webkit-scrollbar-button {
+  display: none;
+}
+
+.scroll_wrap::-webkit-scrollbar-thumb {
+  background: #ccc;
+  background: transparent;
+  border-radius: 4px;
+}
+
+.mod_pop {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background: #222;
+  font-family: PingFangSC-Medium;
+}
+
+.pop_btn_close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  color: #989898;
+}
+.pop_btn_close .icon_close_sm {
+  position: relative;
+  margin-top: 20px;
+}
+
+.pop_hd {
+  position: relative;
+  height: 57px;
+  line-height: 57px;
+  text-align: center;
+}
+.pop_hd:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #333333;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+.pop_hd .title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: normal;
+  font-family: PingFangSC-Bold;
+}
+
+.pop_bd {
+  text-align: center;
+  color: #333;
+}
+.pop_bd .desc {
+  margin-top: 15px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #979797;
+  text-align: center;
+}
+.pop_bd .scroll_wrap {
+  margin: 0px 20px 0px 20px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.pop_ft {
+  position: absolute;
+  bottom: 26px;
+  left: 0;
+  right: 0;
+}
+.pop_ft .pop_ft_inner {
+  font-size: 0;
+  text-align: center;
+}
+.pop_ft a {
+  margin: 0 15px;
+}
+.pop_ft .btn_normal {
+  width: 170px;
+  height: 34px;
+  line-height: 34px;
+  font-size: 14px;
+}
+.pop_ft .btn_normal_line {
+  width: 168px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+}
+
+.g_toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 45px;
+  line-height: 45px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+.g_toast_s {
+  padding: 0 12px;
+  width: auto;
+  height: 35px;
+  line-height: 35px;
+  z-index: 1000;
+}
+
+.g_toast .title {
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}
+
+.g_toast .icon_vcoin_sm {
+  margin-left: 5px;
+  vertical-align: top;
+  margin-top: 11px;
+}
+
+.pop_img {
+  position: relative;
+  text-align: center;
+}
+
+.pop_img .vcoin_img {
+  position: relative;
+  width: 170px;
+  margin-top: 36px;
+}
+
+.pop_img .empty_img {
+  position: relative;
+  width: 155px;
+  margin-top: 22px;
+  margin-bottom: 1px;
+}
+
+.pop_img .vip_card_img {
+  position: relative;
+  width: 243px;
+  margin-top: 30px;
+  margin-bottom: -8px;
+}
+
+.pop_img .quan_img_bg {
+  position: relative;
+  width: 243px;
+  margin-top: 32px;
+  margin-bottom: -11px;
+}
+
+.pop_img .quan_img {
+  position: absolute;
+  left: 50%;
+  top: 74px;
+  width: 162px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.pop_lottery_prize {
+  width: 460px;
+  height: 320px;
+}
+.pop_lottery_prize .pop_desc {
+  font-size: 16px;
+  color: #202020;
+}
+.pop_lottery_prize .pop_tit {
+  font-size: 18px;
+  color: #202020;
+  font-weight: normal;
+}
+.pop_lottery_prize .pop_tit .hl {
+  margin: 0 8px;
+}
+.pop_lottery_prize .pop_ft .btn_normal_large {
+  width: 240px;
+}
+
+.pop_lottery_empty {
+  width: 460px;
+  height: 320px;
+}
+.pop_lottery_empty .pop_desc {
+  font-size: 18px;
+  color: #202020;
+}
+.pop_lottery_empty .pop_tit {
+  font-size: 16px;
+  color: #202020;
+  font-weight: normal;
+}
+.pop_lottery_empty .pop_ft .btn_normal_large {
+  width: 240px;
+}
+
+.pop_vb_exchange {
+  width: 510px;
+  height: 530px;
+}
+.pop_vb_exchange .pop_btn_close {
+  color: #fff;
+}
+.pop_vb_exchange .pop_btn_close:hover {
+  color: #ff7000;
+}
+.pop_vb_exchange .pop_btn_close:before {
+  content: '';
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: #000;
+  opacity: 0.15;
+  border-radius: 50%;
+}
+.pop_vb_exchange .pop_bd {
+  text-align: left;
+}
+.pop_vb_exchange .pop_bd .scroll_wrap {
+  height: 162px;
+  margin-top: 13px;
+}
+.pop_vb_exchange .pop_ft a {
+  margin: 0 21px;
+}
+.pop_vb_exchange .pop_ft .btn_normal {
+  width: 200px;
+  height: 36px;
+  line-height: 36px;
+}
+.pop_vb_exchange .pop_ft .btn_normal_line {
+  width: 198px;
+  height: 34px;
+  line-height: 34px;
+}
+.pop_vb_exchange .pop_ft .btn_normal_large {
+  width: 240px;
+}
+
+.mod_img_text {
+  position: relative;
+  background: #fff;
+  padding-bottom: 1px;
+}
+.mod_img_text:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+  display: block;
+  height: 1px;
+  background: #f9f9f9;
+}
+.mod_img_text .item_img_wrapper {
+  position: relative;
+  width: 100%;
+  height: 0px;
+  padding-bottom: 37.3%;
+  background: #ff8d19;
+  background: -webkit-linear-gradient(45deg, #ff7916 0%, #ffbe21 100%);
+  background: linear-gradient(45deg, #ff7916 0%, #ffbe21 100%);
+}
+.mod_img_text .item_img_wrapper img {
+  position: absolute;
+}
+.mod_img_text .item_img_wrapper .coupon_img {
+  top: 19px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 366px;
+  height: 152px;
+}
+.mod_img_text .item_img_wrapper .goods_img {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.mod_img_text .title {
+  font-size: 20px;
+  color: #202020;
+  line-height: 30px;
+  margin: 14px 20px 0px 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.mod_img_text .desc {
+  font-size: 14px;
+  margin: -2px 20px 14px 20px;
+}
+.mod_img_text .desc .num {
+  font-size: 24px;
+  margin-right: 3px;
+}
+.mod_img_text .link {
+  display: block;
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 1px;
+}
+.mod_img_text .link .icon_right_sm {
+  vertical-align: top;
+  margin-top: 3px;
+}
+
+.mod_list_text .mod_list_row {
+  margin-bottom: 22px;
+}
+.mod_list_text .mod_list_row .list_label {
+  font-size: 16px;
+  color: #bbb;
+  margin-bottom: 10px;
+}
+.mod_list_text .mod_list_row .list {
+  list-style-type: disc;
+  margin-left: 17px;
+}
+.mod_list_text .mod_list_row .list li {
+  word-break: break-all;
+  font-size: 14px;
+  line-height: 25px;
+  color: #666;
+  text-indent: -3px;
+}
+.mod_list_text .mod_list_row .hl,
+.mod_list_text .mod_list_row .hl li {
+  color: #ff7000;
+}
+
+.tips_prop {
+  width: 380px;
+  height: auto;
+  min-height: 185px;
+}
+.tips_prop .pop_bd {
+  position: relative;
+  padding: 20px 40px;
+}
+.tips_prop .pop_bd .icon_tips_prop_wrap {
+  margin: 0 auto 15px;
+}
+.tips_prop .pop_bd .icon_tips_prop_wrap .icon_tips_prop, .tips_prop .pop_bd .icon_tips_prop_wrap .icon_tips_prop_suc {
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+}
+.tips_prop .pop_bd .txt_inner {
+  display: block;
+  font-size: 16px;
+  color: #2a2a2a;
+}
+.tips_prop .pop_bd .tip {
+  margin-top: 3px;
+  font-size: 12px;
+  color: #999;
+}
+.tips_prop .pop_bd .qr_code {
+  padding: 11px 0;
+}
+.tips_prop .pop_bd .qr_img {
+  margin-top: 27px;
+}
+.tips_prop .pop_ft {
+  position: relative;
+  bottom: 0;
+  background: #fafafa;
+  padding: 13px 0px;
+  margin-top: 8px;
+}
+.tips_prop .pop_ft .btn_normal {
+  height: 34px;
+  line-height: 34px;
+  font-size: 14px;
+}
+
+/**适配放在最后**/
+
+/*# sourceMappingURL=vcoin_store.css.map */

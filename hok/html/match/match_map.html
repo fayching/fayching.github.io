@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>王者荣耀冠军杯赛程</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui" />
+<link rel="stylesheet" href="../../style/css/mobile/match_map.css"  />
+
+</head>
+<body ontouchstart>
+	<div class="page_bg">
+		<img src="../../style/img/match_map/bg_01.jpg" width="100%">
+		<img src="../../style/img/match_map/bg_02.jpg" width="100%">
+	</div>
+
+	<ul class="tab_nav tab1"><li>冠军杯个人赛</li><li>冠军杯正赛</li></ul>
+	<ul class="tab_content tab1">
+		<li class="tab_content_item1">
+			<img src="https://i.gtimg.cn/qqlive/images/20170727/match_map1.png" width="100%">
+		</li>
+		<li class="tab_content_item2">
+			<img src="https://i.gtimg.cn/qqlive/images/20170727/match_map2.png" width="100%">
+		</li>
+	</ul>
+	<script type="text/javascript" src="../../js/zepto.js"></script>
+	<script language="javascript">
+		$('.tab_nav li').click(function () {
+			$('.tab_nav,.tab_content').toggleClass('tab1').toggleClass('tab2');
+
+		})
+	</script>
+</body>
+</html>

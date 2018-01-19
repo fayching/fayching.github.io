@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta charset="utf-8">
+	<title>腾讯视频统一播放器</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=yes" />
+	<link rel="stylesheet" type="text/css" href="../style/txp_desktop.css">
+<link rel="stylesheet" type="text/css" href="../style/txp_barrage.css">
+<!-- 开发同学请使用下面这个css引入代码：
+<link rel="stylesheet" href="//vm.gtimg.cn/tencentvideo/txp/style/txp_desktop.css"  />
+-->
+
+	<style type="text/css">
+  *{
+    margin: 0;
+  }
+  html,
+  body{
+    height: 100%;
+    width: 100%;
+  }
+  .mod_player_section,
+  .mod_player{
+    position: relative;
+    width: 800px;
+    margin: auto;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+  .mod_player_section{
+    margin-bottom: 20px;
+  }
+  .txp_html_fullscreen .mod_player_section,
+  .txp_html_fullscreen .mod_player{
+    width: 100%;
+    height: 100%;
+  }
+  .txp_player{
+    height: 56.25vw;
+  }
+</style>
+
+
+</head>
+<body>
+
+<txp class="txp_player txp_player_desktop ">
+	
+	<!-- 视频封面图 -->
+	<txp class="txp_poster" style="background-image: url(http://i.gtimg.cn/qqlive/images/20150608/bg_player_poster.jpg)"></txp>
+
+	<!-- loading -->
+	<txp class="txp_overlay_loading">
+
+		<txp class="txp_overlay_loading_content">
+			<txp class="txp_overlay_loading_ad">
+				<img src="http://tacs_v1.oa.com/img.php?288x162" class="txp_img">
+				<txp class="txp_ad_mark">广告</txp>
+			</txp>
+			<img src="../style/img/slogan.png" width="165" class="txp_overlay_loading_slogan">
+			<txp class="txp_overlay_loading_name">腾讯视频 v.qq.com</txp>
+			<!-- <txp class="txp_overlay_loading_speed">256km/s</txp> -->
+			<txp  class="txp_overlay_loading_canvas">
+				<canvas width="800" height="450" id="loadingCanvas"></canvas>
+			</txp>
+		</txp>
+	</txp>
+
+</txp>
+
+
+
+<!-- <script src="../js/jquery.min.js"></script> -->
+<script src="http://lib.cdc.com/js/jquery/jquery-2.1.3.min.js"></script>
+<script type="text/javascript">
+
+
+
+// 播放器尺寸
+$('.mod_player .txp_player').css({
+	'width': '100%',
+	'height': Math.ceil( $('.mod_player .txp_player').width()*9/16 )
+})
+
+
+// 被嵌入在播放页时
+if( window.top !== window.self ){
+	$('.mod_player, .mod_player_section').css({
+		'width': '100%',
+		'height':  '100%',
+		'margin': 0
+	})
+
+	$('.mod_player .txp_player').css({
+		'width': '100%',
+		'height':  '100%'
+	})
+
+	$(window).resize(function(){
+		console.log($('body').width())
+		$('.mod_player').css({
+			'width': '100%',
+			'height':  '100%'
+		})
+		$('.mod_player .txp_player').css({
+			'width': '100%',
+			'height': '100%'
+		})
+	})
+}
+
+// 全屏视频占比
+$('.txp_screen_percent .txp_screen_50').click(function(){
+	$(this).addClass('txp_current').siblings().removeClass('txp_current');
+	$('.txp_video').attr('class','txp_video txp_video_50')
+})
+$('.txp_screen_percent .txp_screen_75').click(function(){
+	$(this).addClass('txp_current').siblings().removeClass('txp_current');
+	$('.txp_video').attr('class','txp_video txp_video_75')
+})
+$('.txp_screen_percent .txp_screen_100').click(function(){
+	$(this).addClass('txp_current').siblings().removeClass('txp_current');
+	$('.txp_video').attr('class','txp_video txp_video_100')
+})
+
+
+
+
+
+$('.tvp_time_handle').hover(function(e){
+	console.log( e.clientX )
+	$('.tvp_thumbs').removeClass('tvp_none');
+	$('.tvp_thumbs').css({
+		'left': e.clientX - $('.tvp_thumbs').width/2
+	})
+})
+
+/*
+$('.txp_btn_fullscreen').click(function(e){
+	if( $(this).attr('data-status') == 'unfullscreen'){
+		$(this).attr('data-status', 'fullscreen');
+		$(this).html('<svg class="txp_icon_fullscreen" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="30" height="30" viewBox="0 0 60 60"> <filter id="svg_drop_shadow"><feGaussianBlur in="SourceAlpha" stdDeviation="3" /><feOffset dx="0" dy="0" /><feComponentTransfer><feFuncA type="linear" slope="0.6"/></feComponentTransfer><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter> <path d="M 18 32 L 28 32 28 42 M 16 44 28 32 M 32 18 L 32 28 42 28 M 44 16 32 28" style="stroke:#fff;stroke-width:3;fill:none;filter:url(#svg_drop_shadow);"> <animate attributeType="XML" attributeName="d" fill="freeze" from="M 16 34 L 16 44 26 44 M 16 44 28 32 M 34 16 L 44 16 44 26 M 44 16 32 28" to="M 18 32 L 28 32 28 42 M 16 44 28 32 M 32 18 L 32 28 42 28 M 44 16 32 28" dur="0.2s" rekeySplines=".4 0 1 1" peatCount="1"></animate> </path> </svg>')
+	}else{
+		$(this).attr('data-status', 'unfullscreen');
+		$(this).html('<svg class="txp_icon_fullscreen" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="30" height="30" viewBox="0 0 60 60"> <filter id="svg_drop_shadow"><feGaussianBlur in="SourceAlpha" stdDeviation="3" /><feOffset dx="0" dy="0" /><feComponentTransfer><feFuncA type="linear" slope="0.6"/></feComponentTransfer><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter> <path d="M 18 32 L 28 32 28 42 M 16 44 28 32 M 32 18 L 32 28 42 28 M 44 16 32 28" style="stroke:#fff;stroke-width:3;fill:none;filter:url(#svg_drop_shadow);"><animate attributeType="XML" attributeName="d" fill="freeze" from="M 18 32 L 28 32 28 42 M 16 44 28 32 M 32 18 L 32 28 42 28 M 44 16 32 28" to="M 16 34 L 16 44 26 44 M 16 44 28 32 M 34 16 L 44 16 44 26 M 44 16 32 28" dur="0.2s" rekeySplines=".4 0 1 1" peatCount="1"></animate></path> </svg>')
+	}
+})
+*/
+
+
+//判断是否支持 svn
+function supportsSvg() {
+	return document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#BasicStructure", "1.1")
+}
+if( !supportsSvg() ){
+	document.getElementById('mod_player').classList.add('tvp_no_svg');
+}
+
+// 播放按钮
+$('.txp_btn_play').click(function(){
+	if( $(this).attr('data-status') == 'play' ){
+		$(this).attr('data-status','pause');
+		$('.txp_btn_play_lg').attr('data-status','pause');
+		$('.txp_overlay_play').removeClass('tvp_none').addClass('txp_overlay_play_animate');
+		setTimeout(function(){
+			$('.txp_overlay_play').removeClass('txp_overlay_play_animate');
+			$('.txp_overlay_play').addClass('tvp_none');
+		},500);
+	}else if( $(this).attr('data-status') == 'pause' ){
+		$(this).attr('data-status','stop')
+		$('.txp_btn_play_lg').attr('data-status','replay');
+		$('.txp_overlay_play').removeClass('txp_overlay_play_animate')
+	}else{
+		$(this).attr('data-status','play')
+		$('.txp_btn_play_lg').attr('data-status','play');
+		$('.txp_overlay_play').removeClass('tvp_none').addClass('txp_overlay_play_animate');
+		setTimeout(function(){
+			$('.txp_overlay_play').removeClass('txp_overlay_play_animate');
+			$('.txp_overlay_play').addClass('tvp_none')
+		},500);
+	}
+})
+
+
+// // 音量调整
+// $('.txp_btn_volume').click(function(){
+// 	if( $(this).attr('data-status') == 'normal' ){
+// 		$(this).attr('data-status','damping')
+// 	}else if( $(this).attr('data-status') == 'damping' ){
+// 		$(this).attr('data-status','mute')
+// 	}else{
+// 		$(this).attr('data-status','normal')
+// 	}
+// })
+// 音量调整
+
+$('.txp_popup_volume .txp_volume_icon').click(function(){
+	if( $('.txp_btn_volume').attr('data-status') == 'normal' ){
+		$('.txp_btn_volume').attr('data-status','mute')
+	}else{
+		$('.txp_btn_volume').attr('data-status','normal')
+	}
+})
+$('.txp_btn').click(function(e){
+	if($(e.target).parents().hasClass('txp_popup')) return;
+	var $txp_popup = $(this).find('.txp_popup');
+	if($txp_popup.css('display')=='none'){
+		$txp_popup.show();
+		$(this).addClass('txp_active');
+	}else{
+		$txp_popup.hide();
+		$(this).removeClass('txp_active');
+	}
+
+
+})
+$('.txp_btn').mouseleave(function(e){
+	if($(e.relatedTarget).parents().hasClass('txp_btn')) return;
+	var $txp_popup = $(this).find('.txp_popup');
+	if($txp_popup.css('display')=='block'){
+		$txp_popup.hide();
+		$(this).removeClass('txp_active');
+	}
+});
+
+$('.txp_btn_next').hover(function(e){
+	if( e.type == 'mouseenter'){
+		$('.txp_hint_next').removeClass('txp_none')
+	}else{
+		if($(e.relatedTarget).parents().hasClass('txp_btn_next')) return;
+		if(!$('.txp_hint_next').hasClass('txp_none')){
+			$('.txp_hint_next').addClass('txp_none');
+			$(this).removeClass('txp_active');
+		}
+	}
+})
+
+$('.txp_interact_dot').eq(1).hover(function(){
+	$('.txp_tooltip_preview .txp_tooltip_dot_text').toggleClass('txp_none');
+})
+
+// $('.txp_btn').hover(function(e){
+// 	if( e.type == 'mouseenter'){
+// 		$(this).addClass('txp_hover')
+// 	}else{
+// 		$(this).removeClass('txp_hover')
+// 	}
+// })
+// 剧院模式
+$('.txp_btn_size').click(function(){
+	if( $(this).attr('data-status') == 'false' ){
+		$(this).attr('data-status','true')
+	}else{
+		$(this).attr('data-status','false')
+	}
+})
+var timer;
+var hidding = false;
+$(document).mousemove(function () {
+	if(hidding){
+		hidding = false; return;
+	} if (timer) {
+		clearTimeout(timer);
+		timer = 0;
+	}
+	$('html').css({ cursor: '' });
+	timer = setTimeout(function () {
+		hidding = true;
+		if($("html").hasClass('txp_html_fullscreen')){
+			$('html').css({ cursor: 'none' });
+		}
+
+	}, 2000)
+});
+// 伪全屏模式
+$('.txp_btn_fake').click(function(){
+	if( $(this).attr('data-status') == 'false' ){
+		$(this).attr('data-status','true');
+		hidding = true;
+		$('html').css({ 'cursor': 'none' });
+	}else{
+		$(this).attr('data-status','false');
+		hidding = false;
+		$('html').css({ 'cursor': '' });
+	}
+	$(".txp_player").toggleClass('txp_mode_fullscreen');
+	$("html").toggleClass('txp_html_fullscreen');
+
+	$('.txp_btn_fake').removeClass('txp_hover')
+
+})
+
+// 全屏模式
+$('.txp_btn_fullscreen').click(function(){
+	if( $(this).attr('data-status') == 'false' ){
+		$(this).attr('data-status','true');
+		hidding = true;
+		$('html').css({ 'cursor': 'none' });
+	}else{
+		$(this).attr('data-status','false');
+		hidding = false;
+		$('html').css({ 'cursor': '' });
+	}
+	$("html").toggleClass('txp_html_fullscreen');
+	$(".txp_player").toggleClass('txp_mode_fullscreen');
+	$('.txp_btn_fullscreen').removeClass('txp_hover')
+})
+
+
+
+// 加入看单
+$('.txp_btn_collect').click(function(){
+	if( $(this).attr('data-status') == 'false' ){
+		$(this).attr('data-status','true');
+	}else{
+		$(this).attr('data-status','false');
+	}
+})
+
+$('.txp_progress_bar_container').hover(function(e){
+	if(e.type == 'mouseenter'){
+		$('.txp_tooltip_preview_hover').removeClass('txp_none')
+	}else{
+		$('.txp_tooltip_preview_hover').addClass('txp_none')
+
+	}
+})
+
+//firefox 特殊处理浮层
+// if( navigator.userAgent.indexOf('Firefox')> -1 ){
+// 	var $txp_popup = $('.txp_btn .txp_popup');
+// 	for( var i=0; i< $txp_popup.size(); i++ ){
+// 		var $parent = $txp_popup.eq(i).parent();
+//
+// 		$txp_popup.eq(i).css({
+// 			'left': $parent.position().left - $txp_popup.eq(i).width()/2 + $parent.width()/2
+// 		})
+// 		$parent.after($txp_popup.eq(i));
+// 	}
+// }
+
+$('.txp_player').hover(function(e){
+	if($(e.relatedTarget).parents().hasClass('txp_btn')) return;
+	if( e.type == 'mouseenter'){
+		$('.txp_player').removeClass('txp_autohide')
+	}else{
+		$('.txp_player').addClass('txp_autohide')
+	}
+})
+
+// 弹幕开关
+$('.txp_btn_barrage').click(function(){
+	$(this).toggleClass('txp_current')
+})
+
+$('.txp_btn_fullscreen,.txp_btn_fake').hover(function(e){
+	if( e.type == 'mouseenter'){
+		$(this).addClass('txp_hover')
+	}else{
+		$(this).removeClass('txp_hover')
+	}
+});
+
+var dotTipsWidth = $('.txp_interact_dot_tips').width()+28,
+	playerWidth = $('.txp_player').width(),
+	dotPosLeft = parseInt($('.txp_interact_dot_tips').css('left'));
+if(dotPosLeft<dotTipsWidth/2){
+	$('.txp_interact_dot_tips_arrow').css('left', dotPosLeft + 'px');
+	$('.txp_interact_dot_tips').css('left', dotTipsWidth /2 + 'px');
+}else if(dotPosLeft + dotTipsWidth /2>playerWidth){
+
+	$('.txp_interact_dot_tips_arrow').css('left', dotPosLeft + dotTipsWidth-playerWidth + 'px');
+	$('.txp_interact_dot_tips').css('left',playerWidth - dotTipsWidth /2 + 'px');
+
+}
+
+$('.txp_alert_info_role_filter').fadeIn(1000,function(){
+	setTimeout(function(){
+		$('.txp_alert_info_role_filter').fadeOut(1500,function(){
+			$('.txp_progress_play').animate({width:"50%"});
+			$('.txp_btn_scrubber').animate({left:"80%"});
+			$('.txp_role_filter_rocket').show().animate({left:"80%"},function(){
+				setTimeout(function(){$('.txp_role_filter_rocket').fadeOut()},1000)
+			});
+		});
+	},3000)
+});
+
+$('.txp_btn_expand').click(function(){
+	if($('.txp_recommend_expand').attr('data-status') == 'collapse'){
+		$('.txp_recommend_expand').attr('data-status','expand')
+	}else{
+		$('.txp_recommend_expand').attr('data-status','collapse')
+	}
+
+})
+
+
+$(window).resize(function(){
+	detectPlayerSize()
+})
+function detectPlayerSize(){
+	if( $('.txp_player').height() <= 225 || $('.txp_player').width() <= 400 ){
+		$('.txp_player').addClass('txp_player_xs txp_player_mini')
+	}else if( $('.txp_player').height() <= 265 || $('.txp_player').width() <= 470 ){
+		$('.txp_player').removeClass('txp_player_xs').addClass('txp_player_mini')
+	}else{
+		$('.txp_player').removeClass('txp_player_xs txp_player_mini')
+	}
+}
+detectPlayerSize();
+</script>
+
+
+
+<script type='text/javascript' src='../js/fanvas3.js'></script>
+<script type='text/javascript' src='../js/swfData.js'></script>
+<script>
+    fanvas.play("loadingCanvas", swfData, {
+        cache: false, autoPlay: true
+    });
+</script>
+
+</body>
+</html>

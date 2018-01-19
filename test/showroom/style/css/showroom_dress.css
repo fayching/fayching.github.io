@@ -1,0 +1,400 @@
+@charset "UTF-8";
+/*===========================================
+		项目: 腾讯视频
+		作者: jacobgong
+		日期: 2017-03-23
+		作用: 全站样式reset
+===========================================*/
+html {
+  color: #fff;
+  background: none;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font: 14px/1.5 PingFangSC-Regular,"Helvetica Neue",tahoma,arial,sans-serif;
+  font-weight: 300;
+}
+
+article, aside, blockquote, body, button, code, dd, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, input, legend, li, menu, nav, ol, p, pre, section, td, textarea, th, ul {
+  margin: 0;
+  padding: 0;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure, footer, header, optgroup, menu, nav, section {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  font-size: 100%;
+}
+
+a {
+  text-decoration: none;
+  background: 0 0;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:active {
+  outline: 0;
+}
+
+li {
+  list-style: none;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+hr {
+  height: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+optgroup {
+  font-weight: 700;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+em, i {
+  font-style: normal;
+}
+
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+button, input, optgroup, option, select, textarea {
+  font: inherit;
+  outline: 0;
+  border: 0;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+button, input[type=button], input[type=reset], input[type=submit] {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  background: 0 0;
+}
+
+input[type=search], input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: block;
+}
+
+.none {
+  display: none;
+}
+
+.svg_icon {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  pointer-events: none;
+}
+
+.svg_icon path,
+.svg_icon use {
+  fill: currentColor;
+}
+
+.svg_sprite {
+  display: none;
+}
+
+/*链接色*/
+/*一行*/
+/*两行*/
+/*头像*/
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.svg_icon {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  pointer-events: none;
+}
+
+.svg_icon path,
+.svg_icon use {
+  fill: currentColor;
+}
+
+.txp_svg_sprite {
+  display: none;
+}
+
+/****/
+.mod_wardrobe_clothing {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.75);
+}
+.mod_wardrobe_clothing .wardrobe_clothing {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+.mod_wardrobe_clothing .wardrobe_clothing_inner {
+  position: relative;
+  z-index: 1;
+  padding-left: 290px;
+}
+.mod_wardrobe_clothing .wardrobe_area {
+  position: absolute;
+  z-index: 2;
+  left: 65px;
+  top: 50px;
+  width: 170px;
+  height: 178px;
+}
+.mod_wardrobe_clothing .wardrobe_stage {
+  margin-bottom: 2px;
+}
+.mod_wardrobe_clothing .wardrobe_stage .stage_pic {
+  width: 152px;
+  height: 152px;
+  position: relative;
+  top: 10px;
+  left: 8px;
+}
+.mod_wardrobe_clothing .wardrobe_stage .stage_pic .pic {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.mod_wardrobe_clothing .wardrobe_stage .stage_bg {
+  width: 170px;
+  height: 26px;
+  background: url(../img/dress/bg_stage.png) no-repeat;
+  background-size: 100%;
+}
+.mod_wardrobe_clothing .wardrobe_tit {
+  font-size: 15px;
+  line-height: 22px;
+  color: #fff;
+  text-align: center;
+}
+.mod_wardrobe_clothing .wardrobe_txt {
+  font-size: 12px;
+  line-height: 20px;
+  color: #979797;
+  text-align: center;
+  margin-bottom: 4px;
+}
+.mod_wardrobe_clothing .wardrobe_btn {
+  text-align: center;
+}
+.mod_wardrobe_clothing .btn_use {
+  display: inline-block;
+  padding: 0 15px;
+  font-size: 13px;
+  line-height: 30px;
+  border-radius: 30px;
+  color: #fff;
+  background: #ff7000;
+}
+.mod_wardrobe_clothing .btn_use.using {
+  background: #a3a3a3;
+}
+.mod_wardrobe_clothing .clothing_area {
+  padding-top: 60px;
+}
+.mod_wardrobe_clothing .clothing_hd {
+  font-size: 12px;
+  line-height: 18px;
+  color: #fff;
+  padding-bottom: 2px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.mod_wardrobe_clothing .clothing_bd {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.mod_wardrobe_clothing .clothing_list {
+  padding: 25px 0 40px;
+  white-space: nowrap;
+  font-size: 0;
+}
+.mod_wardrobe_clothing .clothing_list .item {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 48px;
+  height: 48px;
+  margin-right: 20px;
+}
+.mod_wardrobe_clothing .clothing_list .item .pic {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.mod_wardrobe_clothing .clothing_list .item .icon_select {
+  display: none;
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: #ff7000;
+}
+.mod_wardrobe_clothing .clothing_list .item .icon_select:before, .mod_wardrobe_clothing .clothing_list .item .icon_select:after {
+  position: absolute;
+  content: ' ';
+  width: 1px;
+  font-size: 0;
+  background: #fff;
+}
+.mod_wardrobe_clothing .clothing_list .item .icon_select:before {
+  top: 8px;
+  left: 6px;
+  height: 6px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.mod_wardrobe_clothing .clothing_list .item .icon_select:after {
+  top: 4px;
+  left: 12px;
+  height: 10px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.mod_wardrobe_clothing .clothing_list .item .icon_mark {
+  position: absolute;
+  top: -13px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 7px;
+  text-align: center;
+}
+.mod_wardrobe_clothing .clothing_list .item .icon_mark img {
+  display: block;
+  width: 21px;
+  height: 7px;
+  margin: 0 auto;
+}
+.mod_wardrobe_clothing .clothing_list .selected .icon_select {
+  display: block;
+}
+.mod_wardrobe_clothing .btn_close {
+  position: absolute;
+  z-index: 2;
+  top: 15px;
+  right: 15px;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+}
+.mod_wardrobe_clothing .btn_close .icon_pk_close {
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin: 0 auto;
+  position: relative;
+  top: 7px;
+}
+.mod_wardrobe_clothing .btn_rule {
+  position: absolute;
+  z-index: 2;
+  top: 15px;
+  left: 15px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 20px;
+}
+.mod_wardrobe_clothing .btn_rule .icon_pk_question {
+  display: inline-block;
+  vertical-align: top;
+  width: 12px;
+  height: 12px;
+  position: relative;
+  top: 4px;
+  margin-right: 5px;
+}
+.mod_wardrobe_clothing .dress_tit {
+  position: absolute;
+  z-index: 2;
+  top: 5px;
+  left: 50%;
+  width: 160px;
+  margin-left: -80px;
+  text-align: center;
+}
+.mod_wardrobe_clothing .dress_tit .tit {
+  font-size: 15px;
+  line-height: 25px;
+  color: #fff;
+}
+.mod_wardrobe_clothing .dress_tit .txt {
+  font-size: 12px;
+  line-height: 21px;
+  color: #979797;
+}
+
+/*# sourceMappingURL=showroom_dress.css.map */

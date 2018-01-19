@@ -1,0 +1,71 @@
+*{margin:0;padding:0}
+li{list-style:none}
+.txp_popup_barrage{position:absolute;width:400px;height:200px;border-radius:5px;font-family:PingFangSC-Regular,Tahoma,Microsoft Yahei,Arial,Hiragino Sans GB;background-color:#27272c;background-color:rgba(38,38,43,.96);box-shadow:0 3px 6px 0 #000;z-index:3000;color:#999;font-size:14px}
+.txp_popup_barrage .txp_popup_barrage_triangle{position:absolute;right:24px;bottom:-16px;width:0;height:0;border:8px solid transparent;border-top-color:rgba(38,38,43,.96)}
+.lte_ie8 .txp_popup_barrage .txp_popup_barrage_triangle{border-top-color:#242424}
+.txp_popup_barrage .txp_iframe_mask{position:absolute;z-index:1;width:100%;height:100%;border-radius:5px;opacity:0;filter:alpha(opacity=0)}
+.txp_popup_barrage .txp_popup_barrage_inner{position:relative;overflow:visible;z-index:2}
+.txp_popup_barrage .txp_popup_barrage_hd{position:relative;text-align:right;padding:8px 20px;overflow:hidden;background:#1f1f21;border-radius:5px 5px 0 0}
+.txp_popup_barrage .txp_popup_barrage_title{font-size:14px;color:#999}
+.txp_popup_barrage .txp_popup_barrage_title .txp_list_item{float:left;margin-right:30px;list-style:none;cursor:pointer}
+.txp_popup_barrage .txp_popup_barrage_title .txp_current{color:#ff5c38}
+.txp_popup_barrage .txp_link{font-size:14px;color:#ff5c38;text-decoration:none;cursor:pointer}
+.txp_popup_barrage .txp_link:hover{color:#ff2424}
+.txp_popup_barrage .x_mod_bd{position:relative}
+.txp_popup_barrage .txp_bubble_list:after,.txp_popup_barrage .txp_bubble_list:before{content:'';display:table}
+.txp_popup_barrage .txp_bubble_list:after{clear:both}
+.txp_popup_barrage .txp_scroll_wrap{position:relative;*zoom:1;list-style:none;max-height:135px;_height:150px;margin-left:2px;font-size:0;overflow-y:auto;overflow-x:hidden;transform:translateZ(0);padding-top:16px;margin-right:8px;-webkit-overflow-scrolling:touch}
+.txp_popup_barrage .txp_scroll_wrap{position:relative;width:100%;zoom:1;scrollbar-base-color:#222225;scrollbar-face-color:#4c4c4c;scrollbar-arrow-color:#000;scrollbar-3dlight-color:#4c4c4c;scrollbar-highlight-color:#4c4c4c;scrollbar-shadow-color:#4c4c4c;scrollbar-darkshadow-color:#4c4c4c;scrollbar-track-color:#333338}
+.txp_popup_barrage .txp_scroll_wrap .scroll_wrap_inner{position:relative;height:100%;overflow:auto}
+.txp_popup_barrage .txp_scroll_wrap .mod_playlist{margin-bottom:10px}
+.txp_popup_barrage .txp_scroll_wrap .mb0{margin-bottom:0}
+.txp_popup_barrage .txp_scroll_wrap::-webkit-scrollbar{width:5px;background:#333338}
+.txp_popup_barrage .txp_scroll_wrap::-webkit-scrollbar-track-piece{background:0 0}
+.txp_popup_barrage .txp_scroll_wrap::-webkit-scrollbar-button{display:none}
+.txp_popup_barrage .txp_scroll_wrap::-webkit-scrollbar-thumb{background:#555;border-radius:5px}
+.txp_bubble_list .txp_list_item{position:relative;display:inline-block;margin:0 0 10px 16px;height:34px;width:161px;border-radius:7px;border:2px solid transparent;cursor:pointer}
+.txp_bubble_list .txp_list_item img{display:inline-block;position:absolute;bottom:0;left:0;width:161px}
+.txp_bubble_list .txp_current img{border-radius:6px}
+.txp_bubble_list .txp_list_item .txp_barrage_icon_slted{display:none;position:absolute;top:2px;left:2px;z-index:1;width:9px;height:7px;overflow:hidden;background:url(//i.gtimg.cn/qqlive/images/20170510/slted.png);background-repeat:no-repeat;background-position:0 0}
+.txp_bubble_list .txp_current{border:2px solid #ff5c38}
+.txp_bubble_list .txp_current .txp_barrage_icon_slted{display:inline-block}
+.txp_popup_barrage .txp_emoticon_list{color:#eaeaea;line-height:30px;padding-left:20px;padding-top:12px}
+.txp_popup_barrage .txp_emoticon_list li{font-size:14px;cursor:pointer}
+.txp_popup_barrage .txp_emoticon_list .txp_current{color:#ff5c38}
+.txp_popup_barrage_text{width:285px;padding:30px 20px 0;height:auto}
+.txp_barrage_settings{position:relative;padding-left:45px;margin-bottom:30px;overflow:hidden}
+.txp_barrage_settings_title{position:absolute;left:0;top:-2px}
+.txp_barrage_settings_color{margin-right:-16px;overflow:hidden;font-size:0}
+.txp_barrage_settings_color .txp_list_item{display:inline-block;cursor:pointer;margin-right:16px;margin-bottom:8px}
+.txp_barrage_settings_color .txp_list_item span{width:16px;height:16px;border-radius:16px;margin:2px;display:block}
+.txp_barrage_settings_color .txp_current span{border:2px #ff5c38 solid;margin:0}
+.txp_barrage_mode{overflow:hidden;font-size:0;margin-right:-29px}
+.txp_barrage_mode .txp_list_item{display:inline-block;margin-right:27px;text-align:center;cursor:pointer}
+.txp_barrage_mode_title{font-size:12px}
+.txp_barrage_mode_box{width:56px;height:40px;border:2px solid #515155;border-radius:4px;position:relative;margin:0 2px 2px 0;overflow:hidden}
+.txp_barrage_mode_line{display:block;width:28px;height:2px;background-color:#999;margin:auto;margin-top:8px}
+.txp_barrage_mode_scroll .txp_barrage_mode_line1{margin-left:18px}
+.txp_barrage_mode_scroll .txp_barrage_mode_line2{margin-left:9px}
+.txp_barrage_mode_scroll .txp_barrage_mode_line3{margin-left:16px}
+.txp_barrage_mode_top .txp_barrage_mode_line2{width:18px}
+.txp_barrage_mode_bottom .txp_barrage_mode_line1{margin-top:23px;width:18px}
+.txp_barrage_mode .txp_current .txp_barrage_mode_box{width:62px;height:46px;background-image:url(/tencentvideo/txp/style/img/icon_txp_barrage.png);background-position:0 -56px;border:0;margin:0;background-repeat:no-repeat}
+.txp_barrage_mode .txp_current .txp_barrage_mode_line{background-color:#ff5c38}
+.txp_barrage_mode .txp_current .txp_barrage_mode_title{color:#ff5c38}
+.txp_barrage_settings_fullscreen{cursor:pointer}
+.txp_barrage_settings_fullscreen .txp_checkbox{display:inline-block;width:12px;height:12px;border:1px #999 solid;border-radius:7px;margin-right:6px;cursor:pointer}
+.txp_barrage_settings_fullscreen .txp_checkbox_selected{width:14px;height:14px;background-image:url(/tencentvideo/txp/style/img/icon_txp_barrage.png);background-position:0 -112px;border:0}
+.txp_popup_barrage_type .txp_barrage_settings{border-bottom:1px #2c2c31 solid;line-height:20px;margin:0 20px;padding:25px 0 22px 70px}
+.txp_barrage_progress{height:20px;font-size:0}
+.txp_barrage_progress .txp_barrage_progress_value{display:inline-block;font-size:12px;position:absolute;left:365px;top:25px}
+.txp_barrage_progress_bar{width:280px;height:4px;margin:8px 0;background-color:#222225;border-radius:2px;position:relative}
+.txp_barrage_progress_bar .txp_barrage_progress_play{background-color:#ff5c38;height:4px;position:absolute;left:0;top:0;border-radius:2px;cursor:pointer}
+.txp_barrage_progress_bar .txp_barrage_progress_handler{width:12px;height:12px;border-radius:6px;position:absolute;top:-4px;margin-left:-4px;background-color:#ff5c38;cursor:pointer}
+.txp_barrage_progress_bar .txp_barrage_progress_handler:hover:after{content:'';display:block;width:20px;height:20px;border-radius:10px;background-color:#ff5c38;opacity:.2;position:absolute;left:-4px;top:-4px}
+.txp_popup_barrage_type{width:436px;height:auto}
+.txp_popup_barrage_type .txp_barrage_settings_title{top:25px}
+.txp_popup_barrage_type .txp_barrage_progress_bar,.txp_popup_barrage_type .txp_barrage_settings_title{display:inline-block}
+.txp_barrage_mode_block .txp_current .txp_barrage_mode_box{width:62px;height:46px;background-image:url(/tencentvideo/txp/style/img/icon_txp_barrage.png);background-position:0 0}
+.txp_barrage_mode_block .txp_current .txp_barrage_mode_line{background-color:#999}
+.txp_barrage_mode_block .txp_current .txp_barrage_mode_title{color:#999}
+#faycheng{content:"20180111183234"}
