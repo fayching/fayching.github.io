@@ -1,0 +1,24 @@
+@import "./mathsass/dist/math";
+ 
+//编写弹簧曲线函数
+@function elasticAniFn($t) {
+    @return -0.5 * pow(exp(1), (-6 * $t)) * (-2 * pow(exp(1), (6 * $t)) + sin(12 * $t) + 2 * cos(12 * $t))
+}
+ 
+//编写物体位移随时间变化的函数
+//$b: 初始值
+//$c: 变化量
+//$p: 当前运动的进度百分比
+//可以理解为物体从$b运动到$c,$p用来表示当前运动了 $p%
+@function aniFn($b, $c, $p) {
+    @return $b + $p * ($c - $b);
+}
+ 
+
+@keyframes moveAni {
+    @for $i from 0 through 100 {
+        #{$i}%{ 
+            transform: translateX(aniFn(400px, 0, elasticAniFn($i / 100)));
+        }
+    }
+}
