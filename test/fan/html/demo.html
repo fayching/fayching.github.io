@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    *{padding: 0px;margin: 0px;}
+      #list{width: 150px;height: 310px;margin: 0px auto;border: 1px solid #ccc;overflow: hidden;white-space: nowrap;}
+      #list li{list-style: none;height: 30px;line-height: 30px;border-bottom: 1px dashed #999;display: inline-block;}
+    </style>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script>
+      var marginLef = 0;//注意命名
+      var scroll = true; 
+      //定时函数，每150毫秒执行一次函数
+      setInterval(function(){
+        if(scroll){ 
+          $("#list li:first").animate(  //第一个li开始执行动画
+            {marginLeft:marginLef--}, //设置上面的外边距自减
+            0,
+            function(){  //动画之后执行的函数
+ 
+              if( -marginLef==$(this).width()+34){ //判断li移动的距离是否超过自身的高度
+                var $f = $(this); //复制一个li
+                $(this).remove(); //把第一个移除。第一个移除之后，第二个就自动变为第一个
+                marginLef=0;
+                $f.css("margin-left","0px");
+                $("ul").append($f); //把第一个追加加到列表的最后，变成一个无缝连接
+              }
+            }
+          );
+        }
+      },150);
+      $(function(){
+        $("ul").hover(function(){scroll = false;},function(){scroll = true;});
+      });
+    </script>
+  </head>
+  <body>
+    <div id="list">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+      </ul>
+    </div>
+  </body>
+</html>

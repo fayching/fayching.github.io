@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>签到成功</title>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui" />
+<link rel="stylesheet" href="../style/css/fan.css">
+
+</head>
+<body ontouchstart>
+	<section class="mod_popup mod_popup_checkin show">
+		<div class="mod_popup_content preview_wallpaper">
+			<img src="http://tacs_v1.oa.com/img.php?502x1091" width="100%">
+		</div>
+	</section>
+
+</body>
+<script type="text/javascript" src="../js/zepto.js"></script>
+<script language="javascript">
+window.onload = function () {
+	var winW = document.documentElement.clientWidth,
+	winH = document.documentElement.clientHeight,
+	img = $('.preview_wallpaper img'),
+ 	imgW = img[0].naturalWidth;
+ 	imgH = img[0].naturalHeight;
+ 	if (imgH/imgW > winH/winW) {
+		img.width(imgW*winH/imgH + 'px');
+ 	}
+ 	console.log(imgH)
+
+};
+
+
+
+</script>
+</html>

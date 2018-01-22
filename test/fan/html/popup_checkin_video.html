@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>签到成功</title>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui" />
+<link rel="stylesheet" href="../style/css/fan.css">
+
+</head>
+<body ontouchstart>
+	<section class="mod_popup mod_popup_checkin show">
+		<div class="mod_popup_content">
+
+			<div class="box_gift box_video">
+				<div class="mod_player" id="mod_player">
+					<img src="http://i.gtimg.cn/qqlive/images/20151229/poster.jpg" alt="" />
+				</div>
+			</div>
+			<div class="checkin_tips">
+
+				<h3 class="title">签到成功</h3>
+				<p>送你一份鹿晗<em> 特制视频 </em>哟！</p>
+			</div>
+		</div>
+		<footer class="footer_btn">
+			<div class="mod_btn_wrap">
+				<button class="mod_btn mod_btn_l mod_btn_outline_white">好的</button><button class="mod_btn mod_btn_l mod_btn_outline_white">下载</button>
+			</div>
+		</footer>
+	</section>
+	<script src="../js/zepto.js"></script>
+	<script src='http://vm.gtimg.cn/tencentvideo/txp/js/txplayer.js'></script>
+	<script>
+	var player = new Txplayer({
+	  containerId: 'mod_player',
+	  vid: 'r0018hmh1pa',
+	  width: '100%',
+	  height: (screen.availWidth-60)/16*9
+	});
+	</script>
+</body>
+
+</html>

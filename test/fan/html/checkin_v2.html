@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>签到日历页</title>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui" />
+<link rel="stylesheet" href="../style/css/fan_v2.css">
+
+</head>
+<body ontouchstart>
+	<section class="mod_toast">
+		<div class="mod_toast_content">
+			<p>上传失败请重试</p>
+		</div>
+	</section>
+	<section class="mod_popup mod_popup_checkin_date show">
+		<div class="mod_popup_content">
+			<header class="mod_popup_header">
+				<h3>12月签到表<span class="desc">升至LV7可获更多补签机会</span><i class="icon_arrow_fold"></i></h3>
+			</header>
+			<div class="checkin_gift_list_scroll">
+				<ul class="checkin_gift_list">
+					<li class="done">
+						<div class="inner">
+							<div class="gift_value"><i class="icon_user"></i><span class="txt">粉丝值</span><span class="value">+12</span></div>
+							<div class="gift_value"><i class="icon_heart"></i><span class="txt">心跳</span><span class="value">+12</span></div>
+							<div class="gift_buff">x<span class="num">4</span></div>
+							<div class="stat"><span class="num">12</span>天</div>
+							<div class="icon_done"></div>
+						</div>
+					</li>
+					<li class="over">
+						<div class="inner">
+							<div class="gift_value"><i class="icon_user"></i><span class="txt">粉丝值</span><span class="value">+12</span></div>
+							<div class="gift_value"><i class="icon_heart"></i><span class="txt">心跳</span><span class="value">+12</span></div>
+							<div class="gift_buff">x<span class="num">4</span></div>
+							<div class="stat"><span class="num">22</span>天</div>
+							<div class="btn_sign"><span class="txt">补签</span></div>
+							<div class="sign_tip">签到+1</div>
+							<div class="icon_done"></div>
+						</div>
+					</li>
+					<li class="current">
+						<div class="inner">
+							<div class="gift_value"><i class="icon_user"></i><span class="txt">粉丝值</span><span class="value">+12</span></div>
+							<div class="gift_value"><i class="icon_heart"></i><span class="txt">心跳</span><span class="value">+12</span></div>
+							<div class="gift_buff">x<span class="num">4</span></div>
+							<div class="stat"><span class="num">12</span>天</div>
+							<div class="icon_done"></div>
+							<div class="sign_tip">签到+1</div>
+						</div>
+					</li>
+					<li>
+						<div class="inner">
+							<div class="gift_value"><i class="icon_user"></i><span class="txt">粉丝值</span><span class="value">+12</span></div>
+							<div class="gift_value"><i class="icon_heart"></i><span class="txt">心跳</span><span class="value">+12</span></div>
+							<div class="gift_buff">x<span class="num">4</span></div>
+							<div class="stat"><span class="num">12</span>天</div>
+							<div class="icon_done"></div>
+							<div class="sign_tip">签到+1</div>
+						</div>
+					</li>
+					<li>
+						<div class="inner">
+							<div class="gift_value"><i class="icon_user"></i><span class="txt">粉丝值</span><span class="value">+12</span></div>
+							<div class="gift_value"><i class="icon_heart"></i><span class="txt">心跳</span><span class="value">+12</span></div>
+							<div class="gift_buff">x<span class="num">4</span></div>
+							<div class="stat"><span class="num">12</span>天</div>
+							<div class="icon_done"></div>
+							<div class="sign_tip">签到+1</div>
+						</div>
+					</li>
+					<li class="current">
+						<div class="inner">
+							<div class="gift_value"><i class="icon_user"></i><span class="txt">粉丝值</span><span class="value">+12</span></div>
+							<div class="gift_value"><i class="icon_heart"></i><span class="txt">心跳</span><span class="value">+12</span></div>
+							<div class="stat"><span class="num">12</span>天</div>
+							<div class="icon_done"></div>
+							<div class="sign_tip">签到+1</div>
+						</div>
+					</li>
+					<li>
+						<div class="inner">
+							<div class="gift_value"><i class="icon_user"></i><span class="txt">粉丝值</span><span class="value">+12</span></div>
+							<div class="gift_value"><i class="icon_heart"></i><span class="txt">心跳</span><span class="value">+12</span></div>
+							<div class="stat"><span class="num">12</span>天</div>
+							<div class="icon_done"></div>
+							<div class="sign_tip">签到+1</div>
+						</div>
+					</li>
+					<li>
+						<div class="inner">
+							<div class="gift_value"><i class="icon_user"></i><span class="txt">粉丝值</span><span class="value">+12</span></div>
+							<div class="gift_value"><i class="icon_heart"></i><span class="txt">心跳</span><span class="value">+12</span></div>
+							<div class="stat"><span class="num">12</span>天</div>
+							<div class="icon_done"></div>
+							<div class="sign_tip">签到+1</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	<section>
+
+<!-- 正式内容 结束 -->
+<script type="text/javascript" src="../js/zepto.js"></script>
+<script language="javascript">
+
+$('.checkin_gift_list_scroll').height(document.documentElement.clientHeight-200-113 + 'px');
+
+setTimeout(function(){
+	$('.checkin_gift_list .current').addClass('active');
+},1000);
+
+setTimeout(function(){
+	$('.checkin_gift_list .current').removeClass('active');
+},2000);
+
+$('.checkin_gift_list li').click(function(){
+	$(this).removeClass('over').addClass('current active');
+	setTimeout(function(){
+		$('.checkin_gift_list .current').removeClass('active');
+	},1000);
+});
+
+</script>
+</body>
+
+</html>
