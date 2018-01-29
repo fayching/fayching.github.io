@@ -55,19 +55,16 @@ from,to{transform:translate3d(0,0,0)}
 }
 body{background:#fff;color:#000;font-size:13px;position:relative}
 em{color:#f9285e}
-@-webkit-keyframes accelerateAnim{
-0%,100%{-webkit-transform:scale3d(1,1,1)}
-}
-.sticky_wrap{position:relative;position:-webkit-sticky;position:sticky;top:0;height:65px;z-index:99;-webkit-animation:accelerateAnim .1s both;background:#fff}
-.sticky_content{width:100%;height:64px}
-.sticky_wrap.sticky .sticky_content{position:fixed;top:0;box-shadow:0 2px 8px 0 rgba(0,0,0,.1);-webkit-animation:accelerateAnim .1s both}
-.wrapper{position:absolute;width:100%;z-index:1;top:0;bottom:0;left:0;overflow:hidden}
-.scroller{position:absolute;width:100%;z-index:1}
+body,html{width:100%;height:100%}
+.wrapper{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-orient:vertical;-webkit-flex-direction:column;flex-direction:column;width:100%;height:100%}
+.fixed_top{width:100%;height:64px;overflow:hidden;position:relative}
+.fixed_top .author_wrapper{display:none;position:absolute;left:0;top:0;width:100%}
+.container{-webkit-box-flex:1;-webkit-flex:1;flex:1;overflow:auto;-webkit-overflow-scrolling:touch}
 .flexslider .slides>li{display:none;-webkit-backface-visibility:hidden}
 .flexslider .slides{zoom:1}
 .flex-viewport{width:100%;height:64px;-webkit-transition:all 1s ease}
 .container{width:100%}
-.mod_slider{margin:0 auto;position:fixed;width:100%;height:64px;left:0;top:0;overflow:hidden;list-style:none;padding:0;z-index:99;background:#fff;zoom:1}
+.mod_slider{margin:0 auto;position:absolute;width:100%;height:64px;left:0;bottom:0;overflow:hidden;list-style:none;padding:0;z-index:99;background:#fff;zoom:1}
 .mod_slider.unfixed{position:absolute;top:100px}
 .mod_slider .mod_slider_content{position:relative;width:200%;height:100%;z-index:1}
 .mod_slider .flex-control-nav{position:absolute;bottom:4px;left:0;width:100%;font-size:0;text-align:center;z-index:10}
@@ -84,7 +81,7 @@ em{color:#f9285e}
 .author .avatar{width:40px;height:40px;border-radius:20px;overflow:hidden}
 .author .text{-webkit-box-flex:1;-webkit-flex:1;flex:1;padding-left:9px}
 .author .name{font-size:15px;color:#26272e;font-weight:700}
-.main_player{position:relative;padding-top:64px}
+.main_player{position:relative}
 .main_player .player_container{padding-top:56.25%;position:relative}
 .main_player .player_container .mod_player{position:absolute;top:0;left:0;width:100%;height:100%;background:#000}
 .main_player .tvp_overlay_play_v2{width:43.5px;height:47px;background-image:url(/tencentvideo/vstyle/mobile/moka/style/img/sprite/share.png);-moz-background-size:44px auto;-o-background-size:44px auto;-webkit-background-size:44px auto;background-size:44px auto;background-position:0 -335px}
