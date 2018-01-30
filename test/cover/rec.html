@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="author" content="faycheng">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<link href="css/global.css"  rel="stylesheet" type="text/css" />
+<title>闪屏</title>
+<style>
+  
+  .wrapper{
+    width:320px;
+    height:480px;
+    overflow:hidden;
+    position: relative;
+  }
+  .view{
+    width: 320px;
+    height: 480px;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: url(img/view.gif);
+    background-size: 320px auto;
+  }
+  .write{
+    background: transparent;
+    height: 70px;
+    font-size: 16px;
+    width: 210px;
+    padding: 10px;
+    text-align: left;
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  
+  <div class="view">
+    <div class="ui-btn-group ui-btn-bottom">
+      <button type="button" class="share">分享喜悦</button>
+      <button type="button">发消息</button>
+  	</div>
+  </div>
+</div>
+<div class="ui-dialog" id="dialog1">
+  <div class="dialog-container">
+  	
+    <div class="dialog-body">
+      <div>
+        <h4>分享到空间</h4>
+        <textarea class="write">
+          这个闪屏是只有我才能看到吗？
+        </textarea>
+      </div>
+    </div>
+    <div class="dialog-footer ui-btn-group">
+      <button type="button">取消</button>
+      <button type="button" class="confirm">确认</button>
+    </div>
+  </div>        
+</div>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script>
+// 大于320屏幕设备缩放页面
+(function () {
+	var autoScale = function () {
+		setTimeout(function() {
+			var winW = $(window).width();
+			var scale = (winW/320).toString().substring(0, 6);
+			var cssText = '-webkit-transform: scale('+ scale +');-webkit-transform-origin: left top;';
+			$('.wrapper').attr('style', cssText);
+		}, 300);
+	};	
+	if ($(window).width() > 320) {
+		autoScale();
+	}
+	window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", autoScale , false); //切换横竖屏
+
+})();
+(function(){
+  $('.share').click(function(){
+    $('#dialog1').addClass('show');
+  });
+  $('.ui-dialog button').click(function(){
+    $('.ui-dialog').removeClass('show');
+  });
+})();
+  
+</script>
+</body>
+</html>
+  
