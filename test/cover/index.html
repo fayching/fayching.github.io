@@ -11,7 +11,7 @@
 	<link href="css/global.css"  rel="stylesheet" type="text/css" />
 <title>闪屏</title>
 <style>
-  
+
   .wrapper{
     width:320px;
     height:480px;
@@ -66,7 +66,7 @@
   .bg2 .arrow{
     left: 18px;
     background-image: url(img/arrow-left.png);
-    
+
   }
   .breakline{
     position: absolute;
@@ -92,7 +92,7 @@
     top: 0;
     bottom: 0;
     background-size: 320px auto;
-    
+
   }
   .page2{
     width: 320px;
@@ -133,7 +133,7 @@
     background: url(img/time.jpg) center center;
     background-size: 260px auto;
     width: 234px;
-    height: 209px; 
+    height: 209px;
   }
 </style>
 </head>
@@ -166,24 +166,24 @@
 <div class="ui-dialog" id="dialog1">
   <div class="dialog-container">
     <div class="dialog-body">
-        
+
     </div>
     <div class="dialog-footer ui-btn-group">
       <button type="button">取消</button>
       <button type="button" class="confirm">确认</button>
     </div>
-  </div>        
+  </div>
 </div>
 <div class="ui-dialog" id="dialog2">
   <div class="dialog-container">
-  	
+
     <div class="dialog-body">
         <div>成功发布！<br>等待ta收到惊喜的表情吧！</div>
     </div>
     <div class="dialog-footer ui-btn-group">
         <button type="button">确认</button>
     </div>
-  </div>        
+  </div>
 </div>
 <script type="text/javascript" src="js/zepto.min.js"></script>
 <script>
@@ -196,7 +196,7 @@
 			var cssText = '-webkit-transform: scale('+ scale +');-webkit-transform-origin: left top;';
 			$('.wrapper').attr('style', cssText);
 		}, 300);
-	};	
+	};
 	if ($(window).width() > 320) {
 		autoScale();
 	}
@@ -240,32 +240,32 @@
     $('.ui-dialog').removeClass('show');
   });
   function Orientation(selector) {
-    
+
   }
-  
+
   Orientation.prototype.init = function(){
     window.addEventListener('deviceorientation', this.orientationListener, false);
-  
+
   }
   var last_update = 0;
   var flag = 0;
   Orientation.prototype.orientationListener = function(evt) {
     if(flag == 1 ) return;
-    
+
     var gamma = evt.gamma;
     var beta = evt.beta;
     var alpha = evt.alpha;
-   
-			
-    if (this._lastGamma != gamma || this._lastBeta != beta) {
+
+
+    if (Math.abs(this._lastGamma - gamma) > 2 || this._lastBeta != beta) {
       if(beta > 0){
          gamma = Math.abs(gamma) < 90 ? gamma : (gamma > 0 && gamma < 180 ? 90 : -90);
     //$('#gamma').html(gamma);
-        
+
         $('.bg2').css('-webkit-mask','url(img/mask.png) '+ (gamma*3 - 311) +'px 0');
         $('.breakline').css('left',gamma*3 + 74 +'px');
       }
-      
+
       if(gamma > 45){
         $('.bg,.breakline').hide();
         $('.btn,.arrow').show();
@@ -276,16 +276,15 @@
         $('.bg2,.breakline').hide();
          $('.btn,.arrow').show();
         flag = 1;
-        
+
       }
       this._lastGamma = gamma;
       this._lastBeta = beta;
     }
   };
-  
+
 })();
-  
+
 </script>
 </body>
 </html>
-  
