@@ -346,6 +346,7 @@ em {
 .sticky_content {
   width: 100%;
   height: 64px;
+  background: #fff;
 }
 
 .sticky_wrap.sticky .sticky_content {

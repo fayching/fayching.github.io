@@ -133,15 +133,16 @@ a,em{color:#f9285e}
 .player_item .detail .avatar{width:24px;height:24px;border-radius:12px;margin-right:8px}
 .player_item .detail .name{display:inline-block;vertical-align:top}
 .player_item .detail .action{position:absolute;right:0;top:0;font-size:0}
-.player_item .detail .action .score{font-size:13px;margin-right:20px}
-.player_item .detail .action .comment{font-size:13px;margin-right:16px}
+.player_item .detail .action .score{font-size:13px;font-weight:700;margin-right:20px}
+.player_item .detail .action .comment{font-size:13px;font-weight:700;margin-right:16px}
+.player_item .detail .icon_hot{display:inline-block;vertical-align:top;width:9px;height:11px;background-image:url(/tencentvideo/vstyle/mobile/moka/style/img/sprite/rank.png);-moz-background-size:154px auto;-o-background-size:154px auto;-webkit-background-size:154px auto;background-size:154px auto;background-position:0 -315px;margin-top:7px;margin-right:3px}
+.player_item .detail .icon_comment{display:inline-block;vertical-align:top;width:14px;height:13px;background-image:url(/tencentvideo/vstyle/mobile/moka/style/img/sprite/rank.png);-moz-background-size:154px auto;-o-background-size:154px auto;-webkit-background-size:154px auto;background-size:154px auto;background-position:0 -248px;margin-top:6px;margin-right:3px}
+.player_item .detail .icon_share{display:inline-block;vertical-align:top;width:13px;height:14px;background-image:url(/tencentvideo/vstyle/mobile/moka/style/img/sprite/rank.png);-moz-background-size:154px auto;-o-background-size:154px auto;-webkit-background-size:154px auto;background-size:154px auto;background-position:0 -410px;margin-top:5px}
 .period_title{color:#f9285e;height:40px;line-height:40px;position:relative;font-size:14px}
 .period_title .link_rule{position:absolute;right:0;top:0}
 .period_title .link_rule:before{content:'';display:block;width:12px;height:12px;background-image:url(/tencentvideo/vstyle/mobile/moka/style/img/sprite/rank.png);-moz-background-size:154px auto;-o-background-size:154px auto;-webkit-background-size:154px auto;background-size:154px auto;background-position:0 -347px;position:absolute;left:-15px;top:14px}
-.icon_hot{display:inline-block;vertical-align:top;width:9px;height:11px;background-image:url(/tencentvideo/vstyle/mobile/moka/style/img/sprite/rank.png);-moz-background-size:154px auto;-o-background-size:154px auto;-webkit-background-size:154px auto;background-size:154px auto;background-position:0 -315px;margin-top:6px;margin-right:3px}
-.icon_comment{display:inline-block;vertical-align:top;width:14px;height:13px;background-image:url(/tencentvideo/vstyle/mobile/moka/style/img/sprite/rank.png);-moz-background-size:154px auto;-o-background-size:154px auto;-webkit-background-size:154px auto;background-size:154px auto;background-position:0 -248px;margin-top:6px;margin-right:3px}
-.icon_share{display:inline-block;vertical-align:top;width:13px;height:14px;background-image:url(/tencentvideo/vstyle/mobile/moka/style/img/sprite/rank.png);-moz-background-size:154px auto;-o-background-size:154px auto;-webkit-background-size:154px auto;background-size:154px auto;background-position:0 -410px;margin-top:4px}
-.icon_gototop{display:none;width:44px;height:44px;background-image:url(/tencentvideo/vstyle/mobile/moka/style/img/sprite/rank.png);-moz-background-size:154px auto;-o-background-size:154px auto;-webkit-background-size:154px auto;background-size:154px auto;background-position:0 -266px;position:fixed;bottom:25px;right:25px;z-index:99}
+.icon_gototop{width:44px;height:44px;background-image:url(/tencentvideo/vstyle/mobile/moka/style/img/sprite/rank.png);-moz-background-size:154px auto;-o-background-size:154px auto;-webkit-background-size:154px auto;background-size:154px auto;background-position:0 -266px;position:fixed;bottom:25px;right:25px;z-index:99;-webkit-transition:all .3s;-webkit-transform:translateY(80px)}
+.icon_gototop.show{-webkit-transform:translateY(0)}
 .first_three_moker{margin-top:25px;position:relative;height:1.49rem}
 .first_three_moker:after{content:'';display:block;background:#e3e3e3;position:absolute;left:0;right:0;bottom:0;height:.09rem}
 .first_three_moker .moker_item{position:absolute;bottom:0;width:1.06rem;height:1.49rem;z-index:1;padding-top:.1rem;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-orient:vertical;-webkit-flex-direction:column;flex-direction:column;color:#fff;font-weight:700}
@@ -177,7 +178,7 @@ a,em{color:#f9285e}
 .common_moker_list .moker_item .num,.moker_user.moker_item .num{font-size:16px;font-weight:700;font-weight:700;width:24px;color:#f9285e}
 .common_moker_list .moker_item .avatar img,.moker_user.moker_item .avatar img{width:42px;height:42px;border:1px rgba(220,221,228,.08) solid;border-radius:50%;box-sizing:content-box;margin-right:10px}
 .common_moker_list .moker_item .score,.moker_user.moker_item .score{font-size:13px;line-height:24px;font-weight:700;color:#acaebf}
-.moker_user.moker_item{background:rgba(255,222,0,.9);position:fixed;left:0;bottom:0;width:100%;padding:10px 31px}
+.moker_user.moker_item{background:rgba(255,222,0,.95);position:fixed;left:0;bottom:0;width:100%;padding:10px 31px}
 .page_fixed{position:fixed;height:100%;width:100%;overflow:hidden}
 .dialog_rule{background:rgba(0,0,0,.75);-webkit-box-pack:end;-webkit-justify-content:flex-end;justify-content:flex-end;color:#747580;font-size:14px}
 .dialog_rule .mod_dialog_content{width:100%;border-radius:5px 5px 0 0;padding:0 16px;height:calc(60%)}
@@ -198,4 +199,4 @@ a,em{color:#f9285e}
 100%{background-position:-720px 0}
 }
 .txp_player .txp_icon_loading{display:block;width:48px;height:48px;margin:0 auto;background:url(/tencentvideo/vstyle/mobile/moka/style/img/moka_loading.png) 0 0 no-repeat;background-size:auto 48px;-webkit-animation:mokaLoading .8s steps(15) infinite}
-#faycheng{content:"20180129193626"}
+#faycheng{content:"20180130124106"}

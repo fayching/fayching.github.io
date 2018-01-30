@@ -736,11 +736,54 @@ em, a {
 }
 .player_item .detail .action .score {
   font-size: 13px;
+  font-weight: 700;
   margin-right: 20px;
 }
 .player_item .detail .action .comment {
   font-size: 13px;
+  font-weight: 700;
   margin-right: 16px;
+}
+.player_item .detail .icon_hot {
+  display: inline-block;
+  vertical-align: top;
+  width: 9px;
+  height: 11px;
+  background-image: url('../../../style/img/sprite/rank.png');
+  -moz-background-size: 154px auto;
+  -o-background-size: 154px auto;
+  -webkit-background-size: 154px auto;
+  background-size: 154px auto;
+  background-position: 0 -315px;
+  margin-top: 7px;
+  margin-right: 3px;
+}
+.player_item .detail .icon_comment {
+  display: inline-block;
+  vertical-align: top;
+  width: 14px;
+  height: 13px;
+  background-image: url('../../../style/img/sprite/rank.png');
+  -moz-background-size: 154px auto;
+  -o-background-size: 154px auto;
+  -webkit-background-size: 154px auto;
+  background-size: 154px auto;
+  background-position: 0 -248px;
+  margin-top: 6px;
+  margin-right: 3px;
+}
+.player_item .detail .icon_share {
+  display: inline-block;
+  vertical-align: top;
+  width: 13px;
+  height: 14px;
+  background-image: url('../../../style/img/sprite/rank.png');
+  -moz-background-size: 154px auto;
+  -o-background-size: 154px auto;
+  -webkit-background-size: 154px auto;
+  background-size: 154px auto;
+  background-position: 0 -410px;
+  margin-top: 5px;
 }
 
 .period_title {
@@ -771,52 +814,7 @@ em, a {
   top: 14px;
 }
 
-.icon_hot {
-  display: inline-block;
-  vertical-align: top;
-  width: 9px;
-  height: 11px;
-  background-image: url('../../../style/img/sprite/rank.png');
-  -moz-background-size: 154px auto;
-  -o-background-size: 154px auto;
-  -webkit-background-size: 154px auto;
-  background-size: 154px auto;
-  background-position: 0 -315px;
-  margin-top: 6px;
-  margin-right: 3px;
-}
-
-.icon_comment {
-  display: inline-block;
-  vertical-align: top;
-  width: 14px;
-  height: 13px;
-  background-image: url('../../../style/img/sprite/rank.png');
-  -moz-background-size: 154px auto;
-  -o-background-size: 154px auto;
-  -webkit-background-size: 154px auto;
-  background-size: 154px auto;
-  background-position: 0 -248px;
-  margin-top: 6px;
-  margin-right: 3px;
-}
-
-.icon_share {
-  display: inline-block;
-  vertical-align: top;
-  width: 13px;
-  height: 14px;
-  background-image: url('../../../style/img/sprite/rank.png');
-  -moz-background-size: 154px auto;
-  -o-background-size: 154px auto;
-  -webkit-background-size: 154px auto;
-  background-size: 154px auto;
-  background-position: 0 -410px;
-  margin-top: 4px;
-}
-
 .icon_gototop {
-  display: none;
   width: 44px;
   height: 44px;
   background-image: url('../../../style/img/sprite/rank.png');
@@ -829,6 +827,11 @@ em, a {
   bottom: 25px;
   right: 25px;
   z-index: 99;
+  -webkit-transition: all .3s;
+  -webkit-transform: translateY(80px);
+}
+.icon_gototop.show {
+  -webkit-transform: translateY(0);
 }
 
 .first_three_moker {
@@ -1095,7 +1098,7 @@ em, a {
 }
 
 .moker_user.moker_item {
-  background: rgba(255, 222, 0, 0.9);
+  background: rgba(255, 222, 0, 0.95);
   position: fixed;
   left: 0;
   bottom: 0;
