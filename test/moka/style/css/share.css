@@ -339,7 +339,6 @@ em {
   top: 0;
   height: 65px;
   z-index: 99;
-  -webkit-animation: accelerateAnim .1s both;
   background: #fff;
 }
 
