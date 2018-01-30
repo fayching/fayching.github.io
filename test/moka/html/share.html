@@ -178,13 +178,13 @@
 	$('.mod_slider').css('position','absolute');
 	$(window).scroll(function(){
 
-	    if($('.sticky_wrap').css("position").indexOf("sticky") == -1){
+	    // if($('.sticky_wrap').css("position").indexOf("sticky") == -1){
 			if($(window).scrollTop() >= offsetTop){
 				$('.sticky_wrap').addClass('sticky');
 			}else{
 				$('.sticky_wrap').removeClass('sticky');
 			}
-	    }
+	    // }
 	});
 
 	$('.flexslider').flexslider({
