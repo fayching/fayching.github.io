@@ -53,6 +53,9 @@ html, body {
 	<script src="../js/zepto.js"></script>
 
 	<script>
+	$('body').on('touchstart',function (e) {
+		e.preventDefault();
+	});
 	$('body').on('touchmove',function (e) {
 		e.preventDefault();
 	});
