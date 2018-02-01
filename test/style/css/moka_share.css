@@ -1,0 +1,618 @@
+@charset "UTF-8";
+/*===========================================
+		项目: 腾讯视频
+		作者: v_rqhe
+		日期: 2017-10-16
+		作用: moka 分享页
+===========================================*/
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  word-wrap: break-word;
+  outline: 0;
+}
+
+article, aside, blockquote, body, button, code, dd, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, input, legend, li, menu, nav, ol, p, pre, section, td, textarea, th, ul {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: PingFangSC-Regular, "Helvetica Neue",Helvetica,STHeiTi,sans-serif;
+  line-height: 1.5;
+  font-size: 13px;
+  color: #202020;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  font-size: 100%;
+}
+
+a {
+  text-decoration: none;
+  background: 0 0;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:active {
+  outline: 0;
+}
+
+li {
+  list-style: none;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+hr {
+  height: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+optgroup {
+  font-weight: 700;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+em, i {
+  font-style: normal;
+}
+
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+button, input, optgroup, option, select, textarea {
+  font: inherit;
+  outline: 0;
+  border: 0;
+  border-radius: 0;
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+}
+
+button, input[type=button], input[type=reset], input[type=submit], select {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  background: 0 0;
+  font-size: inherit;
+  color: inherit;
+  font-family: inherit;
+}
+
+input[type=search], input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #666;
+}
+
+img {
+  display: inline-block;
+}
+
+.none {
+  display: none !important;
+}
+
+html, body {
+  position: relative;
+  overflow-x: hidden;
+  font-weight: 500;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: #26272e;
+}
+
+.page_moka_share {
+  margin: 0 15px;
+}
+
+.mod_moka_top {
+  position: relative;
+  min-height: 98px;
+  padding: 25px 0px 11px 138px;
+}
+.mod_moka_top .moka_img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: inline-block;
+  width: 125px;
+  height: 65px;
+  background: url(../img/moka_img.svg) center center no-repeat;
+  background-size: cover;
+}
+.mod_moka_top .txt {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 9px;
+}
+.mod_moka_top .txt .user_name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: -webkit-calc(100% - 61px);
+  max-width: calc(100% - 61px);
+  display: inline-block;
+  vertical-align: top;
+  color: #f9285e;
+  margin-right: 5px;
+}
+.mod_moka_top .title {
+  position: relative;
+  z-index: 3;
+  display: inline-block;
+  vertical-align: top;
+  padding: 5px 17px;
+  border-radius: 17px;
+  background: #f9285e;
+  box-shadow: -4px 1px 0px #f3e704;
+}
+.mod_moka_top .title:before {
+  content: '';
+  position: absolute;
+  left: -11px;
+  top: 8px;
+  display: inline-block;
+  width: 22px;
+  height: 15px;
+  background: url(../img/bubble_arrow.svg) center center no-repeat;
+  background-size: cover;
+  -webkit-clip-path: polygon(0% 0%, 62% 0%, 43% 80%, 0% 80%, 0% 0%);
+  clip-path: polygon(0% 0%, 62% 0%, 43% 80%, 0% 80%, 0% 0%);
+}
+.mod_moka_top .title .video_title {
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 17px;
+  color: #fff;
+  font-family: PingFangSC-Medium;
+}
+
+.mod_video_player {
+  margin: 0px 0px 20px;
+  border-radius: 5px;
+  background: #35373e;
+}
+.mod_video_player .video_detail {
+  position: relative;
+  padding: 15px 15px;
+}
+.mod_video_player .video_detail .video_title {
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 16px;
+  font-family: PingFangSC-Medium;
+  color: #f9285e;
+  margin: -5px 0px 11px;
+}
+.mod_video_player .video_detail .video_info {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  display: box;
+  box-orient: horizontal;
+  box-pack: center;
+  box-align: center;
+}
+.mod_video_player .video_detail .video_info .video_author {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  font-size: 0;
+  white-space: nowrap;
+}
+.mod_video_player .video_detail .video_info .video_author .avatar {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  vertical-align: top;
+  margin-right: 5px;
+}
+.mod_video_player .video_detail .video_info .video_author .name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: -webkit-calc(100% - 58px);
+  max-width: calc(100% - 58px);
+  display: inline-block;
+  vertical-align: top;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 22px;
+}
+.mod_video_player .video_detail .video_info .video_author .author_right {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 13px;
+  color: rgba(164, 164, 164, 0.8);
+  line-height: 22px;
+  margin-left: 6px;
+}
+.mod_video_player .video_detail .video_info .video_sub {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 22px;
+}
+.mod_video_player .video_detail .video_info .video_sub .gap_dot {
+  display: inline-block;
+  vertical-align: middle;
+  width: 2px;
+  height: 2px;
+  margin: 0 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.mod_player {
+  position: relative;
+  width: 100%;
+  background: #19191c;
+  border-radius: 5px 5px 0px 0px;
+  overflow: hidden;
+}
+.mod_player:after {
+  content: '';
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+.mod_player .player_outer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px 5px 0px 0px;
+  overflow: hidden;
+}
+.mod_player .player_outer img {
+  width: 100%;
+  height: 100%;
+}
+.mod_player .player_inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.mod_player .tvp_overlay_play {
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 44px;
+  height: 47px;
+  line-height: 47px;
+  margin: auto !important;
+  overflow: hidden;
+  font-size: 0;
+  text-align: center;
+  background: none;
+  border-radius: 0%;
+  cursor: pointer;
+}
+.mod_player .tvp_overlay_play .tvp_button_play {
+  position: absolute;
+  display: block;
+  width: 44px;
+  height: 47px;
+  left: 0;
+  top: 0;
+  margin: auto;
+  overflow: hidden;
+  vertical-align: middle;
+  border: none;
+  border-radius: 0%;
+  background: url(../img/icon_play.png) center center no-repeat;
+  background-size: cover;
+}
+
+.mod_comments {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: -9px;
+}
+.mod_comments > div {
+  margin: 5px 0px;
+}
+.mod_comments > div .comments_txt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 15px;
+  height: 32px;
+  line-height: 32px;
+  background: #35373e;
+}
+.mod_comments .comments_left {
+  text-align: left;
+}
+.mod_comments .comments_left .comments_txt {
+  border-radius: 16px 16px 16px 0px;
+}
+.mod_comments .comments_right {
+  text-align: right;
+}
+.mod_comments .comments_right .comments_txt {
+  border-radius: 16px 0px 16px 16px;
+}
+
+.mod_more_title {
+  text-align: center;
+  margin-top: 27px;
+  margin-bottom: 15px;
+}
+.mod_more_title .title {
+  display: block;
+  font-size: 18px;
+  color: #f9285e;
+  font-family: PingFangSC-Medium;
+}
+.mod_more_title .title:after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 18px;
+  margin: 5px auto 0px;
+  background: url(../img/hand.png) center center no-repeat;
+  background-size: cover;
+}
+
+.mod_moka_bottom {
+  text-align: center;
+  padding-bottom: 36px;
+}
+.mod_moka_bottom .txt_l {
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+.mod_moka_bottom .txt_s {
+  font-size: 15px;
+}
+.mod_moka_bottom .hl {
+  color: #f9285e;
+  font-family: "adobe 黑体 std";
+}
+.mod_moka_bottom .user_name {
+  margin: 0 5px;
+  text-decoration: underline;
+}
+.mod_moka_bottom .btn_normal {
+  font-weight: bold;
+  margin-top: 33px;
+  height: 44px;
+  line-height: 44px;
+  font-size: 18px;
+  border-radius: 5px;
+  background: #f9285e;
+}
+.mod_moka_bottom .btn_normal:active {
+  background: #d21143;
+}
+.mod_moka_bottom .face_top {
+  display: inline-block;
+  width: 100px;
+  height: 36px;
+  margin: 7px auto -4px auto;
+  background: url(../img/face_top.png) center center no-repeat;
+  background-size: cover;
+}
+.mod_moka_bottom .face_bottom {
+  display: inline-block;
+  width: 100px;
+  height: 92px;
+  margin: -5px auto 19px auto;
+  background: url(../img/face_bottom.png) center center no-repeat;
+  background-size: cover;
+}
+.mod_moka_bottom .hand_right {
+  display: inline-block;
+  vertical-align: top;
+  width: 24px;
+  height: 16px;
+  margin: 15px 0px 0px 4px;
+  background: url(../img/hand_right.png) center center no-repeat;
+  background-size: cover;
+}
+.mod_moka_bottom .moka_logo {
+  display: inline-block;
+  vertical-align: top;
+  width: 70px;
+  height: 25px;
+  margin: -3px 2px 0px 3px;
+  background: url(../img/moka_logo.svg) center center no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 340px) {
+  .mod_moka_bottom .btn_normal {
+    font-size: 17px;
+  }
+
+  .mod_moka_bottom .hand_right {
+    margin-top: 13px;
+  }
+}
+.pop_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+}
+.pop_modal .pop_inner {
+  width: 100%;
+  background: #fff;
+  border-radius: 3px;
+}
+.pop_modal .pop_btn {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 57px;
+  line-height: 57px;
+  text-align: center;
+  color: #f9285f;
+  font-size: 16px;
+  text-decoration: none;
+}
+.pop_modal .pop_btn:before {
+  content: '';
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  top: 0;
+  height: 1px;
+  background: #f6f6f6;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.pop_alert {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  width: 300px;
+  height: 160px;
+  margin: auto;
+  z-index: 1000;
+}
+.pop_alert .pop_bd {
+  padding-top: 25px;
+}
+.pop_alert .pop_desc {
+  position: relative;
+  padding: 0 20px 24px;
+  min-height: 60px;
+  text-align: center;
+  font-size: 17px;
+  line-height: 27px;
+  color: #1b1a1f;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  -webkit-flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-flex-direction: row;
+}
+
+.mod_loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+.mod_loading .loading_inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  width: 72px;
+  height: 72px;
+  margin: auto;
+  z-index: 1000;
+  background-image: url(../img/loading.png);
+  animation: loading 1.6s steps(26) infinite;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+}
+
+@-webkit-keyframes loading {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -1924px 0px;
+  }
+}
+@keyframes loading {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -1924px 0px;
+  }
+}
+
+/*# sourceMappingURL=moka_share.css.map */

@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover" />
-<link rel="stylesheet" href="../style/css/share.css?ddd"  />
+<link rel="stylesheet" href="../style/css/share.css"  />
 
 </head>
 <body ontouchstart>
@@ -160,7 +160,7 @@
 	<script src='http://vm.gtimg.cn/tencentvideo/txp/js/txplayer.js'></script>
 	<script>
 	var offsetTop = $('.sticky_wrap').offset().top;
-	//支持时做的操作
+	// 支持时做的操作
 	$(window).scroll(function(){
 		if($(window).scrollTop()>100) {
 			$('.mod_slider').addClass('unfixed');
@@ -175,7 +175,6 @@
 
 	});
 	//不支持时做的操作
-	// $('.mod_slider').css('position','absolute');
 	// $(window).scroll(function(){
     //
 	//     if($('.sticky_wrap').css("position").indexOf("sticky") == -1){
@@ -231,16 +230,6 @@
 			floatTips.translateY = v*0.4;
 
 		}
-		// if($(window).scrollTop()>100) {
-		// 	$('.mod_slider').addClass('unfixed');
-		// }else{
-		// 	$('.mod_slider').removeClass('unfixed');
-		// }
-		// if($(window).scrollTop() >= offsetTop){
-		// 	$('.sticky_wrap').addClass('sticky');
-		// }else{
-		// 	$('.sticky_wrap').removeClass('sticky');
-		// }
 
 	});
 	$('body').on('touchend',function (e) {

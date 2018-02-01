@@ -42,11 +42,11 @@
 					</div>
 					<div class="title"><i class="rank_num rank_num1">1</i> 胡歌猎场混剪《有借有还》   </div>
 					<div class="detail">
-						<div class="author"><img src="//tacs_v1.oa.com/img.php?48x48" class="avatar"><span class="name">绿剧人</span></div>
+						<div class="author"><img src="//tacs_v1.oa.com/img.php?48x48" class="avatar"><span class="name">绿剧人绿剧人绿剧人绿剧人绿剧人绿剧人绿剧人绿剧人</span></div>
 						<div class="action">
 							<span class="score"><i class="icon_hot"></i>90.1</span>
 							<span class="comment"><i class="icon_comment"></i>304</span>
-							<span class="download"><i class="icon_share"></i></span>
+
 						</div>
 					</div>
 				</li>
@@ -62,7 +62,7 @@
 						<div class="action">
 							<span class="score"><i class="icon_hot"></i>90.1</span>
 							<span class="comment"><i class="icon_comment"></i>304</span>
-							<span class="download"><i class="icon_share"></i></span>
+
 						</div>
 					</div>
 				</li>
@@ -78,7 +78,7 @@
 						<div class="action">
 							<span class="score"><i class="icon_hot"></i>90.1</span>
 							<span class="comment"><i class="icon_comment"></i>304</span>
-							<span class="download"><i class="icon_share"></i></span>
+
 						</div>
 					</div>
 				</li>
@@ -94,7 +94,7 @@
 						<div class="action">
 							<span class="score"><i class="icon_hot"></i>90.1</span>
 							<span class="comment"><i class="icon_comment"></i>304</span>
-							<span class="download"><i class="icon_share"></i></span>
+
 						</div>
 					</div>
 				</li>
@@ -110,7 +110,7 @@
 						<div class="action">
 							<span class="score"><i class="icon_hot"></i>90.1</span>
 							<span class="comment"><i class="icon_comment"></i>304</span>
-							<span class="download"><i class="icon_share"></i></span>
+
 						</div>
 					</div>
 				</li>
@@ -126,7 +126,7 @@
 						<div class="action">
 							<span class="score"><i class="icon_hot"></i>90.1</span>
 							<span class="comment"><i class="icon_comment"></i>304</span>
-							<span class="download"><i class="icon_share"></i></span>
+
 						</div>
 					</div>
 				</li>
@@ -147,7 +147,7 @@
 						<div class="action">
 							<span class="score"><i class="icon_hot"></i>90.1</span>
 							<span class="comment"><i class="icon_comment"></i>304</span>
-							<span class="download"><i class="icon_share"></i></span>
+
 						</div>
 					</div>
 				</li>
@@ -163,7 +163,7 @@
 						<div class="action">
 							<span class="score"><i class="icon_hot"></i>90.1</span>
 							<span class="comment"><i class="icon_comment"></i>304</span>
-							<span class="download"><i class="icon_share"></i></span>
+
 						</div>
 					</div>
 				</li>
@@ -179,7 +179,7 @@
 						<div class="action">
 							<span class="score"><i class="icon_hot"></i>90.1</span>
 							<span class="comment"><i class="icon_comment"></i>304</span>
-							<span class="download"><i class="icon_share"></i></span>
+
 						</div>
 					</div>
 				</li>
@@ -195,7 +195,7 @@
 						<div class="action">
 							<span class="score"><i class="icon_hot"></i>90.1</span>
 							<span class="comment"><i class="icon_comment"></i>304</span>
-							<span class="download"><i class="icon_share"></i></span>
+
 						</div>
 					</div>
 				</li>
@@ -248,10 +248,20 @@
 	$(window).scroll(function() {
 		if($(window).scrollTop() > $('.player_list .player_item').eq(4).offset().top){
 
-			$('.icon_gototop').show();
+			$('.icon_gototop').addClass('show');
 		}else{
-			$('.icon_gototop').hide();
+			$('.icon_gototop').removeClass('show');
 		}
+	});
+	$('body').on('touchmove',function (e) {
+
+		if($(window).scrollTop() > $('.player_list .player_item').eq(4).offset().top){
+
+			$('.icon_gototop').addClass('show');
+		}else{
+			$('.icon_gototop').removeClass('show');
+		}
+
 	});
 	$.fn.scrollTo = function(scrollHeight ,duration) {
         var el = this;
@@ -268,7 +278,7 @@
        scroll();
    };
    $('.icon_gototop').click(function () {
-	   $(window).scrollTo(1,300);
+	   $(window).scrollTo(1,1000);
    });
 	</script>
 </body>
