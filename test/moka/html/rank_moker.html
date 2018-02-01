@@ -190,8 +190,10 @@
 				}
 
 				if(offset>24){
+					e.returnValue = true;
 					title_right.translateY= 6;
 				}else{
+					e.returnValue = true;
 					title_right.translateY= (offset/4).toFixed(2);
 				}
 			}
