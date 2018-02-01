@@ -177,8 +177,8 @@
 				// }
 
 				if($(window).scrollTop()<= 0){
-					if (e.preventDefault) { e.preventDefault(); }
-				    else { e.returnValue = false; }
+					e.preventDefault();
+					e.returnValue = false;
 					container.translateY= offset*0.5;
 					bg_dec1.translateY= offset*0.8;
 					bg_dec2.translateY= offset*0.7;
