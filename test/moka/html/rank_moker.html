@@ -187,13 +187,13 @@
 					bg_dec4.translateY= offset*0.6;
 					$('.rank_num1 .num').removeClass('fadeIn').addClass('fadeOut');
 					rank_num1.height(height+offset/3);
+				}else{
+					e.returnValue = true;
 				}
 
 				if(offset>24){
-					e.returnValue = true;
 					title_right.translateY= 6;
 				}else{
-					e.returnValue = true;
 					title_right.translateY= (offset/4).toFixed(2);
 				}
 			}
