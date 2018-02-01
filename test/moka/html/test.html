@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8" />
-<title>最受欢迎视频榜2</title>
+<title>最受欢迎视频榜xx</title>
 <meta name="format-detection" content="telephone=no">
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -49,12 +49,13 @@
 	<script src="../js/zepto.js"></script>
 
 	<script>
-	$(window).on('touchmove',function (e) {
+	document.body.addEventListener('touchmove', function (e) {
 		e.preventDefault();
+		// e.returnValue = false;
+		// return;
 	});
-	$(window).on('touchend',function (e) {
-		e.preventDefault();
-	});
+
+
 
 	</script>
 </body>
