@@ -165,11 +165,11 @@
     });
 	$('body').on('touchmove',function (e) {
 		console.log($(window).scrollTop())
+		e.preventDefault();
         if ( isTouchStart ){
 			lastY = e.changedTouches[0].pageY;
 			var offset = lastY - startY;
 
-			alert(offset,$(window).scrollTop())
             if(offset > 0 ){
                 direction = "down";
 				// if(offset > 200){
