@@ -164,6 +164,8 @@
 		startY = e.changedTouches[0].pageY;
     });
 	$('body').on('touchmove',function (e) {
+		e.preventDefault();
+		e.returnValue = false;
 		console.log($(window).scrollTop())
         if ( isTouchStart ){
 			lastY = e.changedTouches[0].pageY;
@@ -177,8 +179,7 @@
 				// }
 
 				if($(window).scrollTop()<= 0){
-					e.preventDefault();
-					e.returnValue = false;
+
 					container.translateY= offset*0.5;
 					bg_dec1.translateY= offset*0.8;
 					bg_dec2.translateY= offset*0.7;
