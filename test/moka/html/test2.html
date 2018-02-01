@@ -11,6 +11,8 @@
 html, body {
    width: 100%;
    height: 100%;
+   overflow: auto;
+
 }
 
 </style>
@@ -53,10 +55,7 @@ html, body {
 	<script src="../js/zepto.js"></script>
 
 	<script>
-	$('body').on('touchstart',function (e) {
-		e.preventDefault();
-	});
-	$('body').on('touchmove',function (e) {
+	document.body.addEventListener('touchstart', function (e) {
 		e.preventDefault();
 	});
 
