@@ -159,13 +159,12 @@
 
 
 	$('body').on('touchstart', function (e) {
-		e.preventDefault();
 		isTouchStart = true;
 		startY = e.changedTouches[0].pageY;
     });
 	$('body').on('touchmove',function (e) {
 		console.log($(window).scrollTop())
-		e.preventDefault();
+
         if ( isTouchStart ){
 			lastY = e.changedTouches[0].pageY;
 			var offset = lastY - startY;
@@ -177,7 +176,7 @@
 				// }
 				e.preventDefault();
 				if($(window).scrollTop()<= 0){
-
+					$(window).scrollTop(0);
 					container.translateY= offset*0.5;
 					bg_dec1.translateY= offset*0.8;
 					bg_dec2.translateY= offset*0.7;
