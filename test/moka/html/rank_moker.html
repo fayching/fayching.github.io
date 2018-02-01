@@ -163,7 +163,7 @@
 		isTouchStart = true;
 		startY = e.changedTouches[0].pageY;
     });
-	$('window').on('touchmove',function (e) {
+	$('body').on('touchmove',function (e) {
 		console.log($(window).scrollTop())
 		e.preventDefault();
         if ( isTouchStart ){
