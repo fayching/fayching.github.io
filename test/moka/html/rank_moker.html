@@ -159,11 +159,11 @@
 
 
 	$('body').on('touchstart', function (e) {
-
+		e.preventDefault();
 		isTouchStart = true;
 		startY = e.changedTouches[0].pageY;
     });
-	$('body').on('touchmove',function (e) {
+	$('window').on('touchmove',function (e) {
 		console.log($(window).scrollTop())
 		e.preventDefault();
         if ( isTouchStart ){
