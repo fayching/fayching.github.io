@@ -190,6 +190,7 @@
 				if($(window).scrollTop()<= 0){
 					e.preventDefault();
 					e.returnValue = false;
+					alert(1)
 					container.translateY= offset*0.5;
 					bg_dec1.translateY= offset*0.8;
 					bg_dec2.translateY= offset*0.7;
@@ -197,6 +198,7 @@
 					bg_dec4.translateY= offset*0.6;
 					$('.rank_num1 .num').removeClass('fadeIn').addClass('fadeOut');
 					rank_num1.height(height+offset/3);
+					return;
 				}else{
 					e.returnValue = true;
 				}
