@@ -224,7 +224,7 @@
 				e.returnValue = false;
 			}
 			currentY = lastY;
-			$('.test').text(startY+','+lastY+','+direction+','+$(window).scrollTop());
+			$('.test').text(lastY - currentY );
 			return;
 		}
 	});
