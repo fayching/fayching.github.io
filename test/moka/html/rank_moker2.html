@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8" />
-<title>最受欢迎视频</title>
+<title>最受欢迎视频pageY</title>
 <meta name="format-detection" content="telephone=no">
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -171,13 +171,13 @@
 	$('body').on('touchstart', function (e) {
 
 		isTouchStart = true;
-		startY = e.changedTouches[0].pageY;
+		startY = e.changedTouches[0].clientY;
     });
 	$('body').on('touchmove',function (e) {
 
 		console.log($(window).scrollTop())
         if ( isTouchStart ){
-			lastY = e.changedTouches[0].pageY;
+			lastY = e.changedTouches[0].clientY;
 			var offset = lastY - startY;
 
 			console.log($(window).scrollTop())
@@ -234,7 +234,7 @@
 	// 	}
 	// });
 	$('body').on('touchend',function (e) {
-		lastY = e.changedTouches[0].pageY;
+		lastY = e.changedTouches[0].clientY;
 		var offset = lastY - startY;
         var time = offset*2;
 
