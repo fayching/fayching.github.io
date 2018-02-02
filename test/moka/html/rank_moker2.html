@@ -171,11 +171,11 @@
 	$('body').on('touchstart', function (e) {
 
 		isTouchStart = true;
-		startY = e.changedTouches[0].clientY;
+		startY = e.changedTouches[0].pageY;
     });
 	$('body').on('touchmove',function (e) {
         if ( isTouchStart ){
-			lastY = e.changedTouches[0].clientY;
+			lastY = e.changedTouches[0].pageY;
 			var offset = lastY - startY;
 
             if(offset > 0 ){
@@ -203,6 +203,7 @@
 				}else{
 					title_right.translateY= (offset*0.5 + offset/4).toFixed(2);
 				}
+				console.log(offset);
 			}
 
 			else if(offset < 0 ){
@@ -238,7 +239,7 @@
 		}
 	});
 	$('body').on('touchend',function (e) {
-		lastY = e.changedTouches[0].clientY;
+		lastY = e.changedTouches[0].pageY;
 		var offset = lastY - startY;
         var time = offset*2;
 
