@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8" />
-<title>最受欢迎视频榜323</title>
+<title>最受欢迎视频榜323333</title>
 <meta name="format-detection" content="telephone=no">
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -202,11 +202,11 @@
 			if(offset < 0 ){
 				direction = "up";
 				var v = -$(window).scrollTop();
-				title_right.translateY= v*0.5;
+				// title_right.translateY= v*0.5;
 				if(v<-24){
-					title_left.translateY= v*0.5 -6;
+					title_left.translateY=-6;
 				}else if(v<0){
-					title_left.translateY= (v*0.5 + v/4).toFixed(2);
+					title_left.translateY= (v/4).toFixed(2);
 				}
 
 
@@ -216,11 +216,10 @@
 	$(window).scroll(function() {
 		if($(window).scrollTop()<= 0){
 			var v = -$(window).scrollTop();
-			title_right.translateY= v*0.5;
 			if(v<-24){
-				title_left.translateY= v*0.5 -6;
+				title_left.translateY=-6;
 			}else if(v<0){
-				title_left.translateY= (v*0.5 + v/4).toFixed(2);
+				title_left.translateY= (v/4).toFixed(2);
 			}
 		}
 	});
