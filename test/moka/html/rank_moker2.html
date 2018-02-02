@@ -19,12 +19,13 @@
 		<i class="bg_dec4"></i>
 	</div>
 	<!-- container_share -->
+	<header class="page_title">
+		<div class="title_moker">
+			<span class="title_left"></span><span  class="title_right"></span>
+		</div>
+	</header>
 	<div class="container">
-		<header class="page_title">
-			<div class="title_moker">
-				<span class="title_left"></span><span  class="title_right"></span>
-			</div>
-		</header>
+
 		<section class="moker_list">
 			<header class="period_title">第10期 12/25-12/31 <div class="link_rule">怎么上榜</div></header>
 
@@ -144,7 +145,7 @@
 	Transform(bg_dec3);
 	Transform(bg_dec4);
 	var container = $('.container')[0];
-	// Transform(container);
+	Transform(container);
 	var title_left = $('.title_left')[0];
 	Transform(title_left);
 	var title_right = $('.title_right')[0];
@@ -190,21 +191,22 @@
 				}else{
 					e.returnValue = true;
 				}
-
+				title_left.translateY= offset*0.5;
 				if(offset>24){
-					title_right.translateY= 6;
+					title_right.translateY= offset*0.5 + 6;
 				}else{
-					title_right.translateY= (offset/4).toFixed(2);
+					title_right.translateY= (offset*0.5 + offset/4).toFixed(2);
 				}
 			}
 
 			if(offset < 0 ){
 				direction = "up";
 				var v = -$(window).scrollTop();
+				title_right.translateY= v*0.5;
 				if(v<-24){
-					title_left.translateY= -6;
+					title_left.translateY= v*0.5 -6;
 				}else if(v<0){
-					title_left.translateY= (v/4).toFixed(2);
+					title_left.translateY= (v*0.5 + v/4).toFixed(2);
 				}
 
 
@@ -214,10 +216,11 @@
 	$(window).scroll(function() {
 		if($(window).scrollTop()<= 0){
 			var v = -$(window).scrollTop();
+			title_right.translateY= v*0.5;
 			if(v<-24){
-				title_left.translateY= -6;
+				title_left.translateY= v*0.5 -6;
 			}else if(v<0){
-				title_left.translateY= (v/4).toFixed(2);
+				title_left.translateY= (v*0.5 + v/4).toFixed(2);
 			}
 		}
 	});
