@@ -218,12 +218,8 @@
 
 
 			}
-			if(lastY - currentY > 0 && $(window).scrollTop()<= 0){
-				console.log(lastY - currentY )
-				e.preventDefault();
-				e.returnValue = false;
-			}
-			$('.test').text(lastY - currentY );
+
+			$('.test').text(lastY+','+currentY +','+startY+','+ $(window).scrollTop() );
 			currentY = lastY;
 		}
 	});
