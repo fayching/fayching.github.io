@@ -2,21 +2,13 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8" />
-<title>xxxrrrrdd</title>
+<title>最受欢迎视频榜323</title>
 <meta name="format-detection" content="telephone=no">
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover" />
 <link rel="stylesheet" href="../style/css/rank.css"/>
-<style>
-.container{
-	overflow: visible;
-}
-.page_title{
-	width: 100%;
-	height: 123px;
-}
-</style>
+
 </head>
 <body ontouchstart>
 
@@ -26,13 +18,12 @@
 		<i class="bg_dec3"></i>
 		<i class="bg_dec4"></i>
 	</div>
-	<!-- container_share -->
 	<header class="page_title">
 		<div class="title_moker">
 			<span class="title_left"></span><span  class="title_right"></span>
 		</div>
 	</header>
-	<div class="test">test</div>
+	<!-- container_share -->
 	<div class="container">
 
 		<section class="moker_list">
@@ -161,7 +152,7 @@
 	Transform(title_right);
 	var rank_num1 = $('.rank_num1 .moker_item_bg');
 	var height = rank_num1.height();
-	var startY,lastY,currentY,
+	var startY,lastY,
         isTouchStart = false,
         direction;
 
@@ -174,10 +165,13 @@
 		startY = e.changedTouches[0].pageY;
     });
 	$('body').on('touchmove',function (e) {
+
+		console.log($(window).scrollTop())
         if ( isTouchStart ){
 			lastY = e.changedTouches[0].pageY;
 			var offset = lastY - startY;
 
+			console.log($(window).scrollTop())
             if(offset > 0 ){
                 direction = "down";
 				// if(offset > 200){
@@ -185,8 +179,8 @@
 				// }
 
 				if($(window).scrollTop()<= 0){
-					// e.preventDefault();
-					// e.returnValue = false;
+					e.preventDefault();
+					e.returnValue = false;
 					container.translateY= offset*0.5;
 					bg_dec1.translateY= offset*0.8;
 					bg_dec2.translateY= offset*0.7;
@@ -197,37 +191,33 @@
 				}else{
 					e.returnValue = true;
 				}
-				title_left.translateY= offset*0.5;
+
 				if(offset>24){
-					title_right.translateY= offset*0.5 + 6;
+					title_right.translateY= 6 +  offset*0.5;
 				}else{
-					title_right.translateY= (offset*0.5 + offset/4).toFixed(2);
+					title_right.translateY= (offset/4 + offset*0.5).toFixed(2);
 				}
-				console.log(offset);
+				title_left.translateY= offset*0.5;
 			}
 
-			else if(offset < 0 ){
+			if(offset < 0 ){
 				direction = "up";
 				var v = -$(window).scrollTop();
-				// title_right.translateY= v*0.5;
 				if(v<-24){
-					title_left.translateY=-6;
+					title_left.translateY= -6;
 				}else if(v<0){
 					title_left.translateY= (v/4).toFixed(2);
 				}
 
 
 			}
-
-			$('.test').text(lastY+','+currentY +','+startY+','+ $(window).scrollTop() );
-			currentY = lastY;
 		}
 	});
 	$(window).scroll(function() {
 		if($(window).scrollTop()<= 0){
 			var v = -$(window).scrollTop();
 			if(v<-24){
-				title_left.translateY=-6;
+				title_left.translateY= -6;
 			}else if(v<0){
 				title_left.translateY= (v/4).toFixed(2);
 			}
@@ -241,9 +231,9 @@
 		if(isTouchStart){
 
 			to(container, 'translateY', 0, time, iosEase);
-			// setTimeout(function () {
-			// 	$('.container').css('transform','none');
-			// },time)
+			setTimeout(function () {
+				$('.container').css('transform','none');
+			},time)
 			to(title_left, 'translateY', 0, time, iosEase);
 			to(title_right, 'translateY', 0, time, iosEase);
 			to(bg_dec1, 'translateY', 0, time, iosEase);
