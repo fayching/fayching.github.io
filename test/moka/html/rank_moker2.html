@@ -23,6 +23,7 @@
 			<span class="title_left"></span><span  class="title_right"></span>
 		</div>
 	</header>
+	<div id="test"></div>
 	<!-- container_share -->
 	<div class="container">
 
@@ -166,12 +167,11 @@
     });
 	$('body').on('touchmove',function (e) {
 
-		console.log($(window).scrollTop())
         if ( isTouchStart ){
 			lastY = e.changedTouches[0].pageY;
 			var offset = lastY - startY;
 
-			console.log($(window).scrollTop())
+
             if(offset > 0 ){
                 direction = "down";
 				// if(offset > 200){
@@ -181,6 +181,7 @@
 				if($(window).scrollTop()<= 0){
 					e.preventDefault();
 					e.returnValue = false;
+					console.log(offset)
 					container.translateY= offset*0.5;
 					bg_dec1.translateY= offset*0.8;
 					bg_dec2.translateY= offset*0.7;
