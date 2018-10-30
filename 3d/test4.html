@@ -176,15 +176,15 @@
 
             var material = materials[ 0 ];
             console.log(materials);
-            mesh = new THREE.Mesh( geometry, material );
+            // mesh = new THREE.Mesh( geometry, material );
 
-            // mesh = new THREE.Mesh(geometry, new THREE.MeshLambertMaterial({
+            mesh = new THREE.Mesh(geometry, new THREE.MeshLambertMaterial({
 
-            //     vertexColors: THREE.FaceColors,
+                vertexColors: THREE.FaceColors,
 
-            //     morphTargets: true
+                morphTargets: true
 
-            // }));
+            }));
 
             mesh.scale.set(1, 1, 1);
 
