@@ -32,5 +32,8 @@
     "gulp-file-include": "1.1.0",
     "gulp-plumber": "1.1.0",
     "yargs": "^1.3.3"
+  },
+  "dependencies": {
+    "@tencent/super-profiler": "^1.9.7"
   }
 }

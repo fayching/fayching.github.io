@@ -27,6 +27,7 @@
 				font-weight: bold;
 			}
 		</style>
+		<script  type="text/javascript" src="../super-profiler.js"></script>
 	</head>
 
 	<body>
@@ -42,19 +43,19 @@
 		<script src="../js/controls/OrbitControls.js"></script>
 
 		<script src="../js/Detector.js"></script>
-		<script src="../js/libs/stats.min.js"></script>
 
 		<script>
 
 			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 
-			var container, stats, controls;
+			var container, controls;
 			var camera, scene, renderer, light;
 
 			var clock = new THREE.Clock();
 
 			var mixers = [];
-
+			var stats = new SuperProfiler();
+            document.body.appendChild( stats.container );
 			init();
 			animate();
 
@@ -133,9 +134,7 @@
 
 				window.addEventListener( 'resize', onWindowResize, false );
 
-				// stats
-				stats = new Stats();
-				container.appendChild( stats.dom );
+			
 
 			}
 
@@ -151,7 +150,15 @@
 			//
 
 			function animate() {
-
+				stats.begin();
+                let num = 0;
+                for ( var i = 0; i < 2000; i ++ ) {
+                  let newArr = new Array(5000);
+                  newArr.forEach((element, i) => {
+                    newArr[i] = num ++;
+                  });
+                }
+                stats.end();
 				requestAnimationFrame( animate );
 
 				if ( mixers.length > 0 ) {
@@ -166,7 +173,6 @@
 
 				renderer.render( scene, camera );
 
-				stats.update();
 
 			}
 
