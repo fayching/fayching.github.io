@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>hello world</title>
+	<link rel="stylesheet" href="../style/css/style.css" />
+	<style type="text/css">
+	.f1{
+	width: 269px;
+	height: 462px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+img{
+	display: block;
+	 position: absolute;
+}
+</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		
+	
+		<img class="apng f1" src="../style/img/60.png">
+		<img class="apng f1" src="../style/img/16.png">
+		<img class="apng f1" src="../style/img/16.png">
+		<img class="apng f1" src="../style/img/16.png">
+		<img class="apng f1" src="../style/img/16.png">
+		<img class="apng f1" src="../style/img/16.png">
+		<img class="apng f1" src="../style/img/16.png">
+		<img class="apng f1" src="../style/img/16.png">
+
+		<img class="apng f1" src="../style/img/16.png">
+		<img class="apng f1" src="../style/img/16.png">
+		<img class="apng f1" src="../style/img/16.png">
+		<img class="apng f1" src="../style/img/16.png">
+		<img class="apng f1" src="../style/img/16.png">
+		<img class="apng f1" src="../style/img/16.png">
+		<img class="apng f1" src="../style/img/16.png">
+		<!-- <img class="apng f4" src="../style/img/p1.png"> -->
+	</div>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/stats.min.js"></script>
+    
+	<script type="text/javascript">
+	
+
+   		var stats = new Stats();
+		stats.showPanel( 0 ); // 0: fps, 1: ms, 2: mb, 3+: custom
+		document.body.appendChild( stats.dom );
+
+		function animate() {
+
+			stats.begin();
+
+			// monitored code goes here
+
+			stats.end();
+
+			requestAnimationFrame( animate );
+
+		}
+
+		requestAnimationFrame( animate );
+
+	</script>
+
+</body>
+
+</html>

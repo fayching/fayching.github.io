@@ -1,0 +1,45 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,maximum-scale=1">
+   
+    <title>gka-preview</title>
+    <style type="text/css">
+    .wrapper{
+    position: relative;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+</style>
+</head>
+<body>
+
+    <canvas id="gka" width="260" height="9240"></canvas>
+    <script src="../js/easeljs-NEXT.combined.js"></script>
+    <script src="../style/img/gka-data.js"></script>
+    <script>
+    var stage = new createjs.Stage(document.getElementById("gka"));
+
+    var spriteSheet = new createjs.SpriteSheet({
+            framerate: 60,
+            "images": ["../style/img/sprites.png"],
+            "frames": data.frames,
+            "animations": {
+                default: [0, 19, "default"]
+            }
+        });
+
+    for (var i = 0; i <= 20; i++) {
+        var grant = new createjs.Sprite(spriteSheet, "default");
+        grant.y= i*462;
+        grant.framerate = (i+1)*2;
+        stage.addChild(grant);
+    }
+    
+    createjs.Ticker.timingMode = createjs.Ticker.RAF;
+    createjs.Ticker.addEventListener("tick", stage);
+    </script>
+</body>
+</html>

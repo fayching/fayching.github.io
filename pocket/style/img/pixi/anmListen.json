@@ -1,0 +1,180 @@
+{"frames": {
+
+"0.png":
+{
+	"frame": {"x":1,"y":1,"w":180,"h":152},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":152},
+	"sourceSize": {"w":180,"h":152}
+},
+"1.png":
+{
+	"frame": {"x":183,"y":1,"w":180,"h":152},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":152},
+	"sourceSize": {"w":180,"h":152}
+},
+"2.png":
+{
+	"frame": {"x":365,"y":1,"w":180,"h":152},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":152},
+	"sourceSize": {"w":180,"h":152}
+},
+"3.png":
+{
+	"frame": {"x":547,"y":1,"w":180,"h":152},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":152},
+	"sourceSize": {"w":180,"h":152}
+},
+"4.png":
+{
+	"frame": {"x":729,"y":1,"w":180,"h":152},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":152},
+	"sourceSize": {"w":180,"h":152}
+},
+"5.png":
+{
+	"frame": {"x":911,"y":1,"w":180,"h":152},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":152},
+	"sourceSize": {"w":180,"h":152}
+},
+"6.png":
+{
+	"frame": {"x":1093,"y":1,"w":180,"h":152},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":152},
+	"sourceSize": {"w":180,"h":152}
+},
+"7.png":
+{
+	"frame": {"x":1275,"y":1,"w":180,"h":152},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":152},
+	"sourceSize": {"w":180,"h":152}
+},
+"8.png":
+{
+	"frame": {"x":1457,"y":1,"w":180,"h":152},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":152},
+	"sourceSize": {"w":180,"h":152}
+},
+"9.png":
+{
+	"frame": {"x":1639,"y":1,"w":180,"h":152},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":152},
+	"sourceSize": {"w":180,"h":152}
+},
+"10.png":
+{
+	"frame": {"x":1821,"y":1,"w":180,"h":152},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":152},
+	"sourceSize": {"w":180,"h":152}
+},
+"11.png":
+{
+	"frame": {"x":2003,"y":1,"w":180,"h":152},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":152},
+	"sourceSize": {"w":180,"h":152}
+},
+"12.png":
+{
+	"frame": {"x":2185,"y":1,"w":180,"h":152},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":152},
+	"sourceSize": {"w":180,"h":152}
+},
+"13.png":
+{
+	"frame": {"x":2367,"y":1,"w":180,"h":152},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":152},
+	"sourceSize": {"w":180,"h":152}
+},
+"14.png":
+{
+	"frame": {"x":2549,"y":1,"w":180,"h":152},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":152},
+	"sourceSize": {"w":180,"h":152}
+},
+"15.png":
+{
+	"frame": {"x":2731,"y":1,"w":180,"h":152},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":152},
+	"sourceSize": {"w":180,"h":152}
+},
+"16.png":
+{
+	"frame": {"x":2913,"y":1,"w":180,"h":152},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":152},
+	"sourceSize": {"w":180,"h":152}
+},
+"17.png":
+{
+	"frame": {"x":3095,"y":1,"w":180,"h":152},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":152},
+	"sourceSize": {"w":180,"h":152}
+},
+"18.png":
+{
+	"frame": {"x":3277,"y":1,"w":180,"h":152},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":152},
+	"sourceSize": {"w":180,"h":152}
+},
+"19.png":
+{
+	"frame": {"x":3459,"y":1,"w":180,"h":152},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":152},
+	"sourceSize": {"w":180,"h":152}
+},
+"20.png":
+{
+	"frame": {"x":3641,"y":1,"w":180,"h":152},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":152},
+	"sourceSize": {"w":180,"h":152}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "anmListen.png",
+	"format": "RGBA8888",
+	"size": {"w":3822,"h":154},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:647f3bceeeb3a223c6984f0f31e4e8f1:2800cd103cad153329cebab134982b0c:79e353791718c5b4279ff20629228b62$"
+}
+}
