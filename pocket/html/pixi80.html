@@ -73,7 +73,7 @@
             for (var i = 0; i <= 100; i++) {
             	let frames = getframe(1,16,"p",".png",textureURLs[Math.floor(i/10)]); 
             	let p = new PIXI.extras.AnimatedSprite(frames);
-	            p.animationSpeed=0.26 + i/200;
+	            p.animationSpeed=0.16 + i/100;
 				p.width = 130;
 				p.height = 231;
 	            p.x= 80*(i%4);
