@@ -65,27 +65,57 @@
                 scene.background = new THREE.Color( 0xffffff );
                 // scene.fog = new THREE.Fog( 0xa0a0a0, 200, 1000 );
 
-                light = new THREE.AmbientLight( 0xffffff );
-                light.position.set( 100, 200, 0 ); 
-                scene.add( light );
+                // var meshMaterial = new THREE.MeshPhongMaterial({color: 0xff8000});
+                // var bufferGeometry = new THREE.BufferGeometry(-8, 10, 7);
+                // var sphere = new THREE.Mesh(bufferGeometry, meshMaterial);
+                // scene.add(sphere);
 
-                light = new THREE.DirectionalLight( 0xffffff );
-                light.position.set( 63, 52, -7 );
-                light.castShadow = true;
-                // light.shadow.camera.top = 100;
-                // light.shadow.camera.bottom = -100;
-                // light.shadow.camera.left = -120;
-                // light.shadow.camera.right = 120;
-                scene.add( light );
-                scene.add( new THREE.CameraHelper( light.shadow.camera ) );
+                 
+                //使用网格Phong材质
+                // var meshMaterial = new THREE.MeshPhongMaterial({color: 0xff8000});
+                // var sphereGeometry = new THREE.CubeGeometry(8, 10, .1,-8, 10, 7);
+                // var sphere = new THREE.Mesh(sphereGeometry, meshMaterial);
+                // scene.add(sphere);
 
-                // ground
-                var mesh = new THREE.Mesh( new THREE.PlaneBufferGeometry( 300, 300 ), new THREE.MeshPhongMaterial( { color: 0x999999, depthWrite: false } ) );
-                mesh.rotation.x = - Math.PI / 2;
-                mesh.receiveShadow = true;
-                scene.add( mesh );
+                // light = new THREE.PointLight( 0xff8000 );
+                // light.position.set( -12, 11, 7 ); 
+                // light.intensity = 0.5;
+                // scene.add( light );
 
-                
+
+                // light = new THREE.PointLight( 0xff9dff );
+                // light.position.set( -30, 27, 19 ); 
+                // light.intensity = 0.2;
+                // scene.add( light );
+
+
+                // light = new THREE.AmbientLight( 0xffffff );
+                // light.position.set( 100, 200, 0 ); 
+                // light.intensity = 0.5;
+                // scene.add( light );
+
+
+
+                // light = new THREE.AmbientLight( 0xffffff );
+                // light.position.set( 0, 39, -2 ); 
+                // light.intensity = 0.75;
+                // scene.add( light );
+
+                // light = new THREE.DirectionalLight( 0xffffff );
+                // light.position.set( 63, 52, -7 );
+                // light.intensity = 0.4;
+                // light.castShadow = true;
+                // scene.add( light );
+                // scene.add( new THREE.CameraHelper( light.shadow.camera ) );
+
+               
+               
+
+                var loader1 = new THREE.ObjectLoader(); 
+                loader1.load('TOUTU.json',function(obj){ 
+                obj.scale.x = obj.scale.y = obj.scale.z =1; 
+                    scene.add(obj); 
+                });
 
                 // model
                 var loader = new THREE.FBXLoader();
