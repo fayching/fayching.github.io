@@ -13,30 +13,102 @@
 		"layers": 1,
 		"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
 		"children": [
-			
 			{
-				"uuid": "6820AF73-048E-4B15-8BF0-6F64E226DBB9",
-				"type": "AmbientLight",
-				"name": "AmbientLight",
+				"uuid": "45DB4A39-170F-4F29-9E95-789FBA4254D5",
+				"type": "PointLight",
+				"name": "PointLight",
+				"castShadow": true,
 				"layers": 1,
-				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,39.875178,-2.492533,1],
-				"color": 16777215,
-				"intensity": 0.75
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-20.329,27.184,-16.230849,1],
+				"color": 16744640,
+				"intensity": 0.68,
+				"distance": 0,
+				"decay": 8.64,
+				"shadow": {
+					"radius": 4,
+					"camera": {
+						"uuid": "B754FD97-5DAD-444B-B683-DDDD1EACCF7D",
+						"type": "PerspectiveCamera",
+						"layers": 1,
+						"fov": 90,
+						"zoom": 1,
+						"near": 0.5,
+						"far": 500,
+						"focus": 10,
+						"aspect": 1,
+						"filmGauge": 35,
+						"filmOffset": 0
+					}
+				}
 			},
-			
 			{
-				"uuid": "C3E8D1F4-E975-4064-8D8D-8D4B9F167275",
+				"uuid": "EE110121-8FFC-415E-A805-5CB1F2B62FDA",
+				"type": "PointLight",
+				"name": "PointLight",
+				"castShadow": true,
+				"layers": 1,
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-12.678392,11.787593,7.962175,1],
+				"color": 16741167,
+				"intensity": 2.62,
+				"distance": 0,
+				"decay": 50,
+				"shadow": {
+					"radius": 3.5,
+					"camera": {
+						"uuid": "F8DE03A8-BB59-402E-8B6E-B059B04A2D94",
+						"type": "PerspectiveCamera",
+						"layers": 1,
+						"fov": 90,
+						"zoom": 1,
+						"near": 0.5,
+						"far": 500,
+						"focus": 10,
+						"aspect": 1,
+						"filmGauge": 35,
+						"filmOffset": 0
+					}
+				}
+			},
+			{
+				"uuid": "B4763E5D-142E-4B2B-9826-867043237DA3",
+				"type": "PointLight",
+				"name": "PointLight",
+				"layers": 1,
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,12.721985,13.146762,-8.361057,1],
+				"color": 14155775,
+				"intensity": 0.56,
+				"distance": 0,
+				"decay": 1,
+				"shadow": {
+					"radius": 4,
+					"camera": {
+						"uuid": "DD913324-6B14-49B3-B934-E7ED69916DE2",
+						"type": "PerspectiveCamera",
+						"layers": 1,
+						"fov": 90,
+						"zoom": 1,
+						"near": 0.5,
+						"far": 500,
+						"focus": 10,
+						"aspect": 1,
+						"filmGauge": 35,
+						"filmOffset": 0
+					}
+				}
+			},
+			{
+				"uuid": "8EC65741-557D-406B-AF05-DA20426275D5",
 				"type": "DirectionalLight",
 				"name": "DirectionalLight",
 				"castShadow": true,
 				"layers": 1,
-				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,63.828283,52.305077,-7.179436,1],
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,42.934132,50.142172,7.5,1],
 				"color": 16777215,
-				"intensity": 0.4,
+				"intensity": 0.65,
 				"shadow": {
-					"radius": 7.24,
+					"radius": 5,
 					"camera": {
-						"uuid": "2EC8C6BA-AF31-4BFA-9B7F-BB919B2D1268",
+						"uuid": "C3A120F8-BA55-4533-81C2-E67C6D592986",
 						"type": "OrthographicCamera",
 						"layers": 1,
 						"zoom": 1,
@@ -50,59 +122,13 @@
 				}
 			},
 			{
-				"uuid": "19EB0F44-A709-4A8C-9351-077017E75279",
-				"type": "PointLight",
-				"name": "PointLight",
+				"uuid": "3E6201EC-A255-44E8-9E00-2B69A604A6EC",
+				"type": "AmbientLight",
+				"name": "AmbientLight",
 				"layers": 1,
-				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-11.664081,10.692635,7.157046,1],
-				"color": 16744448,
-				"intensity": 0.5,
-				"distance": 0,
-				"decay": 50,
-				"shadow": {
-					"radius": 30,
-					"camera": {
-						"uuid": "17F78482-D52A-4A8D-A58A-10B60860AF24",
-						"type": "PerspectiveCamera",
-						"layers": 1,
-						"fov": 90,
-						"zoom": 1,
-						"near": 0.5,
-						"far": 500,
-						"focus": 10,
-						"aspect": 1,
-						"filmGauge": 35,
-						"filmOffset": 0
-					}
-				}
-			},
-			
-			{
-				"uuid": "41C09A8F-EDE5-4CF1-96B6-381BAEDC6F81",
-				"type": "PointLight",
-				"name": "PointLight",
-				"castShadow": true,
-				"layers": 1,
-				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-30.632059,27.823827,-19.016963,1],
-				"color": 16752127,
-				"intensity": 0.2,
-				"distance": 0,
-				"decay": 4.98,
-				"shadow": {
-					"camera": {
-						"uuid": "8FB06521-EDDB-4EA5-9BEF-9736E3443FFD",
-						"type": "PerspectiveCamera",
-						"layers": 1,
-						"fov": 90,
-						"zoom": 1,
-						"near": 0.5,
-						"far": 500,
-						"focus": 10,
-						"aspect": 1,
-						"filmGauge": 35,
-						"filmOffset": 0
-					}
-				}
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,38.143009,0,1],
+				"color": 16777215,
+				"intensity": 0.32
 			}],
 		"background": 1329
 	}

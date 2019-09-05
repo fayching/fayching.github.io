@@ -64,7 +64,10 @@
                 scene = new THREE.Scene();
                 scene.background = new THREE.Color( 0xffffff );
                 
-
+                light = new THREE.AmbientLight( 0xffffff );
+                light.position.set( 100, 200, 0 ); 
+                light.intensity = 0.5;
+                scene.add( light );
                 // light = new THREE.AmbientLight( 0xffffff );
                
                 // scene.add( light );
