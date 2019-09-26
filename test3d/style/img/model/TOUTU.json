@@ -1,0 +1,134 @@
+{
+	"metadata": {
+		"version": 4.5,
+		"type": "Object",
+		"generator": "Object3D.toJSON"
+	},
+	
+	"object": {
+		"uuid": "31517222-A9A7-4EAF-B5F6-60751C0BABA3",
+		"type": "Scene",
+		"name": "Scene",
+		"layers": 1,
+		"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+		"children": [
+			{
+				"uuid": "3BEE7EFE-6992-40EF-966C-60C198D57882",
+				"type": "PointLight",
+				"name": "PointLight",
+				"castShadow": true,
+				"layers": 1,
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-20.329,27.184,-16.231,1],
+				"color": 16744640,
+				"intensity": 0.68,
+				"distance": 0,
+				"decay": 8.64,
+				"shadow": {
+					"radius": 4,
+					"camera": {
+						"uuid": "B03CD465-7534-409A-8220-957744A828B7",
+						"type": "PerspectiveCamera",
+						"layers": 1,
+						"fov": 90,
+						"zoom": 1,
+						"near": 0.5,
+						"far": 500,
+						"focus": 10,
+						"aspect": 1,
+						"filmGauge": 35,
+						"filmOffset": 0
+					}
+				}
+			},
+			{
+				"uuid": "80BBD3F8-534A-4DEF-AD8F-7B7FCBCDD8A9",
+				"type": "PointLight",
+				"name": "PointLight",
+				"castShadow": true,
+				"layers": 1,
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-12.678,11.788,7.962,1],
+				"color": 16738850,
+				"intensity": 2.62,
+				"distance": 0,
+				"decay": 50,
+				"shadow": {
+					"radius": 3.5,
+					"camera": {
+						"uuid": "F547321E-D254-454F-8581-88C793291846",
+						"type": "PerspectiveCamera",
+						"layers": 1,
+						"fov": 90,
+						"zoom": 1,
+						"near": 0.5,
+						"far": 500,
+						"focus": 10,
+						"aspect": 1,
+						"filmGauge": 35,
+						"filmOffset": 0
+					}
+				}
+			},
+			{
+				"uuid": "48112284-497E-472B-834F-ED4AB64DBFC4",
+				"type": "AmbientLight",
+				"name": "AmbientLight",
+				"layers": 1,
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,38.143,0,1],
+				"color": 16645629,
+				"intensity": 0.32
+			},
+			{
+				"uuid": "7E2EECB9-97A0-4F0E-9CD8-B6C6C2F4C619",
+				"type": "PointLight",
+				"name": "PointLight",
+				"layers": 1,
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,12.722,13.147,-8.361,1],
+				"color": 11599871,
+				"intensity": 0.56,
+				"distance": 0,
+				"decay": 1,
+				"shadow": {
+					"radius": 4,
+					"camera": {
+						"uuid": "59CC145C-C7A2-4BA0-A2AF-5155062FA63B",
+						"type": "PerspectiveCamera",
+						"layers": 1,
+						"fov": 90,
+						"zoom": 1,
+						"near": 0.5,
+						"far": 500,
+						"focus": 10,
+						"aspect": 1,
+						"filmGauge": 35,
+						"filmOffset": 0
+					}
+				}
+			},
+			{
+				"uuid": "D0FC5D35-C136-44DA-B972-EE1E111A1D7D",
+				"type": "DirectionalLight",
+				"name": "DirectionalLight",
+				"castShadow": true,
+				"layers": 1,
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,42.934,50.142,7.5,1],
+				"color": 16777215,
+				"intensity": 0.65,
+				"shadow": {
+					"radius": 5,
+					"camera": {
+						"uuid": "36F21DB8-2B62-4330-86C1-FEEC50F3910B",
+						"type": "OrthographicCamera",
+						"layers": 1,
+						"zoom": 1,
+						"left": -5,
+						"right": 5,
+						"top": 5,
+						"bottom": -5,
+						"near": 0.5,
+						"far": 500
+					}
+				}
+			}],
+		"background": 64
+	}
+}

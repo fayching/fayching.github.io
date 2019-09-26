@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>xeogl Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <script src="../js/xeogl.js"></script>
+    <script src="../js/glTFModel.js"></script>
+
+    <script src="../js/skybox.js"></script>
+
+
+<body>
+
+
+<script>
+
+    //---------------------------------------------------
+    // Load the model
+    //---------------------------------------------------
+
+    var model = new xeogl.GLTFModel({
+        // src: "../style/img/glTF-pbrSpecularGlossiness/BoomBox.gltf",
+        src: "../style/img/11111/1.gltf",
+        scale: [200, 200, 200]
+    });
+
+    var scene = model.scene;
+    var camera = scene.camera;
+
+    camera.eye = [0, 0, -6.0];
+    camera.look = [0, 0, 0];
+    camera.up = [0, 1, 0];
+
+    scene.on("tick", function () { // Slowly orbit the camera
+        camera.orbitYaw(-0.1);
+    });
+
+    new xeogl.CameraControl(); // User camera control
+
+
+</script>
+</body>
+</html>
