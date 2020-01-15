@@ -202,27 +202,27 @@ THREE.DeviceOrientationControls=function(object){var scope=this;this.object=obje
 	// 添加物体
 	var Mesh2={
         "p1": [
-            [60, 60],
-            path + "p1.jpg", {
-                x: 100,
-                y: -106,
+            [370, 550],
+            path + "p1.png", {
+                x: 40,
+                y: -100,
                 z: 60
             }
         ],
         "p2": [
-            [60, 60],
-            path + "p2.jpg", {
-				x: 60,
-                y: -108,
-                z: 61
+            [280, 450],
+            path + "p1.png", {
+				        x: 20,
+                y: -100,
+                z: 59
             }
         ],
         "p3": [
-            [60, 60],
-            path + "p3.jpg", {
-				x: 10,
-                y: -110,
-                z: 62
+            [200, 320],
+            path + "p1.png", {
+				        x: 0,
+                y: -100,
+                z: 58
             }
         ],
         "p4": [
@@ -311,7 +311,7 @@ THREE.DeviceOrientationControls=function(object){var scope=this;this.object=obje
             // 材质
             var material = new THREE.MeshBasicMaterial({
                 map: loader.load(Mesh2[k][1]),
-                // transparent: true,
+                transparent: true,
                 opacity: 1,
             });
             // material.map.minFilter = THREE.LinearFilter;
