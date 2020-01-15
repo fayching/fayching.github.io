@@ -156,8 +156,8 @@ THREE.DeviceOrientationControls=function(object){var scope=this;this.object=obje
     }
     init();
 		var path = "images/clan/", // 图片路径
-		    scenebg = path + "bg.jpg", // 场景背景
-		    placeholderImg = path + "texture.jpg"; // 占位图（可忽略，一般无须更改）
+		    scenebg = path + "texture.jpg", // 场景背景
+		    placeholderImg = path + "texture2.jpg"; // 占位图（可忽略，一般无须更改）
 				function loadTexture(path, callback) {
 				    var texture = new THREE.Texture(texture_placeholder);
 				    var material = new THREE.MeshBasicMaterial({
@@ -179,8 +179,8 @@ THREE.DeviceOrientationControls=function(object){var scope=this;this.object=obje
 		var texture_placeholder;
 		var materials = [
 
-        loadTexture(placeholderImg), // right
-        loadTexture(placeholderImg), // left
+        loadTexture(path + "bg1.jpg"), // right
+        loadTexture(path + "bg2.jpg"), // left
 
 
         loadTexture(placeholderImg), // top
@@ -189,7 +189,7 @@ THREE.DeviceOrientationControls=function(object){var scope=this;this.object=obje
 		loadTexture(scenebg,addProp),
 
          // back
-        loadTexture(placeholderImg) // front
+        loadTexture(path + "bg3.jpg") // front
 
     ];
 	texture_placeholder = document.createElement('canvas');
