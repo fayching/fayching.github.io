@@ -70,9 +70,10 @@ THREE.DeviceOrientationControls=function(object){var scope=this;this.object=obje
 		});
 
 	}
-	var winW = document.documentElement.clientWidth,
+  var winW = document.documentElement.clientWidth,
+  winH = document.documentElement.clientHeight,
         clanW = winW,
-        clanH = winW * 0.8;
+        clanH = winH * 0.8;
     var Scene = void 0,
         Camera = void 0,
         Renderer = void 0,
@@ -89,7 +90,7 @@ THREE.DeviceOrientationControls=function(object){var scope=this;this.object=obje
     }
     // 初始化照相机
     function initCamera() {
-        Camera = new THREE.PerspectiveCamera(80, clanW / clanH, 1, 1000);
+        Camera = new THREE.PerspectiveCamera(120, clanW / clanH, 1, 1000);
         Camera.position.set(0, 0, -10);
     }
     // 初始化渲染器
@@ -210,7 +211,7 @@ THREE.DeviceOrientationControls=function(object){var scope=this;this.object=obje
             }
         ],
         "p2": [
-            [280, 450],
+            [280, 420],
             path + "p1.png", {
 				        x: 20,
                 y: -100,
@@ -228,7 +229,7 @@ THREE.DeviceOrientationControls=function(object){var scope=this;this.object=obje
         "p4": [
             [60, 60],
             path + "p4.jpg", {
-				x: -40,
+				        x: 20,
                 y: -108,
                 z: 63
             }
@@ -236,7 +237,7 @@ THREE.DeviceOrientationControls=function(object){var scope=this;this.object=obje
         "p5": [
             [60, 60],
             path + "p5.jpg", {
-				x: -90,
+				        x: -40,
                 y: -106,
                 z: 64
             }
