@@ -1,0 +1,12 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    # 忽略主版本更新以保持稳定性
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+
